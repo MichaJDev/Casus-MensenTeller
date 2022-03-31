@@ -1,0 +1,17 @@
+D:\Repos\Casus-MensenTeller\Casus_Blok3_MensenTeller\bin\Debug\net6.0-windows\Casus_Blok3_MensenTeller.exe
+D:\Repos\Casus-MensenTeller\Casus_Blok3_MensenTeller\bin\Debug\net6.0-windows\Casus_Blok3_MensenTeller.deps.json
+D:\Repos\Casus-MensenTeller\Casus_Blok3_MensenTeller\bin\Debug\net6.0-windows\Casus_Blok3_MensenTeller.runtimeconfig.json
+D:\Repos\Casus-MensenTeller\Casus_Blok3_MensenTeller\bin\Debug\net6.0-windows\Casus_Blok3_MensenTeller.dll
+D:\Repos\Casus-MensenTeller\Casus_Blok3_MensenTeller\bin\Debug\net6.0-windows\Casus_Blok3_MensenTeller.pdb
+D:\Repos\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\Casus_Blok3_MensenTeller.csproj.AssemblyReference.cache
+D:\Repos\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\Casus_Blok3_MensenTeller.Form1.resources
+D:\Repos\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\Casus_Blok3_MensenTeller.csproj.GenerateResource.cache
+D:\Repos\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\Casus_Blok3_MensenTeller.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repos\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\Casus_Blok3_MensenTeller.AssemblyInfoInputs.cache
+D:\Repos\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\Casus_Blok3_MensenTeller.AssemblyInfo.cs
+D:\Repos\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\Casus_Blok3_MensenTeller.csproj.CoreCompileInputs.cache
+D:\Repos\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\Casus_Blok3_MensenTeller.dll
+D:\Repos\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\refint\Casus_Blok3_MensenTeller.dll
+D:\Repos\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\Casus_Blok3_MensenTeller.pdb
+D:\Repos\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\Casus_Blok3_MensenTeller.genruntimeconfig.cache
+D:\Repos\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\ref\Casus_Blok3_MensenTeller.dll
