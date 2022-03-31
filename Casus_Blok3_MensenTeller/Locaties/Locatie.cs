@@ -15,5 +15,49 @@ namespace Casus_Blok3_MensenTeller.Locaties
         public string Plaats { get; set; }
         public string PostCode { get; set; }
 
+        public Locatie()
+        {
+
+        }
+        public Locatie(int id)
+        {
+            ID = id;
+        }
+        public Locatie(int id, string adres)
+        {
+            ID = id;
+            Adres = adres;
+        }
+        public Locatie(int id, string adres, int nummer)
+        {
+            ID = id;
+            Adres = adres;
+            Nummer = nummer;
+        }
+        public Locatie(int id, string adres, int nummer, string toevoeging)
+        {
+            ID = id;
+            Adres = adres;
+            Nummer = nummer;
+            Toevoeging = toevoeging;
+        }
+        public Locatie(int id, string adres, int nummer, string toevoeging, string plaats)
+        {
+            ID = id;
+            Adres = adres;
+            Nummer = nummer;
+            Toevoeging = toevoeging;
+            Plaats = plaats;
+        }
+        public Locatie(int id, string adres, int nummer, string toevoeging, string plaats, string postcode)
+        {
+            ID = id;
+            Adres = adres;
+            Nummer = nummer;
+            Toevoeging = toevoeging;
+            Plaats = plaats;
+            PostCode = postcode;
+        }
+
     }
 }
