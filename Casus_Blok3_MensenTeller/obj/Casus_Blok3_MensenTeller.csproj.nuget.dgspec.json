@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Heijen\\Desktop\\School-HBO\\Projects VS\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\Casus_Blok3_MensenTeller.csproj": {}
+    "D:\\Repos\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\Casus_Blok3_MensenTeller.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Heijen\\Desktop\\School-HBO\\Projects VS\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\Casus_Blok3_MensenTeller.csproj": {
+    "D:\\Repos\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\Casus_Blok3_MensenTeller.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Heijen\\Desktop\\School-HBO\\Projects VS\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\Casus_Blok3_MensenTeller.csproj",
+        "projectUniqueName": "D:\\Repos\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\Casus_Blok3_MensenTeller.csproj",
         "projectName": "Casus_Blok3_MensenTeller",
-        "projectPath": "C:\\Users\\Heijen\\Desktop\\School-HBO\\Projects VS\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\Casus_Blok3_MensenTeller.csproj",
-        "packagesPath": "C:\\Users\\Heijen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Heijen\\Desktop\\School-HBO\\Projects VS\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\obj\\",
+        "projectPath": "D:\\Repos\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\Casus_Blok3_MensenTeller.csproj",
+        "packagesPath": "C:\\Users\\xflak\\.nuget\\packages\\",
+        "outputPath": "D:\\Repos\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Heijen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\xflak\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,7 +57,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

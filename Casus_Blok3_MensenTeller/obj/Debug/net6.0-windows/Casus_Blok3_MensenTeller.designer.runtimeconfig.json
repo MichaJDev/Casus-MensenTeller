@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\Heijen\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Heijen\\.nuget\\packages"
+      "C:\\Users\\xflak\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\xflak\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
