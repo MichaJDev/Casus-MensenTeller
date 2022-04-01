@@ -1,11 +1,5 @@
 {
   "version": 2,
-<<<<<<< Updated upstream
-  "dgSpecHash": "rM1IZ8Kt0+x+dpS2DO3wYqqzfMbqQA0VgvScOMuEGANJbkJOg0comthZi+Bykqf6zneTdioTrYX/4ANCA39gEQ==",
-  "success": true,
-  "projectFilePath": "D:\\Repos\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\Casus_Blok3_MensenTeller.csproj",
-  "expectedPackageFiles": [],
-=======
   "dgSpecHash": "/oV4ulrb1wGtaiTYN4up+pdsftlKe+/6KeTCnOnKg+HfOif1t1eMBeunfe5H+oCKPjVkdSF0HMa10d9e9ULK3w==",
   "success": true,
   "projectFilePath": "D:\\Repos\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\Casus_Blok3_MensenTeller.csproj",
@@ -20,6 +14,12 @@
     "C:\\Users\\xflak\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\xflak\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
->>>>>>> Stashed changes
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\Repos\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

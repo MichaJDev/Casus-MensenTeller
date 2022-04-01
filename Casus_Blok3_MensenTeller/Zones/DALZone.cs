@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Casus_Blok3_MensenTeller.Toestellen;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace Casus_Blok3_MensenTeller.Zones
     public class DALZone
     {
         public string connectionString = "";
-        public List<Toestel> Toestellen { get; set;}
+        public List<Toestel> Toestellen { get; set; }
         public List<Zone> ZoneList { get; set; }
 
         public void CreateZone(Zone zone)
