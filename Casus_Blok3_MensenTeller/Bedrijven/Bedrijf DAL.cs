@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Casus_Blok3_MensenTeller
+namespace Casus_Blok3_MensenTeller.Bedrijven
 {
     class Bedrijf_DAL
     {
@@ -89,7 +89,7 @@ namespace Casus_Blok3_MensenTeller
                     SqlDataReader dataReader = command.ExecuteReader();
                     while (dataReader.Read())
                     {
-                        bedrijf.Add(new Bedrijf(Int32.Parse(dataReader[0].ToString())
+                        bedrijf.Add(new Bedrijf(int.Parse(dataReader[0].ToString())
                          , dataReader[1].ToString()));
 
                     }

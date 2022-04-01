@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Casus_Blok3_MensenTeller
+namespace Casus_Blok3_MensenTeller.Vestigingen
 {
     class Vestiging
     {

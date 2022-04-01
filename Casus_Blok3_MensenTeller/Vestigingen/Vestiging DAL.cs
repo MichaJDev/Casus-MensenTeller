@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 
-namespace Casus_Blok3_MensenTeller
+namespace Casus_Blok3_MensenTeller.Vestigingen
 {
     class Vestiging_DAL
     {
@@ -87,7 +87,7 @@ namespace Casus_Blok3_MensenTeller
                     SqlDataReader dataReader = command.ExecuteReader();
                     while (dataReader.Read())
                     {
-                        vestigingen.Add(new Vestiging(Int32.Parse(dataReader[0].ToString())
+                        vestigingen.Add(new Vestiging(int.Parse(dataReader[0].ToString())
                          , dataReader[1].ToString()));
 
                     }

@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Casus_Blok3_MensenTeller.Vestigingen;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Casus_Blok3_MensenTeller
+namespace Casus_Blok3_MensenTeller.Bedrijven
 {
     internal class Bedrijf
     {
@@ -19,15 +20,15 @@ namespace Casus_Blok3_MensenTeller
 
         }
 
-        public Bedrijf (int id)
+        public Bedrijf(int id)
         {
             Id = id;
 
         }
 
-        public Bedrijf(int id , string name)
+        public Bedrijf(int id, string name)
         {
-            Id=id;
+            Id = id;
             Name = name;
         }
 
@@ -39,6 +40,6 @@ namespace Casus_Blok3_MensenTeller
 
         }
 
-        
+
     }
 }
