@@ -16,7 +16,7 @@ namespace Casus_Blok3_MensenTeller
 
         // List van de classes
         public List<Bedrijf> bedrijf = new List<Bedrijf>();
-        
+
 
 
 
@@ -90,19 +90,9 @@ namespace Casus_Blok3_MensenTeller
                     while (dataReader.Read())
                     {
                         bedrijf.Add(new Bedrijf(Int32.Parse(dataReader[0].ToString())
-                         , dataReader[1].ToString(),
-                         dataReader[2].ToString()));
-                 
- 
-
-
-
-
-
+                         , dataReader[1].ToString()));
 
                     }
-
-
                 }
             }
         }
@@ -110,8 +100,6 @@ namespace Casus_Blok3_MensenTeller
         //-----------------------------------------DELETE----------------------------------------
         public void DeleteBedrijfId(int id)
         {
-
-
             using (SqlConnection cnn = new SqlConnection(connectionString))
             {
                 using (SqlCommand command = new SqlCommand())

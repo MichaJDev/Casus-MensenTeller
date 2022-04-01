@@ -9,13 +9,25 @@ namespace Casus_Blok3_MensenTeller.Zones
 {
     public class Zone
     {
-        public int Id { get; set; }
+        public int ID { get; set; }
         public string Name { get; set; }
         public List<Toestel> Toestellen { get; set; }
+        public Zone()
+        {
 
+        }
+        public Zone(int id)
+        {
+            ID = id;
+        }
+        public Zone(int id, string name)
+        {
+            ID = id;
+            Name = name;
+        }
         public Zone(int id, string name, List <Toestel> toestellen)
         {
-            Id = id;
+            ID = id;
             Name = name;
         }
     }

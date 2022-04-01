@@ -58,8 +58,7 @@ namespace Casus_Blok3_MensenTeller.Ruimtes
                     while (datareader.Read())
                     {
                         RuimteList.Add(new Ruimte(Int32.Parse(datareader[0].ToString()),
-                                                              datareader[1].ToString(),
-                                                              datareader[2].ToString()
+                                                              datareader[1].ToString()
                                                               ));
                     }
                 }

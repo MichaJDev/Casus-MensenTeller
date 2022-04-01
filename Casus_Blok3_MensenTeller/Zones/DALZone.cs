@@ -60,8 +60,7 @@ namespace Casus_Blok3_MensenTeller.Zones
                     while (datareader.Read())
                     {
                         ZoneList.Add(new Zone(Int32.Parse(datareader[0].ToString()),
-                                                              datareader[1].ToString(),
-                                                              datareader[2].ToString()
+                                                              datareader[1].ToString()
                                                               ));
                     }
                 }
