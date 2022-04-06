@@ -1,4 +1,4 @@
-﻿using Casus_Blok3_MensenTeller.Toestellen;
+﻿using Casus_Blok3_MensenTeller.Sensors;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -11,7 +11,7 @@ namespace Casus_Blok3_MensenTeller.Zones
     public class DALZone
     {
         public string connectionString = "";
-        public List<Toestel> Toestellen { get; set; }
+        public List<Sensor> sensors { get; set; }
         public List<Zone> ZoneList { get; set; }
 
         public void CreateZone(Zone zone)
@@ -25,7 +25,8 @@ namespace Casus_Blok3_MensenTeller.Zones
                     command.Connection = connection;
                     command.CommandText = "INSERT INTO zone (name, toestel) VALUES (@name, @toestel)";
                     command.Parameters.AddWithValue("@name", zone.Name);
-                    command.Parameters.AddWithValue("@zone", zone.Toestellen);
+                    //TODO: omzetten naar sensor DAL
+                    command.Parameters.AddWithValue("@zone", zone.Sensors);
                     command.ExecuteNonQuery();
 
                     command.CommandText = "SELECT CAST(@@Identity AS INT;";

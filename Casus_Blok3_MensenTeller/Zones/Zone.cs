@@ -1,4 +1,5 @@
-﻿using Casus_Blok3_MensenTeller.Toestellen;
+﻿using Casus_Blok3_MensenTeller.Sensors;
+using Casus_Blok3_MensenTeller.Toestellen;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace Casus_Blok3_MensenTeller.Zones
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public List<Toestel> Toestellen { get; set; }
+        public List<Sensor> Sensors { get; set; }
         public Zone()
         {
 
@@ -25,10 +26,11 @@ namespace Casus_Blok3_MensenTeller.Zones
             ID = id;
             Name = name;
         }
-        public Zone(int id, string name, List <Toestel> toestellen)
+        public Zone(int id, string name, List <Sensor> sensors)
         {
             ID = id;
             Name = name;
+            Sensors = sensors;
         }
     }
 }

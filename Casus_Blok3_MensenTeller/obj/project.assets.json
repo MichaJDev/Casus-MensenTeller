@@ -454,19 +454,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\xflak\\.nuget\\packages\\": {}
+    "C:\\Users\\ayman\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repos\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\Casus_Blok3_MensenTeller.csproj",
+      "projectUniqueName": "D:\\Users\\ayman\\Documents\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\Casus_Blok3_MensenTeller.csproj",
       "projectName": "Casus_Blok3_MensenTeller",
-      "projectPath": "D:\\Repos\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\Casus_Blok3_MensenTeller.csproj",
-      "packagesPath": "C:\\Users\\xflak\\.nuget\\packages\\",
-      "outputPath": "D:\\Repos\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\obj\\",
+      "projectPath": "D:\\Users\\ayman\\Documents\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\Casus_Blok3_MensenTeller.csproj",
+      "packagesPath": "C:\\Users\\ayman\\.nuget\\packages\\",
+      "outputPath": "D:\\Users\\ayman\\Documents\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\xflak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ayman\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -515,16 +515,8 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\Repos\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'expectedPackageFiles', line 17, position 0."
-    }
-  ]
+  }
 }

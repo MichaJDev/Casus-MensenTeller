@@ -14,7 +14,6 @@
 
   <ItemGroup>
     <Folder Include="Bedrijven\" />
-    <Folder Include="Vestigingen\" />
   </ItemGroup>
 
 </Project>

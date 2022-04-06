@@ -1,4 +1,5 @@
 ﻿using Casus_Blok3_MensenTeller.Vestigingen;
+using Casus_Blok3_MensenTeller.Zones;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace Casus_Blok3_MensenTeller.Bedrijven
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public List<Vestiging> Vestiging { get; set; }
+        public List<Zone> Zones { get; set; }
 
 
         public Bedrijf()
@@ -32,11 +33,11 @@ namespace Casus_Blok3_MensenTeller.Bedrijven
             Name = name;
         }
 
-        public Bedrijf(int id, string name, List<Vestiging> vestigingen)
+        public Bedrijf(int id, string name, List<Zone> zones)
         {
             Id = id;
             Name = name;
-            Vestiging = vestigingen;
+            Zones = zones;
 
         }
 
