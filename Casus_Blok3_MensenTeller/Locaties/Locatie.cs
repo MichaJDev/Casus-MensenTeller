@@ -9,11 +9,10 @@ namespace Casus_Blok3_MensenTeller.Locaties
     public class Locatie
     {
         public int ID { get; set; }
-        public string Adres { get; set; }
-        public int Nummer { get; set; }
-        public string Toevoeging { get; set; }
-        public string Plaats { get; set; }
-        public string PostCode { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string Xco { get; set; }
+        public string Yco { get; set; }
 
         public Locatie()
         {
@@ -23,41 +22,31 @@ namespace Casus_Blok3_MensenTeller.Locaties
         {
             ID = id;
         }
-        public Locatie(int id, string adres)
+        public Locatie(int id, string name)
         {
             ID = id;
-            Adres = adres;
+            Name = name;
         }
-        public Locatie(int id, string adres, int nummer)
+        public Locatie(int id, string name, string description)
         {
             ID = id;
-            Adres = adres;
-            Nummer = nummer;
+            Name = name;
+            Description = description;
         }
-        public Locatie(int id, string adres, int nummer, string toevoeging)
+        public Locatie(int id, string name, string description, string xco)
         {
             ID = id;
-            Adres = adres;
-            Nummer = nummer;
-            Toevoeging = toevoeging;
+            Name = name;
+            Description = description;
+            Xco = xco;
         }
-        public Locatie(int id, string adres, int nummer, string toevoeging, string plaats)
+        public Locatie(int id, string name, string description, string xco, string yco)
         {
             ID = id;
-            Adres = adres;
-            Nummer = nummer;
-            Toevoeging = toevoeging;
-            Plaats = plaats;
+            Name = name;
+            Description = description;
+            Xco = xco;
+            Yco = yco;
         }
-        public Locatie(int id, string adres, int nummer, string toevoeging, string plaats, string postcode)
-        {
-            ID = id;
-            Adres = adres;
-            Nummer = nummer;
-            Toevoeging = toevoeging;
-            Plaats = plaats;
-            PostCode = postcode;
-        }
-
     }
 }

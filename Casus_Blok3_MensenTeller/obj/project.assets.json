@@ -454,19 +454,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ayman\\.nuget\\packages\\": {}
+    "C:\\Users\\Heijen\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\ayman\\Documents\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\Casus_Blok3_MensenTeller.csproj",
+      "projectUniqueName": "C:\\Users\\Heijen\\Desktop\\School-HBO\\Projects VS\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\Casus_Blok3_MensenTeller.csproj",
       "projectName": "Casus_Blok3_MensenTeller",
-      "projectPath": "D:\\Users\\ayman\\Documents\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\Casus_Blok3_MensenTeller.csproj",
-      "packagesPath": "C:\\Users\\ayman\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\ayman\\Documents\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\obj\\",
+      "projectPath": "C:\\Users\\Heijen\\Desktop\\School-HBO\\Projects VS\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\Casus_Blok3_MensenTeller.csproj",
+      "packagesPath": "C:\\Users\\Heijen\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Heijen\\Desktop\\School-HBO\\Projects VS\\Casus-MensenTeller\\Casus_Blok3_MensenTeller\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ayman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Heijen\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -515,7 +515,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
