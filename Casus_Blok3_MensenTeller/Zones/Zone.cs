@@ -1,5 +1,4 @@
 ﻿using Casus_Blok3_MensenTeller.Sensors;
-using Casus_Blok3_MensenTeller.Toestellen;
 using System;
 using System.Collections.Generic;
 using System.Linq;

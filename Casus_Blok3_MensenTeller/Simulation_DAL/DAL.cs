@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Casus_Blok3_MensenTeller.Locaties;
 using Casus_Blok3_MensenTeller.Sensors;
 
-namespace Casus_Blok3_MensenTeller.Simulation_DAL
+namespace Casus_Blok3_MensenTeller
 {
     class DAL
     {

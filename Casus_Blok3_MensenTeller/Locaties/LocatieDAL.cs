@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Casus_Blok3_MensenTeller.Locaties
 {
-    //kchebs
+    
     public class LocatieDAL
     {
         private string conString = "";

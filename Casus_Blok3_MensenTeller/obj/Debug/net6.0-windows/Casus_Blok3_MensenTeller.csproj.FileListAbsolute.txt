@@ -15,3 +15,13 @@ D:\Repos\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\re
 D:\Repos\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\Casus_Blok3_MensenTeller.pdb
 D:\Repos\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\Casus_Blok3_MensenTeller.genruntimeconfig.cache
 D:\Repos\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\ref\Casus_Blok3_MensenTeller.dll
+D:\Users\ayman\Documents\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\Casus_Blok3_MensenTeller.csproj.AssemblyReference.cache
+D:\Users\ayman\Documents\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\Casus_Blok3_MensenTeller.Form1.resources
+D:\Users\ayman\Documents\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\Casus_Blok3_MensenTeller.csproj.GenerateResource.cache
+D:\Users\ayman\Documents\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\Casus_Blok3_MensenTeller.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\ayman\Documents\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\Casus_Blok3_MensenTeller.AssemblyInfoInputs.cache
+D:\Users\ayman\Documents\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\Casus_Blok3_MensenTeller.AssemblyInfo.cs
+D:\Users\ayman\Documents\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\Casus_Blok3_MensenTeller.csproj.CoreCompileInputs.cache
+D:\Users\ayman\Documents\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\Casus_Blok3_MensenTeller.dll
+D:\Users\ayman\Documents\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\ref\Casus_Blok3_MensenTeller.dll
+D:\Users\ayman\Documents\Casus-MensenTeller\Casus_Blok3_MensenTeller\obj\Debug\net6.0-windows\Casus_Blok3_MensenTeller.pdb
