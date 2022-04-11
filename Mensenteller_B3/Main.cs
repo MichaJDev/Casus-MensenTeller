@@ -16,5 +16,17 @@ namespace Mensenteller_B3
         {
             InitializeComponent();
         }
+
+        private void ButtonCreateModify_Click(object sender, EventArgs e)
+        {
+            CreateModify createModify = new CreateModify();
+            createModify.Show();
+        }
+
+        private void ButtonView_Click(object sender, EventArgs e)
+        {
+            View view = new View();
+            view.Show();
+        }
     }
 }

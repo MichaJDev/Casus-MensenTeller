@@ -8,3 +8,14 @@ D:\Users\ayman\source\repos\Mensenteller_B3\Mensenteller_B3\obj\Debug\Mensentell
 D:\Users\ayman\source\repos\Mensenteller_B3\Mensenteller_B3\obj\Debug\Mensenteller_B3.csproj.CoreCompileInputs.cache
 D:\Users\ayman\source\repos\Mensenteller_B3\Mensenteller_B3\obj\Debug\Mensenteller_B3.exe
 D:\Users\ayman\source\repos\Mensenteller_B3\Mensenteller_B3\obj\Debug\Mensenteller_B3.pdb
+C:\Users\Ramon\Source\Repos\MichaJDev\Casus-MensenTeller\Mensenteller_B3\bin\Debug\Mensenteller_B3.exe.config
+C:\Users\Ramon\Source\Repos\MichaJDev\Casus-MensenTeller\Mensenteller_B3\bin\Debug\Mensenteller_B3.exe
+C:\Users\Ramon\Source\Repos\MichaJDev\Casus-MensenTeller\Mensenteller_B3\bin\Debug\Mensenteller_B3.pdb
+C:\Users\Ramon\Source\Repos\MichaJDev\Casus-MensenTeller\Mensenteller_B3\obj\Debug\Mensenteller_B3.csproj.AssemblyReference.cache
+C:\Users\Ramon\Source\Repos\MichaJDev\Casus-MensenTeller\Mensenteller_B3\obj\Debug\Mensenteller_B3.csproj.SuggestedBindingRedirects.cache
+C:\Users\Ramon\Source\Repos\MichaJDev\Casus-MensenTeller\Mensenteller_B3\obj\Debug\Mensenteller_B3.Main.resources
+C:\Users\Ramon\Source\Repos\MichaJDev\Casus-MensenTeller\Mensenteller_B3\obj\Debug\Mensenteller_B3.Properties.Resources.resources
+C:\Users\Ramon\Source\Repos\MichaJDev\Casus-MensenTeller\Mensenteller_B3\obj\Debug\Mensenteller_B3.csproj.GenerateResource.cache
+C:\Users\Ramon\Source\Repos\MichaJDev\Casus-MensenTeller\Mensenteller_B3\obj\Debug\Mensenteller_B3.csproj.CoreCompileInputs.cache
+C:\Users\Ramon\Source\Repos\MichaJDev\Casus-MensenTeller\Mensenteller_B3\obj\Debug\Mensenteller_B3.exe
+C:\Users\Ramon\Source\Repos\MichaJDev\Casus-MensenTeller\Mensenteller_B3\obj\Debug\Mensenteller_B3.pdb
