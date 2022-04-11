@@ -64,8 +64,8 @@ namespace Mensenteller_B3.Sensors.Druksensors
                     while (datareader.Read())
                     {
                         druksensorlist.Add(new Druksensor(Int32.Parse(datareader[0].ToString()),
-                                                              Int32.Parse(datareader[1].ToString()),
-                                                              datareader.GetBoolean(2),
+                                                              datareader[1].ToString(),
+                                                              datareader[2].ToString(),
                                                               datareader[3].ToString()
                                                               ));
                     }
