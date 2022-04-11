@@ -48,18 +48,6 @@
   <ItemGroup>
     <Compile Include="Bedrijven\Bedrijf DAL.cs" />
     <Compile Include="Bedrijven\Bedrijf.cs" />
-    <Compile Include="CreateModify.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CreateModify.Designer.cs">
-      <DependentUpon>CreateModify.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CreateModifyModern.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CreateModifyModern.Designer.cs">
-      <DependentUpon>CreateModifyModern.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,23 +61,8 @@
     <Compile Include="Sensors\Sensor.cs" />
     <Compile Include="Sensors\SensorDAL.cs" />
     <Compile Include="Simulation_DAL\DAL.cs" />
-    <Compile Include="View.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View.Designer.cs">
-      <DependentUpon>View.cs</DependentUpon>
-    </Compile>
     <Compile Include="Zones\DALZone.cs" />
     <Compile Include="Zones\Zone.cs" />
-    <EmbeddedResource Include="CreateModify.resx">
-      <DependentUpon>CreateModify.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CreateModifyModern.resx">
-      <DependentUpon>CreateModifyModern.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
