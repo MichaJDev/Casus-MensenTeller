@@ -1,0 +1,10 @@
+D:\Users\ayman\source\repos\Mensenteller_B3\Mensenteller_B3\bin\Debug\Mensenteller_B3.exe.config
+D:\Users\ayman\source\repos\Mensenteller_B3\Mensenteller_B3\bin\Debug\Mensenteller_B3.exe
+D:\Users\ayman\source\repos\Mensenteller_B3\Mensenteller_B3\bin\Debug\Mensenteller_B3.pdb
+D:\Users\ayman\source\repos\Mensenteller_B3\Mensenteller_B3\obj\Debug\Mensenteller_B3.csproj.AssemblyReference.cache
+D:\Users\ayman\source\repos\Mensenteller_B3\Mensenteller_B3\obj\Debug\Mensenteller_B3.csproj.SuggestedBindingRedirects.cache
+D:\Users\ayman\source\repos\Mensenteller_B3\Mensenteller_B3\obj\Debug\Mensenteller_B3.Properties.Resources.resources
+D:\Users\ayman\source\repos\Mensenteller_B3\Mensenteller_B3\obj\Debug\Mensenteller_B3.csproj.GenerateResource.cache
+D:\Users\ayman\source\repos\Mensenteller_B3\Mensenteller_B3\obj\Debug\Mensenteller_B3.csproj.CoreCompileInputs.cache
+D:\Users\ayman\source\repos\Mensenteller_B3\Mensenteller_B3\obj\Debug\Mensenteller_B3.exe
+D:\Users\ayman\source\repos\Mensenteller_B3\Mensenteller_B3\obj\Debug\Mensenteller_B3.pdb
