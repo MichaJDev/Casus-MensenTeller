@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mensenteller_B3.Sensors.Druksensors
+namespace Mensenteller_B3.Sensors.DrukSensors
 {
     public class DruksensorDAL
     {
         public string connectionString = "";
-        public List<Druksensor> druksensorlist = new List<Druksensor>();
-        public void CreateDruksensor(Druksensor druksensor)
+        public List<DrukSensor> druksensorlist = new List<DrukSensor>();
+        public void CreateDruksensor(DrukSensor druksensor)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -63,7 +63,7 @@ namespace Mensenteller_B3.Sensors.Druksensors
 
                     while (datareader.Read())
                     {
-                        druksensorlist.Add(new Druksensor(Int32.Parse(datareader[0].ToString()),
+                        druksensorlist.Add(new DrukSensor(Int32.Parse(datareader[0].ToString()),
                                                               Int32.Parse(datareader[1].ToString()),
                                                               datareader.GetBoolean(2),
                                                               datareader[3].ToString()

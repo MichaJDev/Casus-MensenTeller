@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mensenteller_B3.Sensors.Druksensors
+namespace Mensenteller_B3.Sensors.DrukSensors
 {
-    public class Druksensor : Sensor
+    public class DrukSensor : Sensor
     {
         public int EntryId { get; set; }
         public int SensorId { get; set; }

@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace Mensenteller_B3.Bedrijven
 {
-    class Bedrijf_DAL
+    class BedrijfDAL
     {
 
         // Connectionstring die de connectie maakt naar de database
         private string connectionString = "";
 
         // List van de classes
-        public List<Bedrijf> bedrijf = new List<Bedrijf>();
+        public List<Bedrijf> bedrijven = new List<Bedrijf>();
 
 
 
@@ -76,7 +76,7 @@ namespace Mensenteller_B3.Bedrijven
         //---------------------------------READ--------------------------------------------
         public void ReadBedrijf()
         {
-            bedrijf.Clear();
+            bedrijven.Clear();
 
             using (SqlConnection cnn = new SqlConnection(connectionString))
             {
@@ -89,7 +89,7 @@ namespace Mensenteller_B3.Bedrijven
                     SqlDataReader dataReader = command.ExecuteReader();
                     while (dataReader.Read())
                     {
-                        bedrijf.Add(new Bedrijf(int.Parse(dataReader[0].ToString())
+                        bedrijven.Add(new Bedrijf(int.Parse(dataReader[0].ToString())
                          , dataReader[1].ToString()));
 
                     }
