@@ -48,7 +48,6 @@
   <ItemGroup>
     <Compile Include="Bedrijven\Bedrijf DAL.cs" />
     <Compile Include="Bedrijven\Bedrijf.cs" />
-<<<<<<< Updated upstream
     <Compile Include="CreateModify.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,13 +59,6 @@
     </Compile>
     <Compile Include="CreateModifyModern.Designer.cs">
       <DependentUpon>CreateModifyModern.cs</DependentUpon>
-=======
-    <Compile Include="Createbedrijf_zone.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Createbedrijf_zone.Designer.cs">
-      <DependentUpon>Createbedrijf_zone.cs</DependentUpon>
->>>>>>> Stashed changes
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -76,28 +68,10 @@
     </Compile>
     <Compile Include="Locaties\Locatie.cs" />
     <Compile Include="Locaties\LocatieDAL.cs" />
-    <Compile Include="MensentellerDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MensentellerDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="MensentellerDataSet_bedrijven.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MensentellerDataSet_bedrijven.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< Updated upstream
     <Compile Include="Sensors\EntreeSensors\EntreeSensor.cs" />
     <Compile Include="Sensors\EntreeSensors\EntreeSensorDAL.cs" />
-=======
-    <Compile Include="SensorDataDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SensorDataDataSet.xsd</DependentUpon>
-    </Compile>
->>>>>>> Stashed changes
     <Compile Include="Sensors\Sensor.cs" />
       <Compile Include="Sensors\DrukSensors\DrukSensor.cs" />
     <Compile Include="Sensors\DrukSensors\DrukSensorDAL.cs" />
@@ -110,16 +84,11 @@
     </Compile>
     <Compile Include="Zones\DALZone.cs" />
     <Compile Include="Zones\Zone.cs" />
-<<<<<<< Updated upstream
     <EmbeddedResource Include="CreateModify.resx">
       <DependentUpon>CreateModify.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateModifyModern.resx">
       <DependentUpon>CreateModifyModern.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="Createbedrijf_zone.resx">
-      <DependentUpon>Createbedrijf_zone.cs</DependentUpon>
->>>>>>> Stashed changes
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -133,32 +102,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View.resx">
-      <DependentUpon>View.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <None Include="MensentellerDataSet.xsc">
-      <DependentUpon>MensentellerDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="MensentellerDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MensentellerDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MensentellerDataSet.xss">
-      <DependentUpon>MensentellerDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="MensentellerDataSet_bedrijven.xsc">
-      <DependentUpon>MensentellerDataSet_bedrijven.xsd</DependentUpon>
-    </None>
-    <None Include="MensentellerDataSet_bedrijven.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MensentellerDataSet_bedrijven.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MensentellerDataSet_bedrijven.xss">
-      <DependentUpon>MensentellerDataSet_bedrijven.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -168,17 +111,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="SensorDataDataSet.xsc">
-      <DependentUpon>SensorDataDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="SensorDataDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SensorDataDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SensorDataDataSet.xss">
-      <DependentUpon>SensorDataDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

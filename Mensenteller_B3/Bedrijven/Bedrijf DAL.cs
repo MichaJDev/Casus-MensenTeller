@@ -15,7 +15,7 @@ namespace Mensenteller_B3.Bedrijven
         private string connectionString = "";
 
         // List van de classes
-        public List<Bedrijf> Bedrijven { get; set; } 
+        public List<Bedrijf> bedrijf = new List<Bedrijf>();
 
 
 
@@ -76,7 +76,7 @@ namespace Mensenteller_B3.Bedrijven
         //---------------------------------READ--------------------------------------------
         public void ReadBedrijf()
         {
-            Bedrijven.Clear();
+            bedrijf.Clear();
 
             using (SqlConnection cnn = new SqlConnection(connectionString))
             {
@@ -89,7 +89,7 @@ namespace Mensenteller_B3.Bedrijven
                     SqlDataReader dataReader = command.ExecuteReader();
                     while (dataReader.Read())
                     {
-                        Bedrijven.Add(new Bedrijf(int.Parse(dataReader[0].ToString())
+                        bedrijf.Add(new Bedrijf(int.Parse(dataReader[0].ToString())
                          , dataReader[1].ToString()));
 
                     }
