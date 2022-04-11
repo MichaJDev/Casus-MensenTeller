@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< Updated upstream
             this.TableLayoutPanelMain = new System.Windows.Forms.TableLayoutPanel();
             this.TableLayoutPanelDecoCounter = new System.Windows.Forms.TableLayoutPanel();
             this.LabelCounter1 = new System.Windows.Forms.Label();
@@ -225,10 +226,15 @@
             this.ButtonView.UseVisualStyleBackColor = true;
             this.ButtonView.Click += new System.EventHandler(this.ButtonView_Click);
             // 
+=======
+            this.SuspendLayout();
+            // 
+>>>>>>> Stashed changes
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< Updated upstream
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.TableLayoutPanelMain);
             this.Name = "Main";
@@ -239,6 +245,13 @@
             this.TableLayoutPanelDecoCounter.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
+=======
+            this.ClientSize = new System.Drawing.Size(815, 465);
+            this.Name = "Main";
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Main_Load);
+            this.ResumeLayout(false);
+>>>>>>> Stashed changes
 
         }
 
