@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Mensenteller_B3.Locaties;
+using Mensenteller_B3.Sensors.DrukSensors;
 using Mensenteller_B3.Sensors.EntreeSensors;
 using MensenTeller_B3.Sensors;
 
