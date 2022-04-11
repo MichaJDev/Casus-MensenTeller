@@ -12,21 +12,6 @@ namespace MensenTeller_B3.Sensors
         public int ID { get; set; }
         public string Name { get; set; }
 
-        public int PeopleIn { get; set; }
-        
-        public int PeopleOut { get; set; }
-
-        public string ResetTimeStamp { get; set; }
-
-        public Sensor (int id, string name, string resetTimeStap)
-        {
-            ID = id;
-            Name = name;
-            PeopleIn = 0;
-            PeopleOut = 0;
-            ResetTimeStamp = resetTimeStap;  
-        }
-
         public Sensor()
         {
 
@@ -41,8 +26,12 @@ namespace MensenTeller_B3.Sensors
             ID = id;
             Name = name;
         }
-        
-       
-        
+
+        public Sensor(int id, string name, string resetTimeStap)
+        {
+            ID = id;
+            Name = name;
+        }
+
     }
 }
