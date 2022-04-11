@@ -48,18 +48,19 @@
   <ItemGroup>
     <Compile Include="Bedrijven\Bedrijf DAL.cs" />
     <Compile Include="Bedrijven\Bedrijf.cs" />
+    <Compile Include="Locaties\Locatie.cs" />
+    <Compile Include="Locaties\LocatieDAL.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Locaties\Locatie.cs" />
-    <Compile Include="Locaties\LocatieDAL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sensors\DrukSensors\DrukSensor.cs" />
+    <Compile Include="Sensors\DrukSensors\DrukSensorDAL.cs" />
     <Compile Include="Sensors\Sensor.cs" />
-    <Compile Include="Sensors\SensorDAL.cs" />
     <Compile Include="Simulation_DAL\DAL.cs" />
     <Compile Include="Zones\DALZone.cs" />
     <Compile Include="Zones\Zone.cs" />
@@ -85,5 +86,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

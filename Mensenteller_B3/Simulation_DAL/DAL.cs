@@ -5,14 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Mensenteller_B3.Locaties;
+using Mensenteller_B3.Sensors.EntreeSensors;
 using MensenTeller_B3.Sensors;
 
 namespace MensenTeller_B3.Simualtion_DAL
 {
-
-
     class DAL
     {
+        public List<DrukSensor> DrukSensorsSim { get; set; }
+        public List<EntreeSensor> EntreeSensorsSim { get; set; }
         private string source = ".";
         private string catalog = "SensorData";
 
@@ -24,34 +25,15 @@ namespace MensenTeller_B3.Simualtion_DAL
             return $"Data Source=" + source + ";Initial Catalog=" + catalog + ";Integrated Security=True";
         }
 
-        private void StoreData(Sensor _sensor)
+        //Haal op vanuit SensorData Db maken nog
+        public void ReadDrukSimulator()
         {
-            // show feedback
-            Console.WriteLine($"Sensor {_sensor.ID}, PeopleIn {_sensor.PeopleIn.ToString().PadLeft(5, '0')}, PeopleOut {_sensor.PeopleOut.ToString().PadLeft(5, '0')}, Timestamp {_sensor.ResetTimeStamp}, ");
+            //TODO Table PressureSensors
+        }
 
-            // actually save the record
-            try
-            {
-                SqlConnection cnn = new SqlConnection
-                {
-                    ConnectionString = GetConnectionString()
-                };
-                cnn.Open();
-                string sql = "INSERT INTO SensorReading (ID, People_in, People_out, TimeStamp) VALUES (@ID, @People_in, @People_out, @TimeStamp)";
-                using (SqlCommand cmd = new SqlCommand(sql, cnn))
-                {
-                    cmd.Parameters.AddWithValue("@ID", _sensor.ID);
-                    cmd.Parameters.AddWithValue("@People_in", _sensor.PeopleIn);
-                    cmd.Parameters.AddWithValue("@People_out", _sensor.PeopleOut);
-                    cmd.Parameters.AddWithValue("@TimeStamp", _sensor.ResetTimeStamp);
-                    cmd.ExecuteNonQuery();
-                }
-                cnn.Close();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+        public void ReadEntreeSensors()
+        {
+            //TODO Table SensorReading
         }
     }
 }
