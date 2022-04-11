@@ -12,7 +12,7 @@ namespace Mensenteller_B3.Bedrijven
     {
 
         // Connectionstring die de connectie maakt naar de database
-        private string connectionString = "";
+        private string connectionString = "Data Source=.;Initial Catalog=Mensenteller;Integrated Security=True";
 
         // List van de classes
         public List<Bedrijf> bedrijven = new List<Bedrijf>();
@@ -38,7 +38,7 @@ namespace Mensenteller_B3.Bedrijven
                 {
                     command.Connection = connection;
                     //In locatie database wordt in straat,postcode,nummer de waardes ingevuld die ingevuld zijn als value's door de gebruiker
-                    command.CommandText = "INSERT INTO Bedrijf (Name) VALUES (@Name);";
+                    command.CommandText = "INSERT INTO Bedrijven (Name) VALUES (@Name);";
                     command.Parameters.AddWithValue("@Name", bedrijf.Name);
                     try
                     {
@@ -58,7 +58,7 @@ namespace Mensenteller_B3.Bedrijven
                     {
                         Console.WriteLine(ex.ToString());
                     }
-                    command.CommandText = "SELECT * FROM Locatie WHERE ID = @id";
+                    command.CommandText = "SELECT * FROM Bedrijven WHERE ID = @id";
                     command.Parameters.AddWithValue("@id", id);
                     SqlDataReader reader = command.ExecuteReader();
                     while (reader.Read())
@@ -85,7 +85,7 @@ namespace Mensenteller_B3.Bedrijven
                     cnn.ConnectionString = connectionString;
                     cnn.Open();
                     command.Connection = cnn;
-                    command.CommandText = "SELECT Id, Name FROM Bedrijf ORDER BY id";
+                    command.CommandText = "SELECT Id, Name FROM Bedrijven ORDER BY id";
                     SqlDataReader dataReader = command.ExecuteReader();
                     while (dataReader.Read())
                     {

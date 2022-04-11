@@ -14,30 +14,30 @@ namespace Mensenteller_B3.Sensors.DrukSensors
         public bool InUse { get; set; }
         public string TimeStamp { get; set; }
 
-        public Druksensor()
+        public DrukSensor()
         {
 
         }
 
-        public Druksensor(int entryid)
+        public DrukSensor(int entryid)
         {
             EntryId = entryid;
         }
 
-        public Druksensor(int entryid, int sensorid)
+        public DrukSensor(int entryid, int sensorid)
         {
             EntryId = entryid;
             SensorId = sensorid;
         }
 
-        public Druksensor(int entryid, int sensorid, bool inuse)
+        public DrukSensor(int entryid, int sensorid, bool inuse)
         {
             EntryId = entryid;
             SensorId = sensorid;
             InUse = inuse;
         }
 
-        public Druksensor(int entryid, int sensorid, bool inuse, string timestamp)
+        public DrukSensor(int entryid, int sensorid, bool inuse, string timestamp)
         {
             EntryId = entryid;
             SensorId = sensorid;

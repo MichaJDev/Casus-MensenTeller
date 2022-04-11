@@ -29,12 +29,18 @@ namespace Mensenteller_B3
             if (dal.bedrijven == null)
             {
                 CreateBedrijf form = new CreateBedrijf();
-                form.Show()
+                form.Show();
             }
             else
             {
 
             }
+        }
+
+        private void Createbedrijfbut_Click(object sender, EventArgs e)
+        {
+            CreateBedrijf f2 = new CreateBedrijf();
+            f2.Show();
         }
     }
 }
