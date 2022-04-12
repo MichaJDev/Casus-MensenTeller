@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.TableLayoutPanelCreateModify = new System.Windows.Forms.TableLayoutPanel();
-            this.DataGridViewView = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.ButtonCreate = new System.Windows.Forms.Button();
-            this.ButtonModify = new System.Windows.Forms.Button();
-            this.ButtonBack = new System.Windows.Forms.Button();
             this.ButtonDone = new System.Windows.Forms.Button();
+            this.ButtonBack = new System.Windows.Forms.Button();
+            this.ButtonModify = new System.Windows.Forms.Button();
+            this.ButtonCreate = new System.Windows.Forms.Button();
+            this.DataGridViewView = new System.Windows.Forms.DataGridView();
             this.TableLayoutPanelCreateModify.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewView)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewView)).BeginInit();
             this.SuspendLayout();
             // 
             // TableLayoutPanelCreateModify
@@ -59,17 +59,6 @@
             this.TableLayoutPanelCreateModify.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.TableLayoutPanelCreateModify.Size = new System.Drawing.Size(776, 425);
             this.TableLayoutPanelCreateModify.TabIndex = 0;
-            // 
-            // DataGridViewView
-            // 
-            this.DataGridViewView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DataGridViewView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridViewView.Location = new System.Drawing.Point(3, 3);
-            this.DataGridViewView.Name = "DataGridViewView";
-            this.DataGridViewView.Size = new System.Drawing.Size(770, 249);
-            this.DataGridViewView.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
@@ -93,33 +82,19 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(770, 164);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // ButtonCreate
+            // ButtonDone
             // 
-            this.ButtonCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ButtonDone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonCreate.AutoSize = true;
-            this.ButtonCreate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ButtonCreate.Location = new System.Drawing.Point(3, 3);
-            this.ButtonCreate.Name = "ButtonCreate";
-            this.ButtonCreate.Size = new System.Drawing.Size(379, 125);
-            this.ButtonCreate.TabIndex = 0;
-            this.ButtonCreate.Text = "Create";
-            this.ButtonCreate.UseVisualStyleBackColor = true;
-            // 
-            // ButtonModify
-            // 
-            this.ButtonModify.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonModify.AutoSize = true;
-            this.ButtonModify.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ButtonModify.Location = new System.Drawing.Point(388, 3);
-            this.ButtonModify.Name = "ButtonModify";
-            this.ButtonModify.Size = new System.Drawing.Size(379, 125);
-            this.ButtonModify.TabIndex = 1;
-            this.ButtonModify.Text = "Modify";
-            this.ButtonModify.UseVisualStyleBackColor = true;
+            this.ButtonDone.AutoSize = true;
+            this.ButtonDone.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ButtonDone.Location = new System.Drawing.Point(388, 134);
+            this.ButtonDone.Name = "ButtonDone";
+            this.ButtonDone.Size = new System.Drawing.Size(379, 27);
+            this.ButtonDone.TabIndex = 3;
+            this.ButtonDone.Text = "Done";
+            this.ButtonDone.UseVisualStyleBackColor = true;
             // 
             // ButtonBack
             // 
@@ -135,19 +110,45 @@
             this.ButtonBack.Text = "Back";
             this.ButtonBack.UseVisualStyleBackColor = true;
             // 
-            // ButtonDone
+            // ButtonModify
             // 
-            this.ButtonDone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ButtonModify.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonDone.AutoSize = true;
-            this.ButtonDone.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ButtonDone.Location = new System.Drawing.Point(388, 134);
-            this.ButtonDone.Name = "ButtonDone";
-            this.ButtonDone.Size = new System.Drawing.Size(379, 27);
-            this.ButtonDone.TabIndex = 3;
-            this.ButtonDone.Text = "Done";
-            this.ButtonDone.UseVisualStyleBackColor = true;
+            this.ButtonModify.AutoSize = true;
+            this.ButtonModify.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ButtonModify.Location = new System.Drawing.Point(388, 3);
+            this.ButtonModify.Name = "ButtonModify";
+            this.ButtonModify.Size = new System.Drawing.Size(379, 125);
+            this.ButtonModify.TabIndex = 1;
+            this.ButtonModify.Text = "Modify";
+            this.ButtonModify.UseVisualStyleBackColor = true;
+            // 
+            // ButtonCreate
+            // 
+            this.ButtonCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonCreate.AutoSize = true;
+            this.ButtonCreate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ButtonCreate.Location = new System.Drawing.Point(3, 3);
+            this.ButtonCreate.Name = "ButtonCreate";
+            this.ButtonCreate.Size = new System.Drawing.Size(379, 125);
+            this.ButtonCreate.TabIndex = 0;
+            this.ButtonCreate.Text = "Create";
+            this.ButtonCreate.UseVisualStyleBackColor = true;
+            this.ButtonCreate.Click += new System.EventHandler(this.ButtonCreate_Click);
+            // 
+            // DataGridViewView
+            // 
+            this.DataGridViewView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DataGridViewView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridViewView.Location = new System.Drawing.Point(3, 3);
+            this.DataGridViewView.Name = "DataGridViewView";
+            this.DataGridViewView.Size = new System.Drawing.Size(770, 249);
+            this.DataGridViewView.TabIndex = 0;
             // 
             // CreateModify
             // 
@@ -159,9 +160,9 @@
             this.Text = "CreateModify";
             this.TableLayoutPanelCreateModify.ResumeLayout(false);
             this.TableLayoutPanelCreateModify.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewView)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

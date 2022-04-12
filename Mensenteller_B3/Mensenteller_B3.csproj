@@ -54,6 +54,12 @@
     <Compile Include="CreateBedrijf.Designer.cs">
       <DependentUpon>CreateBedrijf.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateModify.designer.cs">
+      <DependentUpon>CreateModify.cs</DependentUpon>
+    </Compile>
     <Compile Include="Locaties\Locatie.cs" />
     <Compile Include="Locaties\LocatieDAL.cs" />
     <Compile Include="Logic\Statestieken.cs" />
@@ -76,10 +82,19 @@
     <Compile Include="Sensors\EntreeSensors\EntreeSensorDAL.cs" />
     <Compile Include="Sensors\Sensor.cs" />
     <Compile Include="Simulation_DAL\DAL.cs" />
+    <Compile Include="View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View.designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
     <Compile Include="Zones\DALZone.cs" />
     <Compile Include="Zones\Zone.cs" />
     <EmbeddedResource Include="CreateBedrijf.resx">
       <DependentUpon>CreateBedrijf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateModify.resx">
+      <DependentUpon>CreateModify.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

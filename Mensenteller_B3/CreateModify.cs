@@ -16,5 +16,11 @@ namespace Mensenteller_B3
         {
             InitializeComponent();
         }
+
+        private void ButtonCreate_Click(object sender, EventArgs e)
+        {
+            CreateBedrijf createBedrijf = new CreateBedrijf();
+            createBedrijf.Show();
+        }
     }
 }
