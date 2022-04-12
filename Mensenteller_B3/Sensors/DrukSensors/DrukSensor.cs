@@ -44,5 +44,12 @@ namespace Mensenteller_B3.Sensors.DrukSensors
             InUse = inuse;
             TimeStamp = timestamp;
         }
+
+        public DrukSensor(int sensorid, bool inuse, string timestamp)
+        {
+            SensorId = sensorid;
+            InUse = inuse;
+            TimeStamp = timestamp;
+        }
     }
 }

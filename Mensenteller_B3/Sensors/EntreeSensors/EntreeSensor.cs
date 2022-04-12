@@ -28,12 +28,27 @@ namespace Mensenteller_B3.Sensors.EntreeSensors
         }
         public EntreeSensor(int _id, string _name, int _peopleIn, int _peopleOut)
         {
-
+            ID= _id;
+            Name= _name;
+            PeopleIn = _peopleIn;
+            PeopleOut = _peopleOut;
         }
 
         public EntreeSensor(int _id, string _name, int _peopleIn, int _peopleOut, string _timeStamp)
         {
+            ID = _id ;
+            Name = _name ;
+            PeopleIn = _peopleIn ;
+            PeopleOut = _peopleOut ;
+            TimeStamp = _timeStamp ;
+        }
 
+        public EntreeSensor(string _name, int _peopleIn, int _peopleOut, string _timeStamp)
+        {
+            Name = _name;
+            PeopleIn = _peopleIn;
+            PeopleOut = _peopleOut;
+            TimeStamp = _timeStamp;
         }
     }
 }
