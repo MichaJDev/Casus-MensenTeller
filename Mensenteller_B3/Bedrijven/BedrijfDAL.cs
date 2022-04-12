@@ -98,7 +98,7 @@ namespace Mensenteller_B3.Bedrijven
         }
 
         //-----------------------------------------DELETE----------------------------------------
-        public void DeleteBedrijfId(int id)
+        public void DeleteBedrijf(int id)
         {
             using (SqlConnection cnn = new SqlConnection(connectionString))
             {
@@ -107,9 +107,10 @@ namespace Mensenteller_B3.Bedrijven
                     cnn.ConnectionString = connectionString;
                     cnn.Open();
                     command.Connection = cnn;
-                    command.CommandText = "DELETE Bedrijf FROM bedrijf WHERE id = @id;";
+                    command.CommandText = "DELETE Bedrijven FROM Bedrijven WHERE id = @id;"   ;
                     command.Parameters.AddWithValue("@id", id);
                     command.ExecuteNonQuery();
+                   
                 }
             }
             ReadBedrijf();
@@ -118,7 +119,7 @@ namespace Mensenteller_B3.Bedrijven
         }
 
         //-------------------------------------------EDIT-----------------------------------------
-        public void EditBedrijfByid(int id, string name)
+        public void EditBedrijf(int id, string name)
         {
             using (SqlConnection cnn = new SqlConnection(connectionString))
             {

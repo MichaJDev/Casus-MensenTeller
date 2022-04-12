@@ -22,14 +22,16 @@ namespace Mensenteller_B3
             InitializeComponent();
             
         }
+        // mocht het zijn dat er niks in de database over bedrijf is wordt er direct 
+        // verwezen naar de createbedrijf form
 
         private void Main_Load(object sender, EventArgs e)
         {
             dal.ReadBedrijf();
             if (dal.bedrijven == null)
             {
-                CreateBedrijf form = new CreateBedrijf();
-                form.Show();
+                CreateBedrijf f2 = new CreateBedrijf();
+                f2.Show();
             }
             else
             {
