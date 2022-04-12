@@ -26,7 +26,16 @@ namespace Mensenteller_B3.Sensors.EntreeSensors
                         SqlDataReader reader = cmd.ExecuteReader();
                         while (reader.Read())
                         {
-                            EntreeSensors.Add(new EntreeSensor(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2), reader.GetInt32(3), reader.GetString(4)));
+                            EntreeSensor es = new EntreeSensor
+                            {
+                                EntryID = 0,
+                                SensorID = reader.GetInt32(0),
+                                Name = reader.GetString(1),
+                                PeopleIn = reader.GetInt32(2),
+                                PeopleOut = reader.GetInt32(3),
+                                TimeStamp = reader.GetString(4)
+                            };
+                            EntreeSensors.Add(es);
                         }
 
                     }
@@ -43,18 +52,23 @@ namespace Mensenteller_B3.Sensors.EntreeSensors
         {
             using (SqlConnection cnn = new SqlConnection(conString))
             {
-                string sql = "UPDATE EntreeSensors SET Name = @Name, people_In = @PeopleIn, people_Out = @PeopleOut,TimeStamp = @TimeStamp WHERE Id = @Id";
+                string sql = "UPDATE EntreeSensors SET Name = @Name, PeopleIn = @PeopleIn, PeopleOut = @PeopleOut,TimeStamp = @TimeStamp WHERE Id = @Id";
                 using (SqlCommand cmd = new SqlCommand(sql, cnn))
                 {
                     cnn.Open();
                     try
                     {
+                        cmd.Parameters.AddWithValue("@Id", sensor.SensorID);
+                        cmd.Parameters.AddWithValue("@Name", sensor.Name);
+                        cmd.Parameters.AddWithValue("@Peoplein", sensor.PeopleIn);
+                        cmd.Parameters.AddWithValue("@PeopleOut", sensor.PeopleOut);
+                        cmd.Parameters.AddWithValue("@TimeStamp", sensor.TimeStamp);
                         cmd.ExecuteNonQuery();
-                        Console.WriteLine($"EntreeSensor with ID: {sensor.ID} On : {sensor.TimeStamp} Succesfully Updated\n");
+                        Console.WriteLine($"EntreeSensor with ID: {sensor.SensorID} On : {sensor.TimeStamp} Succesfully Updated\n");
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine($"Unable to update EntreeSensor with ID: {sensor.ID} On : {sensor.TimeStamp}\nCheck stacktrace below:\n");
+                        Console.WriteLine($"Unable to update EntreeSensor with ID: {sensor.SensorID} On : {sensor.TimeStamp}\nCheck stacktrace below:\n");
                         Console.WriteLine(ex.ToString());
                     }
                 }
@@ -68,16 +82,16 @@ namespace Mensenteller_B3.Sensors.EntreeSensors
                 string sql = "DELETE FROM EntreeSensors WHERE Id = @ID";
                 using (SqlCommand cmd = new SqlCommand(sql, cnn))
                 {
-                    cmd.Parameters.AddWithValue("@ID", sensor.ID);
+                    cmd.Parameters.AddWithValue("@ID", sensor.SensorID);
                     cnn.Open();
                     try
                     {
                         cmd.ExecuteNonQuery();
-                        Console.WriteLine($"EntreeSensor with ID: {sensor.ID} On : {sensor.TimeStamp} Succesfully deleted\n");
+                        Console.WriteLine($"EntreeSensor with ID: {sensor.SensorID} On : {sensor.TimeStamp} Succesfully deleted\n");
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine($"Unable to delete EntreeSensor with ID: {sensor.ID} On : {sensor.TimeStamp}\nCheck stacktrace below:\n");
+                        Console.WriteLine($"Unable to delete EntreeSensor with ID: {sensor.SensorID} On : {sensor.TimeStamp}\nCheck stacktrace below:\n");
                         Console.WriteLine(ex.ToString());
                     }
                 }
@@ -88,10 +102,23 @@ namespace Mensenteller_B3.Sensors.EntreeSensors
         {
             using (SqlConnection cnn = new SqlConnection(conString))
             {
-                string sql = "INSERT INTO EntreeSensors (name, people_in, people_out,timestamp) VALUES(@Name, @PeopleIn, @PeopleOut, @TimeStamp)";
+                int id = 0;
+                string sql = "SELECT MAX(id) FROM EntreeSensors";
                 using (SqlCommand cmd = new SqlCommand(sql, cnn))
                 {
-                    cmd.Parameters.AddWithValue("@Name", sensor.Name);
+                    try
+                    {
+                        id = (int)cmd.ExecuteScalar();
+                    }
+                    catch (Exception ex)
+                    {
+                        throw;
+                    }
+                }
+                sql = "INSERT INTO EntreeSensors (name, people_in, people_out,timestamp) VALUES(@Name, @PeopleIn, @PeopleOut, @TimeStamp)";
+                using (SqlCommand cmd = new SqlCommand(sql, cnn))
+                {
+                    cmd.Parameters.AddWithValue("@Name", $"Sensor{id}");
                     cmd.Parameters.AddWithValue("@PeopleIn", sensor.PeopleIn);
                     cmd.Parameters.AddWithValue("@PeopleOut", sensor.PeopleOut);
                     cmd.Parameters.AddWithValue("@TimeStamp", sensor.TimeStamp);
@@ -99,7 +126,7 @@ namespace Mensenteller_B3.Sensors.EntreeSensors
                     try
                     {
                         cmd.ExecuteNonQuery();
-                        Console.WriteLine($"EntreeSensor with ID: {sensor.ID} On : {sensor.TimeStamp} Succesfully created\n");
+                        Console.WriteLine($"EntreeSensor with ID: {sensor.SensorID} On : {sensor.TimeStamp} Succesfully created\n");
                     }
                     catch (Exception ex)
                     {
@@ -108,7 +135,6 @@ namespace Mensenteller_B3.Sensors.EntreeSensors
                     }
                 }
             }
-
         }
     }
 }
