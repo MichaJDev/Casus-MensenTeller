@@ -15,11 +15,8 @@ namespace MensenTeller_B3.Simualtion_DAL
     {
         public List<DrukSensor> DrukSensors { get; set; }
         public List<EntreeSensor> EntreeSensors { get; set; }
-        private string source = ".";
-        private string catalog = "SensorData";
-
-        const int MAXRANDOM = 8; // maximum number of people to add or delete per datageneration
-        const int INTERVALMINUTES = 5; // interval in minutes to generate data for
+        private readonly string  source = ".";
+        private readonly string catalog = "SensorData";
 
         public DAL()
         {
@@ -43,7 +40,14 @@ namespace MensenTeller_B3.Simualtion_DAL
                     SqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
-                        DrukSensors.Add(new DrukSensor(Int32.Parse(reader.GetValue(0).ToString()), Int32.Parse(reader.GetString(1)), reader.GetBoolean(2),reader.GetString(3)));
+                        DrukSensor ds = new DrukSensor
+                        {
+                            EntryId = reader.GetInt32(0),
+                            SensorId = reader.GetInt32(1),
+                            InUse = reader.GetBoolean(2),
+                            TimeStamp = reader.GetString(3)
+                        };
+                        DrukSensors.Add(ds); 
                     }
                 }
             }
@@ -60,7 +64,15 @@ namespace MensenTeller_B3.Simualtion_DAL
                     SqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
-                        EntreeSensors.Add(new EntreeSensor(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2), reader.GetInt32(3),reader.GetString(4)));
+                        EntreeSensor es = new EntreeSensor
+                        {
+                            EntryID = reader.GetInt32(0),
+                            SensorID = reader.GetInt32(1),
+                            PeopleIn = reader.GetInt32(2),
+                            PeopleOut = reader.GetInt32(3),
+                            TimeStamp = reader.GetString(4)
+                        };
+                        EntreeSensors.Add(es);
                     }
                 }
             }
