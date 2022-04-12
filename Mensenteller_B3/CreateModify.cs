@@ -21,6 +21,14 @@ namespace Mensenteller_B3
         {
             CreateBedrijf createBedrijf = new CreateBedrijf();
             createBedrijf.Show();
+            
+        }
+
+        private void ButtonBack_Click(object sender, EventArgs e)
+        {
+            Close();
+            Main main = new Main();
+            main.Show();
         }
     }
 }

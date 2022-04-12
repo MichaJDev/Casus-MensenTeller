@@ -19,8 +19,9 @@ namespace Mensenteller_B3
 
         private void ButtonCreateModify_Click(object sender, EventArgs e)
         {
+            Close();
             CreateModify createModify = new CreateModify();
-            createModify.Show();
+            createModify.Show();            
         }
 
         private void ButtonView_Click(object sender, EventArgs e)
