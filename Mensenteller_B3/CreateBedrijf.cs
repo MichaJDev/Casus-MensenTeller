@@ -17,6 +17,7 @@ namespace Mensenteller_B3
         BedrijfDAL dal = new BedrijfDAL();
         private int rowID = 0;
         int rowIndexInt = 0;
+        
 
 
 
@@ -51,7 +52,7 @@ namespace Mensenteller_B3
                 }
                 CreateBedrijftextbox.Text = "";
 
-
+                
                 MessageBox.Show("Saved");
 
 
@@ -66,6 +67,8 @@ namespace Mensenteller_B3
             dataGridView1.Rows.RemoveAt(rowIndexInt);
             dal.DeleteBedrijf(rowID);
             MessageBox.Show("Deleted");
+
+            
 
 
         }
@@ -97,17 +100,15 @@ namespace Mensenteller_B3
 
         private void EditBedrijfbutton_Click(object sender, EventArgs e)
         {
-            //        int id = 0;
 
-            //        foreach (Bedrijf bedrijf in dal.bedrijven)
-            //        {
-            //            //indien deze geslect is kan de functie uitgevoerd worden dit geld ook voor alle andere functies, eerst hoort deze ingedrukt te zijn door de gebruiker vervolgens kan er een aanpassing gemaakt worden
-            //            if (selectedName == locatie.Straat)
-            //            {
-            //                id = locatie.Id;
-            //            }
-            //        }
-            //}
+            MessageBox.Show(rowID.ToString());
+            
+            dataGridView1.Rows.Add(EditBedrijftextbox.Text);
+            dal.EditBedrijf(0,Name);
+            MessageBox.Show("Updated");
+
+
         }
     }
 }
+
