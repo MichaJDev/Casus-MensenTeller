@@ -28,5 +28,10 @@ namespace Mensenteller_B3
             View view = new View();
             view.Show();
         }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
