@@ -64,7 +64,7 @@
             this.TableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.TableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.TableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.TableLayoutPanelMain.Size = new System.Drawing.Size(776, 422);
+            this.TableLayoutPanelMain.Size = new System.Drawing.Size(776, 420);
             this.TableLayoutPanelMain.TabIndex = 0;
             // 
             // ButtonView
@@ -77,7 +77,7 @@
             this.ButtonView.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonView.Location = new System.Drawing.Point(3, 297);
             this.ButtonView.Name = "ButtonView";
-            this.ButtonView.Size = new System.Drawing.Size(770, 122);
+            this.ButtonView.Size = new System.Drawing.Size(770, 120);
             this.ButtonView.TabIndex = 4;
             this.ButtonView.Text = "View";
             this.ButtonView.UseVisualStyleBackColor = true;
@@ -94,7 +94,7 @@
             this.LabelTitle.Name = "LabelTitle";
             this.LabelTitle.Size = new System.Drawing.Size(770, 84);
             this.LabelTitle.TabIndex = 2;
-            this.LabelTitle.Text = "Poeple Counter";
+            this.LabelTitle.Text = "People Counter";
             this.LabelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TableLayoutPanelDecoCounter
