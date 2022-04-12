@@ -8,7 +8,7 @@ using MensenTeller_B3.Zones;
 
 namespace Mensenteller_B3.Bedrijven
 {
-    internal class Bedrijf
+    public class Bedrijf
     {
         public int Id { get; set; }
         public string Name { get; set; }
