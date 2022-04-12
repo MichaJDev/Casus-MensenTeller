@@ -27,8 +27,6 @@ namespace Mensenteller_B3
         private void ButtonBack_Click(object sender, EventArgs e)
         {
             Close();
-            Main main = new Main();
-            main.Show();
         }
     }
 }
