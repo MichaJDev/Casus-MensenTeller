@@ -43,7 +43,7 @@ namespace MensenTeller_B3.Simualtion_DAL
                     SqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
-                        DrukSensors.Add(new DrukSensor(reader.GetInt32(0), reader.GetInt32(1), reader.GetBoolean(2),reader.GetString(3)));
+                        DrukSensors.Add(new DrukSensor(Int32.Parse(reader.GetValue(0).ToString()), Int32.Parse(reader.GetString(1)), reader.GetBoolean(2),reader.GetString(3)));
                     }
                 }
             }
