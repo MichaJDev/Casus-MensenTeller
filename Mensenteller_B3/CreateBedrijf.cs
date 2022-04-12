@@ -90,7 +90,8 @@ namespace Mensenteller_B3
 
         private void RefreshButton_Click(object sender, EventArgs e)
         {
-
+            CreateBedrijf f2 = new CreateBedrijf();
+            f2.Show();
 
         }
 
