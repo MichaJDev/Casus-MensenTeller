@@ -38,22 +38,25 @@ namespace Mensenteller_B3
 
         private void CreateBedrijfbutton_Click(object sender, EventArgs e)
         {
+
             if (CreateBedrijftextbox.Text != "")
             {
                 string Name = CreateBedrijftextbox.Text;
                 Bedrijf bedrijf = new Bedrijf(0, Name);
                 dal.CreateBedrijf(bedrijf);
 
-                //foreach (Bedrijf bedrijf1 in dal.bedrijven)
-                //{
-                //    CreateBedrijftextbox.ResetText();
-                //}
+                foreach (Bedrijf bedrijf1 in dal.bedrijven)
+                {
+                    CreateBedrijftextbox.ResetText();
+                }
                 CreateBedrijftextbox.Text = "";
+
 
                 MessageBox.Show("Saved");
 
-            }
 
+
+            }
         }
 
         private void BedrijfDeleteButton_Click(object sender, EventArgs e)
@@ -62,6 +65,7 @@ namespace Mensenteller_B3
             MessageBox.Show(rowID.ToString());
             dataGridView1.Rows.RemoveAt(rowIndexInt);
             dal.DeleteBedrijf(rowID);
+            MessageBox.Show("Deleted");
 
 
         }

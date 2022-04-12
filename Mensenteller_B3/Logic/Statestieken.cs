@@ -41,5 +41,23 @@ namespace Mensenteller_B3.Logic
             }
             AveragePeopleIn = MaxPeopleIn / count;
         }
+
+        public void Stoplicht()
+        {
+            // wanneer variable toegekend is kan deze methode gebruikt worden
+
+            //if ( < 30)
+            //{
+            //    Console.WriteLine("Laat kleur groen zien");
+            //}
+            //else if ( > 30 &&  < 60)
+            //{
+            //    Console.WriteLine("Laat Kleur geel zien");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Laat kleur rood zien");
+            //}
+        }
     }
 }
