@@ -108,6 +108,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="MensentellerDataSet.xsc">
       <DependentUpon>MensentellerDataSet.xsd</DependentUpon>
     </None>
