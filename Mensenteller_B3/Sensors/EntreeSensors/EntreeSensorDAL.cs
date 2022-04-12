@@ -102,23 +102,10 @@ namespace Mensenteller_B3.Sensors.EntreeSensors
         {
             using (SqlConnection cnn = new SqlConnection(conString))
             {
-                int id = 0;
-                string sql = "SELECT MAX(id) FROM EntreeSensors";
+                string sql = "INSERT INTO EntreeSensors (name, people_in, people_out,timestamp) VALUES(@Name, @PeopleIn, @PeopleOut, @TimeStamp)";
                 using (SqlCommand cmd = new SqlCommand(sql, cnn))
                 {
-                    try
-                    {
-                        id = (int)cmd.ExecuteScalar();
-                    }
-                    catch (Exception ex)
-                    {
-                        throw;
-                    }
-                }
-                sql = "INSERT INTO EntreeSensors (name, people_in, people_out,timestamp) VALUES(@Name, @PeopleIn, @PeopleOut, @TimeStamp)";
-                using (SqlCommand cmd = new SqlCommand(sql, cnn))
-                {
-                    cmd.Parameters.AddWithValue("@Name", $"Sensor{id}");
+                    cmd.Parameters.AddWithValue("@Name", $"Sensor{sensor.EntryID}");
                     cmd.Parameters.AddWithValue("@PeopleIn", sensor.PeopleIn);
                     cmd.Parameters.AddWithValue("@PeopleOut", sensor.PeopleOut);
                     cmd.Parameters.AddWithValue("@TimeStamp", sensor.TimeStamp);
