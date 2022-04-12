@@ -47,7 +47,7 @@ namespace MensenTeller_B3.Simualtion_DAL
                             InUse = reader.GetBoolean(2),
                             TimeStamp = reader.GetString(3)
                         };
-                        DrukSensors.Add(ds); 
+                        DrukSensors.Add(ds);
                     }
                 }
             }
