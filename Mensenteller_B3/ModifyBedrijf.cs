@@ -12,9 +12,14 @@ namespace Mensenteller_B3
 {
     public partial class ModifyBedrijf : Form
     {
-        public ModifyBedrijf()
+        public ModifyBedrijf(int id)
         {
             InitializeComponent();
+        }
+
+        private void ModifyBedrijf_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

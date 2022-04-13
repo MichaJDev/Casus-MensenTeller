@@ -49,14 +49,14 @@ namespace Mensenteller_B3
             }
         }
 
-        private void DeleteBedrijfbutton_Click(object sender, EventArgs e)
+        /*private void DeleteBedrijfbutton_Click(object sender, EventArgs e)
         {
             MessageBox.Show(rowID.ToString());
             DgvBedrijven.Rows.RemoveAt(rowIndexInt);
             dal.DeleteBedrijf(rowID);
             MessageBox.Show("Deleted");
 
-        }
+        }*/
 
         private void DgvBedrijven_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -82,6 +82,13 @@ namespace Mensenteller_B3
             dal.EditBedrijf(id, Name);
             this.bedrijvenTableAdapter.Fill(this.dataSet_CreateBedrijven.Bedrijven);
             MessageBox.Show("Updated");
+        }
+
+        private void ButtondDone_Click(object sender, EventArgs e)
+        {
+            Close();
+            CreateModify createModify = new CreateModify();
+            createModify.Show();
         }
     }
 }

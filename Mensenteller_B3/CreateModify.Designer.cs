@@ -28,16 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TableLayoutPanelCreateModify = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.ButtonDone = new System.Windows.Forms.Button();
-            this.ButtonBack = new System.Windows.Forms.Button();
             this.ButtonModify = new System.Windows.Forms.Button();
             this.ButtonCreate = new System.Windows.Forms.Button();
-            this.DataGridViewView = new System.Windows.Forms.DataGridView();
+            this.DGVCreateModify = new System.Windows.Forms.DataGridView();
+            this.mensentellerDataSet1 = new Mensenteller_B3.MensentellerDataSet1();
+            this.bedrijvenBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bedrijvenTableAdapter = new Mensenteller_B3.MensentellerDataSet1TableAdapters.BedrijvenTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ButtonDelete = new System.Windows.Forms.Button();
             this.TableLayoutPanelCreateModify.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVCreateModify)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // TableLayoutPanelCreateModify
@@ -50,7 +58,7 @@
             this.TableLayoutPanelCreateModify.ColumnCount = 1;
             this.TableLayoutPanelCreateModify.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TableLayoutPanelCreateModify.Controls.Add(this.tableLayoutPanel1, 0, 1);
-            this.TableLayoutPanelCreateModify.Controls.Add(this.DataGridViewView, 0, 0);
+            this.TableLayoutPanelCreateModify.Controls.Add(this.DGVCreateModify, 0, 0);
             this.TableLayoutPanelCreateModify.Location = new System.Drawing.Point(12, 12);
             this.TableLayoutPanelCreateModify.Name = "TableLayoutPanelCreateModify";
             this.TableLayoutPanelCreateModify.RowCount = 2;
@@ -70,10 +78,10 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.ButtonDone, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.ButtonBack, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.ButtonModify, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.ButtonCreate, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.ButtonDone, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.ButtonDelete, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 258);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -95,21 +103,7 @@
             this.ButtonDone.TabIndex = 3;
             this.ButtonDone.Text = "Done";
             this.ButtonDone.UseVisualStyleBackColor = true;
-            // 
-            // ButtonBack
-            // 
-            this.ButtonBack.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonBack.AutoSize = true;
-            this.ButtonBack.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ButtonBack.Location = new System.Drawing.Point(3, 134);
-            this.ButtonBack.Name = "ButtonBack";
-            this.ButtonBack.Size = new System.Drawing.Size(379, 27);
-            this.ButtonBack.TabIndex = 2;
-            this.ButtonBack.Text = "Back";
-            this.ButtonBack.UseVisualStyleBackColor = true;
-            this.ButtonBack.Click += new System.EventHandler(this.ButtonBack_Click);
+            this.ButtonDone.Click += new System.EventHandler(this.ButtonDone_Click);
             // 
             // ButtonModify
             // 
@@ -124,6 +118,7 @@
             this.ButtonModify.TabIndex = 1;
             this.ButtonModify.Text = "Modify";
             this.ButtonModify.UseVisualStyleBackColor = true;
+            this.ButtonModify.Click += new System.EventHandler(this.ButtonModify_Click);
             // 
             // ButtonCreate
             // 
@@ -140,16 +135,65 @@
             this.ButtonCreate.UseVisualStyleBackColor = true;
             this.ButtonCreate.Click += new System.EventHandler(this.ButtonCreate_Click);
             // 
-            // DataGridViewView
+            // DGVCreateModify
             // 
-            this.DataGridViewView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DGVCreateModify.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DataGridViewView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridViewView.Location = new System.Drawing.Point(3, 3);
-            this.DataGridViewView.Name = "DataGridViewView";
-            this.DataGridViewView.Size = new System.Drawing.Size(770, 249);
-            this.DataGridViewView.TabIndex = 0;
+            this.DGVCreateModify.AutoGenerateColumns = false;
+            this.DGVCreateModify.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVCreateModify.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn});
+            this.DGVCreateModify.DataSource = this.bedrijvenBindingSource;
+            this.DGVCreateModify.Location = new System.Drawing.Point(3, 3);
+            this.DGVCreateModify.Name = "DGVCreateModify";
+            this.DGVCreateModify.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGVCreateModify.Size = new System.Drawing.Size(770, 249);
+            this.DGVCreateModify.TabIndex = 0;
+            this.DGVCreateModify.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVCreateModify_CellContentClick);
+            // 
+            // mensentellerDataSet1
+            // 
+            this.mensentellerDataSet1.DataSetName = "MensentellerDataSet1";
+            this.mensentellerDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bedrijvenBindingSource
+            // 
+            this.bedrijvenBindingSource.DataMember = "Bedrijven";
+            this.bedrijvenBindingSource.DataSource = this.mensentellerDataSet1;
+            // 
+            // bedrijvenTableAdapter
+            // 
+            this.bedrijvenTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // ButtonDelete
+            // 
+            this.ButtonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonDelete.AutoSize = true;
+            this.ButtonDelete.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ButtonDelete.Location = new System.Drawing.Point(3, 134);
+            this.ButtonDelete.Name = "ButtonDelete";
+            this.ButtonDelete.Size = new System.Drawing.Size(379, 27);
+            this.ButtonDelete.TabIndex = 4;
+            this.ButtonDelete.Text = "Delete";
+            this.ButtonDelete.UseVisualStyleBackColor = true;
+            this.ButtonDelete.Click += new System.EventHandler(this.ButtonDelete_Click);
             // 
             // CreateModify
             // 
@@ -159,11 +203,14 @@
             this.Controls.Add(this.TableLayoutPanelCreateModify);
             this.Name = "CreateModify";
             this.Text = "CreateModify";
+            this.Load += new System.EventHandler(this.CreateModify_Load);
             this.TableLayoutPanelCreateModify.ResumeLayout(false);
             this.TableLayoutPanelCreateModify.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVCreateModify)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,11 +219,16 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel TableLayoutPanelCreateModify;
-        private System.Windows.Forms.DataGridView DataGridViewView;
+        private System.Windows.Forms.DataGridView DGVCreateModify;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button ButtonDone;
-        private System.Windows.Forms.Button ButtonBack;
         private System.Windows.Forms.Button ButtonModify;
         private System.Windows.Forms.Button ButtonCreate;
+        private MensentellerDataSet1 mensentellerDataSet1;
+        private System.Windows.Forms.BindingSource bedrijvenBindingSource;
+        private MensentellerDataSet1TableAdapters.BedrijvenTableAdapter bedrijvenTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button ButtonDelete;
     }
 }
