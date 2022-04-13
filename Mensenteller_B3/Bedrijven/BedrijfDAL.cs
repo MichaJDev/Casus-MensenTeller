@@ -128,7 +128,7 @@ namespace Mensenteller_B3.Bedrijven
                     cnn.ConnectionString = connectionString;
                     cnn.Open();
                     command.Connection = cnn;
-                    command.CommandText = "UPDATE Bedrijf SET name = @name WHERE  id = @id ";
+                    command.CommandText = "UPDATE Bedrijven SET name = @name WHERE  id = @id ";
                     command.Parameters.AddWithValue("@id", id);
                     command.Parameters.AddWithValue("@name", name);
                     command.ExecuteNonQuery();
@@ -138,6 +138,5 @@ namespace Mensenteller_B3.Bedrijven
             }
             ReadBedrijf();
         }
-
     }
 }

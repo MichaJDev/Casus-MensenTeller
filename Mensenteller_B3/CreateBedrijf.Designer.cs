@@ -41,6 +41,7 @@
             this.RefreshButton = new System.Windows.Forms.Button();
             this.EditBedrijfbutton = new System.Windows.Forms.Button();
             this.EditBedrijftextbox = new System.Windows.Forms.TextBox();
+            this.TextBoxEditId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet)).BeginInit();
@@ -125,7 +126,7 @@
             // 
             // EditBedrijfbutton
             // 
-            this.EditBedrijfbutton.Location = new System.Drawing.Point(215, 84);
+            this.EditBedrijfbutton.Location = new System.Drawing.Point(280, 212);
             this.EditBedrijfbutton.Name = "EditBedrijfbutton";
             this.EditBedrijfbutton.Size = new System.Drawing.Size(75, 23);
             this.EditBedrijfbutton.TabIndex = 5;
@@ -135,16 +136,24 @@
             // 
             // EditBedrijftextbox
             // 
-            this.EditBedrijftextbox.Location = new System.Drawing.Point(215, 43);
+            this.EditBedrijftextbox.Location = new System.Drawing.Point(280, 173);
             this.EditBedrijftextbox.Name = "EditBedrijftextbox";
             this.EditBedrijftextbox.Size = new System.Drawing.Size(100, 20);
             this.EditBedrijftextbox.TabIndex = 6;
+            // 
+            // TextBoxEditId
+            // 
+            this.TextBoxEditId.Location = new System.Drawing.Point(280, 111);
+            this.TextBoxEditId.Name = "TextBoxEditId";
+            this.TextBoxEditId.Size = new System.Drawing.Size(100, 20);
+            this.TextBoxEditId.TabIndex = 7;
             // 
             // CreateBedrijf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TextBoxEditId);
             this.Controls.Add(this.EditBedrijftextbox);
             this.Controls.Add(this.EditBedrijfbutton);
             this.Controls.Add(this.RefreshButton);
@@ -177,5 +186,6 @@
         private System.Windows.Forms.Button RefreshButton;
         private System.Windows.Forms.Button EditBedrijfbutton;
         private System.Windows.Forms.TextBox EditBedrijftextbox;
+        private System.Windows.Forms.TextBox TextBoxEditId;
     }
 }

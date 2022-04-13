@@ -52,11 +52,9 @@ namespace Mensenteller_B3
                 }
                 CreateBedrijftextbox.Text = "";
 
-                
+
                 MessageBox.Show("Saved");
-
-
-
+                this.bedrijvenTableAdapter.Fill(this.mensentellerDataSet.Bedrijven);
             }
         }
 
@@ -100,14 +98,11 @@ namespace Mensenteller_B3
 
         private void EditBedrijfbutton_Click(object sender, EventArgs e)
         {
-
-            MessageBox.Show(rowID.ToString());
-            
-            dataGridView1.Rows.Add(EditBedrijftextbox.Text);
-            dal.EditBedrijf(0,Name);
+            string Name = EditBedrijftextbox.Text;
+            int id = int.Parse(TextBoxEditId.Text);
+            dal.EditBedrijf(id, Name);
+            this.bedrijvenTableAdapter.Fill(this.mensentellerDataSet.Bedrijven);
             MessageBox.Show("Updated");
-
-
         }
     }
 }

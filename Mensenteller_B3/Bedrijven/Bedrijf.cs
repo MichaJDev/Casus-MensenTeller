@@ -21,6 +21,11 @@ namespace Mensenteller_B3.Bedrijven
 
         }
 
+        public Bedrijf(string name)
+        {
+            Name = name;
+        }
+
         public Bedrijf(int id)
         {
             Id = id;
@@ -40,6 +45,8 @@ namespace Mensenteller_B3.Bedrijven
             Zones = zones;
 
         }
+
+
 
 
     }
