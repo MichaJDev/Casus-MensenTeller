@@ -941,7 +941,7 @@ SELECT EntryId, SensorId, People_in, People_out, TimeStamp FROM SensorReading WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Mensenteller_B3.Properties.Settings.Default.SensorDataConnectionString;
+            //this._connection.ConnectionString = global::Mensenteller_B3.Properties.Settings.Default.SensorDataConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

@@ -20,17 +20,17 @@ namespace Mensenteller_B3 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("SensorDataDataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DataSet_CreateBedrijven")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class SensorDataDataSet1 : global::System.Data.DataSet {
+    public partial class DataSet_CreateBedrijven : global::System.Data.DataSet {
         
-        private PressureSensorsDataTable tablePressureSensors;
+        private BedrijvenDataTable tableBedrijven;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public SensorDataDataSet1() {
+        public DataSet_CreateBedrijven() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Mensenteller_B3 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected SensorDataDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DataSet_CreateBedrijven(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Mensenteller_B3 {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["PressureSensors"] != null)) {
-                    base.Tables.Add(new PressureSensorsDataTable(ds.Tables["PressureSensors"]));
+                if ((ds.Tables["Bedrijven"] != null)) {
+                    base.Tables.Add(new BedrijvenDataTable(ds.Tables["Bedrijven"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Mensenteller_B3 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public PressureSensorsDataTable PressureSensors {
+        public BedrijvenDataTable Bedrijven {
             get {
-                return this.tablePressureSensors;
+                return this.tableBedrijven;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Mensenteller_B3 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            SensorDataDataSet1 cln = ((SensorDataDataSet1)(base.Clone()));
+            DataSet_CreateBedrijven cln = ((DataSet_CreateBedrijven)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Mensenteller_B3 {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["PressureSensors"] != null)) {
-                    base.Tables.Add(new PressureSensorsDataTable(ds.Tables["PressureSensors"]));
+                if ((ds.Tables["Bedrijven"] != null)) {
+                    base.Tables.Add(new BedrijvenDataTable(ds.Tables["Bedrijven"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Mensenteller_B3 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablePressureSensors = ((PressureSensorsDataTable)(base.Tables["PressureSensors"]));
+            this.tableBedrijven = ((BedrijvenDataTable)(base.Tables["Bedrijven"]));
             if ((initTable == true)) {
-                if ((this.tablePressureSensors != null)) {
-                    this.tablePressureSensors.InitVars();
+                if ((this.tableBedrijven != null)) {
+                    this.tableBedrijven.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Mensenteller_B3 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "SensorDataDataSet1";
+            this.DataSetName = "DataSet_CreateBedrijven";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/SensorDataDataSet1.xsd";
+            this.Namespace = "http://tempuri.org/DataSet_CreateBedrijven.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablePressureSensors = new PressureSensorsDataTable();
-            base.Tables.Add(this.tablePressureSensors);
+            this.tableBedrijven = new BedrijvenDataTable();
+            base.Tables.Add(this.tableBedrijven);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializePressureSensors() {
+        private bool ShouldSerializeBedrijven() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Mensenteller_B3 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            SensorDataDataSet1 ds = new SensorDataDataSet1();
+            DataSet_CreateBedrijven ds = new DataSet_CreateBedrijven();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,27 +270,23 @@ namespace Mensenteller_B3 {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void PressureSensorsRowChangeEventHandler(object sender, PressureSensorsRowChangeEvent e);
+        public delegate void BedrijvenRowChangeEventHandler(object sender, BedrijvenRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class PressureSensorsDataTable : global::System.Data.TypedTableBase<PressureSensorsRow> {
+        public partial class BedrijvenDataTable : global::System.Data.TypedTableBase<BedrijvenRow> {
             
-            private global::System.Data.DataColumn columnEnrtyId;
+            private global::System.Data.DataColumn columnId;
             
-            private global::System.Data.DataColumn columnSensorId;
-            
-            private global::System.Data.DataColumn columnInUse;
-            
-            private global::System.Data.DataColumn columnTimeStamp;
+            private global::System.Data.DataColumn columnName;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PressureSensorsDataTable() {
-                this.TableName = "PressureSensors";
+            public BedrijvenDataTable() {
+                this.TableName = "Bedrijven";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +294,7 @@ namespace Mensenteller_B3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal PressureSensorsDataTable(global::System.Data.DataTable table) {
+            internal BedrijvenDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,40 +311,24 @@ namespace Mensenteller_B3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected PressureSensorsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected BedrijvenDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn EnrtyIdColumn {
+            public global::System.Data.DataColumn IdColumn {
                 get {
-                    return this.columnEnrtyId;
+                    return this.columnId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SensorIdColumn {
+            public global::System.Data.DataColumn NameColumn {
                 get {
-                    return this.columnSensorId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn InUseColumn {
-                get {
-                    return this.columnInUse;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn TimeStampColumn {
-                get {
-                    return this.columnTimeStamp;
+                    return this.columnName;
                 }
             }
             
@@ -363,55 +343,53 @@ namespace Mensenteller_B3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PressureSensorsRow this[int index] {
+            public BedrijvenRow this[int index] {
                 get {
-                    return ((PressureSensorsRow)(this.Rows[index]));
+                    return ((BedrijvenRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event PressureSensorsRowChangeEventHandler PressureSensorsRowChanging;
+            public event BedrijvenRowChangeEventHandler BedrijvenRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event PressureSensorsRowChangeEventHandler PressureSensorsRowChanged;
+            public event BedrijvenRowChangeEventHandler BedrijvenRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event PressureSensorsRowChangeEventHandler PressureSensorsRowDeleting;
+            public event BedrijvenRowChangeEventHandler BedrijvenRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event PressureSensorsRowChangeEventHandler PressureSensorsRowDeleted;
+            public event BedrijvenRowChangeEventHandler BedrijvenRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddPressureSensorsRow(PressureSensorsRow row) {
+            public void AddBedrijvenRow(BedrijvenRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PressureSensorsRow AddPressureSensorsRow(int SensorId, bool InUse, string TimeStamp) {
-                PressureSensorsRow rowPressureSensorsRow = ((PressureSensorsRow)(this.NewRow()));
+            public BedrijvenRow AddBedrijvenRow(string Name) {
+                BedrijvenRow rowBedrijvenRow = ((BedrijvenRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        SensorId,
-                        InUse,
-                        TimeStamp};
-                rowPressureSensorsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowPressureSensorsRow);
-                return rowPressureSensorsRow;
+                        Name};
+                rowBedrijvenRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowBedrijvenRow);
+                return rowBedrijvenRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PressureSensorsRow FindByEnrtyId(int EnrtyId) {
-                return ((PressureSensorsRow)(this.Rows.Find(new object[] {
-                            EnrtyId})));
+            public BedrijvenRow FindById(int Id) {
+                return ((BedrijvenRow)(this.Rows.Find(new object[] {
+                            Id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                PressureSensorsDataTable cln = ((PressureSensorsDataTable)(base.Clone()));
+                BedrijvenDataTable cln = ((BedrijvenDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -419,67 +397,59 @@ namespace Mensenteller_B3 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new PressureSensorsDataTable();
+                return new BedrijvenDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnEnrtyId = base.Columns["EnrtyId"];
-                this.columnSensorId = base.Columns["SensorId"];
-                this.columnInUse = base.Columns["InUse"];
-                this.columnTimeStamp = base.Columns["TimeStamp"];
+                this.columnId = base.Columns["Id"];
+                this.columnName = base.Columns["Name"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnEnrtyId = new global::System.Data.DataColumn("EnrtyId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEnrtyId);
-                this.columnSensorId = new global::System.Data.DataColumn("SensorId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSensorId);
-                this.columnInUse = new global::System.Data.DataColumn("InUse", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnInUse);
-                this.columnTimeStamp = new global::System.Data.DataColumn("TimeStamp", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTimeStamp);
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnName);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnEnrtyId}, true));
-                this.columnEnrtyId.AutoIncrement = true;
-                this.columnEnrtyId.AutoIncrementSeed = -1;
-                this.columnEnrtyId.AutoIncrementStep = -1;
-                this.columnEnrtyId.AllowDBNull = false;
-                this.columnEnrtyId.ReadOnly = true;
-                this.columnEnrtyId.Unique = true;
-                this.columnSensorId.AllowDBNull = false;
-                this.columnInUse.AllowDBNull = false;
-                this.columnTimeStamp.AllowDBNull = false;
-                this.columnTimeStamp.MaxLength = 255;
+                                this.columnId}, true));
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AllowDBNull = false;
+                this.columnId.ReadOnly = true;
+                this.columnId.Unique = true;
+                this.columnName.AllowDBNull = false;
+                this.columnName.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PressureSensorsRow NewPressureSensorsRow() {
-                return ((PressureSensorsRow)(this.NewRow()));
+            public BedrijvenRow NewBedrijvenRow() {
+                return ((BedrijvenRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new PressureSensorsRow(builder);
+                return new BedrijvenRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(PressureSensorsRow);
+                return typeof(BedrijvenRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.PressureSensorsRowChanged != null)) {
-                    this.PressureSensorsRowChanged(this, new PressureSensorsRowChangeEvent(((PressureSensorsRow)(e.Row)), e.Action));
+                if ((this.BedrijvenRowChanged != null)) {
+                    this.BedrijvenRowChanged(this, new BedrijvenRowChangeEvent(((BedrijvenRow)(e.Row)), e.Action));
                 }
             }
             
@@ -487,8 +457,8 @@ namespace Mensenteller_B3 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.PressureSensorsRowChanging != null)) {
-                    this.PressureSensorsRowChanging(this, new PressureSensorsRowChangeEvent(((PressureSensorsRow)(e.Row)), e.Action));
+                if ((this.BedrijvenRowChanging != null)) {
+                    this.BedrijvenRowChanging(this, new BedrijvenRowChangeEvent(((BedrijvenRow)(e.Row)), e.Action));
                 }
             }
             
@@ -496,8 +466,8 @@ namespace Mensenteller_B3 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.PressureSensorsRowDeleted != null)) {
-                    this.PressureSensorsRowDeleted(this, new PressureSensorsRowChangeEvent(((PressureSensorsRow)(e.Row)), e.Action));
+                if ((this.BedrijvenRowDeleted != null)) {
+                    this.BedrijvenRowDeleted(this, new BedrijvenRowChangeEvent(((BedrijvenRow)(e.Row)), e.Action));
                 }
             }
             
@@ -505,14 +475,14 @@ namespace Mensenteller_B3 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.PressureSensorsRowDeleting != null)) {
-                    this.PressureSensorsRowDeleting(this, new PressureSensorsRowChangeEvent(((PressureSensorsRow)(e.Row)), e.Action));
+                if ((this.BedrijvenRowDeleting != null)) {
+                    this.BedrijvenRowDeleting(this, new BedrijvenRowChangeEvent(((BedrijvenRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemovePressureSensorsRow(PressureSensorsRow row) {
+            public void RemoveBedrijvenRow(BedrijvenRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -521,7 +491,7 @@ namespace Mensenteller_B3 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SensorDataDataSet1 ds = new SensorDataDataSet1();
+                DataSet_CreateBedrijven ds = new DataSet_CreateBedrijven();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -539,7 +509,7 @@ namespace Mensenteller_B3 {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "PressureSensorsDataTable";
+                attribute2.FixedValue = "BedrijvenDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -583,58 +553,36 @@ namespace Mensenteller_B3 {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class PressureSensorsRow : global::System.Data.DataRow {
+        public partial class BedrijvenRow : global::System.Data.DataRow {
             
-            private PressureSensorsDataTable tablePressureSensors;
+            private BedrijvenDataTable tableBedrijven;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal PressureSensorsRow(global::System.Data.DataRowBuilder rb) : 
+            internal BedrijvenRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablePressureSensors = ((PressureSensorsDataTable)(this.Table));
+                this.tableBedrijven = ((BedrijvenDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int EnrtyId {
+            public int Id {
                 get {
-                    return ((int)(this[this.tablePressureSensors.EnrtyIdColumn]));
+                    return ((int)(this[this.tableBedrijven.IdColumn]));
                 }
                 set {
-                    this[this.tablePressureSensors.EnrtyIdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int SensorId {
-                get {
-                    return ((int)(this[this.tablePressureSensors.SensorIdColumn]));
-                }
-                set {
-                    this[this.tablePressureSensors.SensorIdColumn] = value;
+                    this[this.tableBedrijven.IdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool InUse {
+            public string Name {
                 get {
-                    return ((bool)(this[this.tablePressureSensors.InUseColumn]));
+                    return ((string)(this[this.tableBedrijven.NameColumn]));
                 }
                 set {
-                    this[this.tablePressureSensors.InUseColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string TimeStamp {
-                get {
-                    return ((string)(this[this.tablePressureSensors.TimeStampColumn]));
-                }
-                set {
-                    this[this.tablePressureSensors.TimeStampColumn] = value;
+                    this[this.tableBedrijven.NameColumn] = value;
                 }
             }
         }
@@ -643,22 +591,22 @@ namespace Mensenteller_B3 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class PressureSensorsRowChangeEvent : global::System.EventArgs {
+        public class BedrijvenRowChangeEvent : global::System.EventArgs {
             
-            private PressureSensorsRow eventRow;
+            private BedrijvenRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PressureSensorsRowChangeEvent(PressureSensorsRow row, global::System.Data.DataRowAction action) {
+            public BedrijvenRowChangeEvent(BedrijvenRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PressureSensorsRow Row {
+            public BedrijvenRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -674,7 +622,7 @@ namespace Mensenteller_B3 {
         }
     }
 }
-namespace Mensenteller_B3.SensorDataDataSet1TableAdapters {
+namespace Mensenteller_B3.DataSet_CreateBedrijvenTableAdapters {
     
     
     /// <summary>
@@ -686,7 +634,7 @@ namespace Mensenteller_B3.SensorDataDataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class PressureSensorsTableAdapter : global::System.ComponentModel.Component {
+    public partial class BedrijvenTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -700,7 +648,7 @@ namespace Mensenteller_B3.SensorDataDataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public PressureSensorsTableAdapter() {
+        public BedrijvenTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -797,44 +745,32 @@ namespace Mensenteller_B3.SensorDataDataSet1TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "PressureSensors";
-            tableMapping.ColumnMappings.Add("EnrtyId", "EnrtyId");
-            tableMapping.ColumnMappings.Add("SensorId", "SensorId");
-            tableMapping.ColumnMappings.Add("InUse", "InUse");
-            tableMapping.ColumnMappings.Add("TimeStamp", "TimeStamp");
+            tableMapping.DataSetTable = "Bedrijven";
+            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.ColumnMappings.Add("Name", "Name");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[PressureSensors] WHERE (([EnrtyId] = @Original_EnrtyId) AND ([" +
-                "SensorId] = @Original_SensorId) AND ([InUse] = @Original_InUse) AND ([TimeStamp]" +
-                " = @Original_TimeStamp))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Bedrijven] WHERE (([Id] = @Original_Id) AND ([Name] = @Origina" +
+                "l_Name))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EnrtyId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrtyId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SensorId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SensorId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_InUse", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InUse", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TimeStamp", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TimeStamp", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[PressureSensors] ([SensorId], [InUse], [TimeStamp]) VALUES (@S" +
-                "ensorId, @InUse, @TimeStamp);\r\nSELECT EnrtyId, SensorId, InUse, TimeStamp FROM P" +
-                "ressureSensors WHERE (EnrtyId = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Bedrijven] ([Name]) VALUES (@Name);\r\nSELECT Id, Name FROM Bedr" +
+                "ijven WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SensorId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SensorId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@InUse", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InUse", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TimeStamp", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TimeStamp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[PressureSensors] SET [SensorId] = @SensorId, [InUse] = @InUse, [TimeStamp] = @TimeStamp WHERE (([EnrtyId] = @Original_EnrtyId) AND ([SensorId] = @Original_SensorId) AND ([InUse] = @Original_InUse) AND ([TimeStamp] = @Original_TimeStamp));
-SELECT EnrtyId, SensorId, InUse, TimeStamp FROM PressureSensors WHERE (EnrtyId = @EnrtyId)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Bedrijven] SET [Name] = @Name WHERE (([Id] = @Original_Id) AND ([Na" +
+                "me] = @Original_Name));\r\nSELECT Id, Name FROM Bedrijven WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SensorId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SensorId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@InUse", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InUse", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TimeStamp", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TimeStamp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EnrtyId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrtyId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SensorId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SensorId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_InUse", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InUse", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TimeStamp", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TimeStamp", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EnrtyId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "EnrtyId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -850,7 +786,7 @@ SELECT EnrtyId, SensorId, InUse, TimeStamp FROM PressureSensors WHERE (EnrtyId =
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT EnrtyId, SensorId, InUse, TimeStamp FROM dbo.PressureSensors";
+            this._commandCollection[0].CommandText = "SELECT Id, Name FROM dbo.Bedrijven";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -858,7 +794,7 @@ SELECT EnrtyId, SensorId, InUse, TimeStamp FROM PressureSensors WHERE (EnrtyId =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SensorDataDataSet1.PressureSensorsDataTable dataTable) {
+        public virtual int Fill(DataSet_CreateBedrijven.BedrijvenDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -871,9 +807,9 @@ SELECT EnrtyId, SensorId, InUse, TimeStamp FROM PressureSensors WHERE (EnrtyId =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SensorDataDataSet1.PressureSensorsDataTable GetData() {
+        public virtual DataSet_CreateBedrijven.BedrijvenDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SensorDataDataSet1.PressureSensorsDataTable dataTable = new SensorDataDataSet1.PressureSensorsDataTable();
+            DataSet_CreateBedrijven.BedrijvenDataTable dataTable = new DataSet_CreateBedrijven.BedrijvenDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -881,15 +817,15 @@ SELECT EnrtyId, SensorId, InUse, TimeStamp FROM PressureSensors WHERE (EnrtyId =
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SensorDataDataSet1.PressureSensorsDataTable dataTable) {
+        public virtual int Update(DataSet_CreateBedrijven.BedrijvenDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SensorDataDataSet1 dataSet) {
-            return this.Adapter.Update(dataSet, "PressureSensors");
+        public virtual int Update(DataSet_CreateBedrijven dataSet) {
+            return this.Adapter.Update(dataSet, "Bedrijven");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -911,15 +847,13 @@ SELECT EnrtyId, SensorId, InUse, TimeStamp FROM PressureSensors WHERE (EnrtyId =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_EnrtyId, int Original_SensorId, bool Original_InUse, string Original_TimeStamp) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_EnrtyId));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_SensorId));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((bool)(Original_InUse));
-            if ((Original_TimeStamp == null)) {
-                throw new global::System.ArgumentNullException("Original_TimeStamp");
+        public virtual int Delete(int Original_Id, string Original_Name) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
+            if ((Original_Name == null)) {
+                throw new global::System.ArgumentNullException("Original_Name");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_TimeStamp));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Name));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -941,14 +875,12 @@ SELECT EnrtyId, SensorId, InUse, TimeStamp FROM PressureSensors WHERE (EnrtyId =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int SensorId, bool InUse, string TimeStamp) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(SensorId));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((bool)(InUse));
-            if ((TimeStamp == null)) {
-                throw new global::System.ArgumentNullException("TimeStamp");
+        public virtual int Insert(string Name) {
+            if ((Name == null)) {
+                throw new global::System.ArgumentNullException("Name");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(TimeStamp));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Name));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -970,25 +902,21 @@ SELECT EnrtyId, SensorId, InUse, TimeStamp FROM PressureSensors WHERE (EnrtyId =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int SensorId, bool InUse, string TimeStamp, int Original_EnrtyId, int Original_SensorId, bool Original_InUse, string Original_TimeStamp, int EnrtyId) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(SensorId));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((bool)(InUse));
-            if ((TimeStamp == null)) {
-                throw new global::System.ArgumentNullException("TimeStamp");
+        public virtual int Update(string Name, int Original_Id, string Original_Name, int Id) {
+            if ((Name == null)) {
+                throw new global::System.ArgumentNullException("Name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(TimeStamp));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Name));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_EnrtyId));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_SensorId));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((bool)(Original_InUse));
-            if ((Original_TimeStamp == null)) {
-                throw new global::System.ArgumentNullException("Original_TimeStamp");
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_Id));
+            if ((Original_Name == null)) {
+                throw new global::System.ArgumentNullException("Original_Name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_TimeStamp));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_Name));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(EnrtyId));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1009,8 +937,8 @@ SELECT EnrtyId, SensorId, InUse, TimeStamp FROM PressureSensors WHERE (EnrtyId =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int SensorId, bool InUse, string TimeStamp, int Original_EnrtyId, int Original_SensorId, bool Original_InUse, string Original_TimeStamp) {
-            return this.Update(SensorId, InUse, TimeStamp, Original_EnrtyId, Original_SensorId, Original_InUse, Original_TimeStamp, Original_EnrtyId);
+        public virtual int Update(string Name, int Original_Id, string Original_Name) {
+            return this.Update(Name, Original_Id, Original_Name, Original_Id);
         }
     }
     
@@ -1026,7 +954,7 @@ SELECT EnrtyId, SensorId, InUse, TimeStamp FROM PressureSensors WHERE (EnrtyId =
         
         private UpdateOrderOption _updateOrder;
         
-        private PressureSensorsTableAdapter _pressureSensorsTableAdapter;
+        private BedrijvenTableAdapter _bedrijvenTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1048,12 +976,12 @@ SELECT EnrtyId, SensorId, InUse, TimeStamp FROM PressureSensors WHERE (EnrtyId =
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public PressureSensorsTableAdapter PressureSensorsTableAdapter {
+        public BedrijvenTableAdapter BedrijvenTableAdapter {
             get {
-                return this._pressureSensorsTableAdapter;
+                return this._bedrijvenTableAdapter;
             }
             set {
-                this._pressureSensorsTableAdapter = value;
+                this._bedrijvenTableAdapter = value;
             }
         }
         
@@ -1076,9 +1004,9 @@ SELECT EnrtyId, SensorId, InUse, TimeStamp FROM PressureSensors WHERE (EnrtyId =
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._pressureSensorsTableAdapter != null) 
-                            && (this._pressureSensorsTableAdapter.Connection != null))) {
-                    return this._pressureSensorsTableAdapter.Connection;
+                if (((this._bedrijvenTableAdapter != null) 
+                            && (this._bedrijvenTableAdapter.Connection != null))) {
+                    return this._bedrijvenTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1093,7 +1021,7 @@ SELECT EnrtyId, SensorId, InUse, TimeStamp FROM PressureSensors WHERE (EnrtyId =
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._pressureSensorsTableAdapter != null)) {
+                if ((this._bedrijvenTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1105,14 +1033,14 @@ SELECT EnrtyId, SensorId, InUse, TimeStamp FROM PressureSensors WHERE (EnrtyId =
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(SensorDataDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DataSet_CreateBedrijven dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._pressureSensorsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.PressureSensors.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._bedrijvenTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Bedrijven.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._pressureSensorsTableAdapter.Update(updatedRows));
+                    result = (result + this._bedrijvenTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1124,13 +1052,13 @@ SELECT EnrtyId, SensorId, InUse, TimeStamp FROM PressureSensors WHERE (EnrtyId =
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(SensorDataDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DataSet_CreateBedrijven dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._pressureSensorsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.PressureSensors.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._bedrijvenTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Bedrijven.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._pressureSensorsTableAdapter.Update(addedRows));
+                    result = (result + this._bedrijvenTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1142,13 +1070,13 @@ SELECT EnrtyId, SensorId, InUse, TimeStamp FROM PressureSensors WHERE (EnrtyId =
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(SensorDataDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DataSet_CreateBedrijven dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._pressureSensorsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.PressureSensors.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._bedrijvenTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Bedrijven.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._pressureSensorsTableAdapter.Update(deletedRows));
+                    result = (result + this._bedrijvenTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1184,15 +1112,15 @@ SELECT EnrtyId, SensorId, InUse, TimeStamp FROM PressureSensors WHERE (EnrtyId =
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(SensorDataDataSet1 dataSet) {
+        public virtual int UpdateAll(DataSet_CreateBedrijven dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._pressureSensorsTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._pressureSensorsTableAdapter.Connection) == false))) {
+            if (((this._bedrijvenTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._bedrijvenTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1228,13 +1156,13 @@ SELECT EnrtyId, SensorId, InUse, TimeStamp FROM PressureSensors WHERE (EnrtyId =
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._pressureSensorsTableAdapter != null)) {
-                    revertConnections.Add(this._pressureSensorsTableAdapter, this._pressureSensorsTableAdapter.Connection);
-                    this._pressureSensorsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._pressureSensorsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._pressureSensorsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._pressureSensorsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._pressureSensorsTableAdapter.Adapter);
+                if ((this._bedrijvenTableAdapter != null)) {
+                    revertConnections.Add(this._bedrijvenTableAdapter, this._bedrijvenTableAdapter.Connection);
+                    this._bedrijvenTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._bedrijvenTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._bedrijvenTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._bedrijvenTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._bedrijvenTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1295,9 +1223,9 @@ SELECT EnrtyId, SensorId, InUse, TimeStamp FROM PressureSensors WHERE (EnrtyId =
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._pressureSensorsTableAdapter != null)) {
-                    this._pressureSensorsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._pressureSensorsTableAdapter]));
-                    this._pressureSensorsTableAdapter.Transaction = null;
+                if ((this._bedrijvenTableAdapter != null)) {
+                    this._bedrijvenTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._bedrijvenTableAdapter]));
+                    this._bedrijvenTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

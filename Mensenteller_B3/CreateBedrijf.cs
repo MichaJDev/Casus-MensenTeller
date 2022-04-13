@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Mensenteller_B3.Bedrijven;
-using System.Data.SqlClient;
 
 namespace Mensenteller_B3
 {
@@ -17,29 +16,23 @@ namespace Mensenteller_B3
         BedrijfDAL dal = new BedrijfDAL();
         private int rowID = 0;
         int rowIndexInt = 0;
-        
-
-
-
 
         public CreateBedrijf()
         {
+
             InitializeComponent();
             dal.ReadBedrijf();
         }
 
         private void CreateBedrijf_Load(object sender, EventArgs e)
         {
-
-            dal.ReadBedrijf();
-            // TODO: This line of code loads data into the 'mensentellerDataSet.Bedrijven' table. You can move, or remove it, as needed.
-            this.bedrijvenTableAdapter.Fill(this.mensentellerDataSet.Bedrijven);
+            // TODO: This line of code loads data into the 'dataSet_CreateBedrijven.Bedrijven' table. You can move, or remove it, as needed.
+            this.bedrijvenTableAdapter.Fill(this.dataSet_CreateBedrijven.Bedrijven);
 
         }
 
         private void CreateBedrijfbutton_Click(object sender, EventArgs e)
         {
-
             if (CreateBedrijftextbox.Text != "")
             {
                 string Name = CreateBedrijftextbox.Text;
@@ -51,32 +44,26 @@ namespace Mensenteller_B3
                     CreateBedrijftextbox.ResetText();
                 }
                 CreateBedrijftextbox.Text = "";
-
-
                 MessageBox.Show("Saved");
-                this.bedrijvenTableAdapter.Fill(this.mensentellerDataSet.Bedrijven);
+                this.bedrijvenTableAdapter.Fill(this.dataSet_CreateBedrijven.Bedrijven);
             }
         }
 
-        private void BedrijfDeleteButton_Click(object sender, EventArgs e)
+        private void DeleteBedrijfbutton_Click(object sender, EventArgs e)
         {
-
             MessageBox.Show(rowID.ToString());
-            dataGridView1.Rows.RemoveAt(rowIndexInt);
+            DgvBedrijven.Rows.RemoveAt(rowIndexInt);
             dal.DeleteBedrijf(rowID);
             MessageBox.Show("Deleted");
 
-            
-
-
         }
 
-        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void DgvBedrijven_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
 
-                DataGridViewCell cell = (DataGridViewCell)dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                DataGridViewCell cell = (DataGridViewCell)DgvBedrijven.Rows[e.RowIndex].Cells[e.ColumnIndex];
                 rowID = (int)cell.Value;
                 rowIndexInt = e.RowIndex;
 
@@ -85,25 +72,16 @@ namespace Mensenteller_B3
 
                 // DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
                 //rowID= Int32.Parse(row.Cells[0].Value.ToString());
-
             }
-        }
-
-        private void RefreshButton_Click(object sender, EventArgs e)
-        {
-            CreateBedrijf f2 = new CreateBedrijf();
-            f2.Show();
-
         }
 
         private void EditBedrijfbutton_Click(object sender, EventArgs e)
         {
             string Name = EditBedrijftextbox.Text;
-            int id = int.Parse(TextBoxEditId.Text);
+            int id = int.Parse(EditBedrijftextbox.Text);
             dal.EditBedrijf(id, Name);
-            this.bedrijvenTableAdapter.Fill(this.mensentellerDataSet.Bedrijven);
+            this.bedrijvenTableAdapter.Fill(this.dataSet_CreateBedrijven.Bedrijven);
             MessageBox.Show("Updated");
         }
     }
 }
-

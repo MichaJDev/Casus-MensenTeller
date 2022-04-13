@@ -60,6 +60,11 @@
     <Compile Include="CreateModify.designer.cs">
       <DependentUpon>CreateModify.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataSet_CreateBedrijven.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_CreateBedrijven.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Locaties\Locatie.cs" />
     <Compile Include="Locaties\LocatieDAL.cs" />
     <Compile Include="Logic\Statestieken.cs" />
@@ -121,6 +126,17 @@
     <EmbeddedResource Include="View.resx">
       <DependentUpon>View.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataSet_CreateBedrijven.xsc">
+      <DependentUpon>DataSet_CreateBedrijven.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_CreateBedrijven.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_CreateBedrijven.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_CreateBedrijven.xss">
+      <DependentUpon>DataSet_CreateBedrijven.xsd</DependentUpon>
+    </None>
     <None Include="MensentellerDataSet.xsc">
       <DependentUpon>MensentellerDataSet.xsd</DependentUpon>
     </None>

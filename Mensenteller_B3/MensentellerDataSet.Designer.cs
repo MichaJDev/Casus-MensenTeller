@@ -747,7 +747,7 @@ namespace Mensenteller_B3.MensentellerDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            //this._connection.ConnectionString = global::Mensenteller_B3.Properties.Settings.Default.MensentellerConnectionString;
+            this._connection.ConnectionString = global::Mensenteller_B3.Properties.Settings.Default.MensentellerConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
