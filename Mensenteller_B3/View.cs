@@ -72,6 +72,28 @@ namespace Mensenteller_B3
 
 
         }
+
+        private void View_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'sensorDataDataSet1.PressureSensors' table. You can move, or remove it, as needed.
+            this.pressureSensorsTableAdapter.Fill(this.sensorDataDataSet1.PressureSensors);
+            // TODO: This line of code loads data into the 'sensorDataDataSet.SensorReading' table. You can move, or remove it, as needed.
+            this.sensorReadingTableAdapter.Fill(this.sensorDataDataSet.SensorReading);
+
+        }
+
+      
+
+        private void DgvSensorRead_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //int sum = e;
+            //double avg = e;
+            //int datacount = DgvSensorRead.Rows.Count;   
+            //for (int i = 0; i <= DgvSensorRead.Rows.Count-1; i++)
+            //    sum = sum + int.Parse(DgvSensorRead.Rows[i].Cells[2].Value.ToString());
+            //avg = (double)sum / datacount;
+            //Averagetextbox.Text = avg.ToString("00.000");
+        }
     }
 
 }
