@@ -26,10 +26,10 @@ namespace Mensenteller_B3.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=Mensenteller;Integrated Security=True")]
-        public string MensentellerConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=SensorData;Integrated Security=True")]
+        public string SensorDataConnectionString {
             get {
-                return ((string)(this["MensentellerConnectionString"]));
+                return ((string)(this["SensorDataConnectionString"]));
             }
         }
     }
