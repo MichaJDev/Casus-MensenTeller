@@ -7,14 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Mensenteller_B3.Bedrijven;
 
 namespace Mensenteller_B3
 {
     public partial class View : Form
 
     {
-
+        BedrijfDAL bedrijfDAL = new BedrijfDAL();
         public View()
         {
             InitializeComponent();
@@ -75,6 +75,8 @@ namespace Mensenteller_B3
 
         private void View_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet_bedrijvenview.Bedrijven' table. You can move, or remove it, as needed.
+            this.bedrijvenTableAdapter.Fill(this.dataSet_bedrijvenview.Bedrijven);
             // TODO: This line of code loads data into the 'sensorDataDataSet1.PressureSensors' table. You can move, or remove it, as needed.
             //this.pressureSensorsTableAdapter.Fill(this.sensorDataDataSet1.PressureSensors);
             // TODO: This line of code loads data into the 'sensorDataDataSet.SensorReading' table. You can move, or remove it, as needed.
@@ -82,7 +84,7 @@ namespace Mensenteller_B3
 
         }
 
-      
+
 
         private void DgvSensorRead_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -93,6 +95,18 @@ namespace Mensenteller_B3
             //    sum = sum + int.Parse(DgvSensorRead.Rows[i].Cells[2].Value.ToString());
             //avg = (double)sum / datacount;
             //Averagetextbox.Text = avg.ToString("00.000");
+        }
+
+        private void BedrijfViewbutton_Click(object sender, EventArgs e)
+        {
+            string id = DgvBedrijfview.CurrentRow.Cells[0].Value.ToString();
+
+            int pid = int.Parse(id);
+            bedrijfDAL.ReadBedrijf();
+            Bedrijf b = bedrijfDAL.bedrijven.Where(X => X.Id == pid).First();
+            this.bedrijvenTableAdapter.Fill(this.dataSet_bedrijvenview.Bedrijven);
+            BedrijfViewButton form = new BedrijfViewButton(b);
+            form.Show();
         }
     }
 

@@ -14,7 +14,7 @@ namespace MensenTeller_B3.Zones
     {
         public string connectionString = "Data Source=.;Initial Catalog=Mensenteller;Integrated Security=True";
         public List<Sensor> sensors { get; set; }
-        public List<Zone> ZoneList { get; set; }
+        public List<Zone> ZoneList { get; set; } = new List<Zone>();
 
         public void CreateZone(Bedrijf bedrijf, Zone zone)
         {
@@ -25,7 +25,7 @@ namespace MensenTeller_B3.Zones
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "INSERT INTO zone (name, BedrijvenId) VALUES (@name, @bedrijvenId)";
+                    command.CommandText = "INSERT INTO zones (name, BedrijvenId) VALUES (@name, @bedrijvenId)";
                     command.Parameters.AddWithValue("@name", zone.Name);
                     //TODO: omzetten naar sensor DAL
 
@@ -51,7 +51,11 @@ namespace MensenTeller_B3.Zones
 
         public void ReadZone()
         {
-            ZoneList.Clear();
+            if (ZoneList != null)
+            {
+               ZoneList.Clear();
+            }
+          
 
             using (SqlConnection cnn = new SqlConnection(connectionString))
             {
@@ -60,14 +64,18 @@ namespace MensenTeller_B3.Zones
                     cnn.ConnectionString = connectionString;
                     cnn.Open();
                     command.Connection = cnn;
-                    command.CommandText = "SELECT Id, Name, BedrijvenId FROM Zone ORDER BY Id";
+                    command.CommandText = "SELECT Id, Name, BedrijvenId FROM Zones ORDER BY Id";
                     SqlDataReader datareader = command.ExecuteReader();
 
                     while (datareader.Read())
                     {
-                        ZoneList.Add(new Zone(Int32.Parse(datareader[0].ToString()),
-                                                              datareader[1].ToString()
-                                                              ));
+                        Zone z = new Zone
+                        {
+                            ID = datareader.GetInt32(0),
+                            Name = datareader.GetString(1),
+                            BedrijvenId = datareader.GetInt32(2)
+                        };
+                        ZoneList.Add(z);
                     }
                 }
             }
@@ -85,7 +93,7 @@ namespace MensenTeller_B3.Zones
                     cnn.ConnectionString = connectionString;
                     cnn.Open();
                     command.Connection = cnn;
-                    command.CommandText = "DELETE zone FROM zone WHERE Id = @Id;";
+                    command.CommandText = "DELETE FROM zones WHERE Id = @Id;";
                     command.Parameters.AddWithValue("@Id", id);
                     command.ExecuteNonQuery();
                 }

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BedrijfView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BedrijfView.Designer.cs">
+      <DependentUpon>BedrijfView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Bedrijven\BedrijfDAL.cs" />
     <Compile Include="Bedrijven\Bedrijf.cs" />
     <Compile Include="CreateBedrijf.cs">
@@ -78,6 +84,21 @@
     <Compile Include="CreateZones.Designer.cs">
       <DependentUpon>CreateZones.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataSet_Bedrijven.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Bedrijven.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_Bedrijven1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Bedrijven1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_bedrijvenview.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_bedrijvenview.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet_CreateBedrijven.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -93,13 +114,34 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet_Locaties1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet_LocatiesView.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_LocatiesView.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_Sensor.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Sensor.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet_Zones.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet_Zones.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet_Zones1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Zones1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Locaties\Locatie.cs" />
     <Compile Include="Locaties\LocatieDAL.cs" />
+    <Compile Include="LocatieView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocatieView.Designer.cs">
+      <DependentUpon>LocatieView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Logic\Statestieken.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -188,7 +230,16 @@
     <Compile Include="Sensors\EntreeSensors\EntreeSensor.cs" />
     <Compile Include="Sensors\EntreeSensors\EntreeSensorDAL.cs" />
     <Compile Include="Sensors\Sensor.cs" />
+<<<<<<< Updated upstream
     <Compile Include="Sensors\SensorDAL.cs" />
+=======
+    <Compile Include="SensorView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SensorView.Designer.cs">
+      <DependentUpon>SensorView.cs</DependentUpon>
+    </Compile>
+>>>>>>> Stashed changes
     <Compile Include="Simulation_DAL\DAL.cs" />
     <Compile Include="View.cs">
       <SubType>Form</SubType>
@@ -198,6 +249,15 @@
     </Compile>
     <Compile Include="Zones\DALZone.cs" />
     <Compile Include="Zones\Zone.cs" />
+    <Compile Include="ZoneView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZoneView.Designer.cs">
+      <DependentUpon>ZoneView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BedrijfView.resx">
+      <DependentUpon>BedrijfView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateBedrijf.resx">
       <DependentUpon>CreateBedrijf.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,8 +267,14 @@
     <EmbeddedResource Include="CreateModify.resx">
       <DependentUpon>CreateModify.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CreateSensor.resx">
+      <DependentUpon>CreateSensor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateZones.resx">
       <DependentUpon>CreateZones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocatieView.resx">
+      <DependentUpon>LocatieView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -234,9 +300,48 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SensorView.resx">
+      <DependentUpon>SensorView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View.resx">
       <DependentUpon>View.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ZoneView.resx">
+      <DependentUpon>ZoneView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet_Bedrijven.xsc">
+      <DependentUpon>DataSet_Bedrijven.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Bedrijven.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Bedrijven.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_Bedrijven.xss">
+      <DependentUpon>DataSet_Bedrijven.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Bedrijven1.xsc">
+      <DependentUpon>DataSet_Bedrijven1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Bedrijven1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Bedrijven1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_Bedrijven1.xss">
+      <DependentUpon>DataSet_Bedrijven1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_bedrijvenview.xsc">
+      <DependentUpon>DataSet_bedrijvenview.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_bedrijvenview.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_bedrijvenview.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_bedrijvenview.xss">
+      <DependentUpon>DataSet_bedrijvenview.xsd</DependentUpon>
+    </None>
     <None Include="DataSet_CreateBedrijven.xsc">
       <DependentUpon>DataSet_CreateBedrijven.xsd</DependentUpon>
     </None>
@@ -270,6 +375,28 @@
     <None Include="DataSet_Locaties1.xss">
       <DependentUpon>DataSet_Locaties1.xsd</DependentUpon>
     </None>
+    <None Include="DataSet_LocatiesView.xsc">
+      <DependentUpon>DataSet_LocatiesView.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_LocatiesView.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_LocatiesView.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_LocatiesView.xss">
+      <DependentUpon>DataSet_LocatiesView.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Sensor.xsc">
+      <DependentUpon>DataSet_Sensor.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Sensor.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Sensor.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_Sensor.xss">
+      <DependentUpon>DataSet_Sensor.xsd</DependentUpon>
+    </None>
     <None Include="DataSet_Zones.xsc">
       <DependentUpon>DataSet_Zones.xsd</DependentUpon>
     </None>
@@ -280,6 +407,17 @@
     </None>
     <None Include="DataSet_Zones.xss">
       <DependentUpon>DataSet_Zones.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Zones1.xsc">
+      <DependentUpon>DataSet_Zones1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Zones1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Zones1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_Zones1.xss">
+      <DependentUpon>DataSet_Zones1.xsd</DependentUpon>
     </None>
     <None Include="MensentellerDataSet.xsc">
       <DependentUpon>MensentellerDataSet.xsd</DependentUpon>
