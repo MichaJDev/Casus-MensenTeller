@@ -46,6 +46,8 @@ namespace Mensenteller_B3
 
         private void CreateModify_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'mensentellerDataSet4.Bedrijven' table. You can move, or remove it, as needed.
+            this.bedrijvenTableAdapter1.Fill(this.mensentellerDataSet4.Bedrijven);
             // TODO: This line of code loads data into the 'mensentellerDataSet1.Bedrijven' table. You can move, or remove it, as needed.
             this.bedrijvenTableAdapter.Fill(this.mensentellerDataSet1.Bedrijven);
 
@@ -53,7 +55,7 @@ namespace Mensenteller_B3
 
         private void DGVCreateModify_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
         private void ButtonDone_Click(object sender, EventArgs e)
@@ -63,9 +65,9 @@ namespace Mensenteller_B3
 
         private void ButtonDelete_Click(object sender, EventArgs e)
         {
-            int pid = DGVCreateModify.CurrentRow.Cells[0].RowIndex;
-            int id = pid + 1;
-            dal.DeleteBedrijf(id);
+            string id = DGVCreateModify.CurrentRow.Cells[0].Value.ToString();
+            int pid = int.Parse(id);
+            dal.DeleteBedrijf(pid);
             this.bedrijvenTableAdapter.Fill(this.mensentellerDataSet1.Bedrijven);
         }
     }

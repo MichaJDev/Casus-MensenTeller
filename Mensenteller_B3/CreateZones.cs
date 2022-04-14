@@ -34,7 +34,7 @@ namespace Mensenteller_B3
             {
                 string Name = CreateZonetextbox.Text;
                 Zone zone = new Zone(0, Name);
-                dal.CreateZone(zone);
+                //dal.CreateZone(zone);
 
                 CreateZonetextbox.Text = "";
                 MessageBox.Show("Saved");

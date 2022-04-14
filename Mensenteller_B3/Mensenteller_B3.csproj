@@ -66,6 +66,12 @@
     <Compile Include="CreateModify.designer.cs">
       <DependentUpon>CreateModify.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateSensor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateSensor.Designer.cs">
+      <DependentUpon>CreateSensor.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateZones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,11 +127,34 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MensentellerDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MensentellerDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MensentellerDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ModifyBedrijf.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ModifyBedrijf.Designer.cs">
       <DependentUpon>ModifyBedrijf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyLocation.Designer.cs">
+      <DependentUpon>ModifyLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifySensor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifySensor.Designer.cs">
+      <DependentUpon>ModifySensor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyZones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyZones.Designer.cs">
+      <DependentUpon>ModifyZones.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -171,6 +200,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModifyBedrijf.resx">
       <DependentUpon>ModifyBedrijf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyLocation.resx">
+      <DependentUpon>ModifyLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyZones.resx">
+      <DependentUpon>ModifyZones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -271,6 +306,17 @@
     </None>
     <None Include="MensentellerDataSet3.xss">
       <DependentUpon>MensentellerDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MensentellerDataSet4.xsc">
+      <DependentUpon>MensentellerDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="MensentellerDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MensentellerDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MensentellerDataSet4.xss">
+      <DependentUpon>MensentellerDataSet4.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

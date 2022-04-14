@@ -31,9 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.CreateZonebutton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bedrijvenIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.zonesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet_Zones = new Mensenteller_B3.DataSet_Zones();
             this.zonesTableAdapter = new Mensenteller_B3.DataSet_ZonesTableAdapters.ZonesTableAdapter();
@@ -61,39 +58,12 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.bedrijvenIdDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.zonesBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(0, -3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(801, 233);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bedrijvenIdDataGridViewTextBoxColumn
-            // 
-            this.bedrijvenIdDataGridViewTextBoxColumn.DataPropertyName = "BedrijvenId";
-            this.bedrijvenIdDataGridViewTextBoxColumn.HeaderText = "BedrijvenId";
-            this.bedrijvenIdDataGridViewTextBoxColumn.Name = "bedrijvenIdDataGridViewTextBoxColumn";
-            this.bedrijvenIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // zonesBindingSource
             // 
@@ -179,9 +149,6 @@
         private DataSet_Zones dataSet_Zones;
         private System.Windows.Forms.BindingSource zonesBindingSource;
         private DataSet_ZonesTableAdapters.ZonesTableAdapter zonesTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bedrijvenIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox CreateZonetextbox;
         private System.Windows.Forms.Button EditZonebutton;
         private System.Windows.Forms.TextBox IdZonetextbox;

@@ -41,11 +41,16 @@
             this.bedrijvenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mensentellerDataSet1 = new Mensenteller_B3.MensentellerDataSet1();
             this.bedrijvenTableAdapter = new Mensenteller_B3.MensentellerDataSet1TableAdapters.BedrijvenTableAdapter();
+            this.mensentellerDataSet4 = new Mensenteller_B3.MensentellerDataSet4();
+            this.bedrijvenBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bedrijvenTableAdapter1 = new Mensenteller_B3.MensentellerDataSet4TableAdapters.BedrijvenTableAdapter();
             this.TableLayoutPanelCreateModify.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCreateModify)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // TableLayoutPanelCreateModify
@@ -160,7 +165,7 @@
             this.DGVCreateModify.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn});
-            this.DGVCreateModify.DataSource = this.bedrijvenBindingSource;
+            this.DGVCreateModify.DataSource = this.bedrijvenBindingSource1;
             this.DGVCreateModify.Location = new System.Drawing.Point(3, 3);
             this.DGVCreateModify.Name = "DGVCreateModify";
             this.DGVCreateModify.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -195,6 +200,20 @@
             // 
             this.bedrijvenTableAdapter.ClearBeforeFill = true;
             // 
+            // mensentellerDataSet4
+            // 
+            this.mensentellerDataSet4.DataSetName = "MensentellerDataSet4";
+            this.mensentellerDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bedrijvenBindingSource1
+            // 
+            this.bedrijvenBindingSource1.DataMember = "Bedrijven";
+            this.bedrijvenBindingSource1.DataSource = this.mensentellerDataSet4;
+            // 
+            // bedrijvenTableAdapter1
+            // 
+            this.bedrijvenTableAdapter1.ClearBeforeFill = true;
+            // 
             // CreateModify
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,6 +232,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGVCreateModify)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,5 +253,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button ButtonDelete;
+        private MensentellerDataSet4 mensentellerDataSet4;
+        private System.Windows.Forms.BindingSource bedrijvenBindingSource1;
+        private MensentellerDataSet4TableAdapters.BedrijvenTableAdapter bedrijvenTableAdapter1;
     }
 }

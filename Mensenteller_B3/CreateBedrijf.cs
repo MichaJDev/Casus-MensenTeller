@@ -48,31 +48,10 @@ namespace Mensenteller_B3
                 this.bedrijvenTableAdapter.Fill(this.dataSet_CreateBedrijven.Bedrijven);
             }
         }
-
-        /*private void DeleteBedrijfbutton_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(rowID.ToString());
-            DgvBedrijven.Rows.RemoveAt(rowIndexInt);
-            dal.DeleteBedrijf(rowID);
-            MessageBox.Show("Deleted");
-
-        }*/
-
+        
         private void DgvBedrijven_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-
-                DataGridViewCell cell = (DataGridViewCell)DgvBedrijven.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                rowID = (int)cell.Value;
-                rowIndexInt = e.RowIndex;
-
-
-
-
-                // DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-                //rowID= Int32.Parse(row.Cells[0].Value.ToString());
-            }
+            
         }
 
         private void EditBedrijfbutton_Click(object sender, EventArgs e)

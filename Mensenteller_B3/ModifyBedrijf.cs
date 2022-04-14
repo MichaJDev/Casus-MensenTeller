@@ -25,5 +25,17 @@ namespace Mensenteller_B3
             this.zonesTableAdapter.Fill(this.mensentellerDataSet3.Zones);
 
         }
+
+        private void ButtonCreate_Click(object sender, EventArgs e)
+        {
+            CreateZones createZones = new CreateZones();
+            createZones.Show();
+        }
+
+        private void ButtonModify_Click(object sender, EventArgs e)
+        {
+            ModifyZones modifyZones = new ModifyZones();
+            modifyZones.Show();
+        }
     }
 }

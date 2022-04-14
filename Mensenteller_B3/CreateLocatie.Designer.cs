@@ -32,23 +32,20 @@
             this.CreateLocatiebutton = new System.Windows.Forms.Button();
             this.CreateLocatietextbox = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.locatiesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet_Locaties1 = new Mensenteller_B3.DataSet_Locaties1();
             this.dataSet_Locaties = new Mensenteller_B3.DataSet_Locaties();
             this.locatiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.locatiesTableAdapter = new Mensenteller_B3.DataSet_LocatiesTableAdapters.LocatiesTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zoneIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EditLocatiebutton = new System.Windows.Forms.Button();
             this.EditIdLocatietextbox = new System.Windows.Forms.TextBox();
-            this.dataSet_Locaties1 = new Mensenteller_B3.DataSet_Locaties1();
-            this.locatiesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.locatiesTableAdapter1 = new Mensenteller_B3.DataSet_Locaties1TableAdapters.LocatiesTableAdapter();
             this.EditLocatietextbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locatiesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Locaties1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Locaties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.locatiesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Locaties1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.locatiesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // CreateLocatiebutton
@@ -71,18 +68,22 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.zoneIdDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.locatiesBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(793, 219);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // locatiesBindingSource1
+            // 
+            this.locatiesBindingSource1.DataMember = "Locaties";
+            this.locatiesBindingSource1.DataSource = this.dataSet_Locaties1;
+            // 
+            // dataSet_Locaties1
+            // 
+            this.dataSet_Locaties1.DataSetName = "DataSet_Locaties1";
+            this.dataSet_Locaties1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataSet_Locaties
             // 
@@ -97,27 +98,6 @@
             // locatiesTableAdapter
             // 
             this.locatiesTableAdapter.ClearBeforeFill = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // zoneIdDataGridViewTextBoxColumn
-            // 
-            this.zoneIdDataGridViewTextBoxColumn.DataPropertyName = "ZoneId";
-            this.zoneIdDataGridViewTextBoxColumn.HeaderText = "ZoneId";
-            this.zoneIdDataGridViewTextBoxColumn.Name = "zoneIdDataGridViewTextBoxColumn";
-            this.zoneIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // EditLocatiebutton
             // 
@@ -135,16 +115,6 @@
             this.EditIdLocatietextbox.Name = "EditIdLocatietextbox";
             this.EditIdLocatietextbox.Size = new System.Drawing.Size(100, 20);
             this.EditIdLocatietextbox.TabIndex = 4;
-            // 
-            // dataSet_Locaties1
-            // 
-            this.dataSet_Locaties1.DataSetName = "DataSet_Locaties1";
-            this.dataSet_Locaties1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // locatiesBindingSource1
-            // 
-            this.locatiesBindingSource1.DataMember = "Locaties";
-            this.locatiesBindingSource1.DataSource = this.dataSet_Locaties1;
             // 
             // locatiesTableAdapter1
             // 
@@ -172,10 +142,10 @@
             this.Text = "CreateLocatie";
             this.Load += new System.EventHandler(this.CreateLocatie_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locatiesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Locaties1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Locaties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.locatiesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Locaties1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.locatiesBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,9 +159,6 @@
         private DataSet_Locaties dataSet_Locaties;
         private System.Windows.Forms.BindingSource locatiesBindingSource;
         private DataSet_LocatiesTableAdapters.LocatiesTableAdapter locatiesTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn zoneIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button EditLocatiebutton;
         private System.Windows.Forms.TextBox EditIdLocatietextbox;
         private DataSet_Locaties1 dataSet_Locaties1;
