@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MensenTeller_B3.Zones;
 
 namespace Mensenteller_B3.Locaties
 {
@@ -13,15 +14,16 @@ namespace Mensenteller_B3.Locaties
     {
         private string conString = "Data Source=.;Initial Catalog=Mensenteller;Integrated Security=True";
 
-        public List<Locatie> locatie { get; set; }
+        public List<Locatie> locaties { get; set; }
 
-        public void CreateLocatie(Locatie l)
+        public void CreateLocatie(Locatie locatie)
         {
             using (SqlConnection con = new SqlConnection(conString))
             {
-                string query = "INSERT INTO Locaties (Name) VALUES (@name)";
+                string query = "INSERT INTO Locaties (Name, Zoneid) VALUES (@name, @ZoneId)";
                 SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@Name", l.Name);
+                cmd.Parameters.AddWithValue("@Name", locatie.Name);
+                //cmd.Parameters.AddWithValue("@ZoneId", zone.ID);
                 /*
                   cmd.Parameters.AddWithValue("@Description", l.Description);
                   cmd.Parameters.AddWithValue("@Xco", l.Xco);
@@ -121,6 +123,31 @@ namespace Mensenteller_B3.Locaties
                 {
                     Console.WriteLine(ex.Message + "\n" + ex.StackTrace);
                     Debug.Write(ex.Message + "\n" + ex.StackTrace);
+                }
+            }
+        }
+        public void ReadLocatie()
+        {
+            locaties.Clear();
+
+            using (SqlConnection cnn = new SqlConnection(conString))
+            {
+                using (SqlCommand command = new SqlCommand())
+                {
+                    cnn.ConnectionString = conString;
+                    cnn.Open();
+                    command.Connection = cnn;
+                    command.CommandText = "SELECT Id, Name, ZoneId FROM Locaties ORDER BY id";
+                    SqlDataReader dataReader = command.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        Locatie l = new Locatie();
+                        l.ID = dataReader.GetInt32(0);
+                        l.Name = dataReader.GetString(1);
+                        l.ZoneId = dataReader.GetInt32(2);
+                        locaties.Add(l);
+
+                    }
                 }
             }
         }

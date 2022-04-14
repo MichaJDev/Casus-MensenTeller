@@ -51,5 +51,10 @@ namespace Mensenteller_B3
             createlocatie.Show();
 
         }
+
+        private void ViewLocatie_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -38,6 +38,13 @@
             this.LabelCounter4 = new System.Windows.Forms.Label();
             this.LabelCounter3 = new System.Windows.Forms.Label();
             this.LabelCounter2 = new System.Windows.Forms.Label();
+<<<<<<< Updated upstream
+=======
+            this.CreateZoneSc = new System.Windows.Forms.Button();
+            this.CreateLocatieSc = new System.Windows.Forms.Button();
+            this.ViewLocatie = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+>>>>>>> Stashed changes
             this.TableLayoutPanelMain.SuspendLayout();
             this.TableLayoutPanelDecoCounter.SuspendLayout();
             this.SuspendLayout();
@@ -63,7 +70,11 @@
             this.TableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.TableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.TableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+<<<<<<< Updated upstream
             this.TableLayoutPanelMain.Size = new System.Drawing.Size(861, 520);
+=======
+            this.TableLayoutPanelMain.Size = new System.Drawing.Size(861, 500);
+>>>>>>> Stashed changes
             this.TableLayoutPanelMain.TabIndex = 0;
             // 
             // ButtonView
@@ -74,9 +85,15 @@
             this.ButtonView.AutoSize = true;
             this.ButtonView.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonView.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< Updated upstream
             this.ButtonView.Location = new System.Drawing.Point(3, 367);
             this.ButtonView.Name = "ButtonView";
             this.ButtonView.Size = new System.Drawing.Size(855, 150);
+=======
+            this.ButtonView.Location = new System.Drawing.Point(3, 353);
+            this.ButtonView.Name = "ButtonView";
+            this.ButtonView.Size = new System.Drawing.Size(855, 144);
+>>>>>>> Stashed changes
             this.ButtonView.TabIndex = 4;
             this.ButtonView.Text = "View";
             this.ButtonView.UseVisualStyleBackColor = true;
@@ -90,9 +107,15 @@
             this.ButtonCreateModify.AutoSize = true;
             this.ButtonCreateModify.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonCreateModify.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< Updated upstream
             this.ButtonCreateModify.Location = new System.Drawing.Point(3, 211);
             this.ButtonCreateModify.Name = "ButtonCreateModify";
             this.ButtonCreateModify.Size = new System.Drawing.Size(855, 150);
+=======
+            this.ButtonCreateModify.Location = new System.Drawing.Point(3, 203);
+            this.ButtonCreateModify.Name = "ButtonCreateModify";
+            this.ButtonCreateModify.Size = new System.Drawing.Size(855, 144);
+>>>>>>> Stashed changes
             this.ButtonCreateModify.TabIndex = 3;
             this.ButtonCreateModify.Text = "Create/Modify";
             this.ButtonCreateModify.UseVisualStyleBackColor = true;
@@ -105,9 +128,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LabelTitle.AutoSize = true;
             this.LabelTitle.Font = new System.Drawing.Font("Calibri", 51.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< Updated upstream
             this.LabelTitle.Location = new System.Drawing.Point(3, 104);
             this.LabelTitle.Name = "LabelTitle";
             this.LabelTitle.Size = new System.Drawing.Size(855, 104);
+=======
+            this.LabelTitle.Location = new System.Drawing.Point(3, 100);
+            this.LabelTitle.Name = "LabelTitle";
+            this.LabelTitle.Size = new System.Drawing.Size(855, 100);
+>>>>>>> Stashed changes
             this.LabelTitle.TabIndex = 2;
             this.LabelTitle.Text = "People Counter";
             this.LabelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -210,11 +239,60 @@
             this.LabelCounter2.Text = "0";
             this.LabelCounter2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+<<<<<<< Updated upstream
+=======
+            // CreateZoneSc
+            // 
+            this.CreateZoneSc.Location = new System.Drawing.Point(203, 522);
+            this.CreateZoneSc.Name = "CreateZoneSc";
+            this.CreateZoneSc.Size = new System.Drawing.Size(179, 23);
+            this.CreateZoneSc.TabIndex = 6;
+            this.CreateZoneSc.Text = "CreateZone";
+            this.CreateZoneSc.UseVisualStyleBackColor = true;
+            this.CreateZoneSc.Click += new System.EventHandler(this.CreateZoneSc_Click);
+            // 
+            // CreateLocatieSc
+            // 
+            this.CreateLocatieSc.Location = new System.Drawing.Point(18, 521);
+            this.CreateLocatieSc.Name = "CreateLocatieSc";
+            this.CreateLocatieSc.Size = new System.Drawing.Size(179, 23);
+            this.CreateLocatieSc.TabIndex = 1;
+            this.CreateLocatieSc.Text = "CreateLocatie";
+            this.CreateLocatieSc.UseVisualStyleBackColor = true;
+            this.CreateLocatieSc.Click += new System.EventHandler(this.CreateLocatieSc_Click);
+            // 
+            // ViewLocatie
+            // 
+            this.ViewLocatie.Location = new System.Drawing.Point(403, 521);
+            this.ViewLocatie.Name = "ViewLocatie";
+            this.ViewLocatie.Size = new System.Drawing.Size(75, 23);
+            this.ViewLocatie.TabIndex = 7;
+            this.ViewLocatie.Text = "ViewLocatie";
+            this.ViewLocatie.UseVisualStyleBackColor = true;
+            this.ViewLocatie.Click += new System.EventHandler(this.ViewLocatie_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(413, 536);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(8, 8);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+>>>>>>> Stashed changes
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< Updated upstream
             this.ClientSize = new System.Drawing.Size(885, 544);
+=======
+            this.ClientSize = new System.Drawing.Size(885, 545);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.ViewLocatie);
+            this.Controls.Add(this.CreateLocatieSc);
+>>>>>>> Stashed changes
             this.Controls.Add(this.TableLayoutPanelMain);
             this.Name = "Main";
             this.Text = "PoepleCounter : Home";
@@ -240,6 +318,13 @@
         private System.Windows.Forms.Label LabelCounter2;
         private System.Windows.Forms.Button ButtonView;
         private System.Windows.Forms.Button ButtonCreateModify;
+<<<<<<< Updated upstream
+=======
+        private System.Windows.Forms.Button CreateZoneSc;
+        private System.Windows.Forms.Button CreateLocatieSc;
+        private System.Windows.Forms.Button ViewLocatie;
+        private System.Windows.Forms.Button button2;
+>>>>>>> Stashed changes
     }
 }
 
