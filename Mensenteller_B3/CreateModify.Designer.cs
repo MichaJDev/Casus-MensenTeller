@@ -38,19 +38,24 @@
             this.DGVCreateModify = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bedrijvenBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.mensentellerDataSet4 = new Mensenteller_B3.MensentellerDataSet4();
             this.bedrijvenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mensentellerDataSet1 = new Mensenteller_B3.MensentellerDataSet1();
             this.bedrijvenTableAdapter = new Mensenteller_B3.MensentellerDataSet1TableAdapters.BedrijvenTableAdapter();
-            this.mensentellerDataSet4 = new Mensenteller_B3.MensentellerDataSet4();
-            this.bedrijvenBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bedrijvenTableAdapter1 = new Mensenteller_B3.MensentellerDataSet4TableAdapters.BedrijvenTableAdapter();
+            this.mensentellerDataSet6 = new Mensenteller_B3.MensentellerDataSet6();
+            this.bedrijvenBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.bedrijvenTableAdapter2 = new Mensenteller_B3.MensentellerDataSet6TableAdapters.BedrijvenTableAdapter();
             this.TableLayoutPanelCreateModify.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCreateModify)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // TableLayoutPanelCreateModify
@@ -165,7 +170,7 @@
             this.DGVCreateModify.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn});
-            this.DGVCreateModify.DataSource = this.bedrijvenBindingSource1;
+            this.DGVCreateModify.DataSource = this.bedrijvenBindingSource2;
             this.DGVCreateModify.Location = new System.Drawing.Point(3, 3);
             this.DGVCreateModify.Name = "DGVCreateModify";
             this.DGVCreateModify.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -186,6 +191,16 @@
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             // 
+            // bedrijvenBindingSource1
+            // 
+            this.bedrijvenBindingSource1.DataMember = "Bedrijven";
+            this.bedrijvenBindingSource1.DataSource = this.mensentellerDataSet4;
+            // 
+            // mensentellerDataSet4
+            // 
+            this.mensentellerDataSet4.DataSetName = "MensentellerDataSet4";
+            this.mensentellerDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // bedrijvenBindingSource
             // 
             this.bedrijvenBindingSource.DataMember = "Bedrijven";
@@ -200,19 +215,23 @@
             // 
             this.bedrijvenTableAdapter.ClearBeforeFill = true;
             // 
-            // mensentellerDataSet4
-            // 
-            this.mensentellerDataSet4.DataSetName = "MensentellerDataSet4";
-            this.mensentellerDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bedrijvenBindingSource1
-            // 
-            this.bedrijvenBindingSource1.DataMember = "Bedrijven";
-            this.bedrijvenBindingSource1.DataSource = this.mensentellerDataSet4;
-            // 
             // bedrijvenTableAdapter1
             // 
             this.bedrijvenTableAdapter1.ClearBeforeFill = true;
+            // 
+            // mensentellerDataSet6
+            // 
+            this.mensentellerDataSet6.DataSetName = "MensentellerDataSet6";
+            this.mensentellerDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bedrijvenBindingSource2
+            // 
+            this.bedrijvenBindingSource2.DataMember = "Bedrijven";
+            this.bedrijvenBindingSource2.DataSource = this.mensentellerDataSet6;
+            // 
+            // bedrijvenTableAdapter2
+            // 
+            this.bedrijvenTableAdapter2.ClearBeforeFill = true;
             // 
             // CreateModify
             // 
@@ -230,10 +249,12 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCreateModify)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,5 +277,8 @@
         private MensentellerDataSet4 mensentellerDataSet4;
         private System.Windows.Forms.BindingSource bedrijvenBindingSource1;
         private MensentellerDataSet4TableAdapters.BedrijvenTableAdapter bedrijvenTableAdapter1;
+        private MensentellerDataSet6 mensentellerDataSet6;
+        private System.Windows.Forms.BindingSource bedrijvenBindingSource2;
+        private MensentellerDataSet6TableAdapters.BedrijvenTableAdapter bedrijvenTableAdapter2;
     }
 }

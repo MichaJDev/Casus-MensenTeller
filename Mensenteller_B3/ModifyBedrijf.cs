@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MensenTeller_B3.Zones;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Mensenteller_B3
 {
     public partial class ModifyBedrijf : Form
     {
+        DALZone dal = new DALZone();
         public int Id { get; set; }
         public ModifyBedrijf(int id)
         {
@@ -19,8 +21,15 @@ namespace Mensenteller_B3
             InitializeComponent();
         }
 
+        public ModifyBedrijf()
+        {
+            InitializeComponent();
+        }
+
         private void ModifyBedrijf_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'mensentellerDataSet5.Zones' table. You can move, or remove it, as needed.
+            this.zonesTableAdapter1.Fill(this.mensentellerDataSet5.Zones);
             // TODO: This line of code loads data into the 'mensentellerDataSet3.Zones' table. You can move, or remove it, as needed.
             this.zonesTableAdapter.Fill(this.mensentellerDataSet3.Zones);
 
@@ -36,6 +45,25 @@ namespace Mensenteller_B3
         {
             ModifyZones modifyZones = new ModifyZones();
             modifyZones.Show();
+        }
+
+        private void DataGridViewZones_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void ButtonDone_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void ButtonDelete_Click(object sender, EventArgs e)
+        {
+            string id = DataGridViewZones.CurrentRow.Cells[0].Value.ToString();
+            int pid = int.Parse(id);
+            dal.DeleteZone(pid);
+            this.zonesTableAdapter1.Fill(this.mensentellerDataSet5.Zones);
+
         }
     }
 }
