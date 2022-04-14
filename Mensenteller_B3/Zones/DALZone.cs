@@ -16,7 +16,7 @@ namespace MensenTeller_B3.Zones
         public List<Sensor> sensors { get; set; }
         public List<Zone> ZoneList { get; set; } = new List<Zone>();
 
-        public void CreateZone(Bedrijf bedrijf, Zone zone)
+        public void CreateZone(Zone zone)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -27,9 +27,7 @@ namespace MensenTeller_B3.Zones
                     command.Connection = connection;
                     command.CommandText = "INSERT INTO zones (name, BedrijvenId) VALUES (@name, @bedrijvenId)";
                     command.Parameters.AddWithValue("@name", zone.Name);
-                    //TODO: omzetten naar sensor DAL
-
-                    command.Parameters.AddWithValue("@bedrijvenId", bedrijf.Id);
+                    command.Parameters.AddWithValue("@bedrijvenId", zone.BedrijvenId);
                     command.ExecuteNonQuery();
 
                     command.CommandText = "SELECT CAST(@@Identity AS INT);";
@@ -80,7 +78,7 @@ namespace MensenTeller_B3.Zones
                 }
             }
         }
-
+        //ReadZone Maken SELECT Id,Name FROM Zones WHERE bedrijf id =@id ofzoiets.
 
         public void DeleteZone(int id)
         {

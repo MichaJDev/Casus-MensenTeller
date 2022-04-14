@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.CreateZonebutton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.zonesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.mensentellerDataSet7 = new Mensenteller_B3.MensentellerDataSet7();
             this.zonesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet_Zones = new Mensenteller_B3.DataSet_Zones();
             this.zonesTableAdapter = new Mensenteller_B3.DataSet_ZonesTableAdapters.ZonesTableAdapter();
@@ -46,21 +48,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.LabelEditName = new System.Windows.Forms.Label();
             this.ButtondDone = new System.Windows.Forms.Button();
-            this.mensentellerDataSet7 = new Mensenteller_B3.MensentellerDataSet7();
-            this.zonesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.zonesTableAdapter1 = new Mensenteller_B3.MensentellerDataSet7TableAdapters.ZonesTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bedrijvenIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mensentellerDataSet8 = new Mensenteller_B3.MensentellerDataSet8();
+            this.zonesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.zonesTableAdapter2 = new Mensenteller_B3.MensentellerDataSet8TableAdapters.ZonesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Zones)).BeginInit();
             this.TableLayoutPanelCreateZone.SuspendLayout();
             this.TableLayoutPanelControl.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // CreateZonebutton
@@ -84,18 +86,23 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.bedrijvenIdDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.zonesBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(855, 182);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // zonesBindingSource1
+            // 
+            this.zonesBindingSource1.DataMember = "Zones";
+            this.zonesBindingSource1.DataSource = this.mensentellerDataSet7;
+            // 
+            // mensentellerDataSet7
+            // 
+            this.mensentellerDataSet7.DataSetName = "MensentellerDataSet7";
+            this.mensentellerDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // zonesBindingSource
             // 
@@ -285,41 +292,25 @@
             this.ButtondDone.TabIndex = 7;
             this.ButtondDone.Text = "Done";
             this.ButtondDone.UseVisualStyleBackColor = true;
-            // 
-            // mensentellerDataSet7
-            // 
-            this.mensentellerDataSet7.DataSetName = "MensentellerDataSet7";
-            this.mensentellerDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // zonesBindingSource1
-            // 
-            this.zonesBindingSource1.DataMember = "Zones";
-            this.zonesBindingSource1.DataSource = this.mensentellerDataSet7;
+            this.ButtondDone.Click += new System.EventHandler(this.ButtondDone_Click);
             // 
             // zonesTableAdapter1
             // 
             this.zonesTableAdapter1.ClearBeforeFill = true;
             // 
-            // idDataGridViewTextBoxColumn
+            // mensentellerDataSet8
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mensentellerDataSet8.DataSetName = "MensentellerDataSet8";
+            this.mensentellerDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // nameDataGridViewTextBoxColumn
+            // zonesBindingSource2
             // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.zonesBindingSource2.DataMember = "Zones";
+            this.zonesBindingSource2.DataSource = this.mensentellerDataSet8;
             // 
-            // bedrijvenIdDataGridViewTextBoxColumn
+            // zonesTableAdapter2
             // 
-            this.bedrijvenIdDataGridViewTextBoxColumn.DataPropertyName = "BedrijvenId";
-            this.bedrijvenIdDataGridViewTextBoxColumn.HeaderText = "BedrijvenId";
-            this.bedrijvenIdDataGridViewTextBoxColumn.Name = "bedrijvenIdDataGridViewTextBoxColumn";
-            this.bedrijvenIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.zonesTableAdapter2.ClearBeforeFill = true;
             // 
             // CreateZones
             // 
@@ -331,6 +322,8 @@
             this.Text = "CreateZones";
             this.Load += new System.EventHandler(this.CreateZones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Zones)).EndInit();
             this.TableLayoutPanelCreateZone.ResumeLayout(false);
@@ -341,8 +334,8 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -369,8 +362,8 @@
         private MensentellerDataSet7 mensentellerDataSet7;
         private System.Windows.Forms.BindingSource zonesBindingSource1;
         private MensentellerDataSet7TableAdapters.ZonesTableAdapter zonesTableAdapter1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bedrijvenIdDataGridViewTextBoxColumn;
+        private MensentellerDataSet8 mensentellerDataSet8;
+        private System.Windows.Forms.BindingSource zonesBindingSource2;
+        private MensentellerDataSet8TableAdapters.ZonesTableAdapter zonesTableAdapter2;
     }
 }

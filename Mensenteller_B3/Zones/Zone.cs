@@ -23,6 +23,11 @@ namespace MensenTeller_B3.Zones
         {
             ID = id;
         }
+        public Zone(string name, int bedrijvenId)
+        {
+            Name = name;
+            BedrijvenId = bedrijvenId;
+        }
         public Zone(int id, string name)
         {
             ID = id;

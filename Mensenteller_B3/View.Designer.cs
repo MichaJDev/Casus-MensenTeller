@@ -40,9 +40,8 @@
             this.pressureSensorsTableAdapter = new Mensenteller_B3.SensorDataDataSet1TableAdapters.PressureSensorsTableAdapter();
             this.Averagetextbox = new System.Windows.Forms.TextBox();
             this.BedrijfViewbutton = new System.Windows.Forms.Button();
-            this.dataSet_bedrijvenview = new Mensenteller_B3.DataSet_bedrijvenview();
             this.bedrijvenBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bedrijvenTableAdapter = new Mensenteller_B3.DataSet_bedrijvenviewTableAdapters.BedrijvenTableAdapter();
+            //this.bedrijvenTableAdapter = new Mensenteller_B3.DataSet_bedrijvenviewTableAdapters.BedrijvenTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvBedrijfview)).BeginInit();
@@ -50,7 +49,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sensorDataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pressureSensorsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sensorDataDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_bedrijvenview)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.dataSet_bedrijvenview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,21 +131,21 @@
             this.BedrijfViewbutton.TabIndex = 5;
             this.BedrijfViewbutton.Text = "View";
             this.BedrijfViewbutton.UseVisualStyleBackColor = true;
-            this.BedrijfViewbutton.Click += new System.EventHandler(this.BedrijfViewbutton_Click);
+            //this.BedrijfViewbutton.Click += new System.EventHandler(this.BedrijfViewbutton_Click);
             // 
             // dataSet_bedrijvenview
             // 
-            this.dataSet_bedrijvenview.DataSetName = "DataSet_bedrijvenview";
-            this.dataSet_bedrijvenview.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.dataSet_bedrijvenview.DataSetName = "DataSet_bedrijvenview";
+            //this.dataSet_bedrijvenview.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bedrijvenBindingSource
             // 
             this.bedrijvenBindingSource.DataMember = "Bedrijven";
-            this.bedrijvenBindingSource.DataSource = this.dataSet_bedrijvenview;
+            //this.bedrijvenBindingSource.DataSource = this.dataSet_bedrijvenview;
             // 
             // bedrijvenTableAdapter
             // 
-            this.bedrijvenTableAdapter.ClearBeforeFill = true;
+            //this.bedrijvenTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -180,7 +179,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sensorDataDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pressureSensorsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sensorDataDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_bedrijvenview)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.dataSet_bedrijvenview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -200,9 +199,9 @@
         private SensorDataDataSet1TableAdapters.PressureSensorsTableAdapter pressureSensorsTableAdapter;
         private System.Windows.Forms.TextBox Averagetextbox;
         private System.Windows.Forms.Button BedrijfViewbutton;
-        private DataSet_bedrijvenview dataSet_bedrijvenview;
+        //private DataSet_bedrijvenview dataSet_bedrijvenview;
         private System.Windows.Forms.BindingSource bedrijvenBindingSource;
-        private DataSet_bedrijvenviewTableAdapters.BedrijvenTableAdapter bedrijvenTableAdapter;
+        //private DataSet_bedrijvenviewTableAdapters.BedrijvenTableAdapter bedrijvenTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
     }

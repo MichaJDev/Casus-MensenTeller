@@ -21,6 +21,8 @@ namespace Mensenteller_B3
             this.BedrijfId = id;
             this.BedrijfNaam = name;
             InitializeComponent();
+            dal.ReadZone();
+            dataGridView1.DataSource = dal.ZoneList.Where(x => x.BedrijvenId == id).ToList();
         }
 
         public CreateZones()
@@ -31,11 +33,11 @@ namespace Mensenteller_B3
 
         private void CreateZones_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'mensentellerDataSet7.Zones' table. You can move, or remove it, as needed.
-            this.zonesTableAdapter1.Fill(this.mensentellerDataSet7.Zones);
-
-            this.zonesTableAdapter.Fill(this.dataSet_Zones.Zones);
+            // TODO: This line of code loads data into the 'mensentellerDataSet8.Zones' table. You can move, or remove it, as needed.
             
+            dal.ReadZone();
+            dataGridView1.DataSource = dal.ZoneList.Where(x => x.BedrijvenId == BedrijfId).ToList();
+
         }
 
         private void CreateZonebutton_Click(object sender, EventArgs e)
@@ -43,13 +45,12 @@ namespace Mensenteller_B3
             if (CreateZonetextbox.Text != "")
             {
                 string Name = CreateZonetextbox.Text;
-                Zone zone = new Zone(0, Name);
-                //dal.CreateZone(zone);
+                Zone zone = new Zone(Name, BedrijfId);
+                dal.CreateZone(zone);
 
                 CreateZonetextbox.Text = "";
                 MessageBox.Show("Saved");
-                // TODO: This line of code loads data into the 'dataSet_Zones.Zones' table. You can move, or remove it, as needed.
-                this.zonesTableAdapter.Fill(this.dataSet_Zones.Zones);
+                //this.zonesTableAdapter2.Fill(this.mensentellerDataSet8.Zones);
             }
         }
 
@@ -58,11 +59,16 @@ namespace Mensenteller_B3
             string Name = ZoneNameEdit.Text;
             int id = int.Parse(IdZonetextbox.Text);
             dal.EditZone(id, Name);
-            this.zonesTableAdapter.Fill(this.dataSet_Zones.Zones);
+            //this.zonesTableAdapter2.Fill(this.mensentellerDataSet8.Zones);
             MessageBox.Show("Updated");
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void ButtondDone_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
