@@ -121,6 +121,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MensentellerDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MensentellerDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MensentellerDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MensentellerDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MensentellerDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MensentellerDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MensentellerDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MensentellerDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MensentellerDataSet7.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ModifyBedrijf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +190,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModifyBedrijf.resx">
       <DependentUpon>ModifyBedrijf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyLocation.resx">
+      <DependentUpon>ModifyLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifySensor.resx">
+      <DependentUpon>ModifySensor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyZones.resx">
+      <DependentUpon>ModifyZones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -270,6 +299,50 @@
     </None>
     <None Include="MensentellerDataSet3.xss">
       <DependentUpon>MensentellerDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MensentellerDataSet4.xsc">
+      <DependentUpon>MensentellerDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="MensentellerDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MensentellerDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MensentellerDataSet4.xss">
+      <DependentUpon>MensentellerDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="MensentellerDataSet5.xsc">
+      <DependentUpon>MensentellerDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="MensentellerDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MensentellerDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MensentellerDataSet5.xss">
+      <DependentUpon>MensentellerDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="MensentellerDataSet6.xsc">
+      <DependentUpon>MensentellerDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="MensentellerDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MensentellerDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MensentellerDataSet6.xss">
+      <DependentUpon>MensentellerDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="MensentellerDataSet7.xsc">
+      <DependentUpon>MensentellerDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="MensentellerDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MensentellerDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MensentellerDataSet7.xss">
+      <DependentUpon>MensentellerDataSet7.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

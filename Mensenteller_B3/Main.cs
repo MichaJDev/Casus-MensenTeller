@@ -18,9 +18,9 @@ namespace Mensenteller_B3
         }
 
         private void ButtonCreateModify_Click(object sender, EventArgs e)
-        {           
+        {                  
             CreateModify createModify = new CreateModify();
-            createModify.Show();            
+            createModify.Show();
         }
 
         private void ButtonView_Click(object sender, EventArgs e)
@@ -34,27 +34,9 @@ namespace Mensenteller_B3
 
         }
 
-        private void CreateZoneSc_Click(object sender, EventArgs e)
-        {
-            CreateZones createzone = new CreateZones();
-            createzone.Show();
-        }
-
         private void TableLayoutPanelDecoCounter_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void CreateLocatieSc_Click(object sender, EventArgs e)
-        {
-            CreateLocatie createlocatie = new CreateLocatie();
-            createlocatie.Show();
-
-        }
-
-        private void ViewLocatie_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

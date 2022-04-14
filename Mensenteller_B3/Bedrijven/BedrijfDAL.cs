@@ -97,6 +97,30 @@ namespace Mensenteller_B3.Bedrijven
             }
         }
 
+        //----------------------------------READ-AT-ID---------------------------------------------
+        public void ReadBedrijfAtId(int id)
+        {
+            bedrijven.Clear();
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand())
+                {
+                    cnn.ConnectionString = connectionString;
+                    cnn.Open();
+                    command.Connection = cnn;
+                    command.CommandText = "SELECT Name FROM Bedrijven WHERE id = @id ORDER BY id";
+                    command.Parameters.AddWithValue("@id", id);
+                    SqlDataReader dataReader = command.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        bedrijven.Add(new Bedrijf(int.Parse(dataReader[0].ToString())
+                         , dataReader[1].ToString()));
+
+                    }
+                }
+            }
+        }
+
         //-----------------------------------------DELETE----------------------------------------
         public void DeleteBedrijf(int id)
         {

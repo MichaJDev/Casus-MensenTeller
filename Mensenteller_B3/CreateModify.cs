@@ -14,8 +14,7 @@ namespace Mensenteller_B3
     public partial class CreateModify : Form
     {
         BedrijfDAL dal = new BedrijfDAL();
-        private int rowID = 0;
-        int rowIndexInt = 0;
+        
         public CreateModify()
         {
             InitializeComponent();
@@ -35,21 +34,20 @@ namespace Mensenteller_B3
         }
 
         private void ButtonModify_Click(object sender, EventArgs e)
-        {  
-            int pid = DGVCreateModify.CurrentCell.RowIndex;
-            int id = pid + 1;
+        {
+            string id = DGVCreateModify.CurrentRow.Cells[0].Value.ToString();
+            string name = DGVCreateModify.CurrentRow.Cells[1].Value.ToString();
+            int pid = int.Parse(id);
             Close();
-            MessageBox.Show("Bedrijf ID = " + id.ToString());
-            ModifyBedrijf modifyBedrijf = new ModifyBedrijf(id);
+            MessageBox.Show("Bedrijf ID = " + pid.ToString());
+            ModifyBedrijf modifyBedrijf = new ModifyBedrijf(pid, name);
             modifyBedrijf.Show();
         }
 
         private void CreateModify_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'mensentellerDataSet4.Bedrijven' table. You can move, or remove it, as needed.
-            this.bedrijvenTableAdapter1.Fill(this.mensentellerDataSet4.Bedrijven);
-            // TODO: This line of code loads data into the 'mensentellerDataSet1.Bedrijven' table. You can move, or remove it, as needed.
-            this.bedrijvenTableAdapter.Fill(this.mensentellerDataSet1.Bedrijven);
+            // TODO: This line of code loads data into the 'mensentellerDataSet6.Bedrijven' table. You can move, or remove it, as needed.
+            this.bedrijvenTableAdapter2.Fill(this.mensentellerDataSet6.Bedrijven);
 
         }
 
@@ -68,7 +66,7 @@ namespace Mensenteller_B3
             string id = DGVCreateModify.CurrentRow.Cells[0].Value.ToString();
             int pid = int.Parse(id);
             dal.DeleteBedrijf(pid);
-            this.bedrijvenTableAdapter.Fill(this.mensentellerDataSet1.Bedrijven);
+            this.bedrijvenTableAdapter2.Fill(this.mensentellerDataSet6.Bedrijven);
         }
     }
 }

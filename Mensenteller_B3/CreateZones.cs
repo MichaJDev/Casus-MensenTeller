@@ -14,15 +14,25 @@ namespace Mensenteller_B3
     public partial class CreateZones : Form
     {
         DALZone dal = new DALZone();
+        int BedrijfId { get; set; }
+        string BedrijfNaam { get; set; }
+        public CreateZones(int id, string name)
+        {
+            this.BedrijfId = id;
+            this.BedrijfNaam = name;
+            InitializeComponent();
+        }
+
         public CreateZones()
         {
             InitializeComponent();
-            //dal.ReadZone();
         }
         
 
         private void CreateZones_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'mensentellerDataSet7.Zones' table. You can move, or remove it, as needed.
+            this.zonesTableAdapter1.Fill(this.mensentellerDataSet7.Zones);
 
             this.zonesTableAdapter.Fill(this.dataSet_Zones.Zones);
             
