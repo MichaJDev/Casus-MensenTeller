@@ -14,6 +14,8 @@ namespace Mensenteller_B3.Locaties
         public string Xco { get; set; }
         public string Yco { get; set; }
 
+        public int ZoneId { get; set; }
+
         public Locatie()
         {
 
@@ -47,6 +49,16 @@ namespace Mensenteller_B3.Locaties
             Description = description;
             Xco = xco;
             Yco = yco;
+        }
+
+        public Locatie(int id, string name, string description, string xco, string yco, int zoneid)
+        {
+            ID = id;
+            Name = name;
+            Description = description;
+            Xco = xco;
+            Yco = yco;
+            ZoneId = zoneid;
         }
     }
 }
