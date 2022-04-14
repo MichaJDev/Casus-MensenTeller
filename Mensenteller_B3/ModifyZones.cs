@@ -27,5 +27,10 @@ namespace Mensenteller_B3
             CreateLocatie createLocatie = new CreateLocatie();
             createLocatie.Show();
         }
+
+        private void ButtonDone_Click(object sender, EventArgs e)
+        {
+            Close();            
+        }
     }
 }
