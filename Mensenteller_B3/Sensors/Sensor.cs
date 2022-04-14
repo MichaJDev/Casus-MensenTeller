@@ -11,6 +11,7 @@ namespace MensenTeller_B3.Sensors
 
         public int ID { get; set; }
         public string Name { get; set; }
+        public int LocatieID { get; set; }
 
 
         public Sensor()
@@ -26,6 +27,12 @@ namespace MensenTeller_B3.Sensors
         {
             ID = id;
             Name = name;
+        }
+        public Sensor(int id, string name, int locatieId)
+        {
+            ID = id;
+            Name = name;
+            LocatieID = locatieId;
         }
     }
 }
