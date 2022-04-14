@@ -8,31 +8,38 @@ using System.Threading.Tasks;
 
 namespace Mensenteller_B3.Locaties
 {
-    
+
     public class LocatieDAL
     {
-        private string conString = "";
+        private string conString = "Data Source=.;Initial Catalog=Mensenteller;Integrated Security=True";
 
-        public void Create(Locatie l)
+        public List<Locatie> locatie { get; set; }
+
+        public void CreateLocatie(Locatie l)
         {
             using (SqlConnection con = new SqlConnection(conString))
             {
-                string query = "INSERT INTO Locaties (Name,Description,Xco,Yco) VALUES (@name, @description,@xco,@yco)";
+                string query = "INSERT INTO Locaties (Name) VALUES (@name)";
                 SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@adres", l.Name);
-                cmd.Parameters.AddWithValue("@nummer", l.Description);
-                cmd.Parameters.AddWithValue("@toevoeging", l.Xco);
-                cmd.Parameters.AddWithValue("@plaats", l.Yco);
+                cmd.Parameters.AddWithValue("@Name", l.Name);
+                /*
+                  cmd.Parameters.AddWithValue("@Description", l.Description);
+                  cmd.Parameters.AddWithValue("@Xco", l.Xco);
+                  cmd.Parameters.AddWithValue("@Yco", l.Yco);
+                  */
                 con.Open();
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "SELECT CAST(@@Identity AS INT;";
+                int id = 0;
                 try
                 {
-                    cmd.ExecuteNonQuery();
+                    id = (int)cmd.ExecuteScalar();
                 }
                 catch (SqlException ex)
                 {
-                    Console.WriteLine(ex.Message + "\n" + ex.StackTrace);
-                    Debug.Write(ex.Message + "\n" + ex.StackTrace);
+                    Console.WriteLine(ex.ToString());
                 }
+
             }
         }
         public Locatie Get(int id)
@@ -52,6 +59,7 @@ namespace Mensenteller_B3.Locaties
             }
             return l;
         }
+        /*
         public void Update(Locatie l)
         {
             using (SqlConnection con = new SqlConnection(conString))
@@ -59,10 +67,12 @@ namespace Mensenteller_B3.Locaties
                 string query = "UPDATE Locaties SET Name = @name, Description = @description, Xco = @xco, Yco = @yco WHERE Id = @id";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@name", l.Name);
+                
                 cmd.Parameters.AddWithValue("@description", l.Description);
                 cmd.Parameters.AddWithValue("@xco", l.Xco);
                 cmd.Parameters.AddWithValue("@yco", l.Yco);
                 cmd.Parameters.AddWithValue("@id", l.ID);
+                
                 con.Open();
                 try
                 {
@@ -74,9 +84,27 @@ namespace Mensenteller_B3.Locaties
                     Debug.Write(ex.Message + "\n" + ex.StackTrace);
                 }
             }
+*/
 
+        public void EditLocatie(int id, string name)
+        {
+            using (SqlConnection cnn = new SqlConnection(conString))
+            {
+                using (SqlCommand command = new SqlCommand())
+                {
+                    cnn.ConnectionString = conString;
+                    cnn.Open();
+                    command.Connection = cnn;
+                    command.CommandText = "UPDATE Locaties SET name = @name WHERE Id = @id";
+                    command.Parameters.AddWithValue("@Id", id);
+                    command.Parameters.AddWithValue("name", name);
+                    command.ExecuteNonQuery();
+                }
+            }
 
         }
+
+
         public void Delete(Locatie l)
         {
             using (SqlConnection con = new SqlConnection(conString))

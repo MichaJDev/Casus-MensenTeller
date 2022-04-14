@@ -33,5 +33,23 @@ namespace Mensenteller_B3
         {
 
         }
+
+        private void CreateZoneSc_Click(object sender, EventArgs e)
+        {
+            CreateZones createzone = new CreateZones();
+            createzone.Show();
+        }
+
+        private void TableLayoutPanelDecoCounter_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void CreateLocatieSc_Click(object sender, EventArgs e)
+        {
+            CreateLocatie createlocatie = new CreateLocatie();
+            createlocatie.Show();
+
+        }
     }
 }
