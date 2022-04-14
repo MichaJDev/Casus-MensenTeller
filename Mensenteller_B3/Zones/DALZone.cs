@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Mensenteller_B3.Bedrijven;
 using MensenTeller_B3.Sensors;
 
 namespace MensenTeller_B3.Zones
@@ -15,7 +16,7 @@ namespace MensenTeller_B3.Zones
         public List<Sensor> sensors { get; set; }
         public List<Zone> ZoneList { get; set; }
 
-        public void CreateZone(Zone zone)
+        public void CreateZone(Bedrijf bedrijf, Zone zone)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -24,13 +25,14 @@ namespace MensenTeller_B3.Zones
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "INSERT INTO Zones (name) VALUES (@name)";
+                    command.CommandText = "INSERT INTO zone (name, BedrijvenId) VALUES (@name, @bedrijvenId)";
                     command.Parameters.AddWithValue("@name", zone.Name);
                     //TODO: omzetten naar sensor DAL
-                    //command.Parameters.AddWithValue("@zone", zone.Sensors);
+
+                    command.Parameters.AddWithValue("@bedrijvenId", bedrijf.Id);
                     command.ExecuteNonQuery();
 
-                    command.CommandText = "SELECT CAST(@@Identity AS INT;";
+                    command.CommandText = "SELECT CAST(@@Identity AS INT);";
                     int id = 0;
                     try
                     {
@@ -40,13 +42,13 @@ namespace MensenTeller_B3.Zones
                     {
                         Console.WriteLine(ex.ToString());
                     }
-                    //ReadZone();
+                    ReadZone();
                 }
             }
        }
-    
 
-        /* 
+
+
         public void ReadZone()
         {
             ZoneList.Clear();
@@ -58,7 +60,7 @@ namespace MensenTeller_B3.Zones
                     cnn.ConnectionString = connectionString;
                     cnn.Open();
                     command.Connection = cnn;
-                    command.CommandText = "SELECT Id, name FORM Zones ORDER BY Id";
+                    command.CommandText = "SELECT Id, Name, BedrijvenId FROM Zone ORDER BY Id";
                     SqlDataReader datareader = command.ExecuteReader();
 
                     while (datareader.Read())
@@ -70,8 +72,8 @@ namespace MensenTeller_B3.Zones
                 }
             }
         }
-        */
-     
+
+
         public void DeleteZone(int id)
         {
             ZoneList.Clear();
@@ -105,7 +107,7 @@ namespace MensenTeller_B3.Zones
                     command.ExecuteNonQuery();
                 }
             }
-            
+
         }
 
     }

@@ -144,6 +144,7 @@
     <Compile Include="Sensors\EntreeSensors\EntreeSensor.cs" />
     <Compile Include="Sensors\EntreeSensors\EntreeSensorDAL.cs" />
     <Compile Include="Sensors\Sensor.cs" />
+    <Compile Include="Sensors\SensorDAL.cs" />
     <Compile Include="Simulation_DAL\DAL.cs" />
     <Compile Include="View.cs">
       <SubType>Form</SubType>
