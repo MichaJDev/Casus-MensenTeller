@@ -1,4 +1,5 @@
-﻿using MensenTeller_B3.Zones;
+﻿using Mensenteller_B3.Bedrijven;
+using MensenTeller_B3.Zones;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,8 +14,18 @@ namespace Mensenteller_B3
 {
     public partial class ModifyBedrijf : Form
     {
-        DALZone dal = new DALZone();
+        DALZone zoneDAL = new DALZone();
         public int Id { get; set; }
+        public string DisplayName { get; set; }
+
+        public ModifyBedrijf(int id, string name)
+        {
+            Id = id;
+            DisplayName = name;
+            InitializeComponent();
+            TextBoxAdress.Text = "Bedrijf: " + DisplayName + " ID = " + Id;
+        }
+
         public ModifyBedrijf(int id)
         {
             Id = id;
@@ -23,7 +34,7 @@ namespace Mensenteller_B3
 
         public ModifyBedrijf()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private void ModifyBedrijf_Load(object sender, EventArgs e)
@@ -37,7 +48,7 @@ namespace Mensenteller_B3
 
         private void ButtonCreate_Click(object sender, EventArgs e)
         {
-            CreateZones createZones = new CreateZones();
+            CreateZones createZones = new CreateZones(Id, DisplayName);
             createZones.Show();
         }
 
@@ -55,15 +66,22 @@ namespace Mensenteller_B3
         private void ButtonDone_Click(object sender, EventArgs e)
         {
             Close();
+            CreateModify createModify = new CreateModify();
+            createModify.Show();
         }
 
         private void ButtonDelete_Click(object sender, EventArgs e)
         {
             string id = DataGridViewZones.CurrentRow.Cells[0].Value.ToString();
             int pid = int.Parse(id);
-            dal.DeleteZone(pid);
+            zoneDAL.DeleteZone(pid);
             this.zonesTableAdapter1.Fill(this.mensentellerDataSet5.Zones);
 
+        }
+
+        private void TextBoxAdress_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -45,9 +45,5 @@ namespace Mensenteller_B3.Bedrijven
             Zones = zones;
 
         }
-
-
-
-
     }
 }

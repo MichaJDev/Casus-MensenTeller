@@ -14,8 +14,7 @@ namespace Mensenteller_B3
     public partial class CreateModify : Form
     {
         BedrijfDAL dal = new BedrijfDAL();
-        private int rowID = 0;
-        int rowIndexInt = 0;
+        
         public CreateModify()
         {
             InitializeComponent();
@@ -37,10 +36,11 @@ namespace Mensenteller_B3
         private void ButtonModify_Click(object sender, EventArgs e)
         {
             string id = DGVCreateModify.CurrentRow.Cells[0].Value.ToString();
+            string name = DGVCreateModify.CurrentRow.Cells[1].Value.ToString();
             int pid = int.Parse(id);
             Close();
             MessageBox.Show("Bedrijf ID = " + pid.ToString());
-            ModifyBedrijf modifyBedrijf = new ModifyBedrijf(pid);
+            ModifyBedrijf modifyBedrijf = new ModifyBedrijf(pid, name);
             modifyBedrijf.Show();
         }
 
@@ -48,9 +48,6 @@ namespace Mensenteller_B3
         {
             // TODO: This line of code loads data into the 'mensentellerDataSet6.Bedrijven' table. You can move, or remove it, as needed.
             this.bedrijvenTableAdapter2.Fill(this.mensentellerDataSet6.Bedrijven);
-
-            // TODO: This line of code loads data into the 'mensentellerDataSet1.Bedrijven' table. You can move, or remove it, as needed.
-            this.bedrijvenTableAdapter.Fill(this.mensentellerDataSet1.Bedrijven);
 
         }
 
@@ -62,8 +59,6 @@ namespace Mensenteller_B3
         private void ButtonDone_Click(object sender, EventArgs e)
         {
             Close();
-            ModifyBedrijf modifyBedrijf = new ModifyBedrijf();
-            modifyBedrijf.Show();
         }
 
         private void ButtonDelete_Click(object sender, EventArgs e)

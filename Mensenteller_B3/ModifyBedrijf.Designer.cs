@@ -34,25 +34,25 @@
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bedrijvenIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zonesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mensentellerDataSet3 = new Mensenteller_B3.MensentellerDataSet3();
+            this.zonesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.mensentellerDataSet5 = new Mensenteller_B3.MensentellerDataSet5();
             this.TableLayoutPanelControl = new System.Windows.Forms.TableLayoutPanel();
             this.ButtonModify = new System.Windows.Forms.Button();
             this.ButtonCreate = new System.Windows.Forms.Button();
             this.ButtonDone = new System.Windows.Forms.Button();
             this.ButtonDelete = new System.Windows.Forms.Button();
-            this.zonesTableAdapter = new Mensenteller_B3.MensentellerDataSet3TableAdapters.ZonesTableAdapter();
             this.TextBoxAdress = new System.Windows.Forms.TextBox();
-            this.mensentellerDataSet5 = new Mensenteller_B3.MensentellerDataSet5();
-            this.zonesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.zonesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mensentellerDataSet3 = new Mensenteller_B3.MensentellerDataSet3();
+            this.zonesTableAdapter = new Mensenteller_B3.MensentellerDataSet3TableAdapters.ZonesTableAdapter();
             this.zonesTableAdapter1 = new Mensenteller_B3.MensentellerDataSet5TableAdapters.ZonesTableAdapter();
             this.TableLayoutPanelModifyBedrijf.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewZones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet5)).BeginInit();
+            this.TableLayoutPanelControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet3)).BeginInit();
-            this.TableLayoutPanelControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // TableLayoutPanelModifyBedrijf
@@ -73,7 +73,7 @@
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.66667F));
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56F));
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.TableLayoutPanelModifyBedrijf.Size = new System.Drawing.Size(776, 421);
+            this.TableLayoutPanelModifyBedrijf.Size = new System.Drawing.Size(776, 419);
             this.TableLayoutPanelModifyBedrijf.TabIndex = 0;
             // 
             // DataGridViewZones
@@ -90,7 +90,7 @@
             this.DataGridViewZones.DataSource = this.zonesBindingSource1;
             this.DataGridViewZones.Location = new System.Drawing.Point(3, 47);
             this.DataGridViewZones.Name = "DataGridViewZones";
-            this.DataGridViewZones.Size = new System.Drawing.Size(770, 229);
+            this.DataGridViewZones.Size = new System.Drawing.Size(770, 228);
             this.DataGridViewZones.TabIndex = 0;
             this.DataGridViewZones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewZones_CellContentClick);
             // 
@@ -112,15 +112,15 @@
             this.bedrijvenIdDataGridViewTextBoxColumn.HeaderText = "BedrijvenId";
             this.bedrijvenIdDataGridViewTextBoxColumn.Name = "bedrijvenIdDataGridViewTextBoxColumn";
             // 
-            // zonesBindingSource
+            // zonesBindingSource1
             // 
-            this.zonesBindingSource.DataMember = "Zones";
-            this.zonesBindingSource.DataSource = this.mensentellerDataSet3;
+            this.zonesBindingSource1.DataMember = "Zones";
+            this.zonesBindingSource1.DataSource = this.mensentellerDataSet5;
             // 
-            // mensentellerDataSet3
+            // mensentellerDataSet5
             // 
-            this.mensentellerDataSet3.DataSetName = "MensentellerDataSet3";
-            this.mensentellerDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.mensentellerDataSet5.DataSetName = "MensentellerDataSet5";
+            this.mensentellerDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // TableLayoutPanelControl
             // 
@@ -136,12 +136,12 @@
             this.TableLayoutPanelControl.Controls.Add(this.ButtonCreate, 0, 0);
             this.TableLayoutPanelControl.Controls.Add(this.ButtonDone, 1, 1);
             this.TableLayoutPanelControl.Controls.Add(this.ButtonDelete, 0, 1);
-            this.TableLayoutPanelControl.Location = new System.Drawing.Point(3, 282);
+            this.TableLayoutPanelControl.Location = new System.Drawing.Point(3, 281);
             this.TableLayoutPanelControl.Name = "TableLayoutPanelControl";
             this.TableLayoutPanelControl.RowCount = 2;
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TableLayoutPanelControl.Size = new System.Drawing.Size(770, 136);
+            this.TableLayoutPanelControl.Size = new System.Drawing.Size(770, 135);
             this.TableLayoutPanelControl.TabIndex = 2;
             // 
             // ButtonModify
@@ -183,7 +183,7 @@
             this.ButtonDone.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonDone.Location = new System.Drawing.Point(388, 111);
             this.ButtonDone.Name = "ButtonDone";
-            this.ButtonDone.Size = new System.Drawing.Size(379, 22);
+            this.ButtonDone.Size = new System.Drawing.Size(379, 21);
             this.ButtonDone.TabIndex = 3;
             this.ButtonDone.Text = "Done";
             this.ButtonDone.UseVisualStyleBackColor = true;
@@ -198,15 +198,11 @@
             this.ButtonDelete.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonDelete.Location = new System.Drawing.Point(3, 111);
             this.ButtonDelete.Name = "ButtonDelete";
-            this.ButtonDelete.Size = new System.Drawing.Size(379, 22);
+            this.ButtonDelete.Size = new System.Drawing.Size(379, 21);
             this.ButtonDelete.TabIndex = 4;
             this.ButtonDelete.Text = "Delete";
             this.ButtonDelete.UseVisualStyleBackColor = true;
             this.ButtonDelete.Click += new System.EventHandler(this.ButtonDelete_Click);
-            // 
-            // zonesTableAdapter
-            // 
-            this.zonesTableAdapter.ClearBeforeFill = true;
             // 
             // TextBoxAdress
             // 
@@ -216,16 +212,21 @@
             this.TextBoxAdress.ReadOnly = true;
             this.TextBoxAdress.Size = new System.Drawing.Size(770, 20);
             this.TextBoxAdress.TabIndex = 3;
+            this.TextBoxAdress.TextChanged += new System.EventHandler(this.TextBoxAdress_TextChanged);
             // 
-            // mensentellerDataSet5
+            // zonesBindingSource
             // 
-            this.mensentellerDataSet5.DataSetName = "MensentellerDataSet5";
-            this.mensentellerDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.zonesBindingSource.DataMember = "Zones";
+            this.zonesBindingSource.DataSource = this.mensentellerDataSet3;
             // 
-            // zonesBindingSource1
+            // mensentellerDataSet3
             // 
-            this.zonesBindingSource1.DataMember = "Zones";
-            this.zonesBindingSource1.DataSource = this.mensentellerDataSet5;
+            this.mensentellerDataSet3.DataSetName = "MensentellerDataSet3";
+            this.mensentellerDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // zonesTableAdapter
+            // 
+            this.zonesTableAdapter.ClearBeforeFill = true;
             // 
             // zonesTableAdapter1
             // 
@@ -243,12 +244,12 @@
             this.TableLayoutPanelModifyBedrijf.ResumeLayout(false);
             this.TableLayoutPanelModifyBedrijf.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewZones)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet5)).EndInit();
             this.TableLayoutPanelControl.ResumeLayout(false);
             this.TableLayoutPanelControl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
