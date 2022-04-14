@@ -76,9 +76,9 @@ namespace Mensenteller_B3
         private void View_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'sensorDataDataSet1.PressureSensors' table. You can move, or remove it, as needed.
-            this.pressureSensorsTableAdapter.Fill(this.sensorDataDataSet1.PressureSensors);
+            //this.pressureSensorsTableAdapter.Fill(this.sensorDataDataSet1.PressureSensors);
             // TODO: This line of code loads data into the 'sensorDataDataSet.SensorReading' table. You can move, or remove it, as needed.
-            this.sensorReadingTableAdapter.Fill(this.sensorDataDataSet.SensorReading);
+            //this.sensorReadingTableAdapter.Fill(this.sensorDataDataSet.SensorReading);
 
         }
 

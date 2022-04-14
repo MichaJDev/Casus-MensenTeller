@@ -14,6 +14,8 @@ namespace Mensenteller_B3.Sensors.DrukSensors
         public bool InUse { get; set; }
         public string TimeStamp { get; set; }
 
+        
+
         public DrukSensor()
         {
 

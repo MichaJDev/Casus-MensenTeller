@@ -13,6 +13,8 @@ namespace MensenTeller_B3.Zones
         public int ID { get; set; }
         public string Name { get; set; }
         public List<Sensor> Sensors { get; set; }
+
+        public int BedrijvenId { get; set; }
         public Zone()
         {
 
@@ -31,6 +33,13 @@ namespace MensenTeller_B3.Zones
             ID = id;
             Name = name;
             Sensors = sensors;
+        }
+        public Zone(int id, string name, List<Sensor> sensors, int bedrijvenId)
+        {
+            ID = id;
+            Name = name;
+            Sensors = sensors;
+            BedrijvenId = bedrijvenId;
         }
     }
 }

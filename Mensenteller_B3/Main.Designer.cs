@@ -30,15 +30,16 @@
         {
             this.TableLayoutPanelMain = new System.Windows.Forms.TableLayoutPanel();
             this.ButtonView = new System.Windows.Forms.Button();
-            this.LabelTitle = new System.Windows.Forms.Label();
             this.TableLayoutPanelDecoCounter = new System.Windows.Forms.TableLayoutPanel();
             this.LabelCounter6 = new System.Windows.Forms.Label();
             this.LabelCounter5 = new System.Windows.Forms.Label();
             this.LabelCounter4 = new System.Windows.Forms.Label();
             this.LabelCounter3 = new System.Windows.Forms.Label();
             this.LabelCounter2 = new System.Windows.Forms.Label();
-            this.LabelCounter1 = new System.Windows.Forms.Label();
+            this.CreateZoneSc = new System.Windows.Forms.Button();
             this.ButtonCreateModify = new System.Windows.Forms.Button();
+            this.LabelTitle = new System.Windows.Forms.Label();
+            this.CreateLocatieSc = new System.Windows.Forms.Button();
             this.TableLayoutPanelMain.SuspendLayout();
             this.TableLayoutPanelDecoCounter.SuspendLayout();
             this.SuspendLayout();
@@ -53,9 +54,9 @@
             this.TableLayoutPanelMain.ColumnCount = 1;
             this.TableLayoutPanelMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TableLayoutPanelMain.Controls.Add(this.ButtonView, 0, 3);
+            this.TableLayoutPanelMain.Controls.Add(this.ButtonCreateModify, 0, 2);
             this.TableLayoutPanelMain.Controls.Add(this.LabelTitle, 0, 1);
             this.TableLayoutPanelMain.Controls.Add(this.TableLayoutPanelDecoCounter, 0, 0);
-            this.TableLayoutPanelMain.Controls.Add(this.ButtonCreateModify, 0, 2);
             this.TableLayoutPanelMain.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.TableLayoutPanelMain.Location = new System.Drawing.Point(12, 12);
             this.TableLayoutPanelMain.Name = "TableLayoutPanelMain";
@@ -64,7 +65,7 @@
             this.TableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.TableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.TableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.TableLayoutPanelMain.Size = new System.Drawing.Size(776, 420);
+            this.TableLayoutPanelMain.Size = new System.Drawing.Size(861, 504);
             this.TableLayoutPanelMain.TabIndex = 0;
             // 
             // ButtonView
@@ -75,27 +76,13 @@
             this.ButtonView.AutoSize = true;
             this.ButtonView.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonView.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonView.Location = new System.Drawing.Point(3, 297);
+            this.ButtonView.Location = new System.Drawing.Point(3, 354);
             this.ButtonView.Name = "ButtonView";
-            this.ButtonView.Size = new System.Drawing.Size(770, 120);
+            this.ButtonView.Size = new System.Drawing.Size(855, 147);
             this.ButtonView.TabIndex = 4;
             this.ButtonView.Text = "View";
             this.ButtonView.UseVisualStyleBackColor = true;
             this.ButtonView.Click += new System.EventHandler(this.ButtonView_Click);
-            // 
-            // LabelTitle
-            // 
-            this.LabelTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LabelTitle.AutoSize = true;
-            this.LabelTitle.Font = new System.Drawing.Font("Calibri", 51.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelTitle.Location = new System.Drawing.Point(3, 84);
-            this.LabelTitle.Name = "LabelTitle";
-            this.LabelTitle.Size = new System.Drawing.Size(770, 84);
-            this.LabelTitle.TabIndex = 2;
-            this.LabelTitle.Text = "People Counter";
-            this.LabelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TableLayoutPanelDecoCounter
             // 
@@ -116,14 +103,14 @@
             this.TableLayoutPanelDecoCounter.Controls.Add(this.LabelCounter4, 3, 0);
             this.TableLayoutPanelDecoCounter.Controls.Add(this.LabelCounter3, 2, 0);
             this.TableLayoutPanelDecoCounter.Controls.Add(this.LabelCounter2, 1, 0);
-            this.TableLayoutPanelDecoCounter.Controls.Add(this.LabelCounter1, 0, 0);
             this.TableLayoutPanelDecoCounter.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.TableLayoutPanelDecoCounter.Location = new System.Drawing.Point(3, 3);
             this.TableLayoutPanelDecoCounter.Name = "TableLayoutPanelDecoCounter";
             this.TableLayoutPanelDecoCounter.RowCount = 1;
             this.TableLayoutPanelDecoCounter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TableLayoutPanelDecoCounter.Size = new System.Drawing.Size(770, 78);
+            this.TableLayoutPanelDecoCounter.Size = new System.Drawing.Size(855, 94);
             this.TableLayoutPanelDecoCounter.TabIndex = 1;
+            this.TableLayoutPanelDecoCounter.Paint += new System.Windows.Forms.PaintEventHandler(this.TableLayoutPanelDecoCounter_Paint);
             // 
             // LabelCounter6
             // 
@@ -132,9 +119,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LabelCounter6.AutoSize = true;
             this.LabelCounter6.Font = new System.Drawing.Font("Calibri", 56.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelCounter6.Location = new System.Drawing.Point(643, 0);
+            this.LabelCounter6.Location = new System.Drawing.Point(713, 0);
             this.LabelCounter6.Name = "LabelCounter6";
-            this.LabelCounter6.Size = new System.Drawing.Size(124, 78);
+            this.LabelCounter6.Size = new System.Drawing.Size(139, 94);
             this.LabelCounter6.TabIndex = 5;
             this.LabelCounter6.Text = "2";
             this.LabelCounter6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -146,9 +133,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LabelCounter5.AutoSize = true;
             this.LabelCounter5.Font = new System.Drawing.Font("Calibri", 56.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelCounter5.Location = new System.Drawing.Point(515, 0);
+            this.LabelCounter5.Location = new System.Drawing.Point(571, 0);
             this.LabelCounter5.Name = "LabelCounter5";
-            this.LabelCounter5.Size = new System.Drawing.Size(122, 78);
+            this.LabelCounter5.Size = new System.Drawing.Size(136, 94);
             this.LabelCounter5.TabIndex = 4;
             this.LabelCounter5.Text = "0";
             this.LabelCounter5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -160,9 +147,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LabelCounter4.AutoSize = true;
             this.LabelCounter4.Font = new System.Drawing.Font("Calibri", 56.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelCounter4.Location = new System.Drawing.Point(387, 0);
+            this.LabelCounter4.Location = new System.Drawing.Point(429, 0);
             this.LabelCounter4.Name = "LabelCounter4";
-            this.LabelCounter4.Size = new System.Drawing.Size(122, 78);
+            this.LabelCounter4.Size = new System.Drawing.Size(136, 94);
             this.LabelCounter4.TabIndex = 3;
             this.LabelCounter4.Text = "4";
             this.LabelCounter4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -174,9 +161,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LabelCounter3.AutoSize = true;
             this.LabelCounter3.Font = new System.Drawing.Font("Calibri", 56.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelCounter3.Location = new System.Drawing.Point(259, 0);
+            this.LabelCounter3.Location = new System.Drawing.Point(287, 0);
             this.LabelCounter3.Name = "LabelCounter3";
-            this.LabelCounter3.Size = new System.Drawing.Size(122, 78);
+            this.LabelCounter3.Size = new System.Drawing.Size(136, 94);
             this.LabelCounter3.TabIndex = 2;
             this.LabelCounter3.Text = "0";
             this.LabelCounter3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -188,26 +175,22 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LabelCounter2.AutoSize = true;
             this.LabelCounter2.Font = new System.Drawing.Font("Calibri", 56.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelCounter2.Location = new System.Drawing.Point(131, 0);
+            this.LabelCounter2.Location = new System.Drawing.Point(145, 0);
             this.LabelCounter2.Name = "LabelCounter2";
-            this.LabelCounter2.Size = new System.Drawing.Size(122, 78);
+            this.LabelCounter2.Size = new System.Drawing.Size(136, 94);
             this.LabelCounter2.TabIndex = 1;
             this.LabelCounter2.Text = "0";
             this.LabelCounter2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // LabelCounter1
+            // CreateZoneSc
             // 
-            this.LabelCounter1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LabelCounter1.AutoSize = true;
-            this.LabelCounter1.Font = new System.Drawing.Font("Calibri", 56.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelCounter1.Location = new System.Drawing.Point(3, 0);
-            this.LabelCounter1.Name = "LabelCounter1";
-            this.LabelCounter1.Size = new System.Drawing.Size(122, 78);
-            this.LabelCounter1.TabIndex = 0;
-            this.LabelCounter1.Text = "0";
-            this.LabelCounter1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CreateZoneSc.Location = new System.Drawing.Point(203, 522);
+            this.CreateZoneSc.Name = "CreateZoneSc";
+            this.CreateZoneSc.Size = new System.Drawing.Size(179, 23);
+            this.CreateZoneSc.TabIndex = 6;
+            this.CreateZoneSc.Text = "CreateZone";
+            this.CreateZoneSc.UseVisualStyleBackColor = true;
+            this.CreateZoneSc.Click += new System.EventHandler(this.CreateZoneSc_Click);
             // 
             // ButtonCreateModify
             // 
@@ -217,20 +200,46 @@
             this.ButtonCreateModify.AutoSize = true;
             this.ButtonCreateModify.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonCreateModify.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonCreateModify.Location = new System.Drawing.Point(3, 171);
+            this.ButtonCreateModify.Location = new System.Drawing.Point(3, 203);
             this.ButtonCreateModify.Name = "ButtonCreateModify";
-            this.ButtonCreateModify.Size = new System.Drawing.Size(770, 120);
+            this.ButtonCreateModify.Size = new System.Drawing.Size(855, 145);
             this.ButtonCreateModify.TabIndex = 3;
             this.ButtonCreateModify.Text = "Create/Modify";
             this.ButtonCreateModify.UseVisualStyleBackColor = true;
             this.ButtonCreateModify.Click += new System.EventHandler(this.ButtonCreateModify_Click);
             // 
+            // LabelTitle
+            // 
+            this.LabelTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LabelTitle.AutoSize = true;
+            this.LabelTitle.Font = new System.Drawing.Font("Calibri", 51.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelTitle.Location = new System.Drawing.Point(3, 100);
+            this.LabelTitle.Name = "LabelTitle";
+            this.LabelTitle.Size = new System.Drawing.Size(855, 100);
+            this.LabelTitle.TabIndex = 2;
+            this.LabelTitle.Text = "People Counter";
+            this.LabelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // CreateLocatieSc
+            // 
+            this.CreateLocatieSc.Location = new System.Drawing.Point(18, 521);
+            this.CreateLocatieSc.Name = "CreateLocatieSc";
+            this.CreateLocatieSc.Size = new System.Drawing.Size(179, 23);
+            this.CreateLocatieSc.TabIndex = 1;
+            this.CreateLocatieSc.Text = "CreateLocatie";
+            this.CreateLocatieSc.UseVisualStyleBackColor = true;
+            this.CreateLocatieSc.Click += new System.EventHandler(this.CreateLocatieSc_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(885, 545);
+            this.Controls.Add(this.CreateLocatieSc);
             this.Controls.Add(this.TableLayoutPanelMain);
+            this.Controls.Add(this.CreateZoneSc);
             this.Name = "Main";
             this.Text = "PoepleCounter : Home";
             this.Load += new System.EventHandler(this.Main_Load);
@@ -253,9 +262,10 @@
         private System.Windows.Forms.Label LabelCounter4;
         private System.Windows.Forms.Label LabelCounter3;
         private System.Windows.Forms.Label LabelCounter2;
-        private System.Windows.Forms.Label LabelCounter1;
         private System.Windows.Forms.Button ButtonView;
         private System.Windows.Forms.Button ButtonCreateModify;
+        private System.Windows.Forms.Button CreateZoneSc;
+        private System.Windows.Forms.Button CreateLocatieSc;
     }
 }
 
