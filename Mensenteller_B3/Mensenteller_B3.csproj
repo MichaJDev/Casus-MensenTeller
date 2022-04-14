@@ -116,6 +116,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MensentellerDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MensentellerDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MensentellerDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ModifyBedrijf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +259,17 @@
     </None>
     <None Include="MensentellerDataSet2.xss">
       <DependentUpon>MensentellerDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MensentellerDataSet3.xsc">
+      <DependentUpon>MensentellerDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MensentellerDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MensentellerDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MensentellerDataSet3.xss">
+      <DependentUpon>MensentellerDataSet3.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

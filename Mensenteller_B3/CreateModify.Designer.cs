@@ -31,21 +31,21 @@
             this.components = new System.ComponentModel.Container();
             this.TableLayoutPanelCreateModify = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.ButtonDone = new System.Windows.Forms.Button();
             this.ButtonModify = new System.Windows.Forms.Button();
             this.ButtonCreate = new System.Windows.Forms.Button();
+            this.ButtonDone = new System.Windows.Forms.Button();
+            this.ButtonDelete = new System.Windows.Forms.Button();
             this.DGVCreateModify = new System.Windows.Forms.DataGridView();
-            this.mensentellerDataSet1 = new Mensenteller_B3.MensentellerDataSet1();
-            this.bedrijvenBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bedrijvenTableAdapter = new Mensenteller_B3.MensentellerDataSet1TableAdapters.BedrijvenTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ButtonDelete = new System.Windows.Forms.Button();
+            this.bedrijvenBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mensentellerDataSet1 = new Mensenteller_B3.MensentellerDataSet1();
+            this.bedrijvenTableAdapter = new Mensenteller_B3.MensentellerDataSet1TableAdapters.BedrijvenTableAdapter();
             this.TableLayoutPanelCreateModify.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCreateModify)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // TableLayoutPanelCreateModify
@@ -90,21 +90,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(770, 164);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // ButtonDone
-            // 
-            this.ButtonDone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonDone.AutoSize = true;
-            this.ButtonDone.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ButtonDone.Location = new System.Drawing.Point(388, 134);
-            this.ButtonDone.Name = "ButtonDone";
-            this.ButtonDone.Size = new System.Drawing.Size(379, 27);
-            this.ButtonDone.TabIndex = 3;
-            this.ButtonDone.Text = "Done";
-            this.ButtonDone.UseVisualStyleBackColor = true;
-            this.ButtonDone.Click += new System.EventHandler(this.ButtonDone_Click);
-            // 
             // ButtonModify
             // 
             this.ButtonModify.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -135,6 +120,36 @@
             this.ButtonCreate.UseVisualStyleBackColor = true;
             this.ButtonCreate.Click += new System.EventHandler(this.ButtonCreate_Click);
             // 
+            // ButtonDone
+            // 
+            this.ButtonDone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonDone.AutoSize = true;
+            this.ButtonDone.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ButtonDone.Location = new System.Drawing.Point(388, 134);
+            this.ButtonDone.Name = "ButtonDone";
+            this.ButtonDone.Size = new System.Drawing.Size(379, 27);
+            this.ButtonDone.TabIndex = 3;
+            this.ButtonDone.Text = "Done";
+            this.ButtonDone.UseVisualStyleBackColor = true;
+            this.ButtonDone.Click += new System.EventHandler(this.ButtonDone_Click);
+            // 
+            // ButtonDelete
+            // 
+            this.ButtonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonDelete.AutoSize = true;
+            this.ButtonDelete.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ButtonDelete.Location = new System.Drawing.Point(3, 134);
+            this.ButtonDelete.Name = "ButtonDelete";
+            this.ButtonDelete.Size = new System.Drawing.Size(379, 27);
+            this.ButtonDelete.TabIndex = 4;
+            this.ButtonDelete.Text = "Delete";
+            this.ButtonDelete.UseVisualStyleBackColor = true;
+            this.ButtonDelete.Click += new System.EventHandler(this.ButtonDelete_Click);
+            // 
             // DGVCreateModify
             // 
             this.DGVCreateModify.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -153,20 +168,6 @@
             this.DGVCreateModify.TabIndex = 0;
             this.DGVCreateModify.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVCreateModify_CellContentClick);
             // 
-            // mensentellerDataSet1
-            // 
-            this.mensentellerDataSet1.DataSetName = "MensentellerDataSet1";
-            this.mensentellerDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bedrijvenBindingSource
-            // 
-            this.bedrijvenBindingSource.DataMember = "Bedrijven";
-            this.bedrijvenBindingSource.DataSource = this.mensentellerDataSet1;
-            // 
-            // bedrijvenTableAdapter
-            // 
-            this.bedrijvenTableAdapter.ClearBeforeFill = true;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -180,25 +181,26 @@
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             // 
-            // ButtonDelete
+            // bedrijvenBindingSource
             // 
-            this.ButtonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonDelete.AutoSize = true;
-            this.ButtonDelete.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ButtonDelete.Location = new System.Drawing.Point(3, 134);
-            this.ButtonDelete.Name = "ButtonDelete";
-            this.ButtonDelete.Size = new System.Drawing.Size(379, 27);
-            this.ButtonDelete.TabIndex = 4;
-            this.ButtonDelete.Text = "Delete";
-            this.ButtonDelete.UseVisualStyleBackColor = true;
-            this.ButtonDelete.Click += new System.EventHandler(this.ButtonDelete_Click);
+            this.bedrijvenBindingSource.DataMember = "Bedrijven";
+            this.bedrijvenBindingSource.DataSource = this.mensentellerDataSet1;
+            // 
+            // mensentellerDataSet1
+            // 
+            this.mensentellerDataSet1.DataSetName = "MensentellerDataSet1";
+            this.mensentellerDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bedrijvenTableAdapter
+            // 
+            this.bedrijvenTableAdapter.ClearBeforeFill = true;
             // 
             // CreateModify
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.TableLayoutPanelCreateModify);
             this.Name = "CreateModify";
@@ -209,8 +211,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCreateModify)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
