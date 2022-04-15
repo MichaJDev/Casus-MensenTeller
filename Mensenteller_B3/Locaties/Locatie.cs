@@ -10,9 +10,7 @@ namespace Mensenteller_B3.Locaties
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
-        public string Xco { get; set; }
-        public string Yco { get; set; }
+
 
         public int ZoneId { get; set; }
 
@@ -29,35 +27,12 @@ namespace Mensenteller_B3.Locaties
             ID = id;
             Name = name;
         }
-        public Locatie(int id, string name, string description)
-        {
-            ID = id;
-            Name = name;
-            Description = description;
-        }
-        public Locatie(int id, string name, string description, string xco)
-        {
-            ID = id;
-            Name = name;
-            Description = description;
-            Xco = xco;
-        }
-        public Locatie(int id, string name, string description, string xco, string yco)
-        {
-            ID = id;
-            Name = name;
-            Description = description;
-            Xco = xco;
-            Yco = yco;
-        }
 
-        public Locatie(int id, string name, string description, string xco, string yco, int zoneid)
+
+        public Locatie(int id, string name, int zoneid)
         {
             ID = id;
             Name = name;
-            Description = description;
-            Xco = xco;
-            Yco = yco;
             ZoneId = zoneid;
         }
     }

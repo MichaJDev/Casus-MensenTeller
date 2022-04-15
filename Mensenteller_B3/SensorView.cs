@@ -43,5 +43,10 @@ namespace Mensenteller_B3
                 SensorLabel.Text = ds.Name;
             }
         }
+
+        private void SensorLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

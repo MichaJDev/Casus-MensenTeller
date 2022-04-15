@@ -38,7 +38,7 @@ namespace Mensenteller_B3
                 eSensorList = eSensorDal.ReadEntreeSensors().Where(x => x.SensorID == s.ID).ToList();
             }
             DvgEntreeSensors.DataSource = eSensorList;
-            foreach (Sensor s in sensorDal.Sensors)
+            foreach (Sensor s in sensorDal.ReadSensors(locatie.ID))
             {
                 dSensorList = dSensorDal.ReadDrukSensor().Where(x => x.SensorId == s.ID).ToList();
             }
@@ -53,6 +53,9 @@ namespace Mensenteller_B3
 
         private void ViewLocatieButton_Click(object sender, EventArgs e)
         {
+            // Maken : uitzoeken dat id entree of druksensor is !!!!!!!!!! --------------------------------------------------
+
+
             string id = DvgEntreeSensors.CurrentRow.Cells[0].Value.ToString();
 
             int pid = int.Parse(id);
@@ -60,7 +63,7 @@ namespace Mensenteller_B3
             Locatie l = locatiedal.Locaties.Where(X => X.ID == pid).First();
             //ToDO              opnieuw toevoegen!!!
             //this.locatiesTableAdapter.Fill(this.dataSet_LocatiesView.Locaties);
-            LocatieView form = new LocatieView(l);
+            SensorView form = new SensorView();
             form.Show();
 
         }

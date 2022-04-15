@@ -39,6 +39,7 @@
             this.SensorLabel.Size = new System.Drawing.Size(35, 13);
             this.SensorLabel.TabIndex = 0;
             this.SensorLabel.Text = "label1";
+            this.SensorLabel.Click += new System.EventHandler(this.SensorLabel_Click);
             // 
             // SensorView
             // 
