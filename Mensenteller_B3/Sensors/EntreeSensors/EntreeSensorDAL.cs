@@ -51,7 +51,7 @@ namespace Mensenteller_B3.Sensors.EntreeSensors
         {
             using (SqlConnection cnn = new SqlConnection(conString))
             {
-                string sql = "SELECT * FROM EntreeSensors WHERE SensorId = @Id";
+                string sql = "IF EXISTS (SELECT * FROM EntreeSensors WHERE SensorId = @Id)";
                 using (SqlCommand cmd = new SqlCommand(sql, cnn))
                 {
                     cmd.Parameters.AddWithValue("@Id", id);

@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Mensenteller_B3.Locaties;
+using Mensenteller_B3.Sensors;
+using Mensenteller_B3.Sensors.DrukSensors;
+using Mensenteller_B3.Sensors.EntreeSensors;
+using MensenTeller_B3.Sensors;
 
 namespace Mensenteller_B3
 {
@@ -15,7 +19,9 @@ namespace Mensenteller_B3
     {
         private Locatie locatie;
 
-
+        SensorDAL sensorDal = new SensorDAL();
+        EntreeSensorDAL eSensorDal = new EntreeSensorDAL();
+        DruksensorDAL dSensorDal = new DruksensorDAL();
         LocatieDAL locatiedal = new LocatieDAL();
         public ViewLocatie(Locatie l)
         {
@@ -25,8 +31,23 @@ namespace Mensenteller_B3
 
         private void ViewLocatie_Load(object sender, EventArgs e)
         {
-        
-            DgvviewLocatie.DataSource = locatiedal.ReadLocatie(locatie.ZoneId) ;
+            sensorDal.ReadSensors(locatie.ID);
+           
+            List<EntreeSensor> eSensorList = new List<EntreeSensor>();
+            List<DrukSensor> dSensorList = new List<DrukSensor>();
+            foreach(Sensor s in sensorDal.Sensors)
+            {
+                eSensorDal.ReadEntreeSensors();
+                eSensorList = eSensorDal.EntreeSensors.Where(x => x.SensorID == s.ID).ToList();  
+            }
+            DvgEntreeSensors.DataSource = eSensorList;
+            foreach (Sensor s in sensorDal.Sensors)
+            {
+                dSensorDal.ReadDrukSensor();
+                dSensorList = dSensorDal.druksensorlist.Where(x => x.SensorId == s.ID).ToList();
+            }
+            DvgDrukSensors.DataSource = dSensorList;
+
         }
 
         private void DgvviewLocatie_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -36,7 +57,7 @@ namespace Mensenteller_B3
 
         private void ViewLocatieButton_Click(object sender, EventArgs e)
         {
-            string id = DgvviewLocatie.CurrentRow.Cells[0].Value.ToString();
+            string id = DvgEntreeSensors.CurrentRow.Cells[0].Value.ToString();
 
             int pid = int.Parse(id);
             locatiedal.ReadLocatie();

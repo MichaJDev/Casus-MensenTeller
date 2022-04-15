@@ -28,19 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.DgvviewLocatie = new System.Windows.Forms.DataGridView();
+            this.DvgEntreeSensors = new System.Windows.Forms.DataGridView();
             this.ViewLocatieButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvviewLocatie)).BeginInit();
+            this.DvgDrukSensors = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DvgEntreeSensors)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DvgDrukSensors)).BeginInit();
             this.SuspendLayout();
             // 
-            // DgvviewLocatie
+            // DvgEntreeSensors
             // 
-            this.DgvviewLocatie.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvviewLocatie.Location = new System.Drawing.Point(69, 32);
-            this.DgvviewLocatie.Name = "DgvviewLocatie";
-            this.DgvviewLocatie.Size = new System.Drawing.Size(484, 150);
-            this.DgvviewLocatie.TabIndex = 0;
-            this.DgvviewLocatie.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvviewLocatie_CellContentClick);
+            this.DvgEntreeSensors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DvgEntreeSensors.Location = new System.Drawing.Point(45, 26);
+            this.DvgEntreeSensors.Name = "DvgEntreeSensors";
+            this.DvgEntreeSensors.Size = new System.Drawing.Size(334, 157);
+            this.DvgEntreeSensors.TabIndex = 0;
+            this.DvgEntreeSensors.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvviewLocatie_CellContentClick);
             // 
             // ViewLocatieButton
             // 
@@ -52,24 +54,35 @@
             this.ViewLocatieButton.UseVisualStyleBackColor = true;
             this.ViewLocatieButton.Click += new System.EventHandler(this.ViewLocatieButton_Click);
             // 
+            // DvgDrukSensors
+            // 
+            this.DvgDrukSensors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DvgDrukSensors.Location = new System.Drawing.Point(428, 26);
+            this.DvgDrukSensors.Name = "DvgDrukSensors";
+            this.DvgDrukSensors.Size = new System.Drawing.Size(334, 157);
+            this.DvgDrukSensors.TabIndex = 2;
+            // 
             // ViewLocatie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.DvgDrukSensors);
             this.Controls.Add(this.ViewLocatieButton);
-            this.Controls.Add(this.DgvviewLocatie);
+            this.Controls.Add(this.DvgEntreeSensors);
             this.Name = "ViewLocatie";
             this.Text = "ViewLocatie";
             this.Load += new System.EventHandler(this.ViewLocatie_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DgvviewLocatie)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DvgEntreeSensors)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DvgDrukSensors)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView DgvviewLocatie;
+        private System.Windows.Forms.DataGridView DvgEntreeSensors;
         private System.Windows.Forms.Button ViewLocatieButton;
+        private System.Windows.Forms.DataGridView DvgDrukSensors;
     }
 }

@@ -86,7 +86,7 @@ namespace Mensenteller_B3.Sensors.DrukSensors
                     cnn.ConnectionString = connectionString;
                     cnn.Open();
                     command.Connection = cnn;
-                    command.CommandText = "SELECT entryid, sensorid, inuse, timestamp FORM PRESSURESENSORS WHERE SensorId = @Id";
+                    command.CommandText = "IF EXISTS (SELECT entryid, sensorid, inuse, timestamp FORM PRESSURESENSORS WHERE SensorId = @Id)";
                     command.Parameters.AddWithValue("@Id", id);
                     SqlDataReader datareader = command.ExecuteReader();
 
