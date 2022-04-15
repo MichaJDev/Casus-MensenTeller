@@ -20,18 +20,21 @@ namespace Mensenteller_B3.Sensors.DrukSensors
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "INSERT INTO pressuresensors (sensorid, inuse, timestamp) VALUES (@sensorid, @inuse, @timestamp)";
+                    command.CommandText = "INSERT INTO DrukSensors (InUse, Timestamp, SensorID) VALUES (@inuse, @timestamp, @sensorid)";
                     //TODO: omzetten naar sensor DAL
                     command.Parameters.AddWithValue("@sensorid", druksensor.SensorId);
-                    command.ExecuteNonQuery();
-
                     command.Parameters.AddWithValue("@inuse", druksensor.InUse);
-                    command.ExecuteNonQuery();
-
                     command.Parameters.AddWithValue("@timestamp", druksensor.TimeStamp);
-                    command.ExecuteNonQuery();
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                    }catch(SqlException e)
+                    {
+                        Console.WriteLine(e.ToString());
+                    }
+                    
 
-                    command.CommandText = "SELECT CAST(@@Identity AS INT;";
+                    command.CommandText = "SELECT CAST(@@Identity AS INT);";
                     int id = 0;
                     try
                     {

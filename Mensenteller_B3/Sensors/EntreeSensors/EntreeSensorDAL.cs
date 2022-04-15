@@ -138,7 +138,7 @@ namespace Mensenteller_B3.Sensors.EntreeSensors
         {
             using (SqlConnection cnn = new SqlConnection(conString))
             {
-                string sql = "INSERT INTO EntreeSensors (name, people_in, people_out,timestamp) VALUES(@Name, @PeopleIn, @PeopleOut, @TimeStamp)";
+                string sql = "INSERT INTO EntreeSensors (Name, PeopleIn, PeopleOut, Timestamp) VALUES (@Name, @PeopleIn, @PeopleOut, @TimeStamp)";
                 using (SqlCommand cmd = new SqlCommand(sql, cnn))
                 {
                     cmd.Parameters.AddWithValue("@Name", $"Sensor{sensor.EntryID}");
