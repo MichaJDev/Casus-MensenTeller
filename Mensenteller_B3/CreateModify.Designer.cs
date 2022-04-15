@@ -38,24 +38,24 @@
             this.DGVCreateModify = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bedrijvenBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.mensentellerDataSet6 = new Mensenteller_B3.MensentellerDataSet6();
             this.bedrijvenBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.mensentellerDataSet4 = new Mensenteller_B3.MensentellerDataSet4();
             this.bedrijvenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mensentellerDataSet1 = new Mensenteller_B3.MensentellerDataSet1();
             this.bedrijvenTableAdapter = new Mensenteller_B3.MensentellerDataSet1TableAdapters.BedrijvenTableAdapter();
             this.bedrijvenTableAdapter1 = new Mensenteller_B3.MensentellerDataSet4TableAdapters.BedrijvenTableAdapter();
-            this.mensentellerDataSet6 = new Mensenteller_B3.MensentellerDataSet6();
-            this.bedrijvenBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.bedrijvenTableAdapter2 = new Mensenteller_B3.MensentellerDataSet6TableAdapters.BedrijvenTableAdapter();
             this.TableLayoutPanelCreateModify.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCreateModify)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // TableLayoutPanelCreateModify
@@ -191,6 +191,16 @@
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             // 
+            // bedrijvenBindingSource2
+            // 
+            this.bedrijvenBindingSource2.DataMember = "Bedrijven";
+            this.bedrijvenBindingSource2.DataSource = this.mensentellerDataSet6;
+            // 
+            // mensentellerDataSet6
+            // 
+            this.mensentellerDataSet6.DataSetName = "MensentellerDataSet6";
+            this.mensentellerDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // bedrijvenBindingSource1
             // 
             this.bedrijvenBindingSource1.DataMember = "Bedrijven";
@@ -219,16 +229,6 @@
             // 
             this.bedrijvenTableAdapter1.ClearBeforeFill = true;
             // 
-            // mensentellerDataSet6
-            // 
-            this.mensentellerDataSet6.DataSetName = "MensentellerDataSet6";
-            this.mensentellerDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bedrijvenBindingSource2
-            // 
-            this.bedrijvenBindingSource2.DataMember = "Bedrijven";
-            this.bedrijvenBindingSource2.DataSource = this.mensentellerDataSet6;
-            // 
             // bedrijvenTableAdapter2
             // 
             this.bedrijvenTableAdapter2.ClearBeforeFill = true;
@@ -242,6 +242,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.TableLayoutPanelCreateModify);
             this.Name = "CreateModify";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateModify";
             this.Load += new System.EventHandler(this.CreateModify_Load);
             this.TableLayoutPanelCreateModify.ResumeLayout(false);
@@ -249,12 +250,12 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCreateModify)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

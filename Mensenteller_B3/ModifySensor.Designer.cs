@@ -134,6 +134,7 @@
             this.ButtonDone.TabIndex = 3;
             this.ButtonDone.Text = "Done";
             this.ButtonDone.UseVisualStyleBackColor = true;
+            this.ButtonDone.Click += new System.EventHandler(this.ButtonDone_Click);
             // 
             // ButtonDelete
             // 
@@ -156,6 +157,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.TableLayoutPanelModifyBedrijf);
             this.Name = "ModifySensor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModifySensor";
             this.TableLayoutPanelModifyBedrijf.ResumeLayout(false);
             this.TableLayoutPanelModifyBedrijf.PerformLayout();

@@ -16,5 +16,10 @@ namespace Mensenteller_B3
         {
             InitializeComponent();
         }
+
+        private void ButtonDone_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

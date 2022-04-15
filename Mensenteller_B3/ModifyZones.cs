@@ -32,5 +32,11 @@ namespace Mensenteller_B3
         {
             Close();            
         }
+
+        private void ButtonModify_Click(object sender, EventArgs e)
+        {
+            ModifyLocation modifyLocation = new ModifyLocation();
+            modifyLocation.Show();
+        }
     }
 }

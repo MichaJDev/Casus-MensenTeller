@@ -57,7 +57,7 @@
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.TableLayoutPanelModifyBedrijf.Size = new System.Drawing.Size(776, 421);
+            this.TableLayoutPanelModifyBedrijf.Size = new System.Drawing.Size(776, 423);
             this.TableLayoutPanelModifyBedrijf.TabIndex = 1;
             // 
             // DataGridViewZones
@@ -68,7 +68,7 @@
             this.DataGridViewZones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridViewZones.Location = new System.Drawing.Point(3, 59);
             this.DataGridViewZones.Name = "DataGridViewZones";
-            this.DataGridViewZones.Size = new System.Drawing.Size(770, 218);
+            this.DataGridViewZones.Size = new System.Drawing.Size(770, 219);
             this.DataGridViewZones.TabIndex = 0;
             // 
             // TableLayoutPanelControl
@@ -85,12 +85,12 @@
             this.TableLayoutPanelControl.Controls.Add(this.ButtonCreate, 0, 0);
             this.TableLayoutPanelControl.Controls.Add(this.ButtonDone, 1, 1);
             this.TableLayoutPanelControl.Controls.Add(this.ButtonDelete, 0, 1);
-            this.TableLayoutPanelControl.Location = new System.Drawing.Point(3, 283);
+            this.TableLayoutPanelControl.Location = new System.Drawing.Point(3, 284);
             this.TableLayoutPanelControl.Name = "TableLayoutPanelControl";
             this.TableLayoutPanelControl.RowCount = 2;
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TableLayoutPanelControl.Size = new System.Drawing.Size(770, 135);
+            this.TableLayoutPanelControl.Size = new System.Drawing.Size(770, 136);
             this.TableLayoutPanelControl.TabIndex = 2;
             // 
             // ButtonModify
@@ -106,6 +106,7 @@
             this.ButtonModify.TabIndex = 1;
             this.ButtonModify.Text = "Modify";
             this.ButtonModify.UseVisualStyleBackColor = true;
+            this.ButtonModify.Click += new System.EventHandler(this.ButtonModify_Click);
             // 
             // ButtonCreate
             // 
@@ -131,7 +132,7 @@
             this.ButtonDone.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonDone.Location = new System.Drawing.Point(388, 111);
             this.ButtonDone.Name = "ButtonDone";
-            this.ButtonDone.Size = new System.Drawing.Size(379, 21);
+            this.ButtonDone.Size = new System.Drawing.Size(379, 22);
             this.ButtonDone.TabIndex = 3;
             this.ButtonDone.Text = "Done";
             this.ButtonDone.UseVisualStyleBackColor = true;
@@ -146,7 +147,7 @@
             this.ButtonDelete.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonDelete.Location = new System.Drawing.Point(3, 111);
             this.ButtonDelete.Name = "ButtonDelete";
-            this.ButtonDelete.Size = new System.Drawing.Size(379, 21);
+            this.ButtonDelete.Size = new System.Drawing.Size(379, 22);
             this.ButtonDelete.TabIndex = 4;
             this.ButtonDelete.Text = "Delete";
             this.ButtonDelete.UseVisualStyleBackColor = true;
@@ -158,6 +159,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.TableLayoutPanelModifyBedrijf);
             this.Name = "ModifyZones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Location";
             this.Load += new System.EventHandler(this.ModifyZones_Load);
             this.TableLayoutPanelModifyBedrijf.ResumeLayout(false);

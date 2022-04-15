@@ -34,7 +34,7 @@ namespace MensenTeller_B3.Simualtion_DAL
             using(SqlConnection cnn = new SqlConnection(GetConnectionString()))
             {
                 string sql = "SELECT * FROM PressureSensors";
-                using (SqlCommand cmd = new SqlCommand(sql, cnn))
+                using (SqlCommand cmd = new SqlCommand(sql, cnn))//hhh
                 {
                     cnn.Open();
                     SqlDataReader reader = cmd.ExecuteReader();

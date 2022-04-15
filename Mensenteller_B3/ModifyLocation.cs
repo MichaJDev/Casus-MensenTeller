@@ -28,5 +28,10 @@ namespace Mensenteller_B3
             ModifySensor modifySensor = new ModifySensor();
             modifySensor.Show();
         }
+
+        private void ButtonDone_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
