@@ -16,6 +16,7 @@ namespace Mensenteller_B3
 
     {
         BedrijfDAL bedrijfDAL = new BedrijfDAL();
+        
         public View()
         {
             InitializeComponent();
@@ -76,6 +77,8 @@ namespace Mensenteller_B3
 
         private void View_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet_Bedrijvenview.Bedrijven' table. You can move, or remove it, as needed.
+            this.bedrijvenTableAdapter.Fill(this.dataSet_Bedrijvenview.Bedrijven);
             // TODO: This line of code loads data into the 'dataSet_bedrijvenview.Bedrijven' table. You can move, or remove it, as needed.
             //this.bedrijvenTableAdapter.Fill(this.dataSet_bedrijvenview.Bedrijven);
             // TODO: This line of code loads data into the 'sensorDataDataSet1.PressureSensors' table. You can move, or remove it, as needed.
@@ -98,7 +101,18 @@ namespace Mensenteller_B3
             //Averagetextbox.Text = avg.ToString("00.000");
         }
 
-       
+        private void BedrijfViewbutton_Click(object sender, EventArgs e)
+        {
+            string id = DgvBedrijfview.CurrentRow.Cells[0].Value.ToString();
+
+            int pid = int.Parse(id);
+            bedrijfDAL.ReadBedrijfAtId(pid);
+            Bedrijf b = new Bedrijf(pid);
+            //ToDO              opnieuw toevoegen!!!
+            //this.locatiesTableAdapter.Fill(this.dataSet_LocatiesView.Locaties);
+            ViewBedrijf form = new ViewBedrijf(b);
+            form.Show();
+        }
     }
 
 }

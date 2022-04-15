@@ -44,23 +44,7 @@ namespace Mensenteller_B3.Locaties
 
             }
         }
-        public Locatie Get(int id)
-        {
-            Locatie l = new Locatie();
-            using (SqlConnection con = new SqlConnection(conString))
-            {
-                string query = "SELECT * FROM Locaties WHERE sensorId = @id";
-                SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@id", id);
-                con.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    return new Locatie(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
-                }
-            }
-            return l;
-        }
+       
         /*
         public void Update(Locatie l)
         {
@@ -152,31 +136,39 @@ namespace Mensenteller_B3.Locaties
             }
             
         }
-        public void ReadLocatie(int id)
+        public List<Locatie> ReadLocatie(int id)
         {
-            Locaties.Clear();
-
+            if (Locaties != null)
+            {
+                Locaties.Clear();
+            }
+            List<Locatie>ls = new List<Locatie>();
             using (SqlConnection cnn = new SqlConnection(conString))
             {
                 using (SqlCommand command = new SqlCommand())
                 {
                     cnn.ConnectionString = conString;
-                    cnn.Open();
                     command.Connection = cnn;
-                    command.CommandText = "SELECT Id, Name, ZoneId FROM Locaties WHERE ZoneId = @Id";
+                    command.CommandText = "SELECT * FROM Locaties WHERE ZoneId = @Id";
                     command.Parameters.AddWithValue("@Id", id);
+                    cnn.Open();
                     SqlDataReader dataReader = command.ExecuteReader();
 
                     while (dataReader.Read())
                     {
-                        Locatie l = new Locatie();
-                        l.ID = dataReader.GetInt32(0);
-                        l.Name = dataReader.GetString(1);
-                        l.ZoneId = dataReader.GetInt32(2);
-                        Locaties.Add(l);
+                        Locatie l = new Locatie
+                        {
+                            ID = dataReader.GetInt32(0),
+                            Name = dataReader.GetString(1),
+                            ZoneId = dataReader.GetInt32(2)
+                        };
+          
+                        ls.Add(l);
+                        
 
                     }
                 }
+                return ls;
             }
         }
     }

@@ -40,6 +40,7 @@
             this.DgvBedrijfview.Name = "DgvBedrijfview";
             this.DgvBedrijfview.Size = new System.Drawing.Size(615, 150);
             this.DgvBedrijfview.TabIndex = 0;
+            this.DgvBedrijfview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvBedrijfview_CellContentClick);
             // 
             // BedrijfView
             // 

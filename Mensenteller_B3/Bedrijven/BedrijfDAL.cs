@@ -108,13 +108,18 @@ namespace Mensenteller_B3.Bedrijven
                     cnn.ConnectionString = connectionString;
                     cnn.Open();
                     command.Connection = cnn;
-                    command.CommandText = "SELECT Name FROM Bedrijven WHERE id = @id ORDER BY id";
+                    command.CommandText = "SELECT id, Name FROM Bedrijven WHERE id = @id ORDER BY id";
                     command.Parameters.AddWithValue("@id", id);
                     SqlDataReader dataReader = command.ExecuteReader();
                     while (dataReader.Read())
                     {
-                        bedrijven.Add(new Bedrijf(int.Parse(dataReader[0].ToString())
-                         , dataReader[1].ToString()));
+                        Bedrijf b = new Bedrijf
+                        {
+                            Id = dataReader.GetInt32(0),
+                            Name = dataReader.GetString(1)
+                        };
+                        bedrijven.Add(b);
+                      
 
                     }
                 }

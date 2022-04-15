@@ -25,8 +25,8 @@ namespace Mensenteller_B3
 
         private void ViewLocatie_Load(object sender, EventArgs e)
         {
-            locatiedal.ReadLocatie();
-            DgvviewLocatie.DataSource = locatiedal.Locaties.Where(x => x.ZoneId == locatie.ID).ToList();
+        
+            DgvviewLocatie.DataSource = locatiedal.ReadLocatie(locatie.ZoneId) ;
         }
 
         private void DgvviewLocatie_CellContentClick(object sender, DataGridViewCellEventArgs e)

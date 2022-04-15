@@ -43,7 +43,7 @@
             this.EditLocatietextbox = new System.Windows.Forms.TextBox();
             this.ZoneIdtextbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.locatiesBindingSource1)).BeginInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.locatiesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Locaties1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Locaties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.locatiesBindingSource)).BeginInit();
@@ -78,8 +78,8 @@
             // 
             // locatiesBindingSource1
             // 
-            this.locatiesBindingSource1.DataMember = "Locaties";
-            this.locatiesBindingSource1.DataSource = this.dataSet_Locaties1;
+           // this.locatiesBindingSource1.DataMember = "Locaties";
+//            this.locatiesBindingSource1.DataSource = this.dataSet_Locaties1;
             // 
             // dataSet_Locaties1
             // 
@@ -151,7 +151,7 @@
             this.Text = "CreateLocatie";
             this.Load += new System.EventHandler(this.CreateLocatie_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.locatiesBindingSource1)).EndInit();
+//            ((System.ComponentModel.ISupportInitialize)(this.locatiesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Locaties1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Locaties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.locatiesBindingSource)).EndInit();

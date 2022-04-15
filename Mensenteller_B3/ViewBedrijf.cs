@@ -27,14 +27,23 @@ namespace Mensenteller_B3
         private void ViewBedrijf_Load(object sender, EventArgs e)
         {
             //LBLname.Text = bedrijf.Name;
-            zonedal.ReadZone();
-            DgvBedrijfview.DataSource = zonedal.ZoneList.Where(x => x.BedrijvenId == bedrijf.Id).ToList();
+            zonedal.ReadZone(bedrijf.Id);
+            DgvBedrijfview.DataSource = zonedal.ZoneList;
         }
 
         private void BedrijfView_Click(object sender, EventArgs e)
         {
             string id = DgvBedrijfview.CurrentRow.Cells[0].Value.ToString();
             int pid = int.Parse(id);
+            Zone z = new Zone(pid);
+            ViewZone form = new ViewZone(z);
+            form.Show();
+            
+        }
+
+        private void DgvBedrijfview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
