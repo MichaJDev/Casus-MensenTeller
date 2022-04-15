@@ -96,7 +96,13 @@ namespace Mensenteller_B3.Sensors
                     SqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
-                        Sensors.Add(new Sensor(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2)));
+                        Sensor s = new Sensor
+                        {
+                            ID = reader.GetInt32(0),
+                            Name = reader.GetString(1),
+                            LocatieID = reader.GetInt32(2)
+                        };
+                        Sensors.Add(s);
                     }
                 }
             }
@@ -114,7 +120,13 @@ namespace Mensenteller_B3.Sensors
                     SqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
-                        Sensors.Add(new Sensor(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2)));
+                        Sensor s = new Sensor
+                        {
+                            ID = reader.GetInt32(0),
+                            Name = reader.GetString(1),
+                            LocatieID = reader.GetInt32(2)
+                        };
+                        Sensors.Add(s);
                     }
                 }
             }
