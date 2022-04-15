@@ -10,6 +10,8 @@
 
 #pragma warning disable 1591
 
+using System.Data;
+
 namespace Mensenteller_B3 {
     
     
@@ -111,7 +113,7 @@ namespace Mensenteller_B3 {
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public LocatiesDataTable Locaties {
             get {
-                return this.tableLocaties;
+                return (LocatiesDataTable)tableLocaties;
             }
         }
         
@@ -236,7 +238,7 @@ namespace Mensenteller_B3 {
                     this.tableEntreeSensor.InitVars();
                 }
             }
-            this.tableLocaties = ((LocatiesDataTable)(base.Tables["Locaties"]));
+            tableLocaties = ((LocatiesDataTable)(base.Tables["Locaties"]));
             if ((initTable == true)) {
                 if ((this.tableLocaties != null)) {
                     this.tableLocaties.InitVars();

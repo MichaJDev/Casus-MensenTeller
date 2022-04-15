@@ -12,9 +12,9 @@ namespace Mensenteller_B3.Locaties
 
     public class LocatieDAL
     {
-        private string conString = "Data Source=.;Initial Catalog=Mensenteller;Integrated Security=True";
+        private readonly string conString = "Data Source=.;Initial Catalog=Mensenteller;Integrated Security=True";
 
-        public List<Locatie> locaties { get; set; }
+        public List<Locatie> Locaties { get; set; }
 
         public void CreateLocatie(Locatie locatie)
         {
@@ -128,7 +128,7 @@ namespace Mensenteller_B3.Locaties
         }
         public void ReadLocatie()
         {
-            locaties.Clear();
+            Locaties.Clear();
 
             using (SqlConnection cnn = new SqlConnection(conString))
             {
@@ -145,7 +145,35 @@ namespace Mensenteller_B3.Locaties
                         l.ID = dataReader.GetInt32(0);
                         l.Name = dataReader.GetString(1);
                         l.ZoneId = dataReader.GetInt32(2);
-                        locaties.Add(l);
+                        Locaties.Add(l);
+
+                    }
+                }
+            }
+            
+        }
+        public void ReadLocatie(int id)
+        {
+            Locaties.Clear();
+
+            using (SqlConnection cnn = new SqlConnection(conString))
+            {
+                using (SqlCommand command = new SqlCommand())
+                {
+                    cnn.ConnectionString = conString;
+                    cnn.Open();
+                    command.Connection = cnn;
+                    command.CommandText = "SELECT Id, Name, ZoneId FROM Locaties WHERE ZoneId = @Id";
+                    command.Parameters.AddWithValue("@Id", id);
+                    SqlDataReader dataReader = command.ExecuteReader();
+
+                    while (dataReader.Read())
+                    {
+                        Locatie l = new Locatie();
+                        l.ID = dataReader.GetInt32(0);
+                        l.Name = dataReader.GetString(1);
+                        l.ZoneId = dataReader.GetInt32(2);
+                        Locaties.Add(l);
 
                     }
                 }

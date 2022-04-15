@@ -79,7 +79,38 @@ namespace MensenTeller_B3.Zones
             }
         }
         //ReadZone Maken SELECT Id,Name FROM Zones WHERE bedrijf id =@id ofzoiets.
+        public void ReadZone(int id)
+        {
+            if (ZoneList != null)
+            {
+                ZoneList.Clear();
+            }
 
+
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand())
+                {
+                    cnn.ConnectionString = connectionString;
+                    cnn.Open();
+                    command.Connection = cnn;
+                    command.CommandText = "SELECT Id, Name, BedrijvenId FROM Zones WHERE BedrijvenId = @Id";
+                    command.Parameters.AddWithValue("@Id", id);
+                    SqlDataReader datareader = command.ExecuteReader();
+
+                    while (datareader.Read())
+                    {
+                        Zone z = new Zone
+                        {
+                            ID = datareader.GetInt32(0),
+                            Name = datareader.GetString(1),
+                            BedrijvenId = datareader.GetInt32(2)
+                        };
+                        ZoneList.Add(z);
+                    }
+                }
+            }
+        }
         public void DeleteZone(int id)
         {
             ZoneList.Clear();

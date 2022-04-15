@@ -4,7 +4,6 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Mensenteller_B3.Locaties;
 using Mensenteller_B3.Sensors.DrukSensors;
 using Mensenteller_B3.Sensors.EntreeSensors;
 using MensenTeller_B3.Sensors;
@@ -15,7 +14,7 @@ namespace MensenTeller_B3.Simualtion_DAL
     {
         public List<DrukSensor> DrukSensors { get; set; }
         public List<EntreeSensor> EntreeSensors { get; set; }
-        private readonly string  source = ".";
+        private readonly string source = ".";
         private readonly string catalog = "SensorData";
 
         public DAL()
@@ -31,7 +30,7 @@ namespace MensenTeller_B3.Simualtion_DAL
         //Haal op vanuit SensorData Db maken nog
         private void ReadDrukSimulator()
         {
-            using(SqlConnection cnn = new SqlConnection(GetConnectionString()))
+            using (SqlConnection cnn = new SqlConnection(GetConnectionString()))
             {
                 string sql = "SELECT * FROM PressureSensors";
                 using (SqlCommand cmd = new SqlCommand(sql, cnn))//hhh

@@ -26,7 +26,7 @@ namespace Mensenteller_B3
         private void ViewLocatie_Load(object sender, EventArgs e)
         {
             locatiedal.ReadLocatie();
-            DgvviewLocatie.DataSource = locatiedal.locaties.Where(x => x.ZoneId == locatie.ID).ToList();
+            DgvviewLocatie.DataSource = locatiedal.Locaties.Where(x => x.ZoneId == locatie.ID).ToList();
         }
 
         private void DgvviewLocatie_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -40,7 +40,7 @@ namespace Mensenteller_B3
 
             int pid = int.Parse(id);
             locatiedal.ReadLocatie();
-            Locatie l = locatiedal.locaties.Where(X => X.ID == pid).First();
+            Locatie l = locatiedal.Locaties.Where(X => X.ID == pid).First();
             //ToDO              opnieuw toevoegen!!!
             //this.locatiesTableAdapter.Fill(this.dataSet_LocatiesView.Locaties);
             LocatieView form = new LocatieView(l);

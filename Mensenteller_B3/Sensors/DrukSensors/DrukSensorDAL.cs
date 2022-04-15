@@ -72,6 +72,33 @@ namespace Mensenteller_B3.Sensors.DrukSensors
             }
         }
 
+        public void ReadDrukSensor(int id)
+        {
+            druksensorlist.Clear();
+
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand())
+                {
+                    cnn.ConnectionString = connectionString;
+                    cnn.Open();
+                    command.Connection = cnn;
+                    command.CommandText = "SELECT entryid, sensorid, inuse, timestamp FORM PRESSURESENSORS WHERE LocatieId = @Id";
+                    command.Parameters.AddWithValue("@Id", id);
+                    SqlDataReader datareader = command.ExecuteReader();
+
+                    while (datareader.Read())
+                    {
+                        druksensorlist.Add(new DrukSensor(Int32.Parse(datareader[0].ToString()),
+                                                              Int32.Parse(datareader[1].ToString()),
+                                                              datareader.GetBoolean(2),
+                                                              datareader[3].ToString()
+                                                              ));
+                    }
+                }
+            }
+        }
+
         public void DeleteDrukSensor(int entryid)
         {
             druksensorlist.Clear();

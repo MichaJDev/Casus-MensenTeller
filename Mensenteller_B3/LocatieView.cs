@@ -32,7 +32,7 @@ namespace Mensenteller_B3
             // TODO: This line of code loads data into the 'dataSet_LocatiesView.Locaties' table. You can move, or remove it, as needed.
             this.locatiesTableAdapter.Fill(this.dataSet_LocatiesView.Locaties);
             locatiedal.ReadLocatie();
-            DgvViewLocatie.DataSource = locatiedal.locaties.Where(x => x.ZoneId == locatie.ID).ToList();
+            DgvViewLocatie.DataSource = locatiedal.Locaties.Where(x => x.ZoneId == locatie.ID).ToList();
         }
 
         private void ViewLocatiebutton_Click(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace Mensenteller_B3
 
             int pid = int.Parse(id);
             locatiedal.ReadLocatie();
-            Locatie l = locatiedal.locaties.Where(X => X.ID == pid).First();
+            Locatie l = locatiedal.Locaties.Where(X => X.ID == pid).First();
             this.locatiesTableAdapter.Fill(this.dataSet_LocatiesView.Locaties);
             LocatieView form = new LocatieView(l);
             form.Show();

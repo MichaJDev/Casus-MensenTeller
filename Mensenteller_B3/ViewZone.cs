@@ -28,7 +28,7 @@ namespace Mensenteller_B3
         {
             // label toevoegen hier!!
             locatiedal.ReadLocatie();
-            DgvZoneview.DataSource = locatiedal.locaties.Where(x => x.ZoneId == zone.ID).ToList();
+            DgvZoneview.DataSource = locatiedal.Locaties.Where(x => x.ZoneId == zone.ID).ToList();
         }
 
         private void ViewZonebutton_Click(object sender, EventArgs e)

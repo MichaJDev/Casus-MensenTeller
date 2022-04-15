@@ -33,6 +33,7 @@ namespace Mensenteller_B3.Sensors
                         cmd.ExecuteNonQuery();
                     }catch(Exception ex)
                     {
+                        Console.Write(ex.ToString());
                         throw;
                     }
                 }
@@ -56,6 +57,7 @@ namespace Mensenteller_B3.Sensors
                         cmd.ExecuteNonQuery();
                     }catch(Exception ex)
                     {
+                        Console.Write(ex.ToString());
                         throw;
                     }
                 }
@@ -76,6 +78,7 @@ namespace Mensenteller_B3.Sensors
                         cmd.ExecuteNonQuery();
                     }catch(Exception ex)
                     {
+                        Console.Write(ex.ToString());
                         throw;
                     }
                 }
@@ -90,6 +93,24 @@ namespace Mensenteller_B3.Sensors
                 using(SqlCommand cmd = new SqlCommand(sql, cnn))
                 {
                     cnn.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        Sensors.Add(new Sensor(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2)));
+                    }
+                }
+            }
+        }
+
+        public void ReadSensors(int id)
+        {
+            using(SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                string sql = "SELECT Id, Name, LocatieId FROM Sensors WHERE LocatieId = @id";
+                using(SqlCommand cmd = new SqlCommand(sql, cnn))
+                {
+                    cnn.Open();
+                    cmd.Parameters.AddWithValue("@id", id);
                     SqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {

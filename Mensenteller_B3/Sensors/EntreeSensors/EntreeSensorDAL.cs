@@ -47,7 +47,43 @@ namespace Mensenteller_B3.Sensors.EntreeSensors
                 }
             }
         }
+        public void ReadEntreeSensors(int id)
+        {
+            using (SqlConnection cnn = new SqlConnection(conString))
+            {
+                string sql = "SELECT * FROM EntreeSensors WHERE SensorId = @Id";
+                using (SqlCommand cmd = new SqlCommand(sql, cnn))
+                {
+                    cmd.Parameters.AddWithValue("@Id", id);
+                    EntreeSensors.Clear();
+                    cnn.Open();
+                    try
+                    {
 
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            EntreeSensor es = new EntreeSensor
+                            {
+                                EntryID = 0,
+                                SensorID = reader.GetInt32(0),
+                                Name = reader.GetString(1),
+                                PeopleIn = reader.GetInt32(2),
+                                PeopleOut = reader.GetInt32(3),
+                                TimeStamp = reader.GetString(4)
+                            };
+                            EntreeSensors.Add(es);
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Unable to read from EntreeSensors table, are you connected?");
+                        Console.WriteLine(ex.ToString());
+                    }
+                }
+            }
+        }
         public void Update(EntreeSensor sensor)
         {
             using (SqlConnection cnn = new SqlConnection(conString))

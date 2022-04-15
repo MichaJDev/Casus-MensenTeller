@@ -32,7 +32,7 @@
             this.CreateLocatiebutton = new System.Windows.Forms.Button();
             this.CreateLocatietextbox = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.locatiesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            
             this.dataSet_Locaties1 = new Mensenteller_B3.DataSet_Locaties1();
             this.dataSet_Locaties = new Mensenteller_B3.DataSet_Locaties();
             this.locatiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
