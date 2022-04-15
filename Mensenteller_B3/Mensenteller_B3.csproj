@@ -66,12 +66,21 @@
     <Compile Include="CreateModify.designer.cs">
       <DependentUpon>CreateModify.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateSensor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateSensor.Designer.cs">
+      <DependentUpon>CreateSensor.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateZones.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CreateZones.Designer.cs">
       <DependentUpon>CreateZones.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataSet_Bedrijven.Designer.cs" />
+    <Compile Include="DataSet_Bedrijven1.Designer.cs" />
+    <Compile Include="DataSet_bedrijvenview.Designer.cs" />
     <Compile Include="DataSet_CreateBedrijven.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -87,13 +96,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet_Locaties1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet_LocatiesView.Designer.cs" />
+    <Compile Include="DataSet_Sensor.Designer.cs" />
     <Compile Include="DataSet_Zones.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet_Zones.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet_Zones1.Designer.cs" />
     <Compile Include="Locaties\Locatie.cs" />
     <Compile Include="Locaties\LocatieDAL.cs" />
+    <Compile Include="LocatieView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocatieView.Designer.cs">
+      <DependentUpon>LocatieView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Logic\Statestieken.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -121,31 +139,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MensentellerDataSet3.xsd</DependentUpon>
     </Compile>
-    <Compile Include="MensentellerDataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MensentellerDataSet4.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="MensentellerDataSet5.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MensentellerDataSet5.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="MensentellerDataSet6.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MensentellerDataSet6.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="MensentellerDataSet7.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MensentellerDataSet7.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="MensentellerDataSet8.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MensentellerDataSet8.xsd</DependentUpon>
-    </Compile>
+    <Compile Include="MensentellerDataSet4.Designer.cs" />
+    <Compile Include="MensentellerDataSet5.Designer.cs" />
+    <Compile Include="MensentellerDataSet6.Designer.cs" />
+    <Compile Include="MensentellerDataSet7.Designer.cs" />
+    <Compile Include="MensentellerDataSet8.Designer .cs" />
     <Compile Include="ModifyBedrijf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,12 +185,31 @@
     <Compile Include="Sensors\EntreeSensors\EntreeSensor.cs" />
     <Compile Include="Sensors\EntreeSensors\EntreeSensorDAL.cs" />
     <Compile Include="Sensors\Sensor.cs" />
+    <Compile Include="Sensors\SensorDAL.cs" />
     <Compile Include="Simulation_DAL\DAL.cs" />
     <Compile Include="View.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View.designer.cs">
       <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBedrijf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewBedrijf.Designer.cs">
+      <DependentUpon>ViewBedrijf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewLocatie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewLocatie.Designer.cs">
+      <DependentUpon>ViewLocatie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewZone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewZone.Designer.cs">
+      <DependentUpon>ViewZone.cs</DependentUpon>
     </Compile>
     <Compile Include="Zones\DALZone.cs" />
     <Compile Include="Zones\Zone.cs" />
@@ -205,8 +222,14 @@
     <EmbeddedResource Include="CreateModify.resx">
       <DependentUpon>CreateModify.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CreateSensor.resx">
+      <DependentUpon>CreateSensor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateZones.resx">
       <DependentUpon>CreateZones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocatieView.resx">
+      <DependentUpon>LocatieView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -234,6 +257,15 @@
     </Compile>
     <EmbeddedResource Include="View.resx">
       <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewBedrijf.resx">
+      <DependentUpon>ViewBedrijf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewLocatie.resx">
+      <DependentUpon>ViewLocatie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewZone.resx">
+      <DependentUpon>ViewZone.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DataSet_CreateBedrijven.xsc">
       <DependentUpon>DataSet_CreateBedrijven.xsd</DependentUpon>
@@ -322,61 +354,6 @@
     </None>
     <None Include="MensentellerDataSet3.xss">
       <DependentUpon>MensentellerDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="MensentellerDataSet4.xsc">
-      <DependentUpon>MensentellerDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="MensentellerDataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MensentellerDataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MensentellerDataSet4.xss">
-      <DependentUpon>MensentellerDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="MensentellerDataSet5.xsc">
-      <DependentUpon>MensentellerDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="MensentellerDataSet5.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MensentellerDataSet5.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MensentellerDataSet5.xss">
-      <DependentUpon>MensentellerDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="MensentellerDataSet6.xsc">
-      <DependentUpon>MensentellerDataSet6.xsd</DependentUpon>
-    </None>
-    <None Include="MensentellerDataSet6.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MensentellerDataSet6.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MensentellerDataSet6.xss">
-      <DependentUpon>MensentellerDataSet6.xsd</DependentUpon>
-    </None>
-    <None Include="MensentellerDataSet7.xsc">
-      <DependentUpon>MensentellerDataSet7.xsd</DependentUpon>
-    </None>
-    <None Include="MensentellerDataSet7.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MensentellerDataSet7.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MensentellerDataSet7.xss">
-      <DependentUpon>MensentellerDataSet7.xsd</DependentUpon>
-    </None>
-    <None Include="MensentellerDataSet8.xsc">
-      <DependentUpon>MensentellerDataSet8.xsd</DependentUpon>
-    </None>
-    <None Include="MensentellerDataSet8.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MensentellerDataSet8.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MensentellerDataSet8.xss">
-      <DependentUpon>MensentellerDataSet8.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

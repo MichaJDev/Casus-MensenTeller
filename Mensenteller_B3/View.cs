@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Mensenteller_B3.Bedrijven;
 
+
 namespace Mensenteller_B3
 {
     public partial class View : Form

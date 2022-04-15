@@ -23,7 +23,7 @@ namespace Mensenteller_B3.Locaties
                 string query = "INSERT INTO Locaties (Name, Zoneid) VALUES (@name, @ZoneId)";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@Name", locatie.Name);
-                //cmd.Parameters.AddWithValue("@ZoneId", zone.ID);
+                cmd.Parameters.AddWithValue("@ZoneId", locatie.ZoneId);
                 /*
                   cmd.Parameters.AddWithValue("@Description", l.Description);
                   cmd.Parameters.AddWithValue("@Xco", l.Xco);

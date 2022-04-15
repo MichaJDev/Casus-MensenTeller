@@ -24,7 +24,7 @@ namespace Mensenteller_B3 {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class MensentellerDataSet8 : global::System.Data.DataSet {
         
-        private ZonesDataTable tableZones;
+        private BedrijvenDataTable tableBedrijven;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace Mensenteller_B3 {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Zones"] != null)) {
-                    base.Tables.Add(new ZonesDataTable(ds.Tables["Zones"]));
+                if ((ds.Tables["Bedrijven"] != null)) {
+                    base.Tables.Add(new BedrijvenDataTable(ds.Tables["Bedrijven"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Mensenteller_B3 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ZonesDataTable Zones {
+        public BedrijvenDataTable Bedrijven {
             get {
-                return this.tableZones;
+                return this.tableBedrijven;
             }
         }
         
@@ -152,8 +152,8 @@ namespace Mensenteller_B3 {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Zones"] != null)) {
-                    base.Tables.Add(new ZonesDataTable(ds.Tables["Zones"]));
+                if ((ds.Tables["Bedrijven"] != null)) {
+                    base.Tables.Add(new BedrijvenDataTable(ds.Tables["Bedrijven"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Mensenteller_B3 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableZones = ((ZonesDataTable)(base.Tables["Zones"]));
+            this.tableBedrijven = ((BedrijvenDataTable)(base.Tables["Bedrijven"]));
             if ((initTable == true)) {
-                if ((this.tableZones != null)) {
-                    this.tableZones.InitVars();
+                if ((this.tableBedrijven != null)) {
+                    this.tableBedrijven.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace Mensenteller_B3 {
             this.Namespace = "http://tempuri.org/MensentellerDataSet8.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableZones = new ZonesDataTable();
-            base.Tables.Add(this.tableZones);
+            this.tableBedrijven = new BedrijvenDataTable();
+            base.Tables.Add(this.tableBedrijven);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeZones() {
+        private bool ShouldSerializeBedrijven() {
             return false;
         }
         
@@ -270,25 +270,23 @@ namespace Mensenteller_B3 {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void ZonesRowChangeEventHandler(object sender, ZonesRowChangeEvent e);
+        public delegate void BedrijvenRowChangeEventHandler(object sender, BedrijvenRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ZonesDataTable : global::System.Data.TypedTableBase<ZonesRow> {
+        public partial class BedrijvenDataTable : global::System.Data.TypedTableBase<BedrijvenRow> {
             
             private global::System.Data.DataColumn columnId;
             
             private global::System.Data.DataColumn columnName;
             
-            private global::System.Data.DataColumn columnBedrijvenId;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ZonesDataTable() {
-                this.TableName = "Zones";
+            public BedrijvenDataTable() {
+                this.TableName = "Bedrijven";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -296,7 +294,7 @@ namespace Mensenteller_B3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal ZonesDataTable(global::System.Data.DataTable table) {
+            internal BedrijvenDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -313,7 +311,7 @@ namespace Mensenteller_B3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected ZonesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected BedrijvenDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -336,14 +334,6 @@ namespace Mensenteller_B3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn BedrijvenIdColumn {
-                get {
-                    return this.columnBedrijvenId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -353,54 +343,53 @@ namespace Mensenteller_B3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ZonesRow this[int index] {
+            public BedrijvenRow this[int index] {
                 get {
-                    return ((ZonesRow)(this.Rows[index]));
+                    return ((BedrijvenRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ZonesRowChangeEventHandler ZonesRowChanging;
+            public event BedrijvenRowChangeEventHandler BedrijvenRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ZonesRowChangeEventHandler ZonesRowChanged;
+            public event BedrijvenRowChangeEventHandler BedrijvenRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ZonesRowChangeEventHandler ZonesRowDeleting;
+            public event BedrijvenRowChangeEventHandler BedrijvenRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ZonesRowChangeEventHandler ZonesRowDeleted;
+            public event BedrijvenRowChangeEventHandler BedrijvenRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddZonesRow(ZonesRow row) {
+            public void AddBedrijvenRow(BedrijvenRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ZonesRow AddZonesRow(int Id, string Name, int BedrijvenId) {
-                ZonesRow rowZonesRow = ((ZonesRow)(this.NewRow()));
+            public BedrijvenRow AddBedrijvenRow(string Name) {
+                BedrijvenRow rowBedrijvenRow = ((BedrijvenRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Id,
-                        Name,
-                        BedrijvenId};
-                rowZonesRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowZonesRow);
-                return rowZonesRow;
+                        null,
+                        Name};
+                rowBedrijvenRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowBedrijvenRow);
+                return rowBedrijvenRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ZonesRow FindById(int Id) {
-                return ((ZonesRow)(this.Rows.Find(new object[] {
+            public BedrijvenRow FindById(int Id) {
+                return ((BedrijvenRow)(this.Rows.Find(new object[] {
                             Id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                ZonesDataTable cln = ((ZonesDataTable)(base.Clone()));
+                BedrijvenDataTable cln = ((BedrijvenDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -408,7 +397,7 @@ namespace Mensenteller_B3 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new ZonesDataTable();
+                return new BedrijvenDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -416,7 +405,6 @@ namespace Mensenteller_B3 {
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
                 this.columnName = base.Columns["Name"];
-                this.columnBedrijvenId = base.Columns["BedrijvenId"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -426,11 +414,13 @@ namespace Mensenteller_B3 {
                 base.Columns.Add(this.columnId);
                 this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnName);
-                this.columnBedrijvenId = new global::System.Data.DataColumn("BedrijvenId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBedrijvenId);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
                 this.columnId.AllowDBNull = false;
+                this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
                 this.columnName.AllowDBNull = false;
                 this.columnName.MaxLength = 50;
@@ -438,28 +428,28 @@ namespace Mensenteller_B3 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ZonesRow NewZonesRow() {
-                return ((ZonesRow)(this.NewRow()));
+            public BedrijvenRow NewBedrijvenRow() {
+                return ((BedrijvenRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ZonesRow(builder);
+                return new BedrijvenRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(ZonesRow);
+                return typeof(BedrijvenRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.ZonesRowChanged != null)) {
-                    this.ZonesRowChanged(this, new ZonesRowChangeEvent(((ZonesRow)(e.Row)), e.Action));
+                if ((this.BedrijvenRowChanged != null)) {
+                    this.BedrijvenRowChanged(this, new BedrijvenRowChangeEvent(((BedrijvenRow)(e.Row)), e.Action));
                 }
             }
             
@@ -467,8 +457,8 @@ namespace Mensenteller_B3 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.ZonesRowChanging != null)) {
-                    this.ZonesRowChanging(this, new ZonesRowChangeEvent(((ZonesRow)(e.Row)), e.Action));
+                if ((this.BedrijvenRowChanging != null)) {
+                    this.BedrijvenRowChanging(this, new BedrijvenRowChangeEvent(((BedrijvenRow)(e.Row)), e.Action));
                 }
             }
             
@@ -476,8 +466,8 @@ namespace Mensenteller_B3 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.ZonesRowDeleted != null)) {
-                    this.ZonesRowDeleted(this, new ZonesRowChangeEvent(((ZonesRow)(e.Row)), e.Action));
+                if ((this.BedrijvenRowDeleted != null)) {
+                    this.BedrijvenRowDeleted(this, new BedrijvenRowChangeEvent(((BedrijvenRow)(e.Row)), e.Action));
                 }
             }
             
@@ -485,14 +475,14 @@ namespace Mensenteller_B3 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.ZonesRowDeleting != null)) {
-                    this.ZonesRowDeleting(this, new ZonesRowChangeEvent(((ZonesRow)(e.Row)), e.Action));
+                if ((this.BedrijvenRowDeleting != null)) {
+                    this.BedrijvenRowDeleting(this, new BedrijvenRowChangeEvent(((BedrijvenRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveZonesRow(ZonesRow row) {
+            public void RemoveBedrijvenRow(BedrijvenRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -519,7 +509,7 @@ namespace Mensenteller_B3 {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ZonesDataTable";
+                attribute2.FixedValue = "BedrijvenDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -563,25 +553,25 @@ namespace Mensenteller_B3 {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class ZonesRow : global::System.Data.DataRow {
+        public partial class BedrijvenRow : global::System.Data.DataRow {
             
-            private ZonesDataTable tableZones;
+            private BedrijvenDataTable tableBedrijven;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal ZonesRow(global::System.Data.DataRowBuilder rb) : 
+            internal BedrijvenRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableZones = ((ZonesDataTable)(this.Table));
+                this.tableBedrijven = ((BedrijvenDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int Id {
                 get {
-                    return ((int)(this[this.tableZones.IdColumn]));
+                    return ((int)(this[this.tableBedrijven.IdColumn]));
                 }
                 set {
-                    this[this.tableZones.IdColumn] = value;
+                    this[this.tableBedrijven.IdColumn] = value;
                 }
             }
             
@@ -589,39 +579,11 @@ namespace Mensenteller_B3 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Name {
                 get {
-                    return ((string)(this[this.tableZones.NameColumn]));
+                    return ((string)(this[this.tableBedrijven.NameColumn]));
                 }
                 set {
-                    this[this.tableZones.NameColumn] = value;
+                    this[this.tableBedrijven.NameColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int BedrijvenId {
-                get {
-                    try {
-                        return ((int)(this[this.tableZones.BedrijvenIdColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'BedrijvenId\' in table \'Zones\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableZones.BedrijvenIdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsBedrijvenIdNull() {
-                return this.IsNull(this.tableZones.BedrijvenIdColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetBedrijvenIdNull() {
-                this[this.tableZones.BedrijvenIdColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -629,22 +591,22 @@ namespace Mensenteller_B3 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class ZonesRowChangeEvent : global::System.EventArgs {
+        public class BedrijvenRowChangeEvent : global::System.EventArgs {
             
-            private ZonesRow eventRow;
+            private BedrijvenRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ZonesRowChangeEvent(ZonesRow row, global::System.Data.DataRowAction action) {
+            public BedrijvenRowChangeEvent(BedrijvenRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ZonesRow Row {
+            public BedrijvenRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -672,7 +634,7 @@ namespace Mensenteller_B3.MensentellerDataSet8TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class ZonesTableAdapter : global::System.ComponentModel.Component {
+    public partial class BedrijvenTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -686,7 +648,7 @@ namespace Mensenteller_B3.MensentellerDataSet8TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public ZonesTableAdapter() {
+        public BedrijvenTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -783,41 +745,32 @@ namespace Mensenteller_B3.MensentellerDataSet8TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Zones";
+            tableMapping.DataSetTable = "Bedrijven";
             tableMapping.ColumnMappings.Add("Id", "Id");
             tableMapping.ColumnMappings.Add("Name", "Name");
-            tableMapping.ColumnMappings.Add("BedrijvenId", "BedrijvenId");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Zones] WHERE (([Id] = @Original_Id) AND ([Name] = @Original_Na" +
-                "me) AND ((@IsNull_BedrijvenId = 1 AND [BedrijvenId] IS NULL) OR ([BedrijvenId] =" +
-                " @Original_BedrijvenId)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Bedrijven] WHERE (([Id] = @Original_Id) AND ([Name] = @Origina" +
+                "l_Name))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BedrijvenId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BedrijvenId", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BedrijvenId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BedrijvenId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Zones] ([Id], [Name], [BedrijvenId]) VALUES (@Id, @Name, @Bedr" +
-                "ijvenId);\r\nSELECT Id, Name, BedrijvenId FROM Zones WHERE (Id = @Id)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Bedrijven] ([Name]) VALUES (@Name);\r\nSELECT Id, Name FROM Bedr" +
+                "ijven WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BedrijvenId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BedrijvenId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Zones] SET [Id] = @Id, [Name] = @Name, [BedrijvenId] = @BedrijvenId WHERE (([Id] = @Original_Id) AND ([Name] = @Original_Name) AND ((@IsNull_BedrijvenId = 1 AND [BedrijvenId] IS NULL) OR ([BedrijvenId] = @Original_BedrijvenId)));
-SELECT Id, Name, BedrijvenId FROM Zones WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Bedrijven] SET [Name] = @Name WHERE (([Id] = @Original_Id) AND ([Na" +
+                "me] = @Original_Name));\r\nSELECT Id, Name FROM Bedrijven WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BedrijvenId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BedrijvenId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BedrijvenId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BedrijvenId", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BedrijvenId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BedrijvenId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -833,7 +786,7 @@ SELECT Id, Name, BedrijvenId FROM Zones WHERE (Id = @Id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Name, BedrijvenId FROM dbo.Zones";
+            this._commandCollection[0].CommandText = "SELECT Id, Name FROM dbo.Bedrijven";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -841,7 +794,7 @@ SELECT Id, Name, BedrijvenId FROM Zones WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(MensentellerDataSet8.ZonesDataTable dataTable) {
+        public virtual int Fill(MensentellerDataSet8.BedrijvenDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -854,9 +807,9 @@ SELECT Id, Name, BedrijvenId FROM Zones WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual MensentellerDataSet8.ZonesDataTable GetData() {
+        public virtual MensentellerDataSet8.BedrijvenDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            MensentellerDataSet8.ZonesDataTable dataTable = new MensentellerDataSet8.ZonesDataTable();
+            MensentellerDataSet8.BedrijvenDataTable dataTable = new MensentellerDataSet8.BedrijvenDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -864,7 +817,7 @@ SELECT Id, Name, BedrijvenId FROM Zones WHERE (Id = @Id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(MensentellerDataSet8.ZonesDataTable dataTable) {
+        public virtual int Update(MensentellerDataSet8.BedrijvenDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -872,7 +825,7 @@ SELECT Id, Name, BedrijvenId FROM Zones WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(MensentellerDataSet8 dataSet) {
-            return this.Adapter.Update(dataSet, "Zones");
+            return this.Adapter.Update(dataSet, "Bedrijven");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -894,21 +847,13 @@ SELECT Id, Name, BedrijvenId FROM Zones WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_Name, global::System.Nullable<int> Original_BedrijvenId) {
+        public virtual int Delete(int Original_Id, string Original_Name) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             if ((Original_Name == null)) {
                 throw new global::System.ArgumentNullException("Original_Name");
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Name));
-            }
-            if ((Original_BedrijvenId.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_BedrijvenId.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -930,19 +875,12 @@ SELECT Id, Name, BedrijvenId FROM Zones WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Id, string Name, global::System.Nullable<int> BedrijvenId) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id));
+        public virtual int Insert(string Name) {
             if ((Name == null)) {
                 throw new global::System.ArgumentNullException("Name");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Name));
-            }
-            if ((BedrijvenId.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(BedrijvenId.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Name));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -964,35 +902,21 @@ SELECT Id, Name, BedrijvenId FROM Zones WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Id, string Name, global::System.Nullable<int> BedrijvenId, int Original_Id, string Original_Name, global::System.Nullable<int> Original_BedrijvenId) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id));
+        public virtual int Update(string Name, int Original_Id, string Original_Name, int Id) {
             if ((Name == null)) {
                 throw new global::System.ArgumentNullException("Name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Name));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Name));
             }
-            if ((BedrijvenId.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(BedrijvenId.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Id));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_Id));
             if ((Original_Name == null)) {
                 throw new global::System.ArgumentNullException("Original_Name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Name));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_Name));
             }
-            if ((Original_BedrijvenId.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_BedrijvenId.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1013,8 +937,8 @@ SELECT Id, Name, BedrijvenId FROM Zones WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name, global::System.Nullable<int> BedrijvenId, int Original_Id, string Original_Name, global::System.Nullable<int> Original_BedrijvenId) {
-            return this.Update(Original_Id, Name, BedrijvenId, Original_Id, Original_Name, Original_BedrijvenId);
+        public virtual int Update(string Name, int Original_Id, string Original_Name) {
+            return this.Update(Name, Original_Id, Original_Name, Original_Id);
         }
     }
     
@@ -1030,7 +954,7 @@ SELECT Id, Name, BedrijvenId FROM Zones WHERE (Id = @Id)";
         
         private UpdateOrderOption _updateOrder;
         
-        private ZonesTableAdapter _zonesTableAdapter;
+        private BedrijvenTableAdapter _bedrijvenTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1052,12 +976,12 @@ SELECT Id, Name, BedrijvenId FROM Zones WHERE (Id = @Id)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public ZonesTableAdapter ZonesTableAdapter {
+        public BedrijvenTableAdapter BedrijvenTableAdapter {
             get {
-                return this._zonesTableAdapter;
+                return this._bedrijvenTableAdapter;
             }
             set {
-                this._zonesTableAdapter = value;
+                this._bedrijvenTableAdapter = value;
             }
         }
         
@@ -1080,9 +1004,9 @@ SELECT Id, Name, BedrijvenId FROM Zones WHERE (Id = @Id)";
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._zonesTableAdapter != null) 
-                            && (this._zonesTableAdapter.Connection != null))) {
-                    return this._zonesTableAdapter.Connection;
+                if (((this._bedrijvenTableAdapter != null) 
+                            && (this._bedrijvenTableAdapter.Connection != null))) {
+                    return this._bedrijvenTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1097,7 +1021,7 @@ SELECT Id, Name, BedrijvenId FROM Zones WHERE (Id = @Id)";
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._zonesTableAdapter != null)) {
+                if ((this._bedrijvenTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1111,12 +1035,12 @@ SELECT Id, Name, BedrijvenId FROM Zones WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateUpdatedRows(MensentellerDataSet8 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._zonesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Zones.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._bedrijvenTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Bedrijven.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._zonesTableAdapter.Update(updatedRows));
+                    result = (result + this._bedrijvenTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1130,11 +1054,11 @@ SELECT Id, Name, BedrijvenId FROM Zones WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateInsertedRows(MensentellerDataSet8 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._zonesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Zones.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._bedrijvenTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Bedrijven.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._zonesTableAdapter.Update(addedRows));
+                    result = (result + this._bedrijvenTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1148,11 +1072,11 @@ SELECT Id, Name, BedrijvenId FROM Zones WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(MensentellerDataSet8 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._zonesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Zones.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._bedrijvenTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Bedrijven.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._zonesTableAdapter.Update(deletedRows));
+                    result = (result + this._bedrijvenTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1195,8 +1119,8 @@ SELECT Id, Name, BedrijvenId FROM Zones WHERE (Id = @Id)";
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._zonesTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._zonesTableAdapter.Connection) == false))) {
+            if (((this._bedrijvenTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._bedrijvenTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1232,13 +1156,13 @@ SELECT Id, Name, BedrijvenId FROM Zones WHERE (Id = @Id)";
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._zonesTableAdapter != null)) {
-                    revertConnections.Add(this._zonesTableAdapter, this._zonesTableAdapter.Connection);
-                    this._zonesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._zonesTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._zonesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._zonesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._zonesTableAdapter.Adapter);
+                if ((this._bedrijvenTableAdapter != null)) {
+                    revertConnections.Add(this._bedrijvenTableAdapter, this._bedrijvenTableAdapter.Connection);
+                    this._bedrijvenTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._bedrijvenTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._bedrijvenTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._bedrijvenTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._bedrijvenTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1299,9 +1223,9 @@ SELECT Id, Name, BedrijvenId FROM Zones WHERE (Id = @Id)";
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._zonesTableAdapter != null)) {
-                    this._zonesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._zonesTableAdapter]));
-                    this._zonesTableAdapter.Transaction = null;
+                if ((this._bedrijvenTableAdapter != null)) {
+                    this._bedrijvenTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._bedrijvenTableAdapter]));
+                    this._bedrijvenTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

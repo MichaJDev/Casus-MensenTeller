@@ -18,7 +18,7 @@ namespace Mensenteller_B3.Sensors
         // Properties lijst van Sensoren van gehele bedrijf
         public List<Sensor> Sensors { get; set; }
        
-        public void Create(Locatie l, Sensor s)
+        public void Create(Sensor s)
         {
             using(SqlConnection cnn = new SqlConnection(connectionString))
             {
@@ -26,7 +26,7 @@ namespace Mensenteller_B3.Sensors
                 using(SqlCommand cmd = new SqlCommand(sql, cnn))
                 {
                     cmd.Parameters.AddWithValue("@name", s.Name);
-                    cmd.Parameters.AddWithValue("@locatieId", l.ID);
+                    cmd.Parameters.AddWithValue("@locatieId", s.LocatieID);
                     cnn.Open();
                     try
                     {

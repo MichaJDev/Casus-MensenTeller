@@ -28,342 +28,127 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.DgvCreateZone = new System.Windows.Forms.DataGridView();
             this.CreateZonebutton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.zonesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.mensentellerDataSet7 = new Mensenteller_B3.MensentellerDataSet7();
-            this.zonesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet_Zones = new Mensenteller_B3.DataSet_Zones();
-            this.zonesTableAdapter = new Mensenteller_B3.DataSet_ZonesTableAdapters.ZonesTableAdapter();
-            this.CreateZonetextbox = new System.Windows.Forms.TextBox();
             this.EditZonebutton = new System.Windows.Forms.Button();
-            this.IdZonetextbox = new System.Windows.Forms.TextBox();
-            this.ZoneNameEdit = new System.Windows.Forms.TextBox();
-            this.TableLayoutPanelCreateZone = new System.Windows.Forms.TableLayoutPanel();
-            this.TableLayoutPanelControl = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.LabelCreateZone = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.CreateZoneNatextbox = new System.Windows.Forms.TextBox();
+            this.ZoneEditIdtextbox = new System.Windows.Forms.TextBox();
+            this.ZoneNaamEdittextbox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.LabelEditName = new System.Windows.Forms.Label();
-            this.ButtondDone = new System.Windows.Forms.Button();
-            this.zonesTableAdapter1 = new Mensenteller_B3.MensentellerDataSet7TableAdapters.ZonesTableAdapter();
-            this.mensentellerDataSet8 = new Mensenteller_B3.MensentellerDataSet8();
-            this.zonesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.zonesTableAdapter2 = new Mensenteller_B3.MensentellerDataSet8TableAdapters.ZonesTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Zones)).BeginInit();
-            this.TableLayoutPanelCreateZone.SuspendLayout();
-            this.TableLayoutPanelControl.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource2)).BeginInit();
+            this.label3 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvCreateZone)).BeginInit();
             this.SuspendLayout();
+            // 
+            // DgvCreateZone
+            // 
+            this.DgvCreateZone.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvCreateZone.Location = new System.Drawing.Point(0, 0);
+            this.DgvCreateZone.Name = "DgvCreateZone";
+            this.DgvCreateZone.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvCreateZone.Size = new System.Drawing.Size(799, 191);
+            this.DgvCreateZone.TabIndex = 0;
             // 
             // CreateZonebutton
             // 
-            this.CreateZonebutton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CreateZonebutton.AutoSize = true;
-            this.CreateZonebutton.Location = new System.Drawing.Point(430, 3);
+            this.CreateZonebutton.Location = new System.Drawing.Point(582, 197);
             this.CreateZonebutton.Name = "CreateZonebutton";
-            this.CreateZonebutton.Size = new System.Drawing.Size(422, 67);
-            this.CreateZonebutton.TabIndex = 0;
+            this.CreateZonebutton.Size = new System.Drawing.Size(217, 74);
+            this.CreateZonebutton.TabIndex = 1;
             this.CreateZonebutton.Text = "Create";
             this.CreateZonebutton.UseVisualStyleBackColor = true;
             this.CreateZonebutton.Click += new System.EventHandler(this.CreateZonebutton_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(855, 182);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // zonesBindingSource1
-            // 
-            this.zonesBindingSource1.DataMember = "Zones";
-            this.zonesBindingSource1.DataSource = this.mensentellerDataSet7;
-            // 
-            // mensentellerDataSet7
-            // 
-            this.mensentellerDataSet7.DataSetName = "MensentellerDataSet7";
-            this.mensentellerDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // zonesBindingSource
-            // 
-            this.zonesBindingSource.DataMember = "Zones";
-            this.zonesBindingSource.DataSource = this.dataSet_Zones;
-            // 
-            // dataSet_Zones
-            // 
-            this.dataSet_Zones.DataSetName = "DataSet_Zones";
-            this.dataSet_Zones.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // zonesTableAdapter
-            // 
-            this.zonesTableAdapter.ClearBeforeFill = true;
-            // 
-            // CreateZonetextbox
-            // 
-            this.CreateZonetextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.CreateZonetextbox.Location = new System.Drawing.Point(213, 23);
-            this.CreateZonetextbox.Name = "CreateZonetextbox";
-            this.CreateZonetextbox.Size = new System.Drawing.Size(205, 20);
-            this.CreateZonetextbox.TabIndex = 2;
-            // 
             // EditZonebutton
             // 
-            this.EditZonebutton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.EditZonebutton.AutoSize = true;
-            this.EditZonebutton.Location = new System.Drawing.Point(430, 76);
+            this.EditZonebutton.Location = new System.Drawing.Point(582, 357);
             this.EditZonebutton.Name = "EditZonebutton";
-            this.EditZonebutton.Size = new System.Drawing.Size(422, 67);
-            this.EditZonebutton.TabIndex = 3;
+            this.EditZonebutton.Size = new System.Drawing.Size(217, 81);
+            this.EditZonebutton.TabIndex = 2;
             this.EditZonebutton.Text = "Edit";
             this.EditZonebutton.UseVisualStyleBackColor = true;
             this.EditZonebutton.Click += new System.EventHandler(this.EditZonebutton_Click);
             // 
-            // IdZonetextbox
+            // CreateZoneNatextbox
             // 
-            this.IdZonetextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.IdZonetextbox.Location = new System.Drawing.Point(213, 40);
-            this.IdZonetextbox.Name = "IdZonetextbox";
-            this.IdZonetextbox.Size = new System.Drawing.Size(205, 20);
-            this.IdZonetextbox.TabIndex = 4;
+            this.CreateZoneNatextbox.Location = new System.Drawing.Point(48, 233);
+            this.CreateZoneNatextbox.Name = "CreateZoneNatextbox";
+            this.CreateZoneNatextbox.Size = new System.Drawing.Size(100, 20);
+            this.CreateZoneNatextbox.TabIndex = 3;
             // 
-            // ZoneNameEdit
+            // ZoneEditIdtextbox
             // 
-            this.ZoneNameEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.ZoneNameEdit.Location = new System.Drawing.Point(213, 6);
-            this.ZoneNameEdit.Name = "ZoneNameEdit";
-            this.ZoneNameEdit.Size = new System.Drawing.Size(205, 20);
-            this.ZoneNameEdit.TabIndex = 5;
+            this.ZoneEditIdtextbox.Location = new System.Drawing.Point(48, 328);
+            this.ZoneEditIdtextbox.Name = "ZoneEditIdtextbox";
+            this.ZoneEditIdtextbox.Size = new System.Drawing.Size(100, 20);
+            this.ZoneEditIdtextbox.TabIndex = 4;
             // 
-            // TableLayoutPanelCreateZone
+            // ZoneNaamEdittextbox
             // 
-            this.TableLayoutPanelCreateZone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TableLayoutPanelCreateZone.AutoScroll = true;
-            this.TableLayoutPanelCreateZone.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.TableLayoutPanelCreateZone.ColumnCount = 1;
-            this.TableLayoutPanelCreateZone.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TableLayoutPanelCreateZone.Controls.Add(this.TableLayoutPanelControl, 0, 1);
-            this.TableLayoutPanelCreateZone.Controls.Add(this.dataGridView1, 0, 0);
-            this.TableLayoutPanelCreateZone.Location = new System.Drawing.Point(12, 12);
-            this.TableLayoutPanelCreateZone.Name = "TableLayoutPanelCreateZone";
-            this.TableLayoutPanelCreateZone.RowCount = 2;
-            this.TableLayoutPanelCreateZone.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TableLayoutPanelCreateZone.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TableLayoutPanelCreateZone.Size = new System.Drawing.Size(861, 377);
-            this.TableLayoutPanelCreateZone.TabIndex = 9;
+            this.ZoneNaamEdittextbox.Location = new System.Drawing.Point(48, 357);
+            this.ZoneNaamEdittextbox.Name = "ZoneNaamEdittextbox";
+            this.ZoneNaamEdittextbox.Size = new System.Drawing.Size(100, 20);
+            this.ZoneNaamEdittextbox.TabIndex = 5;
             // 
-            // TableLayoutPanelControl
+            // label1
             // 
-            this.TableLayoutPanelControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TableLayoutPanelControl.AutoSize = true;
-            this.TableLayoutPanelControl.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.TableLayoutPanelControl.ColumnCount = 2;
-            this.TableLayoutPanelControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TableLayoutPanelControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TableLayoutPanelControl.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.TableLayoutPanelControl.Controls.Add(this.tableLayoutPanel1, 0, 1);
-            this.TableLayoutPanelControl.Controls.Add(this.ButtondDone, 1, 2);
-            this.TableLayoutPanelControl.Controls.Add(this.EditZonebutton, 1, 1);
-            this.TableLayoutPanelControl.Controls.Add(this.CreateZonebutton, 1, 0);
-            this.TableLayoutPanelControl.Location = new System.Drawing.Point(3, 191);
-            this.TableLayoutPanelControl.Name = "TableLayoutPanelControl";
-            this.TableLayoutPanelControl.RowCount = 3;
-            this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TableLayoutPanelControl.Size = new System.Drawing.Size(855, 183);
-            this.TableLayoutPanelControl.TabIndex = 9;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.AutoSize = true;
-            this.tableLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.LabelCreateZone, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.CreateZonetextbox, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(421, 67);
-            this.tableLayoutPanel2.TabIndex = 11;
-            // 
-            // LabelCreateZone
-            // 
-            this.LabelCreateZone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LabelCreateZone.AutoSize = true;
-            this.LabelCreateZone.Location = new System.Drawing.Point(3, 0);
-            this.LabelCreateZone.Name = "LabelCreateZone";
-            this.LabelCreateZone.Size = new System.Drawing.Size(204, 67);
-            this.LabelCreateZone.TabIndex = 10;
-            this.LabelCreateZone.Text = "Create Zone";
-            this.LabelCreateZone.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.AutoSize = true;
-            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.LabelEditName, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.IdZonetextbox, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.ZoneNameEdit, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 76);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(421, 67);
-            this.tableLayoutPanel1.TabIndex = 10;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(167, 233);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Naam Create";
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 33);
+            this.label2.Location = new System.Drawing.Point(176, 331);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(204, 34);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Edit ID";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "ID zone";
             // 
-            // LabelEditName
+            // label3
             // 
-            this.LabelEditName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LabelEditName.AutoSize = true;
-            this.LabelEditName.Location = new System.Drawing.Point(3, 0);
-            this.LabelEditName.Name = "LabelEditName";
-            this.LabelEditName.Size = new System.Drawing.Size(204, 33);
-            this.LabelEditName.TabIndex = 9;
-            this.LabelEditName.Text = "Edit Zone";
-            this.LabelEditName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // ButtondDone
-            // 
-            this.ButtondDone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtondDone.AutoSize = true;
-            this.ButtondDone.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ButtondDone.Location = new System.Drawing.Point(430, 149);
-            this.ButtondDone.Name = "ButtondDone";
-            this.ButtondDone.Size = new System.Drawing.Size(422, 31);
-            this.ButtondDone.TabIndex = 7;
-            this.ButtondDone.Text = "Done";
-            this.ButtondDone.UseVisualStyleBackColor = true;
-            this.ButtondDone.Click += new System.EventHandler(this.ButtondDone_Click);
-            // 
-            // zonesTableAdapter1
-            // 
-            this.zonesTableAdapter1.ClearBeforeFill = true;
-            // 
-            // mensentellerDataSet8
-            // 
-            this.mensentellerDataSet8.DataSetName = "MensentellerDataSet8";
-            this.mensentellerDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // zonesBindingSource2
-            // 
-            this.zonesBindingSource2.DataMember = "Zones";
-            this.zonesBindingSource2.DataSource = this.mensentellerDataSet8;
-            // 
-            // zonesTableAdapter2
-            // 
-            this.zonesTableAdapter2.ClearBeforeFill = true;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(175, 357);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Naam zone";
             // 
             // CreateZones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 401);
-            this.Controls.Add(this.TableLayoutPanelCreateZone);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ZoneNaamEdittextbox);
+            this.Controls.Add(this.ZoneEditIdtextbox);
+            this.Controls.Add(this.CreateZoneNatextbox);
+            this.Controls.Add(this.EditZonebutton);
+            this.Controls.Add(this.CreateZonebutton);
+            this.Controls.Add(this.DgvCreateZone);
             this.Name = "CreateZones";
-            this.Text = "CreateZones";
-            this.Load += new System.EventHandler(this.CreateZones_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Zones)).EndInit();
-            this.TableLayoutPanelCreateZone.ResumeLayout(false);
-            this.TableLayoutPanelCreateZone.PerformLayout();
-            this.TableLayoutPanelControl.ResumeLayout(false);
-            this.TableLayoutPanelControl.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource2)).EndInit();
+            this.Text = "CreateZone";
+            ((System.ComponentModel.ISupportInitialize)(this.DgvCreateZone)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
+        private System.Windows.Forms.DataGridView DgvCreateZone;
         private System.Windows.Forms.Button CreateZonebutton;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private DataSet_Zones dataSet_Zones;
-        private System.Windows.Forms.BindingSource zonesBindingSource;
-        private DataSet_ZonesTableAdapters.ZonesTableAdapter zonesTableAdapter;
-        private System.Windows.Forms.TextBox CreateZonetextbox;
         private System.Windows.Forms.Button EditZonebutton;
-        private System.Windows.Forms.TextBox IdZonetextbox;
-        private System.Windows.Forms.TextBox ZoneNameEdit;
-        private System.Windows.Forms.TableLayoutPanel TableLayoutPanelCreateZone;
-        private System.Windows.Forms.TableLayoutPanel TableLayoutPanelControl;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label LabelCreateZone;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TextBox CreateZoneNatextbox;
+        private System.Windows.Forms.TextBox ZoneEditIdtextbox;
+        private System.Windows.Forms.TextBox ZoneNaamEdittextbox;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label LabelEditName;
-        private System.Windows.Forms.Button ButtondDone;
-        private MensentellerDataSet7 mensentellerDataSet7;
-        private System.Windows.Forms.BindingSource zonesBindingSource1;
-        private MensentellerDataSet7TableAdapters.ZonesTableAdapter zonesTableAdapter1;
-        private MensentellerDataSet8 mensentellerDataSet8;
-        private System.Windows.Forms.BindingSource zonesBindingSource2;
-        private MensentellerDataSet8TableAdapters.ZonesTableAdapter zonesTableAdapter2;
+        private System.Windows.Forms.Label label3;
     }
 }

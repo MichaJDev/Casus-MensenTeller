@@ -48,7 +48,7 @@ namespace Mensenteller_B3
 
         private void ButtonCreate_Click(object sender, EventArgs e)
         {
-            CreateZones createZones = new CreateZones(Id, DisplayName);
+            CreateZones createZones = new CreateZones();
             createZones.Show();
         }
 

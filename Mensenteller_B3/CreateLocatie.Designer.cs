@@ -41,6 +41,7 @@
             this.EditIdLocatietextbox = new System.Windows.Forms.TextBox();
             this.locatiesTableAdapter1 = new Mensenteller_B3.DataSet_Locaties1TableAdapters.LocatiesTableAdapter();
             this.EditLocatietextbox = new System.Windows.Forms.TextBox();
+            this.ZoneIdtextbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.locatiesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Locaties1)).BeginInit();
@@ -50,9 +51,9 @@
             // 
             // CreateLocatiebutton
             // 
-            this.CreateLocatiebutton.Location = new System.Drawing.Point(71, 296);
+            this.CreateLocatiebutton.Location = new System.Drawing.Point(542, 227);
             this.CreateLocatiebutton.Name = "CreateLocatiebutton";
-            this.CreateLocatiebutton.Size = new System.Drawing.Size(75, 23);
+            this.CreateLocatiebutton.Size = new System.Drawing.Size(253, 92);
             this.CreateLocatiebutton.TabIndex = 0;
             this.CreateLocatiebutton.Text = "Create";
             this.CreateLocatiebutton.UseVisualStyleBackColor = true;
@@ -101,9 +102,9 @@
             // 
             // EditLocatiebutton
             // 
-            this.EditLocatiebutton.Location = new System.Drawing.Point(71, 349);
+            this.EditLocatiebutton.Location = new System.Drawing.Point(542, 367);
             this.EditLocatiebutton.Name = "EditLocatiebutton";
-            this.EditLocatiebutton.Size = new System.Drawing.Size(75, 23);
+            this.EditLocatiebutton.Size = new System.Drawing.Size(253, 80);
             this.EditLocatiebutton.TabIndex = 3;
             this.EditLocatiebutton.Text = "Edit";
             this.EditLocatiebutton.UseVisualStyleBackColor = true;
@@ -127,11 +128,19 @@
             this.EditLocatietextbox.Size = new System.Drawing.Size(100, 20);
             this.EditLocatietextbox.TabIndex = 5;
             // 
+            // ZoneIdtextbox
+            // 
+            this.ZoneIdtextbox.Location = new System.Drawing.Point(339, 298);
+            this.ZoneIdtextbox.Name = "ZoneIdtextbox";
+            this.ZoneIdtextbox.Size = new System.Drawing.Size(100, 20);
+            this.ZoneIdtextbox.TabIndex = 6;
+            // 
             // CreateLocatie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ZoneIdtextbox);
             this.Controls.Add(this.EditLocatietextbox);
             this.Controls.Add(this.EditIdLocatietextbox);
             this.Controls.Add(this.EditLocatiebutton);
@@ -165,5 +174,6 @@
         private System.Windows.Forms.BindingSource locatiesBindingSource1;
         private DataSet_Locaties1TableAdapters.LocatiesTableAdapter locatiesTableAdapter1;
         private System.Windows.Forms.TextBox EditLocatietextbox;
+        private System.Windows.Forms.TextBox ZoneIdtextbox;
     }
 }
