@@ -28,11 +28,12 @@ namespace Mensenteller_B3.Sensors.DrukSensors
                     try
                     {
                         command.ExecuteNonQuery();
-                    }catch(SqlException e)
+                    }
+                    catch (SqlException e)
                     {
                         Console.WriteLine(e.ToString());
                     }
-                    
+
 
                     command.CommandText = "SELECT CAST(@@Identity AS INT);";
                     int id = 0;
@@ -49,9 +50,9 @@ namespace Mensenteller_B3.Sensors.DrukSensors
             }
         }
 
-        public void ReadDrukSensor()
+        public List<DrukSensor> ReadDrukSensor()
         {
-            druksensorlist.Clear();
+            List<DrukSensor> dl = new List<DrukSensor>();
 
             using (SqlConnection cnn = new SqlConnection(connectionString))
             {
@@ -65,19 +66,23 @@ namespace Mensenteller_B3.Sensors.DrukSensors
 
                     while (datareader.Read())
                     {
-                        druksensorlist.Add(new DrukSensor(Int32.Parse(datareader[0].ToString()),
+                        dl.Add(new DrukSensor(Int32.Parse(datareader[0].ToString()),
                                                               Int32.Parse(datareader[1].ToString()),
                                                               datareader.GetBoolean(2),
                                                               datareader[3].ToString()
                                                               ));
                     }
                 }
+                return dl;
             }
         }
 
         public void ReadDrukSensor(int id)
         {
-            druksensorlist.Clear();
+            if (druksensorlist != null)
+            {
+                druksensorlist.Clear();
+            }
 
             using (SqlConnection cnn = new SqlConnection(connectionString))
             {

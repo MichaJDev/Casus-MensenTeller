@@ -108,13 +108,14 @@ namespace Mensenteller_B3.Sensors
             }
         }
 
-        public void ReadSensors(int id)
+        public List<Sensor> ReadSensors(int id)
         {
             using(SqlConnection cnn = new SqlConnection(connectionString))
             {
                 string sql = "SELECT Id, Name, LocatieId FROM Sensors WHERE LocatieId = @id";
                 using(SqlCommand cmd = new SqlCommand(sql, cnn))
                 {
+                    List<Sensor> sl = new List<Sensor>();
                     cnn.Open();
                     cmd.Parameters.AddWithValue("@id", id);
                     SqlDataReader reader = cmd.ExecuteReader();
@@ -126,8 +127,9 @@ namespace Mensenteller_B3.Sensors
                             Name = reader.GetString(1),
                             LocatieID = reader.GetInt32(2)
                         };
-                        Sensors.Add(s);
+                        sl.Add(s);
                     }
+                    return sl;
                 }
             }
         }

@@ -31,20 +31,16 @@ namespace Mensenteller_B3
 
         private void ViewLocatie_Load(object sender, EventArgs e)
         {
-            sensorDal.ReadSensors(locatie.ID);
-           
             List<EntreeSensor> eSensorList = new List<EntreeSensor>();
             List<DrukSensor> dSensorList = new List<DrukSensor>();
-            foreach(Sensor s in sensorDal.Sensors)
+            foreach (Sensor s in sensorDal.ReadSensors(locatie.ID))
             {
-                eSensorDal.ReadEntreeSensors();
-                eSensorList = eSensorDal.EntreeSensors.Where(x => x.SensorID == s.ID).ToList();  
+                eSensorList = eSensorDal.ReadEntreeSensors().Where(x => x.SensorID == s.ID).ToList();
             }
             DvgEntreeSensors.DataSource = eSensorList;
             foreach (Sensor s in sensorDal.Sensors)
             {
-                dSensorDal.ReadDrukSensor();
-                dSensorList = dSensorDal.druksensorlist.Where(x => x.SensorId == s.ID).ToList();
+                dSensorList = dSensorDal.ReadDrukSensor().Where(x => x.SensorId == s.ID).ToList();
             }
             DvgDrukSensors.DataSource = dSensorList;
 

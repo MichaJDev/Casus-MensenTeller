@@ -11,8 +11,9 @@ namespace Mensenteller_B3.Sensors.EntreeSensors
     {
         private readonly string conString = "";
         public List<EntreeSensor> EntreeSensors { get; set; }
-        public void ReadEntreeSensors()
+        public List<EntreeSensor> ReadEntreeSensors()
         {
+            List<EntreeSensor> el = new List<EntreeSensor>();
             using (SqlConnection cnn = new SqlConnection(conString))
             {
                 string sql = "SELECT * FROM EntreeSensors";
@@ -35,7 +36,7 @@ namespace Mensenteller_B3.Sensors.EntreeSensors
                                 PeopleOut = reader.GetInt32(3),
                                 TimeStamp = reader.GetString(4)
                             };
-                            EntreeSensors.Add(es);
+                            el.Add(es);
                         }
 
                     }
@@ -44,6 +45,7 @@ namespace Mensenteller_B3.Sensors.EntreeSensors
                         Console.WriteLine($"Unable to read from EntreeSensors table, are you connected?");
                         Console.WriteLine(ex.ToString());
                     }
+                    return el;
                 }
             }
         }
@@ -51,7 +53,7 @@ namespace Mensenteller_B3.Sensors.EntreeSensors
         {
             using (SqlConnection cnn = new SqlConnection(conString))
             {
-                string sql = "IF EXISTS (SELECT * FROM EntreeSensors WHERE SensorId = @Id)";
+                string sql = "SELECT * FROM EntreeSensors WHERE SensorId = @Id";
                 using (SqlCommand cmd = new SqlCommand(sql, cnn))
                 {
                     cmd.Parameters.AddWithValue("@Id", id);
@@ -138,7 +140,7 @@ namespace Mensenteller_B3.Sensors.EntreeSensors
         {
             using (SqlConnection cnn = new SqlConnection(conString))
             {
-                string sql = "INSERT INTO EntreeSensors (Name, PeopleIn, PeopleOut, Timestamp) VALUES (@Name, @PeopleIn, @PeopleOut, @TimeStamp)";
+                string sql = "INSERT INTO EntreeSensors (Name, PeopleIn, PeopleOut, Timestamp) VALUES(@Name, @PeopleIn, @PeopleOut, @TimeStamp)";
                 using (SqlCommand cmd = new SqlCommand(sql, cnn))
                 {
                     cmd.Parameters.AddWithValue("@Name", $"Sensor{sensor.EntryID}");
