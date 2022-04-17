@@ -59,8 +59,9 @@
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.TableLayoutPanelModifyBedrijf.Size = new System.Drawing.Size(776, 422);
+            this.TableLayoutPanelModifyBedrijf.Size = new System.Drawing.Size(776, 421);
             this.TableLayoutPanelModifyBedrijf.TabIndex = 1;
+            this.TableLayoutPanelModifyBedrijf.Paint += new System.Windows.Forms.PaintEventHandler(this.TableLayoutPanelModifyBedrijf_Paint);
             // 
             // DataGridViewZones
             // 
@@ -71,7 +72,7 @@
             this.DataGridViewZones.Location = new System.Drawing.Point(3, 59);
             this.DataGridViewZones.Name = "DataGridViewZones";
             this.DataGridViewZones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridViewZones.Size = new System.Drawing.Size(770, 219);
+            this.DataGridViewZones.Size = new System.Drawing.Size(770, 218);
             this.DataGridViewZones.TabIndex = 0;
             // 
             // TableLayoutPanelControl
@@ -88,7 +89,7 @@
             this.TableLayoutPanelControl.Controls.Add(this.ButtonCreate, 0, 0);
             this.TableLayoutPanelControl.Controls.Add(this.ButtonDone, 1, 1);
             this.TableLayoutPanelControl.Controls.Add(this.ButtonDelete, 0, 1);
-            this.TableLayoutPanelControl.Location = new System.Drawing.Point(3, 284);
+            this.TableLayoutPanelControl.Location = new System.Drawing.Point(3, 283);
             this.TableLayoutPanelControl.Name = "TableLayoutPanelControl";
             this.TableLayoutPanelControl.RowCount = 2;
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));

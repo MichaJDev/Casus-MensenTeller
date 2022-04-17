@@ -57,11 +57,11 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
+            //
             // CreateLocatiebutton
-            // 
-            this.CreateLocatiebutton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this.CreateLocatiebutton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CreateLocatiebutton.AutoSize = true;
             this.CreateLocatiebutton.Location = new System.Drawing.Point(376, 3);
@@ -71,12 +71,12 @@
             this.CreateLocatiebutton.Text = "Create";
             this.CreateLocatiebutton.UseVisualStyleBackColor = true;
             this.CreateLocatiebutton.Click += new System.EventHandler(this.CreateLocatiebutton_Click);
-            // 
+            //
             // dataGridView1
-            // 
+            //
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
@@ -85,30 +85,30 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(747, 206);
             this.dataGridView1.TabIndex = 2;
-            // 
+            //
             // dataSet_Locaties1
-            // 
+            //
             this.dataSet_Locaties1.DataSetName = "DataSet_Locaties1";
             this.dataSet_Locaties1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
+            //
             // dataSet_Locaties
-            // 
+            //
             this.dataSet_Locaties.DataSetName = "DataSet_Locaties";
             this.dataSet_Locaties.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
+            //
             // locatiesBindingSource
-            // 
+            //
             this.locatiesBindingSource.DataMember = "Locaties";
             this.locatiesBindingSource.DataSource = this.dataSet_Locaties;
-            // 
+            //
             // locatiesTableAdapter
-            // 
+            //
             this.locatiesTableAdapter.ClearBeforeFill = true;
-            // 
+            //
             // EditLocatiebutton
-            // 
-            this.EditLocatiebutton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this.EditLocatiebutton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EditLocatiebutton.AutoSize = true;
             this.EditLocatiebutton.Location = new System.Drawing.Point(376, 85);
@@ -118,32 +118,32 @@
             this.EditLocatiebutton.Text = "Edit";
             this.EditLocatiebutton.UseVisualStyleBackColor = true;
             this.EditLocatiebutton.Click += new System.EventHandler(this.EditLocatiebutton_Click);
-            // 
+            //
             // EditIdLocatietextbox
-            // 
+            //
             this.EditIdLocatietextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.EditIdLocatietextbox.Location = new System.Drawing.Point(186, 47);
             this.EditIdLocatietextbox.Name = "EditIdLocatietextbox";
             this.EditIdLocatietextbox.Size = new System.Drawing.Size(178, 20);
             this.EditIdLocatietextbox.TabIndex = 4;
             this.EditIdLocatietextbox.TextChanged += new System.EventHandler(this.EditIdLocatietextbox_TextChanged);
-            // 
+            //
             // locatiesTableAdapter1
-            // 
+            //
             this.locatiesTableAdapter1.ClearBeforeFill = true;
-            // 
+            //
             // EditLocatietextbox
-            // 
+            //
             this.EditLocatietextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.EditLocatietextbox.Location = new System.Drawing.Point(186, 9);
             this.EditLocatietextbox.Name = "EditLocatietextbox";
             this.EditLocatietextbox.Size = new System.Drawing.Size(178, 20);
             this.EditLocatietextbox.TabIndex = 5;
-            // 
+            //
             // TableLayoutPanelCreateBedrijf
-            // 
-            this.TableLayoutPanelCreateBedrijf.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this.TableLayoutPanelCreateBedrijf.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TableLayoutPanelCreateBedrijf.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.TableLayoutPanelCreateBedrijf.ColumnCount = 1;
@@ -157,11 +157,11 @@
             this.TableLayoutPanelCreateBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TableLayoutPanelCreateBedrijf.Size = new System.Drawing.Size(753, 425);
             this.TableLayoutPanelCreateBedrijf.TabIndex = 9;
-            // 
+            //
             // TableLayoutPanelControl
-            // 
-            this.TableLayoutPanelControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this.TableLayoutPanelControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TableLayoutPanelControl.AutoSize = true;
             this.TableLayoutPanelControl.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -181,11 +181,11 @@
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.TableLayoutPanelControl.Size = new System.Drawing.Size(747, 207);
             this.TableLayoutPanelControl.TabIndex = 9;
-            // 
+            //
             // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.AutoSize = true;
             this.tableLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -200,11 +200,11 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(367, 76);
             this.tableLayoutPanel2.TabIndex = 11;
-            // 
+            //
             // LabelCreateLocatie
-            // 
-            this.LabelCreateLocatie.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this.LabelCreateLocatie.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LabelCreateLocatie.AutoSize = true;
             this.LabelCreateLocatie.Location = new System.Drawing.Point(3, 0);
@@ -213,11 +213,11 @@
             this.LabelCreateLocatie.TabIndex = 10;
             this.LabelCreateLocatie.Text = "Create Locatie";
             this.LabelCreateLocatie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
+            //
             // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.AutoSize = true;
             this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -235,11 +235,11 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(367, 76);
             this.tableLayoutPanel1.TabIndex = 10;
-            // 
+            //
             // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 38);
@@ -248,11 +248,11 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Edit ID";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
+            //
             // LabelEditName
-            // 
-            this.LabelEditName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this.LabelEditName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LabelEditName.AutoSize = true;
             this.LabelEditName.Location = new System.Drawing.Point(3, 0);
@@ -261,11 +261,11 @@
             this.LabelEditName.TabIndex = 9;
             this.LabelEditName.Text = "Edit Locatie";
             this.LabelEditName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
+            //
             // ButtondDone
-            // 
-            this.ButtondDone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            //
+            this.ButtondDone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtondDone.AutoSize = true;
             this.ButtondDone.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -278,20 +278,27 @@
             this.ButtondDone.Click += new System.EventHandler(this.ButtondDone_Click);
             // 
             // TextBoxCreateLocatie
-            // 
+            //
             this.TextBoxCreateLocatie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.TextBoxCreateLocatie.Location = new System.Drawing.Point(186, 28);
             this.TextBoxCreateLocatie.Name = "TextBoxCreateLocatie";
             this.TextBoxCreateLocatie.Size = new System.Drawing.Size(178, 20);
             this.TextBoxCreateLocatie.TabIndex = 11;
             this.TextBoxCreateLocatie.TextChanged += new System.EventHandler(this.TextBoxCreateLocatie_TextChanged);
-            // 
+            //
             // CreateLocatie
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 449);
             this.Controls.Add(this.TableLayoutPanelCreateBedrijf);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.EditLocatietextbox);
+            this.Controls.Add(this.EditIdLocatietextbox);
+            this.Controls.Add(this.EditLocatiebutton);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.CreateLocatietextbox);
+            this.Controls.Add(this.CreateLocatiebutton);
             this.Name = "CreateLocatie";
             this.Text = "CreateLocatie";
             this.Load += new System.EventHandler(this.CreateLocatie_Load);

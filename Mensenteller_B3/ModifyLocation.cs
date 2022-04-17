@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Mensenteller_B3.Sensors;
 
 namespace Mensenteller_B3
 {
     public partial class ModifyLocation : Form
     {
-        int zoneId = _zoneId
+        int zoneId ;
+        SensorDAL sensordal = new SensorDAL();
         public ModifyLocation(int _zoneId )
         {
+            zoneId = _zoneId;
             InitializeComponent();
         }
 
@@ -34,6 +37,12 @@ namespace Mensenteller_B3
         private void ButtonDone_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void ModifyLocation_Load(object sender, EventArgs e)
+        {
+            //.Text = "Bedrijf: " + BedrijfNaam + "Bedrijf Id: " + BedrijfId + "Zone: " + ZoneNaam + " Zone Id: " + ZoneId;
+            DataGridViewSensors.DataSource = sensordal.ReadSensors(zoneId);
         }
     }
 }

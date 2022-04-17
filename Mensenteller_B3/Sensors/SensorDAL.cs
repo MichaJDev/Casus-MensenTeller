@@ -22,11 +22,12 @@ namespace Mensenteller_B3.Sensors
         {
             using(SqlConnection cnn = new SqlConnection(connectionString))
             {
-                string sql = "INSERT INTO Sensors (Name, LocatieId) VALUES (@name, @locatieId)";
+                string sql = "INSERT INTO Sensors (Id,Name, LocatieId) VALUES (@Id,@name, @locatieId)";
                 using(SqlCommand cmd = new SqlCommand(sql, cnn))
                 {
                     cmd.Parameters.AddWithValue("@name", s.Name);
                     cmd.Parameters.AddWithValue("@locatieId", s.LocatieID);
+                    cmd.Parameters.AddWithValue("@Id", s.ID);
                     cnn.Open();
                     try
                     {

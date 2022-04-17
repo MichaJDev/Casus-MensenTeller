@@ -170,5 +170,39 @@ namespace Mensenteller_B3.Locaties
                 return ls;
             }
         }
+        public List <Locatie> ReadLocatieById(int id)
+        {
+            
+            List<Locatie> ls = new List<Locatie>();
+            using (SqlConnection cnn = new SqlConnection(conString))
+            {
+                using (SqlCommand command = new SqlCommand())
+                {
+                    cnn.ConnectionString = conString;
+                    command.Connection = cnn;
+                    command.CommandText = "SELECT * FROM Locaties WHERE ZoneId = @Id";
+                    command.Parameters.AddWithValue("@Id", id);
+                    cnn.Open();
+                    SqlDataReader dataReader = command.ExecuteReader();
+
+                    while (dataReader.Read())
+                    {
+                        Locatie l = new Locatie
+                        {
+                            ID = dataReader.GetInt32(0),
+                            Name = dataReader.GetString(1),
+                            ZoneId = dataReader.GetInt32(2)
+                        }
+                    ;
+                        ls.Add (l);
+
+                      
+
+
+                    }
+                }
+                return ls;
+            }
+        }
     }
 }

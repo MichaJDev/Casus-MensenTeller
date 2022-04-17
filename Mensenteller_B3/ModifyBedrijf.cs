@@ -62,7 +62,7 @@ namespace Mensenteller_B3
 
             zoneDAL.ReadZoneByBedrijfId(bedrijfId);
             Zone zone = zoneDAL.ReadZone(bedrijfId);
-            ModifyZones modifyZones = new ModifyZones(BedrijfNaam, zone.BedrijvenId, zone.Name, zone.ID);
+            ModifyZones modifyZones = new ModifyZones(BedrijfNaam, zone.BedrijvenId, zone.Name, zoneId);
             modifyZones.Show();
         }
 

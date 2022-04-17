@@ -57,7 +57,7 @@
             this.TableLayoutPanelModifyLocation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.TableLayoutPanelModifyLocation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.TableLayoutPanelModifyLocation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.TableLayoutPanelModifyLocation.Size = new System.Drawing.Size(776, 421);
+            this.TableLayoutPanelModifyLocation.Size = new System.Drawing.Size(776, 420);
             this.TableLayoutPanelModifyLocation.TabIndex = 1;
             // 
             // DataGridViewSensors
@@ -90,7 +90,7 @@
             this.TableLayoutPanelControl.RowCount = 2;
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TableLayoutPanelControl.Size = new System.Drawing.Size(770, 135);
+            this.TableLayoutPanelControl.Size = new System.Drawing.Size(770, 134);
             this.TableLayoutPanelControl.TabIndex = 2;
             // 
             // ButtonModify
@@ -102,7 +102,7 @@
             this.ButtonModify.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonModify.Location = new System.Drawing.Point(388, 3);
             this.ButtonModify.Name = "ButtonModify";
-            this.ButtonModify.Size = new System.Drawing.Size(379, 102);
+            this.ButtonModify.Size = new System.Drawing.Size(379, 101);
             this.ButtonModify.TabIndex = 1;
             this.ButtonModify.Text = "Modify";
             this.ButtonModify.UseVisualStyleBackColor = true;
@@ -117,7 +117,7 @@
             this.ButtonCreate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonCreate.Location = new System.Drawing.Point(3, 3);
             this.ButtonCreate.Name = "ButtonCreate";
-            this.ButtonCreate.Size = new System.Drawing.Size(379, 102);
+            this.ButtonCreate.Size = new System.Drawing.Size(379, 101);
             this.ButtonCreate.TabIndex = 0;
             this.ButtonCreate.Text = "Create";
             this.ButtonCreate.UseVisualStyleBackColor = true;
@@ -130,7 +130,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonDone.AutoSize = true;
             this.ButtonDone.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ButtonDone.Location = new System.Drawing.Point(388, 111);
+            this.ButtonDone.Location = new System.Drawing.Point(388, 110);
             this.ButtonDone.Name = "ButtonDone";
             this.ButtonDone.Size = new System.Drawing.Size(379, 21);
             this.ButtonDone.TabIndex = 3;
@@ -145,7 +145,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonDelete.AutoSize = true;
             this.ButtonDelete.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ButtonDelete.Location = new System.Drawing.Point(3, 111);
+            this.ButtonDelete.Location = new System.Drawing.Point(3, 110);
             this.ButtonDelete.Name = "ButtonDelete";
             this.ButtonDelete.Size = new System.Drawing.Size(379, 21);
             this.ButtonDelete.TabIndex = 4;
@@ -162,6 +162,7 @@
             this.Name = "ModifyLocation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModifyLocation";
+            this.Load += new System.EventHandler(this.ModifyLocation_Load);
             this.TableLayoutPanelModifyLocation.ResumeLayout(false);
             this.TableLayoutPanelModifyLocation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewSensors)).EndInit();
