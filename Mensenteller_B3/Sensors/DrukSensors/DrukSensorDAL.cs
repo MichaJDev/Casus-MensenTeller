@@ -51,7 +51,7 @@ namespace Mensenteller_B3.Sensors.DrukSensors
                     cnn.ConnectionString = connectionString;
                     cnn.Open();
                     command.Connection = cnn;
-                    command.CommandText = "SELECT entryid, sensorid, inuse, timestamp FORM PRESSURESENSORS ORDER BY Id";
+                    command.CommandText = "SELECT entryid, sensorid, inuse, timestamp FORM DrukSensors ORDER BY Id";
                     SqlDataReader datareader = command.ExecuteReader();
 
                     while (datareader.Read())
@@ -67,13 +67,9 @@ namespace Mensenteller_B3.Sensors.DrukSensors
             }
         }
 
-        public void ReadDrukSensor(int id)
+        public List<DrukSensor> ReadDrukSensor(int id)
         {
-            if (druksensorlist != null)
-            {
-                druksensorlist.Clear();
-            }
-
+            List<DrukSensor> ds = new List<DrukSensor>();
             using (SqlConnection cnn = new SqlConnection(connectionString))
             {
                 using (SqlCommand command = new SqlCommand())
@@ -81,19 +77,20 @@ namespace Mensenteller_B3.Sensors.DrukSensors
                     cnn.ConnectionString = connectionString;
                     cnn.Open();
                     command.Connection = cnn;
-                    command.CommandText = "IF EXISTS (SELECT entryid, sensorid, inuse, timestamp FORM PRESSURESENSORS WHERE SensorId = @Id)";
+                    command.CommandText = "SELECT entryid, sensorid, inuse, timestamp FROM DrukSensors WHERE SensorId = @Id";
                     command.Parameters.AddWithValue("@Id", id);
                     SqlDataReader datareader = command.ExecuteReader();
 
                     while (datareader.Read())
                     {
-                        druksensorlist.Add(new DrukSensor(Int32.Parse(datareader[0].ToString()),
+                        ds.Add(new DrukSensor(Int32.Parse(datareader[0].ToString()),
                                                               Int32.Parse(datareader[1].ToString()),
                                                               datareader.GetBoolean(2),
                                                               datareader[3].ToString()
                                                               ));
                     }
                 }
+                return ds;
             }
         }
 
@@ -108,7 +105,7 @@ namespace Mensenteller_B3.Sensors.DrukSensors
                     cnn.ConnectionString = connectionString;
                     cnn.Open();
                     command.Connection = cnn;
-                    command.CommandText = "DELETE PRESSURESENSORS FROM DRUKSENSOR WHERE Id = @Id;";
+                    command.CommandText = "DELETE FROM DrukSensors WHERE Id = @Id;";
                     command.Parameters.AddWithValue("@Id", entryid);
                     command.ExecuteNonQuery();
                 }
@@ -124,11 +121,11 @@ namespace Mensenteller_B3.Sensors.DrukSensors
                     cnn.ConnectionString = connectionString;
                     cnn.Open();
                     command.Connection = cnn;
-                    command.CommandText = "UPDATE pressuresensors SET entryid = @entryid WHERE Id = @id";
+                    command.CommandText = "UPDATE DrukSensors SET entryid = @entryid, sensorid = @sensorid, inuse = @inuse, timestamp = @timestamp WHERE Id = @id";
                     command.Parameters.AddWithValue("@Id", entryid);
-                    command.Parameters.AddWithValue("sensorid", sensorid);
-                    command.Parameters.AddWithValue("inuse", inuse);
-                    command.Parameters.AddWithValue("timestamp", timestamp);
+                    command.Parameters.AddWithValue("@sensorid", sensorid);
+                    command.Parameters.AddWithValue("@inuse", inuse);
+                    command.Parameters.AddWithValue("@timestamp", timestamp);
                     command.ExecuteNonQuery();
                 }
             }

@@ -31,11 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.TableLayoutPanelModifyBedrijf = new System.Windows.Forms.TableLayoutPanel();
             this.DataGridViewZones = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bedrijvenIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zonesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.mensentellerDataSet5 = new Mensenteller_B3.MensentellerDataSet5();
             this.TableLayoutPanelControl = new System.Windows.Forms.TableLayoutPanel();
             this.ButtonModify = new System.Windows.Forms.Button();
             this.ButtonCreate = new System.Windows.Forms.Button();
@@ -45,14 +40,13 @@
             this.zonesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mensentellerDataSet3 = new Mensenteller_B3.MensentellerDataSet3();
             this.zonesTableAdapter = new Mensenteller_B3.MensentellerDataSet3TableAdapters.ZonesTableAdapter();
-            this.zonesTableAdapter1 = new Mensenteller_B3.MensentellerDataSet5TableAdapters.ZonesTableAdapter();
+            this.zonesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.TableLayoutPanelModifyBedrijf.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewZones)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet5)).BeginInit();
             this.TableLayoutPanelControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // TableLayoutPanelModifyBedrijf
@@ -73,7 +67,7 @@
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.66667F));
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56F));
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.TableLayoutPanelModifyBedrijf.Size = new System.Drawing.Size(776, 423);
+            this.TableLayoutPanelModifyBedrijf.Size = new System.Drawing.Size(776, 406);
             this.TableLayoutPanelModifyBedrijf.TabIndex = 0;
             // 
             // DataGridViewZones
@@ -83,45 +77,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DataGridViewZones.AutoGenerateColumns = false;
             this.DataGridViewZones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridViewZones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.bedrijvenIdDataGridViewTextBoxColumn});
             this.DataGridViewZones.DataSource = this.zonesBindingSource1;
-            this.DataGridViewZones.Location = new System.Drawing.Point(3, 48);
+            this.DataGridViewZones.Location = new System.Drawing.Point(3, 46);
             this.DataGridViewZones.Name = "DataGridViewZones";
             this.DataGridViewZones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridViewZones.Size = new System.Drawing.Size(770, 230);
+            this.DataGridViewZones.Size = new System.Drawing.Size(770, 221);
             this.DataGridViewZones.TabIndex = 0;
             this.DataGridViewZones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewZones_CellContentClick);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // bedrijvenIdDataGridViewTextBoxColumn
-            // 
-            this.bedrijvenIdDataGridViewTextBoxColumn.DataPropertyName = "BedrijvenId";
-            this.bedrijvenIdDataGridViewTextBoxColumn.HeaderText = "BedrijvenId";
-            this.bedrijvenIdDataGridViewTextBoxColumn.Name = "bedrijvenIdDataGridViewTextBoxColumn";
-            // 
-            // zonesBindingSource1
-            // 
-            this.zonesBindingSource1.DataMember = "Zones";
-            this.zonesBindingSource1.DataSource = this.mensentellerDataSet5;
-            // 
-            // mensentellerDataSet5
-            // 
-            this.mensentellerDataSet5.DataSetName = "MensentellerDataSet5";
-            this.mensentellerDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // TableLayoutPanelControl
             // 
@@ -137,12 +99,12 @@
             this.TableLayoutPanelControl.Controls.Add(this.ButtonCreate, 0, 0);
             this.TableLayoutPanelControl.Controls.Add(this.ButtonDone, 1, 1);
             this.TableLayoutPanelControl.Controls.Add(this.ButtonDelete, 0, 1);
-            this.TableLayoutPanelControl.Location = new System.Drawing.Point(3, 284);
+            this.TableLayoutPanelControl.Location = new System.Drawing.Point(3, 273);
             this.TableLayoutPanelControl.Name = "TableLayoutPanelControl";
             this.TableLayoutPanelControl.RowCount = 2;
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TableLayoutPanelControl.Size = new System.Drawing.Size(770, 136);
+            this.TableLayoutPanelControl.Size = new System.Drawing.Size(770, 130);
             this.TableLayoutPanelControl.TabIndex = 2;
             // 
             // ButtonModify
@@ -154,7 +116,7 @@
             this.ButtonModify.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonModify.Location = new System.Drawing.Point(388, 3);
             this.ButtonModify.Name = "ButtonModify";
-            this.ButtonModify.Size = new System.Drawing.Size(379, 102);
+            this.ButtonModify.Size = new System.Drawing.Size(379, 98);
             this.ButtonModify.TabIndex = 1;
             this.ButtonModify.Text = "Modify";
             this.ButtonModify.UseVisualStyleBackColor = true;
@@ -169,7 +131,7 @@
             this.ButtonCreate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonCreate.Location = new System.Drawing.Point(3, 3);
             this.ButtonCreate.Name = "ButtonCreate";
-            this.ButtonCreate.Size = new System.Drawing.Size(379, 102);
+            this.ButtonCreate.Size = new System.Drawing.Size(379, 98);
             this.ButtonCreate.TabIndex = 0;
             this.ButtonCreate.Text = "Create";
             this.ButtonCreate.UseVisualStyleBackColor = true;
@@ -182,9 +144,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonDone.AutoSize = true;
             this.ButtonDone.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ButtonDone.Location = new System.Drawing.Point(388, 111);
+            this.ButtonDone.Location = new System.Drawing.Point(388, 107);
             this.ButtonDone.Name = "ButtonDone";
-            this.ButtonDone.Size = new System.Drawing.Size(379, 22);
+            this.ButtonDone.Size = new System.Drawing.Size(379, 20);
             this.ButtonDone.TabIndex = 3;
             this.ButtonDone.Text = "Done";
             this.ButtonDone.UseVisualStyleBackColor = true;
@@ -197,9 +159,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonDelete.AutoSize = true;
             this.ButtonDelete.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ButtonDelete.Location = new System.Drawing.Point(3, 111);
+            this.ButtonDelete.Location = new System.Drawing.Point(3, 107);
             this.ButtonDelete.Name = "ButtonDelete";
-            this.ButtonDelete.Size = new System.Drawing.Size(379, 22);
+            this.ButtonDelete.Size = new System.Drawing.Size(379, 20);
             this.ButtonDelete.TabIndex = 4;
             this.ButtonDelete.Text = "Delete";
             this.ButtonDelete.UseVisualStyleBackColor = true;
@@ -208,7 +170,7 @@
             // TextBoxAdress
             // 
             this.TextBoxAdress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.TextBoxAdress.Location = new System.Drawing.Point(3, 12);
+            this.TextBoxAdress.Location = new System.Drawing.Point(3, 11);
             this.TextBoxAdress.Name = "TextBoxAdress";
             this.TextBoxAdress.ReadOnly = true;
             this.TextBoxAdress.Size = new System.Drawing.Size(770, 20);
@@ -229,10 +191,6 @@
             // 
             this.zonesTableAdapter.ClearBeforeFill = true;
             // 
-            // zonesTableAdapter1
-            // 
-            this.zonesTableAdapter1.ClearBeforeFill = true;
-            // 
             // ModifyBedrijf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,12 +204,11 @@
             this.TableLayoutPanelModifyBedrijf.ResumeLayout(false);
             this.TableLayoutPanelModifyBedrijf.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewZones)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet5)).EndInit();
             this.TableLayoutPanelControl.ResumeLayout(false);
             this.TableLayoutPanelControl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,17 +221,12 @@
         private MensentellerDataSet3 mensentellerDataSet3;
         private System.Windows.Forms.BindingSource zonesBindingSource;
         private MensentellerDataSet3TableAdapters.ZonesTableAdapter zonesTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bedrijvenIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.TableLayoutPanel TableLayoutPanelControl;
         private System.Windows.Forms.Button ButtonModify;
         private System.Windows.Forms.Button ButtonCreate;
         private System.Windows.Forms.Button ButtonDone;
         private System.Windows.Forms.Button ButtonDelete;
         private System.Windows.Forms.TextBox TextBoxAdress;
-        private MensentellerDataSet5 mensentellerDataSet5;
         private System.Windows.Forms.BindingSource zonesBindingSource1;
-        private MensentellerDataSet5TableAdapters.ZonesTableAdapter zonesTableAdapter1;
     }
 }

@@ -30,7 +30,7 @@ namespace Mensenteller_B3
 
         private void ButtonModify_Click(object sender, EventArgs e)
         {
-            ModifySensor modifySensor = new ModifySensor();
+            ModifySensor modifySensor = new ModifySensor(zoneId);
             modifySensor.Show();
         }
 
@@ -43,6 +43,7 @@ namespace Mensenteller_B3
         {
             //.Text = "Bedrijf: " + BedrijfNaam + "Bedrijf Id: " + BedrijfId + "Zone: " + ZoneNaam + " Zone Id: " + ZoneId;
             DataGridViewSensors.DataSource = sensordal.ReadSensors(zoneId);
+            
         }
     }
 }

@@ -49,15 +49,19 @@ namespace Mensenteller_B3.Sensors.EntreeSensors
                 }
             }
         }
-        public void ReadEntreeSensors(int id)
+        public List<EntreeSensor> ReadEntreeSensors(int id)
         {
+            List<EntreeSensor> os = new List<EntreeSensor>();
+
             using (SqlConnection cnn = new SqlConnection(conString))
             {
                 string sql = "SELECT * FROM EntreeSensors WHERE SensorId = @Id";
                 using (SqlCommand cmd = new SqlCommand(sql, cnn))
                 {
                     cmd.Parameters.AddWithValue("@Id", id);
-                    EntreeSensors.Clear();
+                    if (EntreeSensors != null)
+                        EntreeSensors.Clear();
+      
                     cnn.Open();
                     try
                     {
@@ -68,21 +72,23 @@ namespace Mensenteller_B3.Sensors.EntreeSensors
                             EntreeSensor es = new EntreeSensor
                             {
                                 EntryID = 0,
-                                SensorID = reader.GetInt32(0),
+                                SensorID = reader.GetInt32(5),
                                 Name = reader.GetString(1),
                                 PeopleIn = reader.GetInt32(2),
                                 PeopleOut = reader.GetInt32(3),
                                 TimeStamp = reader.GetString(4)
                             };
-                            EntreeSensors.Add(es);
+                            os.Add(es);
                         }
 
                     }
                     catch (Exception ex)
                     {
+
                         Console.WriteLine($"Unable to read from EntreeSensors table, are you connected?");
                         Console.WriteLine(ex.ToString());
                     }
+                    return os;
                 }
             }
         }
@@ -90,14 +96,13 @@ namespace Mensenteller_B3.Sensors.EntreeSensors
         {
             using (SqlConnection cnn = new SqlConnection(conString))
             {
-                string sql = "UPDATE EntreeSensors SET Name = @Name, PeopleIn = @PeopleIn, PeopleOut = @PeopleOut,TimeStamp = @TimeStamp WHERE Id = @Id";
+                string sql = "UPDATE EntreeSensors SET PeopleIn = @PeopleIn, PeopleOut = @PeopleOut,TimeStamp = @TimeStamp WHERE Id = @Id";
                 using (SqlCommand cmd = new SqlCommand(sql, cnn))
                 {
                     cnn.Open();
                     try
                     {
                         cmd.Parameters.AddWithValue("@Id", sensor.SensorID);
-                        cmd.Parameters.AddWithValue("@Name", sensor.Name);
                         cmd.Parameters.AddWithValue("@Peoplein", sensor.PeopleIn);
                         cmd.Parameters.AddWithValue("@PeopleOut", sensor.PeopleOut);
                         cmd.Parameters.AddWithValue("@TimeStamp", sensor.TimeStamp);

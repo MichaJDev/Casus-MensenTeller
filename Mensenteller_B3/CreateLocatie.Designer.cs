@@ -291,8 +291,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(789, 450);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.TableLayoutPanelCreateBedrijf);
+            this.Controls.Add(this.EditLocatietextbox);
+            this.Controls.Add(this.EditIdLocatietextbox);
+            this.Controls.Add(this.EditLocatiebutton);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.CreateLocatiebutton);
             this.Name = "CreateLocatie";
             this.Text = "CreateLocatie";
             this.Load += new System.EventHandler(this.CreateLocatie_Load);
