@@ -37,6 +37,7 @@ namespace Mensenteller_B3
         {
             CreateSensor createSensor = new CreateSensor();
             createSensor.Show();
+        }
         private void ModifySensor_Load(object sender, EventArgs e)
         {
 
