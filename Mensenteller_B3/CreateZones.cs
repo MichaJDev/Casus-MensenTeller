@@ -52,5 +52,10 @@ namespace Mensenteller_B3
         {
 
         }
+
+        private void ButtondDone_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

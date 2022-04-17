@@ -275,6 +275,7 @@
             this.ButtondDone.TabIndex = 7;
             this.ButtondDone.Text = "Done";
             this.ButtondDone.UseVisualStyleBackColor = true;
+            this.ButtondDone.Click += new System.EventHandler(this.ButtondDone_Click);
             // 
             // TextBoxCreateLocatie
             // 
