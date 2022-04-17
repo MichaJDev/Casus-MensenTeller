@@ -47,5 +47,10 @@ namespace Mensenteller_B3
             dal.EditZone(id, Name);
             MessageBox.Show("Updated");
         }
+
+        private void CreateZones_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

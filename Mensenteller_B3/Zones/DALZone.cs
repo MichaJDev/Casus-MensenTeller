@@ -146,6 +146,36 @@ namespace MensenTeller_B3.Zones
             }
 
         }
+        public Zone ReadZone(int id)
+        {
+           Zone z = new Zone();
+
+
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand())
+                {
+                    cnn.ConnectionString = connectionString;
+                    cnn.Open();
+                    command.Connection = cnn;
+                    command.CommandText = "SELECT Id, Name, BedrijvenId FROM Zones Where BedrijvenId = @Id";
+                    command.Parameters.AddWithValue("@Id", id);
+                    SqlDataReader datareader = command.ExecuteReader();
+
+                    while (datareader.Read())
+                    {
+
+
+                        z.ID = datareader.GetInt32(0);
+                        z.Name = datareader.GetString(1);
+                        z.BedrijvenId = datareader.GetInt32(2);
+                        
+                      
+                    }
+                }
+                return z;
+            }
+        }
 
     }
 }

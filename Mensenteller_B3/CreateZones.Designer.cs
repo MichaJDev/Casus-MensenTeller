@@ -133,6 +133,7 @@
             this.Controls.Add(this.DgvCreateZone);
             this.Name = "CreateZones";
             this.Text = "CreateZone";
+            this.Load += new System.EventHandler(this.CreateZones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvCreateZone)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

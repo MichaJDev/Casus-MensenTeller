@@ -27,7 +27,7 @@ namespace Mensenteller_B3
         private void ViewBedrijf_Load(object sender, EventArgs e)
         {
             //LBLname.Text = bedrijf.Name;
-            zonedal.ReadZone(bedrijf.Id);
+            zonedal.ReadZoneByBedrijfId(bedrijf.Id);
             DgvBedrijfview.DataSource = zonedal.ZoneList;
         }
 

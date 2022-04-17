@@ -22,17 +22,7 @@ namespace Mensenteller_B3
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main());
 
-            DAL dal = new DAL();
-            DruksensorDAL dsDal = new DruksensorDAL();
-            foreach (DrukSensor ds in dal.DrukSensors)
-            {
-               dsDal.CreateDruksensor(ds);
-            }
-            //Dit is voor ALLE EntreeSensors van de gehele dag opteslaan
-            EntreeSensorDAL esDal = new EntreeSensorDAL();
-
-            foreach (EntreeSensor ds in dal.EntreeSensors)
-                esDal.Create(ds);
+            
         }
     }
 }

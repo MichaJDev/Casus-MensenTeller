@@ -12,13 +12,15 @@ namespace Mensenteller_B3
 {
     public partial class ModifyLocation : Form
     {
-        public ModifyLocation()
+        int zoneId = _zoneId
+        public ModifyLocation(int _zoneId )
         {
             InitializeComponent();
         }
 
         private void ButtonCreate_Click(object sender, EventArgs e)
         {
+            
             CreateLocatie createLocatie = new CreateLocatie();
             createLocatie.Show();
         }

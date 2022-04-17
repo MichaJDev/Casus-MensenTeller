@@ -30,12 +30,11 @@ namespace Mensenteller_B3.Locaties
                   cmd.Parameters.AddWithValue("@Yco", l.Yco);
                   */
                 con.Open();
-                cmd.ExecuteNonQuery();
-                cmd.CommandText = "SELECT CAST(@@Identity AS INT;";
-                int id = 0;
+                
+               
                 try
                 {
-                    id = (int)cmd.ExecuteScalar();
+                    cmd.ExecuteNonQuery();
                 }
                 catch (SqlException ex)
                 {

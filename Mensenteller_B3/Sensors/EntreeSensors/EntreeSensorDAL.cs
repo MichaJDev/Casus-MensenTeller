@@ -9,7 +9,7 @@ namespace Mensenteller_B3.Sensors.EntreeSensors
 {
     public class EntreeSensorDAL
     {
-        private readonly string conString = "";
+        private readonly string conString = "Data Source=.;Initial Catalog=Mensenteller;Integrated Security=True";
         public List<EntreeSensor> EntreeSensors { get; set; }
         public List<EntreeSensor> ReadEntreeSensors()
         {

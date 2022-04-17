@@ -39,11 +39,8 @@ namespace Mensenteller_B3
                 Bedrijf bedrijf = new Bedrijf(0, Name);
                 dal.CreateBedrijf(bedrijf);
 
-                foreach (Bedrijf bedrijf1 in dal.bedrijven)
-                {
-                    CreateBedrijftextbox.ResetText();
-                }
-                CreateBedrijftextbox.Text = "";
+              
+                CreateBedrijftextbox.Clear();
                 MessageBox.Show("Saved");
                 this.bedrijvenTableAdapter.Fill(this.dataSet_CreateBedrijven.Bedrijven);
             }

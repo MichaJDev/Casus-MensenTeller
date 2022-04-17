@@ -9,7 +9,7 @@ namespace Mensenteller_B3.Sensors.DrukSensors
 {
     public class DruksensorDAL
     {
-        public string connectionString = "";
+        public string connectionString = "Data Source=.;Initial Catalog=Mensenteller;Integrated Security=True";
         public List<DrukSensor> druksensorlist = new List<DrukSensor>();
         public void CreateDruksensor(DrukSensor druksensor)
         {
@@ -35,17 +35,7 @@ namespace Mensenteller_B3.Sensors.DrukSensors
                     }
 
 
-                    command.CommandText = "SELECT CAST(@@Identity AS INT);";
-                    int id = 0;
-                    try
-                    {
-                        id = (int)command.ExecuteScalar();
-                    }
-                    catch (SqlException ex)
-                    {
-                        Console.WriteLine(ex.ToString());
-                    }
-                    ReadDrukSensor();
+        
                 }
             }
         }

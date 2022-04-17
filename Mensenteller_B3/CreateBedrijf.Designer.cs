@@ -30,31 +30,31 @@
         {
             this.components = new System.ComponentModel.Container();
             this.DgvBedrijven = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bedrijvenBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet_CreateBedrijven = new Mensenteller_B3.DataSet_CreateBedrijven();
             this.CreateBedrijfbutton = new System.Windows.Forms.Button();
             this.CreateBedrijftextbox = new System.Windows.Forms.TextBox();
             this.EditBedrijftextbox = new System.Windows.Forms.TextBox();
             this.EditBedrijfbutton = new System.Windows.Forms.Button();
             this.EdittextoxId = new System.Windows.Forms.TextBox();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bedrijvenBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet_CreateBedrijven = new Mensenteller_B3.DataSet_CreateBedrijven();
             this.bedrijvenTableAdapter = new Mensenteller_B3.DataSet_CreateBedrijvenTableAdapters.BedrijvenTableAdapter();
             this.ButtondDone = new System.Windows.Forms.Button();
             this.TableLayoutPanelCreateBedrijf = new System.Windows.Forms.TableLayoutPanel();
             this.TableLayoutPanelControl = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.LabelEditName = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.LabelCreateBedrijf = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.LabelEditName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgvBedrijven)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_CreateBedrijven)).BeginInit();
             this.TableLayoutPanelCreateBedrijf.SuspendLayout();
             this.TableLayoutPanelControl.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // DgvBedrijven
@@ -70,9 +70,33 @@
             this.DgvBedrijven.DataSource = this.bedrijvenBindingSource;
             this.DgvBedrijven.Location = new System.Drawing.Point(3, 3);
             this.DgvBedrijven.Name = "DgvBedrijven";
+            this.DgvBedrijven.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvBedrijven.Size = new System.Drawing.Size(770, 207);
             this.DgvBedrijven.TabIndex = 0;
             this.DgvBedrijven.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvBedrijven_CellMouseClick);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // bedrijvenBindingSource
+            // 
+            this.bedrijvenBindingSource.DataMember = "Bedrijven";
+            this.bedrijvenBindingSource.DataSource = this.dataSet_CreateBedrijven;
+            // 
+            // dataSet_CreateBedrijven
+            // 
+            this.dataSet_CreateBedrijven.DataSetName = "DataSet_CreateBedrijven";
+            this.dataSet_CreateBedrijven.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // CreateBedrijfbutton
             // 
@@ -127,29 +151,6 @@
             this.EdittextoxId.Name = "EdittextoxId";
             this.EdittextoxId.Size = new System.Drawing.Size(184, 20);
             this.EdittextoxId.TabIndex = 6;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // bedrijvenBindingSource
-            // 
-            this.bedrijvenBindingSource.DataMember = "Bedrijven";
-            this.bedrijvenBindingSource.DataSource = this.dataSet_CreateBedrijven;
-            // 
-            // dataSet_CreateBedrijven
-            // 
-            this.dataSet_CreateBedrijven.DataSetName = "DataSet_CreateBedrijven";
-            this.dataSet_CreateBedrijven.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bedrijvenTableAdapter
             // 
@@ -213,54 +214,6 @@
             this.TableLayoutPanelControl.Size = new System.Drawing.Size(770, 207);
             this.TableLayoutPanelControl.TabIndex = 9;
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.AutoSize = true;
-            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.LabelEditName, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.EditBedrijftextbox, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.EdittextoxId, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 85);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(379, 76);
-            this.tableLayoutPanel1.TabIndex = 10;
-            // 
-            // LabelEditName
-            // 
-            this.LabelEditName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LabelEditName.AutoSize = true;
-            this.LabelEditName.Location = new System.Drawing.Point(3, 0);
-            this.LabelEditName.Name = "LabelEditName";
-            this.LabelEditName.Size = new System.Drawing.Size(183, 38);
-            this.LabelEditName.TabIndex = 9;
-            this.LabelEditName.Text = "Edit Bedrijf ";
-            this.LabelEditName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 38);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Edit ID";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -293,6 +246,54 @@
             this.LabelCreateBedrijf.Text = "Create Bedrijf";
             this.LabelCreateBedrijf.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.AutoSize = true;
+            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.LabelEditName, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.EditBedrijftextbox, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.EdittextoxId, 1, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 85);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(379, 76);
+            this.tableLayoutPanel1.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(183, 38);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Edit ID";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LabelEditName
+            // 
+            this.LabelEditName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LabelEditName.AutoSize = true;
+            this.LabelEditName.Location = new System.Drawing.Point(3, 0);
+            this.LabelEditName.Name = "LabelEditName";
+            this.LabelEditName.Size = new System.Drawing.Size(183, 38);
+            this.LabelEditName.TabIndex = 9;
+            this.LabelEditName.Text = "Edit Bedrijf ";
+            this.LabelEditName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // CreateBedrijf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,10 +310,10 @@
             this.TableLayoutPanelCreateBedrijf.PerformLayout();
             this.TableLayoutPanelControl.ResumeLayout(false);
             this.TableLayoutPanelControl.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

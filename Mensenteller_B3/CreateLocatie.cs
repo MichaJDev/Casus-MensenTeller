@@ -15,8 +15,10 @@ namespace Mensenteller_B3
     {
 
         LocatieDAL dal = new LocatieDAL();
-        public CreateLocatie()
+        Locatie l;
+        public CreateLocatie(Locatie _l)
         {
+            l = _l;
             InitializeComponent();
         }
 

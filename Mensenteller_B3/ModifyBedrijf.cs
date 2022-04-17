@@ -59,8 +59,10 @@ namespace Mensenteller_B3
             string stringbedrijfId = DataGridViewZones.CurrentRow.Cells[2].Value.ToString();
             int zoneId = int.Parse(stringzoneId);
             int bedrijfId = int.Parse(stringbedrijfId);
-            //zoneDAL.ReadZoneByBedrijfId(bedrijfId);
-            ModifyZones modifyZones = new ModifyZones(BedrijfNaam, bedrijfId, zoneNaam, zoneId);
+
+            zoneDAL.ReadZoneByBedrijfId(bedrijfId);
+            Zone zone = zoneDAL.ReadZone(bedrijfId);
+            ModifyZones modifyZones = new ModifyZones(BedrijfNaam, zone.BedrijvenId, zone.Name, zone.ID);
             modifyZones.Show();
         }
 

@@ -12,15 +12,13 @@ namespace MensenTeller_B3.Simualtion_DAL
 {
     class DAL
     {
-        public List<DrukSensor> DrukSensors { get; set; }
-        public List<EntreeSensor> EntreeSensors { get; set; }
+        
         private readonly string source = ".";
         private readonly string catalog = "SensorData";
 
         public DAL()
         {
-            ReadDrukSimulator();
-            ReadEntreeSensors();
+ 
         }
         private string GetConnectionString()
         {
@@ -28,8 +26,12 @@ namespace MensenTeller_B3.Simualtion_DAL
         }
 
         //Haal op vanuit SensorData Db maken nog
-        private void ReadDrukSimulator()
+        public List<DrukSensor> ReadDrukSimulator()
         {
+
+            List<DrukSensor> lds = new List<DrukSensor>();
+
+
             using (SqlConnection cnn = new SqlConnection(GetConnectionString()))
             {
                 string sql = "SELECT * FROM PressureSensors";
@@ -46,14 +48,16 @@ namespace MensenTeller_B3.Simualtion_DAL
                             InUse = reader.GetBoolean(2),
                             TimeStamp = reader.GetString(3)
                         };
-                        DrukSensors.Add(ds);
+                        lds.Add(ds);
                     }
                 }
+                return lds;
             }
         }
 
-        private void ReadEntreeSensors()
+        public List<EntreeSensor> ReadEntreeSensors()
         {
+            List<EntreeSensor> les = new List<EntreeSensor>();
             using (SqlConnection cnn = new SqlConnection(GetConnectionString()))
             {
                 string sql = "SELECT * FROM SensorReading";
@@ -71,9 +75,10 @@ namespace MensenTeller_B3.Simualtion_DAL
                             PeopleOut = reader.GetInt32(3),
                             TimeStamp = reader.GetString(4)
                         };
-                        EntreeSensors.Add(es);
+                        les.Add(es);
                     }
                 }
+                return les;
             }
         }
     }
