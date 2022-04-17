@@ -38,7 +38,7 @@ namespace Mensenteller_B3
 
         private void ModifyZones_Load(object sender, EventArgs e)
         {
-            TextBoxAdress.Text = "Berijf: " + BedrijfNaam + "Bedrijf Id: " + BedrijfId + "Zone: " + ZoneNaam + " Zone Id: " + ZoneId;
+            TextBoxAdress.Text = "Bedrijf: " + BedrijfNaam + "Bedrijf Id: " + BedrijfId + "Zone: " + ZoneNaam + " Zone Id: " + ZoneId;
             
             DataGridViewZones.DataSource = dal.ReadLocatieById(ZoneId) ;
 
@@ -64,6 +64,11 @@ namespace Mensenteller_B3
         }
 
         private void TextBoxAdress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TableLayoutPanelModifyBedrijf_Paint(object sender, PaintEventArgs e)
         {
 
         }

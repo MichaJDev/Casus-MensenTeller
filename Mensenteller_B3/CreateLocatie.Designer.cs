@@ -32,7 +32,6 @@
             this.CreateLocatiebutton = new System.Windows.Forms.Button();
             this.CreateLocatietextbox = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            
             this.dataSet_Locaties1 = new Mensenteller_B3.DataSet_Locaties1();
             this.dataSet_Locaties = new Mensenteller_B3.DataSet_Locaties();
             this.locatiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -41,9 +40,7 @@
             this.EditIdLocatietextbox = new System.Windows.Forms.TextBox();
             this.locatiesTableAdapter1 = new Mensenteller_B3.DataSet_Locaties1TableAdapters.LocatiesTableAdapter();
             this.EditLocatietextbox = new System.Windows.Forms.TextBox();
-            this.ZoneIdtextbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-           // ((System.ComponentModel.ISupportInitialize)(this.locatiesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Locaties1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Locaties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.locatiesBindingSource)).BeginInit();
@@ -75,11 +72,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(793, 219);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // locatiesBindingSource1
-            // 
-           // this.locatiesBindingSource1.DataMember = "Locaties";
-//            this.locatiesBindingSource1.DataSource = this.dataSet_Locaties1;
             // 
             // dataSet_Locaties1
             // 
@@ -128,19 +120,11 @@
             this.EditLocatietextbox.Size = new System.Drawing.Size(100, 20);
             this.EditLocatietextbox.TabIndex = 5;
             // 
-            // ZoneIdtextbox
-            // 
-            this.ZoneIdtextbox.Location = new System.Drawing.Point(339, 298);
-            this.ZoneIdtextbox.Name = "ZoneIdtextbox";
-            this.ZoneIdtextbox.Size = new System.Drawing.Size(100, 20);
-            this.ZoneIdtextbox.TabIndex = 6;
-            // 
             // CreateLocatie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.ZoneIdtextbox);
             this.Controls.Add(this.EditLocatietextbox);
             this.Controls.Add(this.EditIdLocatietextbox);
             this.Controls.Add(this.EditLocatiebutton);
@@ -151,7 +135,6 @@
             this.Text = "CreateLocatie";
             this.Load += new System.EventHandler(this.CreateLocatie_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-//            ((System.ComponentModel.ISupportInitialize)(this.locatiesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Locaties1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Locaties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.locatiesBindingSource)).EndInit();
@@ -174,6 +157,5 @@
         private System.Windows.Forms.BindingSource locatiesBindingSource1;
         private DataSet_Locaties1TableAdapters.LocatiesTableAdapter locatiesTableAdapter1;
         private System.Windows.Forms.TextBox EditLocatietextbox;
-        private System.Windows.Forms.TextBox ZoneIdtextbox;
     }
 }
