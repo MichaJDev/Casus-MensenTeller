@@ -120,6 +120,7 @@
             this.ButtonCreate.TabIndex = 0;
             this.ButtonCreate.Text = "Create";
             this.ButtonCreate.UseVisualStyleBackColor = true;
+            this.ButtonCreate.Click += new System.EventHandler(this.ButtonCreate_Click);
             // 
             // ButtonDone
             // 

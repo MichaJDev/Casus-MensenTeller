@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Mensenteller_B3.Sensors;
+using Mensenteller_B3.Sensors.DrukSensors;
+using Mensenteller_B3.Sensors.EntreeSensors;
 using MensenTeller_B3.Sensors;
 using MensenTeller_B3.Simualtion_DAL;
 
@@ -20,6 +22,8 @@ namespace Mensenteller_B3
     public partial class CreateSensor : Form
     {
         SensorDAL dalsensor = new SensorDAL();
+        EntreeSensorDAL entreeSensorDAL = new EntreeSensorDAL();
+        DruksensorDAL drukSensorDAL = new DruksensorDAL();
         public CreateSensor()
         {
             InitializeComponent();
@@ -27,30 +31,50 @@ namespace Mensenteller_B3
 
         private void CreateSensorbutton_Click(object sender, EventArgs e)
         {
-            if (CreatSensorNatextbox.Text != "")
-            {
-                string Name = CreatSensorNatextbox.Text;
-                Sensor sensor = new Sensor(0, Name);
-                dalsensor.Create(sensor);
-
-                CreatSensorNatextbox.Text = "";
-                MessageBox.Show("Saved");
-                // TODO: This line of code loads data into the 'dataSet_Zones.Zones' table. You can move, or remove it, as needed.
-                //this.locatiesTableAdapter.Fill(this.dataSet_Locaties.Locaties);
-               
-            }
+            
         }
 
         private void EditSensorbutton_Click(object sender, EventArgs e)
         {
             string Name = EditNaamsensortextbox.Text;
-            int id = int.Parse(SensorIdtextbox.Text);
+            //int id = int.Parse();//comboboxselectedshithiering
             Sensor sensor= new Sensor(id, Name);
-           dalsensor.Update(sensor);
+            dalsensor.Update(sensor);
 
 
             MessageBox.Show("Updated");
             
+        }
+
+        private void ButtonDone_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void CheckBoxEntree_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CheckBoxEntree.Checked)
+            {
+                CheckBoxDruk.Checked = false;
+                entreeSensorDAL.ReadEntreeSensors();
+                foreach(EntreeSensor es in entreeSensorDAL.EntreeSensors)
+                {
+                    ComboBox.Items.Add(es.SensorID.ToString());
+                }
+            }
+        }
+
+        private void CheckBoxDruk_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CheckBoxDruk.Checked)
+            {
+                CheckBoxEntree.Checked = false;
+                drukSensorDAL.ReadDrukSensor();
+                foreach (DrukSensor ds in drukSensorDAL.druksensorlist)
+                {
+                    ComboBox.Items.Add(ds.SensorId.ToString());
+                }
+            }
         }
     }
 }

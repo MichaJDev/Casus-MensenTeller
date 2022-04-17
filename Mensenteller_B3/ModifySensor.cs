@@ -21,5 +21,11 @@ namespace Mensenteller_B3
         {
             Close();
         }
+
+        private void ButtonCreate_Click(object sender, EventArgs e)
+        {
+            CreateSensor createSensor = new CreateSensor();
+            createSensor.Show();
+        }
     }
 }
