@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Mensenteller_B3.Locaties;
+using MensenTeller_B3.Zones;
 
 namespace Mensenteller_B3
 {
@@ -18,7 +19,9 @@ namespace Mensenteller_B3
         public string ZoneNaam { get; set; }
         public int ZoneId { get; set; }
         
+        
         LocatieDAL dal = new LocatieDAL();
+        
         public ModifyZones()
         {
             InitializeComponent();
@@ -36,12 +39,15 @@ namespace Mensenteller_B3
         private void ModifyZones_Load(object sender, EventArgs e)
         {
             TextBoxAdress.Text = "Berijf: " + BedrijfNaam + "Bedrijf Id: " + BedrijfId + "Zone: " + ZoneNaam + " Zone Id: " + ZoneId;
+            
+            DataGridViewZones.DataSource = dal.ReadLocatieById(ZoneId) ;
+
         }
 
         private void ButtonCreate_Click(object sender, EventArgs e)
         {
 
-            Locatie l = new Locatie();
+            
             CreateLocatie createLocatie = new CreateLocatie();
             createLocatie.Show();
         }
@@ -53,7 +59,7 @@ namespace Mensenteller_B3
 
         private void ButtonModify_Click(object sender, EventArgs e)
         {
-            ModifyLocation modifyLocation = new ModifyLocation();
+            ModifyLocation modifyLocation = new ModifyLocation(ZoneId);
             modifyLocation.Show();
         }
 

@@ -12,9 +12,10 @@ namespace Mensenteller_B3
 {
     public partial class ModifyLocation : Form
     {
-        int zoneId = _zoneId
+        int zoneId ;
         public ModifyLocation(int _zoneId )
         {
+            zoneId = _zoneId;
             InitializeComponent();
         }
 
