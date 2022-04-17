@@ -15,20 +15,20 @@ namespace Mensenteller_B3
     public partial class ModifyBedrijf : Form
     {
         DALZone zoneDAL = new DALZone();
-        public int Id { get; set; }
-        public string DisplayName { get; set; }
+        public int BedrijfId { get; set; }
+        public string BedrijfNaam { get; set; }
 
         public ModifyBedrijf(int id, string name)
         {
-            Id = id;
-            DisplayName = name;
+            BedrijfId = id;
+            BedrijfNaam = name;
             InitializeComponent();
-            TextBoxAdress.Text = "Bedrijf: " + DisplayName + " ID = " + Id;
+            TextBoxAdress.Text = "Bedrijf: " + BedrijfNaam + " ID = " + BedrijfId;
         }
 
         public ModifyBedrijf(int id)
         {
-            Id = id;
+            BedrijfId = id;
             InitializeComponent();
         }
 
@@ -54,7 +54,13 @@ namespace Mensenteller_B3
 
         private void ButtonModify_Click(object sender, EventArgs e)
         {
-            ModifyZones modifyZones = new ModifyZones();
+            string stringzoneId = DataGridViewZones.CurrentRow.Cells[0].Value.ToString();
+            string zoneNaam = DataGridViewZones.CurrentRow.Cells[1].Value.ToString();
+            string stringbedrijfId = DataGridViewZones.CurrentRow.Cells[2].Value.ToString();
+            int zoneId = int.Parse(stringzoneId);
+            int bedrijfId = int.Parse(stringbedrijfId);
+            //zoneDAL.ReadZoneByBedrijfId(bedrijfId);
+            ModifyZones modifyZones = new ModifyZones(BedrijfNaam, bedrijfId, zoneNaam, zoneId);
             modifyZones.Show();
         }
 

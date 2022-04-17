@@ -73,7 +73,7 @@
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.66667F));
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56F));
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.TableLayoutPanelModifyBedrijf.Size = new System.Drawing.Size(776, 424);
+            this.TableLayoutPanelModifyBedrijf.Size = new System.Drawing.Size(776, 423);
             this.TableLayoutPanelModifyBedrijf.TabIndex = 0;
             // 
             // DataGridViewZones
@@ -90,7 +90,8 @@
             this.DataGridViewZones.DataSource = this.zonesBindingSource1;
             this.DataGridViewZones.Location = new System.Drawing.Point(3, 48);
             this.DataGridViewZones.Name = "DataGridViewZones";
-            this.DataGridViewZones.Size = new System.Drawing.Size(770, 231);
+            this.DataGridViewZones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DataGridViewZones.Size = new System.Drawing.Size(770, 230);
             this.DataGridViewZones.TabIndex = 0;
             this.DataGridViewZones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewZones_CellContentClick);
             // 
@@ -136,7 +137,7 @@
             this.TableLayoutPanelControl.Controls.Add(this.ButtonCreate, 0, 0);
             this.TableLayoutPanelControl.Controls.Add(this.ButtonDone, 1, 1);
             this.TableLayoutPanelControl.Controls.Add(this.ButtonDelete, 0, 1);
-            this.TableLayoutPanelControl.Location = new System.Drawing.Point(3, 285);
+            this.TableLayoutPanelControl.Location = new System.Drawing.Point(3, 284);
             this.TableLayoutPanelControl.Name = "TableLayoutPanelControl";
             this.TableLayoutPanelControl.RowCount = 2;
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));

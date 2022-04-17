@@ -12,8 +12,21 @@ namespace Mensenteller_B3
 {
     public partial class ModifyZones : Form
     {
+        public string BedijfNaam { get; set; }
+        public int BedrijfId { get; set; }
+        public string ZoneNaam { get; set; }
+        public int ZoneId { get; set; }
         public ModifyZones()
         {
+            InitializeComponent();
+        }
+        public ModifyZones(string bedrijfNaam, int bedrijfId, string zoneNaam, int zoneId)
+        {
+            this.BedijfNaam = bedrijfNaam;
+            this.BedrijfId = bedrijfId;
+            this.ZoneNaam = zoneNaam;
+            this.ZoneId = zoneId;
+            TextBoxAdress.Text = "Berijf: " + bedrijfNaam + "Bedrijf Id: " + bedrijfId + "Zone: " + zoneNaam + " Zone Id: " + zoneId;
             InitializeComponent();
         }
 
@@ -37,6 +50,11 @@ namespace Mensenteller_B3
         {
             ModifyLocation modifyLocation = new ModifyLocation();
             modifyLocation.Show();
+        }
+
+        private void TextBoxAdress_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

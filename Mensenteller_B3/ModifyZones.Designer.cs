@@ -35,6 +35,7 @@
             this.ButtonCreate = new System.Windows.Forms.Button();
             this.ButtonDone = new System.Windows.Forms.Button();
             this.ButtonDelete = new System.Windows.Forms.Button();
+            this.TextBoxAdress = new System.Windows.Forms.TextBox();
             this.TableLayoutPanelModifyBedrijf.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewZones)).BeginInit();
             this.TableLayoutPanelControl.SuspendLayout();
@@ -51,13 +52,14 @@
             this.TableLayoutPanelModifyBedrijf.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TableLayoutPanelModifyBedrijf.Controls.Add(this.DataGridViewZones, 0, 1);
             this.TableLayoutPanelModifyBedrijf.Controls.Add(this.TableLayoutPanelControl, 0, 2);
+            this.TableLayoutPanelModifyBedrijf.Controls.Add(this.TextBoxAdress, 0, 0);
             this.TableLayoutPanelModifyBedrijf.Location = new System.Drawing.Point(12, 14);
             this.TableLayoutPanelModifyBedrijf.Name = "TableLayoutPanelModifyBedrijf";
             this.TableLayoutPanelModifyBedrijf.RowCount = 3;
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.TableLayoutPanelModifyBedrijf.Size = new System.Drawing.Size(776, 423);
+            this.TableLayoutPanelModifyBedrijf.Size = new System.Drawing.Size(776, 422);
             this.TableLayoutPanelModifyBedrijf.TabIndex = 1;
             // 
             // DataGridViewZones
@@ -68,6 +70,7 @@
             this.DataGridViewZones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridViewZones.Location = new System.Drawing.Point(3, 59);
             this.DataGridViewZones.Name = "DataGridViewZones";
+            this.DataGridViewZones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridViewZones.Size = new System.Drawing.Size(770, 219);
             this.DataGridViewZones.TabIndex = 0;
             // 
@@ -90,7 +93,7 @@
             this.TableLayoutPanelControl.RowCount = 2;
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TableLayoutPanelControl.Size = new System.Drawing.Size(770, 136);
+            this.TableLayoutPanelControl.Size = new System.Drawing.Size(770, 135);
             this.TableLayoutPanelControl.TabIndex = 2;
             // 
             // ButtonModify
@@ -132,7 +135,7 @@
             this.ButtonDone.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonDone.Location = new System.Drawing.Point(388, 111);
             this.ButtonDone.Name = "ButtonDone";
-            this.ButtonDone.Size = new System.Drawing.Size(379, 22);
+            this.ButtonDone.Size = new System.Drawing.Size(379, 21);
             this.ButtonDone.TabIndex = 3;
             this.ButtonDone.Text = "Done";
             this.ButtonDone.UseVisualStyleBackColor = true;
@@ -147,10 +150,20 @@
             this.ButtonDelete.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonDelete.Location = new System.Drawing.Point(3, 111);
             this.ButtonDelete.Name = "ButtonDelete";
-            this.ButtonDelete.Size = new System.Drawing.Size(379, 22);
+            this.ButtonDelete.Size = new System.Drawing.Size(379, 21);
             this.ButtonDelete.TabIndex = 4;
             this.ButtonDelete.Text = "Delete";
             this.ButtonDelete.UseVisualStyleBackColor = true;
+            // 
+            // TextBoxAdress
+            // 
+            this.TextBoxAdress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TextBoxAdress.Location = new System.Drawing.Point(3, 18);
+            this.TextBoxAdress.Name = "TextBoxAdress";
+            this.TextBoxAdress.ReadOnly = true;
+            this.TextBoxAdress.Size = new System.Drawing.Size(770, 20);
+            this.TextBoxAdress.TabIndex = 3;
+            this.TextBoxAdress.TextChanged += new System.EventHandler(this.TextBoxAdress_TextChanged);
             // 
             // ModifyZones
             // 
@@ -181,5 +194,6 @@
         private System.Windows.Forms.Button ButtonCreate;
         private System.Windows.Forms.Button ButtonDone;
         private System.Windows.Forms.Button ButtonDelete;
+        private System.Windows.Forms.TextBox TextBoxAdress;
     }
 }

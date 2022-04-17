@@ -79,7 +79,7 @@ namespace MensenTeller_B3.Zones
             }
         }
         //ReadZone Maken SELECT Id,Name FROM Zones WHERE bedrijf id =@id ofzoiets.
-        public void ReadZone(int id)
+        public void ReadZoneByBedrijfId(int id)
         {
             if (ZoneList != null)
             {
