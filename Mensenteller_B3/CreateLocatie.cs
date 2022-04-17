@@ -33,13 +33,13 @@ namespace Mensenteller_B3
 
         private void CreateLocatiebutton_Click(object sender, EventArgs e)
         {
-            if (CreateLocatietextbox.Text != "")
+            if (TextBoxCreateLocatie.Text != "")
             {
-                string Name = CreateLocatietextbox.Text;
+                string Name = TextBoxCreateLocatie.Text;
                 Locatie locatie = new Locatie(0, Name);
                 dal.CreateLocatie(locatie);
 
-                CreateLocatietextbox.Text = "";
+                TextBoxCreateLocatie.Text = "";
                 MessageBox.Show("Saved");
                 // TODO: This line of code loads data into the 'dataSet_Zones.Zones' table. You can move, or remove it, as needed.
                 //this.locatiesTableAdapter.Fill(this.dataSet_Locaties.Locaties);
@@ -56,6 +56,26 @@ namespace Mensenteller_B3
             
             MessageBox.Show("Updated");
             this.locatiesTableAdapter1.Fill(this.dataSet_Locaties1.Locaties);
+        }
+
+        private void CreateLocatietextbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditIdLocatietextbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ZoneIdtextbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBoxCreateLocatie_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
