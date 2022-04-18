@@ -113,6 +113,11 @@ namespace Mensenteller_B3
             ViewBedrijf form = new ViewBedrijf(b);
             form.Show();
         }
+
+        private void ButtonDone_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 
 }

@@ -46,6 +46,8 @@
             this.Averagetextbox = new System.Windows.Forms.TextBox();
             this.BedrijfViewbutton = new System.Windows.Forms.Button();
             this.bedrijvenTableAdapter = new Mensenteller_B3.DataSet_BedrijvenviewTableAdapters.BedrijvenTableAdapter();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.ButtonDone = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvBedrijfview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Bedrijvenview)).BeginInit();
@@ -54,11 +56,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.sensorDataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pressureSensorsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sensorDataDataSet1)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(22, 26);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(379, 207);
             this.panel1.TabIndex = 0;
@@ -66,7 +69,7 @@
             // 
             // StatusMensenButton
             // 
-            this.StatusMensenButton.Location = new System.Drawing.Point(630, 57);
+            this.StatusMensenButton.Location = new System.Drawing.Point(623, 289);
             this.StatusMensenButton.Name = "StatusMensenButton";
             this.StatusMensenButton.Size = new System.Drawing.Size(75, 23);
             this.StatusMensenButton.TabIndex = 1;
@@ -84,7 +87,7 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.DgvBedrijfview.DataSource = this.bedrijvenBindingSource1;
-            this.DgvBedrijfview.Location = new System.Drawing.Point(61, 256);
+            this.DgvBedrijfview.Location = new System.Drawing.Point(623, 3);
             this.DgvBedrijfview.Name = "DgvBedrijfview";
             this.DgvBedrijfview.ReadOnly = true;
             this.DgvBedrijfview.Size = new System.Drawing.Size(544, 150);
@@ -149,14 +152,14 @@
             // 
             // Averagetextbox
             // 
-            this.Averagetextbox.Location = new System.Drawing.Point(504, 151);
+            this.Averagetextbox.Location = new System.Drawing.Point(3, 289);
             this.Averagetextbox.Name = "Averagetextbox";
             this.Averagetextbox.Size = new System.Drawing.Size(100, 20);
             this.Averagetextbox.TabIndex = 4;
             // 
             // BedrijfViewbutton
             // 
-            this.BedrijfViewbutton.Location = new System.Drawing.Point(728, 314);
+            this.BedrijfViewbutton.Location = new System.Drawing.Point(623, 575);
             this.BedrijfViewbutton.Name = "BedrijfViewbutton";
             this.BedrijfViewbutton.Size = new System.Drawing.Size(75, 23);
             this.BedrijfViewbutton.TabIndex = 5;
@@ -168,16 +171,47 @@
             // 
             this.bedrijvenTableAdapter.ClearBeforeFill = true;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.AutoSize = true;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.DgvBedrijfview, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.BedrijfViewbutton, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.StatusMensenButton, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Averagetextbox, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.ButtonDone, 1, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1240, 657);
+            this.tableLayoutPanel1.TabIndex = 6;
+            // 
+            // ButtonDone
+            // 
+            this.ButtonDone.Location = new System.Drawing.Point(623, 638);
+            this.ButtonDone.Name = "ButtonDone";
+            this.ButtonDone.Size = new System.Drawing.Size(75, 16);
+            this.ButtonDone.TabIndex = 6;
+            this.ButtonDone.Text = "Done";
+            this.ButtonDone.UseVisualStyleBackColor = true;
+            this.ButtonDone.Click += new System.EventHandler(this.ButtonDone_Click);
+            // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.BedrijfViewbutton);
-            this.Controls.Add(this.Averagetextbox);
-            this.Controls.Add(this.DgvBedrijfview);
-            this.Controls.Add(this.StatusMensenButton);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "View";
             this.Text = "View";
             this.Load += new System.EventHandler(this.View_Load);
@@ -189,6 +223,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.sensorDataDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pressureSensorsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sensorDataDataSet1)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,5 +253,7 @@
         private DataSet_BedrijvenviewTableAdapters.BedrijvenTableAdapter bedrijvenTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button ButtonDone;
     }
 }

@@ -65,7 +65,7 @@
             this.DgvCreateSensor.Location = new System.Drawing.Point(3, 3);
             this.DgvCreateSensor.Name = "DgvCreateSensor";
             this.DgvCreateSensor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvCreateSensor.Size = new System.Drawing.Size(964, 212);
+            this.DgvCreateSensor.Size = new System.Drawing.Size(1234, 322);
             this.DgvCreateSensor.TabIndex = 0;
             // 
             // CreateSensorbutton
@@ -75,9 +75,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CreateSensorbutton.AutoSize = true;
             this.CreateSensorbutton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.CreateSensorbutton.Location = new System.Drawing.Point(485, 3);
+            this.CreateSensorbutton.Location = new System.Drawing.Point(620, 3);
             this.CreateSensorbutton.Name = "CreateSensorbutton";
-            this.CreateSensorbutton.Size = new System.Drawing.Size(476, 89);
+            this.CreateSensorbutton.Size = new System.Drawing.Size(611, 138);
             this.CreateSensorbutton.TabIndex = 1;
             this.CreateSensorbutton.Text = "Create";
             this.CreateSensorbutton.UseVisualStyleBackColor = true;
@@ -90,9 +90,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EditSensorbutton.AutoSize = true;
             this.EditSensorbutton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.EditSensorbutton.Location = new System.Drawing.Point(485, 98);
+            this.EditSensorbutton.Location = new System.Drawing.Point(620, 147);
             this.EditSensorbutton.Name = "EditSensorbutton";
-            this.EditSensorbutton.Size = new System.Drawing.Size(476, 72);
+            this.EditSensorbutton.Size = new System.Drawing.Size(611, 113);
             this.EditSensorbutton.TabIndex = 2;
             this.EditSensorbutton.Text = "Edit";
             this.EditSensorbutton.UseVisualStyleBackColor = true;
@@ -101,25 +101,25 @@
             // CreatSensorNatextbox
             // 
             this.CreatSensorNatextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.CreatSensorNatextbox.Location = new System.Drawing.Point(241, 4);
+            this.CreatSensorNatextbox.Location = new System.Drawing.Point(308, 13);
             this.CreatSensorNatextbox.Name = "CreatSensorNatextbox";
-            this.CreatSensorNatextbox.Size = new System.Drawing.Size(232, 20);
+            this.CreatSensorNatextbox.Size = new System.Drawing.Size(300, 20);
             this.CreatSensorNatextbox.TabIndex = 3;
             // 
             // SensorIdtextbox
             // 
             this.SensorIdtextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.SensorIdtextbox.Location = new System.Drawing.Point(241, 44);
+            this.SensorIdtextbox.Location = new System.Drawing.Point(308, 74);
             this.SensorIdtextbox.Name = "SensorIdtextbox";
-            this.SensorIdtextbox.Size = new System.Drawing.Size(232, 20);
+            this.SensorIdtextbox.Size = new System.Drawing.Size(300, 20);
             this.SensorIdtextbox.TabIndex = 4;
             // 
             // EditNaamsensortextbox
             // 
             this.EditNaamsensortextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.EditNaamsensortextbox.Location = new System.Drawing.Point(241, 8);
+            this.EditNaamsensortextbox.Location = new System.Drawing.Point(308, 18);
             this.EditNaamsensortextbox.Name = "EditNaamsensortextbox";
-            this.EditNaamsensortextbox.Size = new System.Drawing.Size(232, 20);
+            this.EditNaamsensortextbox.Size = new System.Drawing.Size(300, 20);
             this.EditNaamsensortextbox.TabIndex = 5;
             // 
             // TLPSensor
@@ -138,7 +138,7 @@
             this.TLPSensor.RowCount = 2;
             this.TLPSensor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TLPSensor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TLPSensor.Size = new System.Drawing.Size(970, 436);
+            this.TLPSensor.Size = new System.Drawing.Size(1240, 656);
             this.TLPSensor.TabIndex = 6;
             // 
             // tableLayoutPanel2
@@ -156,13 +156,13 @@
             this.tableLayoutPanel2.Controls.Add(this.CreateSensorbutton, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.EditSensorbutton, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.ButtonDone, 1, 2);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 221);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 331);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(964, 212);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1234, 322);
             this.tableLayoutPanel2.TabIndex = 7;
             // 
             // tableLayoutPanel1
@@ -187,7 +187,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(476, 89);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(611, 138);
             this.tableLayoutPanel1.TabIndex = 13;
             // 
             // LabelComboBox
@@ -196,9 +196,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LabelComboBox.AutoSize = true;
-            this.LabelComboBox.Location = new System.Drawing.Point(3, 58);
+            this.LabelComboBox.Location = new System.Drawing.Point(3, 92);
             this.LabelComboBox.Name = "LabelComboBox";
-            this.LabelComboBox.Size = new System.Drawing.Size(232, 31);
+            this.LabelComboBox.Size = new System.Drawing.Size(299, 46);
             this.LabelComboBox.TabIndex = 10;
             this.LabelComboBox.Text = "Sensor Id:";
             this.LabelComboBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -215,12 +215,12 @@
             this.TLPCheckBox.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TLPCheckBox.Controls.Add(this.CheckBoxEntree, 0, 0);
             this.TLPCheckBox.Controls.Add(this.CheckBoxDruk, 1, 0);
-            this.TLPCheckBox.Location = new System.Drawing.Point(241, 32);
+            this.TLPCheckBox.Location = new System.Drawing.Point(308, 49);
             this.TLPCheckBox.Name = "TLPCheckBox";
             this.TLPCheckBox.RowCount = 1;
             this.TLPCheckBox.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TLPCheckBox.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
-            this.TLPCheckBox.Size = new System.Drawing.Size(232, 23);
+            this.TLPCheckBox.Size = new System.Drawing.Size(300, 40);
             this.TLPCheckBox.TabIndex = 8;
             // 
             // CheckBoxEntree
@@ -231,7 +231,7 @@
             this.CheckBoxEntree.AutoSize = true;
             this.CheckBoxEntree.Location = new System.Drawing.Point(3, 3);
             this.CheckBoxEntree.Name = "CheckBoxEntree";
-            this.CheckBoxEntree.Size = new System.Drawing.Size(110, 17);
+            this.CheckBoxEntree.Size = new System.Drawing.Size(144, 34);
             this.CheckBoxEntree.TabIndex = 11;
             this.CheckBoxEntree.Text = "EntreeSens";
             this.CheckBoxEntree.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -244,9 +244,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CheckBoxDruk.AutoSize = true;
-            this.CheckBoxDruk.Location = new System.Drawing.Point(119, 3);
+            this.CheckBoxDruk.Location = new System.Drawing.Point(153, 3);
             this.CheckBoxDruk.Name = "CheckBoxDruk";
-            this.CheckBoxDruk.Size = new System.Drawing.Size(110, 17);
+            this.CheckBoxDruk.Size = new System.Drawing.Size(144, 34);
             this.CheckBoxDruk.TabIndex = 12;
             this.CheckBoxDruk.Text = "DrukSens";
             this.CheckBoxDruk.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -259,9 +259,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LabelSensorType.AutoSize = true;
-            this.LabelSensorType.Location = new System.Drawing.Point(3, 29);
+            this.LabelSensorType.Location = new System.Drawing.Point(3, 46);
             this.LabelSensorType.Name = "LabelSensorType";
-            this.LabelSensorType.Size = new System.Drawing.Size(232, 29);
+            this.LabelSensorType.Size = new System.Drawing.Size(299, 46);
             this.LabelSensorType.TabIndex = 9;
             this.LabelSensorType.Text = "Sensor Type:";
             this.LabelSensorType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -270,9 +270,9 @@
             // 
             this.LabelSensorNaam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.LabelSensorNaam.AutoSize = true;
-            this.LabelSensorNaam.Location = new System.Drawing.Point(3, 8);
+            this.LabelSensorNaam.Location = new System.Drawing.Point(3, 16);
             this.LabelSensorNaam.Name = "LabelSensorNaam";
-            this.LabelSensorNaam.Size = new System.Drawing.Size(232, 13);
+            this.LabelSensorNaam.Size = new System.Drawing.Size(299, 13);
             this.LabelSensorNaam.TabIndex = 5;
             this.LabelSensorNaam.Text = "Naam:";
             this.LabelSensorNaam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -281,9 +281,9 @@
             // 
             this.ComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ComboBox.FormattingEnabled = true;
-            this.ComboBox.Location = new System.Drawing.Point(241, 63);
+            this.ComboBox.Location = new System.Drawing.Point(308, 104);
             this.ComboBox.Name = "ComboBox";
-            this.ComboBox.Size = new System.Drawing.Size(232, 21);
+            this.ComboBox.Size = new System.Drawing.Size(300, 21);
             this.ComboBox.TabIndex = 11;
             // 
             // tableLayoutPanel3
@@ -300,13 +300,13 @@
             this.tableLayoutPanel3.Controls.Add(this.LabelEditSensorNaam, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.SensorIdtextbox, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.EditNaamsensortextbox, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 98);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 147);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(476, 72);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(611, 113);
             this.tableLayoutPanel3.TabIndex = 9;
             // 
             // LabelEditId
@@ -315,9 +315,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LabelEditId.AutoSize = true;
-            this.LabelEditId.Location = new System.Drawing.Point(3, 36);
+            this.LabelEditId.Location = new System.Drawing.Point(3, 56);
             this.LabelEditId.Name = "LabelEditId";
-            this.LabelEditId.Size = new System.Drawing.Size(232, 36);
+            this.LabelEditId.Size = new System.Drawing.Size(299, 57);
             this.LabelEditId.TabIndex = 7;
             this.LabelEditId.Text = "Edit Id:";
             this.LabelEditId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -330,7 +330,7 @@
             this.LabelEditSensorNaam.AutoSize = true;
             this.LabelEditSensorNaam.Location = new System.Drawing.Point(3, 0);
             this.LabelEditSensorNaam.Name = "LabelEditSensorNaam";
-            this.LabelEditSensorNaam.Size = new System.Drawing.Size(232, 36);
+            this.LabelEditSensorNaam.Size = new System.Drawing.Size(299, 56);
             this.LabelEditSensorNaam.TabIndex = 6;
             this.LabelEditSensorNaam.Text = "Edit Sensor:";
             this.LabelEditSensorNaam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -342,9 +342,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonDone.AutoSize = true;
             this.ButtonDone.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ButtonDone.Location = new System.Drawing.Point(485, 176);
+            this.ButtonDone.Location = new System.Drawing.Point(620, 266);
             this.ButtonDone.Name = "ButtonDone";
-            this.ButtonDone.Size = new System.Drawing.Size(476, 33);
+            this.ButtonDone.Size = new System.Drawing.Size(611, 53);
             this.ButtonDone.TabIndex = 10;
             this.ButtonDone.Text = "Done";
             this.ButtonDone.UseVisualStyleBackColor = true;
@@ -354,10 +354,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(994, 461);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.TLPSensor);
             this.Name = "CreateSensor";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateSensor";
             this.Load += new System.EventHandler(this.CreateSensor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvCreateSensor)).EndInit();

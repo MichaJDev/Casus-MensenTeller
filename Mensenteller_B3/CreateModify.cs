@@ -39,8 +39,7 @@ namespace Mensenteller_B3
             string id = DGVCreateModify.CurrentRow.Cells[0].Value.ToString();
             string name = DGVCreateModify.CurrentRow.Cells[1].Value.ToString();
             int pid = int.Parse(id);
-            Close();
-            MessageBox.Show("Bedrijf ID = " + pid.ToString());
+            Close();            
             ModifyBedrijf modifyBedrijf = new ModifyBedrijf(pid, name);
             modifyBedrijf.Show();
         }

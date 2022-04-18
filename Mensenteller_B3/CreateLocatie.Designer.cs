@@ -72,7 +72,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CreateLocatiebutton.AutoSize = true;
-            this.CreateLocatiebutton.Location = new System.Drawing.Point(620, 131);
+            this.CreateLocatiebutton.Location = new System.Drawing.Point(620, 3);
             this.CreateLocatiebutton.Name = "CreateLocatiebutton";
             this.CreateLocatiebutton.Size = new System.Drawing.Size(611, 122);
             this.CreateLocatiebutton.TabIndex = 0;
@@ -125,7 +125,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EditLocatiebutton.AutoSize = true;
-            this.EditLocatiebutton.Location = new System.Drawing.Point(620, 3);
+            this.EditLocatiebutton.Location = new System.Drawing.Point(620, 131);
             this.EditLocatiebutton.Name = "EditLocatiebutton";
             this.EditLocatiebutton.Size = new System.Drawing.Size(611, 122);
             this.EditLocatiebutton.TabIndex = 3;
@@ -184,10 +184,10 @@
             this.TableLayoutPanelControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TableLayoutPanelControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TableLayoutPanelControl.Controls.Add(this.tableLayoutPanel2, 0, 0);
+            this.TableLayoutPanelControl.Controls.Add(this.CreateLocatiebutton, 1, 0);
             this.TableLayoutPanelControl.Controls.Add(this.tableLayoutPanel1, 0, 1);
             this.TableLayoutPanelControl.Controls.Add(this.ButtondDone, 1, 2);
-            this.TableLayoutPanelControl.Controls.Add(this.CreateLocatiebutton, 1, 1);
-            this.TableLayoutPanelControl.Controls.Add(this.EditLocatiebutton, 1, 0);
+            this.TableLayoutPanelControl.Controls.Add(this.EditLocatiebutton, 1, 1);
             this.TableLayoutPanelControl.Location = new System.Drawing.Point(3, 331);
             this.TableLayoutPanelControl.Name = "TableLayoutPanelControl";
             this.TableLayoutPanelControl.RowCount = 3;
