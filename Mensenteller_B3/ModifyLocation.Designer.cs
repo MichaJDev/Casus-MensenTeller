@@ -55,8 +55,8 @@
             this.TableLayoutPanelModifyLocation.Name = "TableLayoutPanelModifyLocation";
             this.TableLayoutPanelModifyLocation.RowCount = 3;
             this.TableLayoutPanelModifyLocation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.TableLayoutPanelModifyLocation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TableLayoutPanelModifyLocation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.TableLayoutPanelModifyLocation.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.TableLayoutPanelModifyLocation.Size = new System.Drawing.Size(1240, 650);
             this.TableLayoutPanelModifyLocation.TabIndex = 1;
             // 
@@ -66,10 +66,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DataGridViewSensors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridViewSensors.Location = new System.Drawing.Point(3, 89);
+            this.DataGridViewSensors.Location = new System.Drawing.Point(3, 68);
             this.DataGridViewSensors.Name = "DataGridViewSensors";
             this.DataGridViewSensors.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridViewSensors.Size = new System.Drawing.Size(1234, 340);
+            this.DataGridViewSensors.Size = new System.Drawing.Size(1234, 319);
             this.DataGridViewSensors.TabIndex = 0;
             // 
             // TableLayoutPanelControl
@@ -86,12 +86,12 @@
             this.TableLayoutPanelControl.Controls.Add(this.ButtonCreate, 0, 0);
             this.TableLayoutPanelControl.Controls.Add(this.ButtonDone, 1, 1);
             this.TableLayoutPanelControl.Controls.Add(this.ButtonDelete, 0, 1);
-            this.TableLayoutPanelControl.Location = new System.Drawing.Point(3, 435);
+            this.TableLayoutPanelControl.Location = new System.Drawing.Point(3, 393);
             this.TableLayoutPanelControl.Name = "TableLayoutPanelControl";
             this.TableLayoutPanelControl.RowCount = 2;
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TableLayoutPanelControl.Size = new System.Drawing.Size(1234, 212);
+            this.TableLayoutPanelControl.Size = new System.Drawing.Size(1234, 254);
             this.TableLayoutPanelControl.TabIndex = 2;
             // 
             // ButtonModify
@@ -103,7 +103,7 @@
             this.ButtonModify.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonModify.Location = new System.Drawing.Point(620, 3);
             this.ButtonModify.Name = "ButtonModify";
-            this.ButtonModify.Size = new System.Drawing.Size(611, 163);
+            this.ButtonModify.Size = new System.Drawing.Size(611, 197);
             this.ButtonModify.TabIndex = 1;
             this.ButtonModify.Text = "Modify";
             this.ButtonModify.UseVisualStyleBackColor = true;
@@ -118,7 +118,7 @@
             this.ButtonCreate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonCreate.Location = new System.Drawing.Point(3, 3);
             this.ButtonCreate.Name = "ButtonCreate";
-            this.ButtonCreate.Size = new System.Drawing.Size(611, 163);
+            this.ButtonCreate.Size = new System.Drawing.Size(611, 197);
             this.ButtonCreate.TabIndex = 0;
             this.ButtonCreate.Text = "Create";
             this.ButtonCreate.UseVisualStyleBackColor = true;
@@ -131,9 +131,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonDone.AutoSize = true;
             this.ButtonDone.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ButtonDone.Location = new System.Drawing.Point(620, 172);
+            this.ButtonDone.Location = new System.Drawing.Point(620, 206);
             this.ButtonDone.Name = "ButtonDone";
-            this.ButtonDone.Size = new System.Drawing.Size(611, 37);
+            this.ButtonDone.Size = new System.Drawing.Size(611, 45);
             this.ButtonDone.TabIndex = 3;
             this.ButtonDone.Text = "Done";
             this.ButtonDone.UseVisualStyleBackColor = true;
@@ -146,9 +146,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonDelete.AutoSize = true;
             this.ButtonDelete.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ButtonDelete.Location = new System.Drawing.Point(3, 172);
+            this.ButtonDelete.Location = new System.Drawing.Point(3, 206);
             this.ButtonDelete.Name = "ButtonDelete";
-            this.ButtonDelete.Size = new System.Drawing.Size(611, 37);
+            this.ButtonDelete.Size = new System.Drawing.Size(611, 45);
             this.ButtonDelete.TabIndex = 4;
             this.ButtonDelete.Text = "Delete";
             this.ButtonDelete.UseVisualStyleBackColor = true;
