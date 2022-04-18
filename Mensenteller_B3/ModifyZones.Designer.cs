@@ -59,7 +59,7 @@
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.TableLayoutPanelModifyBedrijf.Size = new System.Drawing.Size(1240, 654);
+            this.TableLayoutPanelModifyBedrijf.Size = new System.Drawing.Size(1240, 653);
             this.TableLayoutPanelModifyBedrijf.TabIndex = 1;
             this.TableLayoutPanelModifyBedrijf.Paint += new System.Windows.Forms.PaintEventHandler(this.TableLayoutPanelModifyBedrijf_Paint);
             // 
@@ -72,7 +72,7 @@
             this.DataGridViewZones.Location = new System.Drawing.Point(3, 68);
             this.DataGridViewZones.Name = "DataGridViewZones";
             this.DataGridViewZones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridViewZones.Size = new System.Drawing.Size(1234, 321);
+            this.DataGridViewZones.Size = new System.Drawing.Size(1234, 320);
             this.DataGridViewZones.TabIndex = 0;
             // 
             // TableLayoutPanelControl
@@ -89,7 +89,7 @@
             this.TableLayoutPanelControl.Controls.Add(this.ButtonCreate, 0, 0);
             this.TableLayoutPanelControl.Controls.Add(this.ButtonDone, 1, 1);
             this.TableLayoutPanelControl.Controls.Add(this.ButtonDelete, 0, 1);
-            this.TableLayoutPanelControl.Location = new System.Drawing.Point(3, 395);
+            this.TableLayoutPanelControl.Location = new System.Drawing.Point(3, 394);
             this.TableLayoutPanelControl.Name = "TableLayoutPanelControl";
             this.TableLayoutPanelControl.RowCount = 2;
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
@@ -173,7 +173,7 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.TableLayoutPanelModifyBedrijf);
             this.Name = "ModifyZones";
-            this.Text = "Location";
+            this.Text = "Modify Zone";
             this.Load += new System.EventHandler(this.ModifyZones_Load);
             this.TableLayoutPanelModifyBedrijf.ResumeLayout(false);
             this.TableLayoutPanelModifyBedrijf.PerformLayout();
