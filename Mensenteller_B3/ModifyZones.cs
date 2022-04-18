@@ -59,7 +59,9 @@ namespace Mensenteller_B3
 
         private void ButtonModify_Click(object sender, EventArgs e)
         {
-            ModifyLocation modifyLocation = new ModifyLocation(ZoneId);
+            LocatieDAL locDal = new LocatieDAL();
+            Locatie l = locDal.GetLocatie(ZoneId);
+            ModifyLocation modifyLocation = new ModifyLocation(l.ID);
             modifyLocation.Show();
         }
 
