@@ -48,7 +48,7 @@ namespace Mensenteller_B3
         {
 
             
-            CreateLocatie createLocatie = new CreateLocatie();
+            CreateLocatie createLocatie = new CreateLocatie(ZoneId);
             createLocatie.Show();
         }
 
@@ -59,9 +59,8 @@ namespace Mensenteller_B3
 
         private void ButtonModify_Click(object sender, EventArgs e)
         {
-            LocatieDAL locDal = new LocatieDAL();
-            Locatie l = locDal.GetLocatie(ZoneId);
-            ModifyLocation modifyLocation = new ModifyLocation(l.ID);
+           
+            ModifyLocation modifyLocation = new ModifyLocation(ZoneId);
             modifyLocation.Show();
         }
 

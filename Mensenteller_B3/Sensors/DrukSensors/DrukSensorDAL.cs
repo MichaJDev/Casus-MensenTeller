@@ -51,7 +51,7 @@ namespace Mensenteller_B3.Sensors.DrukSensors
                     cnn.ConnectionString = connectionString;
                     cnn.Open();
                     command.Connection = cnn;
-                    command.CommandText = "SELECT entryid, sensorid, inuse, timestamp FORM DrukSensors ORDER BY Id";
+                    command.CommandText = "SELECT * FROM DrukSensors ORDER BY SensorId";
                     SqlDataReader datareader = command.ExecuteReader();
 
                     while (datareader.Read())
@@ -59,9 +59,9 @@ namespace Mensenteller_B3.Sensors.DrukSensors
                         DrukSensor d = new DrukSensor
                         {
                             ID = datareader.GetInt32(0),
-                            InUse = datareader.GetBoolean(2),
-                            TimeStamp = datareader.GetString(3),
-                            SensorId = datareader.GetInt32(4)
+                            InUse = datareader.GetBoolean(1),
+                            TimeStamp = datareader.GetString(2),
+                            SensorId = datareader.GetInt32(3)
                         };
 
                         dl.Add(d);
@@ -85,7 +85,7 @@ namespace Mensenteller_B3.Sensors.DrukSensors
                     cnn.ConnectionString = connectionString;
                     cnn.Open();
                     command.Connection = cnn;
-                    command.CommandText = "SELECT entryid, sensorid, inuse, timestamp FROM DrukSensors WHERE SensorId = @Id";
+                    command.CommandText = "SELECT * FROM DrukSensors WHERE SensorId = @Id";
                     command.Parameters.AddWithValue("@Id", id);
                     SqlDataReader datareader = command.ExecuteReader();
 
@@ -158,7 +158,7 @@ namespace Mensenteller_B3.Sensors.DrukSensors
                     cnn.ConnectionString = connectionString;
                     cnn.Open();
                     command.Connection = cnn;
-                    command.CommandText = "SELECT entryid, sensorid, inuse, timestamp FROM DrukSensors WHERE SensorId = @Id";
+                    command.CommandText = "SELECT * FROM DrukSensors WHERE SensorId = @Id";
                     command.Parameters.AddWithValue("@Id", id);
                     SqlDataReader datareader = command.ExecuteReader();
 

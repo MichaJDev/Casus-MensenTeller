@@ -16,7 +16,7 @@ namespace Mensenteller_B3
 {
     public partial class ModifySensor : BaseForm
     {
-        EntreeSensorDAL entreeSenorDAL = new EntreeSensorDAL();
+        EntreeSensorDAL entreeSensorDAL = new EntreeSensorDAL();
         DruksensorDAL drukSensorDAL = new DruksensorDAL();
         EntreeSensor entree = new EntreeSensor();
         DrukSensor druk = new DrukSensor();
@@ -41,15 +41,16 @@ namespace Mensenteller_B3
         private void ModifySensor_Load(object sender, EventArgs e)
         {
 
-            Sensor s = sensorDAL.GetSensor(locatieId);
-            foreach (EntreeSensor es in entreeSenorDAL.ReadEntreeSensors(sensorId))
+
+
+            foreach (EntreeSensor es in entreeSensorDAL.ReadEntreeSensors()) 
             {
-                
+                Sensor se = sensorDAL.GetSensor(sensorId);
                 if (es.SensorID == sensorId)
                 {
 
-                    locatieId = s.LocatieID;
-                    entree = entreeSenorDAL.ReadEntreeSensor(sensorId);
+                    locatieId = se.LocatieID;
+                    entree = entreeSensorDAL.ReadEntreeSensor(sensorId);
 
                     InUseCheckBox.Hide();
                     EntreeIdTextBox.Text = es.SensorID.ToString();
@@ -66,8 +67,8 @@ namespace Mensenteller_B3
 
                 }
             }
-
-            foreach (DrukSensor ds in drukSensorDAL.ReadDrukSensor(sensorId))
+            Sensor s = sensorDAL.GetSensor(sensorId);
+            foreach (DrukSensor ds in drukSensorDAL.ReadDrukSensor())
             {
                 if (ds.SensorId == sensorId)
                 {
@@ -82,6 +83,8 @@ namespace Mensenteller_B3
 
                 }
             }
+
+
         }
 
 
@@ -115,7 +118,7 @@ namespace Mensenteller_B3
                     TimeStamp = entree.TimeStamp
                 };
 
-                entreeSenorDAL.Update(es);
+                entreeSensorDAL.Update(es);
 
             }
             else if (druk != null)

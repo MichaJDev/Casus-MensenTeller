@@ -21,9 +21,18 @@ namespace Mensenteller_B3
             
             InitializeComponent();
         }
+        int zoneid;
+        public CreateLocatie(int _zoneId)
+        {
+            zoneid = _zoneId;
+
+            InitializeComponent();
+        }
 
         private void CreateLocatie_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet_Locaties123.Locaties' table. You can move, or remove it, as needed.
+            this.locatiesTableAdapter2.Fill(this.dataSet_Locaties123.Locaties);
             // TODO: This line of code loads data into the 'dataSet_Locaties1.Locaties' table. You can move, or remove it, as needed.
             this.locatiesTableAdapter1.Fill(this.dataSet_Locaties1.Locaties);
             // TODO: This line of code loads data into the 'dataSet_Locaties.Locaties' table. You can move, or remove it, as needed.
@@ -36,7 +45,7 @@ namespace Mensenteller_B3
             if (TextBoxCreateLocatie.Text != "")
             {
                 string Name = TextBoxCreateLocatie.Text;
-                Locatie locatie = new Locatie(0, Name);
+                Locatie locatie = new Locatie(0, Name, zoneid);
                 dal.CreateLocatie(locatie);
 
                 TextBoxCreateLocatie.Text = "";

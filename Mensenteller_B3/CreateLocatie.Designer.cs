@@ -48,6 +48,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.LabelEditName = new System.Windows.Forms.Label();
             this.ButtondDone = new System.Windows.Forms.Button();
+            this.dataSet_Locaties123 = new Mensenteller_B3.DataSet_Locaties123();
+            this.locatiesBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.locatiesTableAdapter2 = new Mensenteller_B3.DataSet_Locaties123TableAdapters.LocatiesTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zoneIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Locaties1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Locaties)).BeginInit();
@@ -56,6 +62,8 @@
             this.TableLayoutPanelControl.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Locaties123)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locatiesBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // CreateLocatiebutton
@@ -78,7 +86,13 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.zoneIdDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.locatiesBindingSource2;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -287,6 +301,41 @@
             this.ButtondDone.UseVisualStyleBackColor = true;
             this.ButtondDone.Click += new System.EventHandler(this.ButtondDone_Click);
             // 
+            // dataSet_Locaties123
+            // 
+            this.dataSet_Locaties123.DataSetName = "DataSet_Locaties123";
+            this.dataSet_Locaties123.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // locatiesBindingSource2
+            // 
+            this.locatiesBindingSource2.DataMember = "Locaties";
+            this.locatiesBindingSource2.DataSource = this.dataSet_Locaties123;
+            // 
+            // locatiesTableAdapter2
+            // 
+            this.locatiesTableAdapter2.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // zoneIdDataGridViewTextBoxColumn
+            // 
+            this.zoneIdDataGridViewTextBoxColumn.DataPropertyName = "ZoneId";
+            this.zoneIdDataGridViewTextBoxColumn.HeaderText = "ZoneId";
+            this.zoneIdDataGridViewTextBoxColumn.Name = "zoneIdDataGridViewTextBoxColumn";
+            this.zoneIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // CreateLocatie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -308,6 +357,8 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Locaties123)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locatiesBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,5 +386,11 @@
         private System.Windows.Forms.Label LabelEditName;
         private System.Windows.Forms.Button ButtondDone;
         private System.Windows.Forms.TextBox TextBoxCreateLocatie;
+        private DataSet_Locaties123 dataSet_Locaties123;
+        private System.Windows.Forms.BindingSource locatiesBindingSource2;
+        private DataSet_Locaties123TableAdapters.LocatiesTableAdapter locatiesTableAdapter2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn zoneIdDataGridViewTextBoxColumn;
     }
 }

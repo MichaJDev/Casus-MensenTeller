@@ -139,7 +139,7 @@ namespace Mensenteller_B3.Sensors
             Sensor s = new Sensor();
             using (SqlConnection cnn = new SqlConnection(connectionString))
             {
-                string sql = "SELECT Id, Name, LocatieId FROM Sensors WHERE LocatieId = @id";
+                string sql = "SELECT Id, Name, LocatieId FROM Sensors WHERE Id = @id";
                 using (SqlCommand cmd = new SqlCommand(sql, cnn))
                 {
                     List<Sensor> sl = new List<Sensor>();
