@@ -13,11 +13,11 @@ namespace Mensenteller_B3
 {
     public partial class ModifyLocation : BaseForm
     {
-        int zoneId ;
+        int LocatieId ;
         SensorDAL sensordal = new SensorDAL();
-        public ModifyLocation(int _zoneId )
+        public ModifyLocation(int _locatieId)
         {
-            zoneId = _zoneId;
+            LocatieId = _locatieId;
             InitializeComponent();
         }
 
@@ -30,7 +30,11 @@ namespace Mensenteller_B3
 
         private void ButtonModify_Click(object sender, EventArgs e)
         {
-            ModifySensor modifySensor = new ModifySensor(zoneId);
+
+            string StringSensorId = DataGridViewSensors.CurrentRow.Cells[0].Value.ToString();
+            int SensorId = int.Parse(StringSensorId);
+
+            ModifySensor modifySensor = new ModifySensor(SensorId);
             modifySensor.Show();
         }
 
@@ -42,7 +46,7 @@ namespace Mensenteller_B3
         private void ModifyLocation_Load(object sender, EventArgs e)
         {
             //.Text = "Bedrijf: " + BedrijfNaam + "Bedrijf Id: " + BedrijfId + "Zone: " + ZoneNaam + " Zone Id: " + ZoneId;
-            DataGridViewSensors.DataSource = sensordal.ReadSensors(zoneId);
+            DataGridViewSensors.DataSource = sensordal.ReadSensors(LocatieId);
             
         }
     }

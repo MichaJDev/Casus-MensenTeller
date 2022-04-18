@@ -19,7 +19,11 @@ namespace Mensenteller_B3.Sensors.EntreeSensors
                 string sql = "SELECT * FROM EntreeSensors";
                 using (SqlCommand cmd = new SqlCommand(sql, cnn))
                 {
-                    EntreeSensors.Clear();
+                    if (EntreeSensors != null)
+                    {
+                        EntreeSensors.Clear();
+                    }
+
                     cnn.Open();
                     try
                     {
@@ -61,7 +65,7 @@ namespace Mensenteller_B3.Sensors.EntreeSensors
                     cmd.Parameters.AddWithValue("@Id", id);
                     if (EntreeSensors != null)
                         EntreeSensors.Clear();
-      
+
                     cnn.Open();
                     try
                     {
@@ -163,6 +167,48 @@ namespace Mensenteller_B3.Sensors.EntreeSensors
                         Console.WriteLine($"Unable to Create EntreeSensor with Name: {sensor.Name} On : {sensor.TimeStamp} \nCheck stacktrace below:\n");
                         Console.WriteLine(ex.ToString());
                     }
+                }
+            }
+        }
+        public EntreeSensor ReadEntreeSensor(int id)
+        {
+            EntreeSensor e = new EntreeSensor();
+
+            using (SqlConnection cnn = new SqlConnection(conString))
+            {
+                string sql = "SELECT * FROM EntreeSensors WHERE SensorId = @Id";
+                using (SqlCommand cmd = new SqlCommand(sql, cnn))
+                {
+                    cmd.Parameters.AddWithValue("@Id", id);
+                    if (EntreeSensors != null)
+                        EntreeSensors.Clear();
+
+                    cnn.Open();
+                    try
+                    {
+
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        while (reader.Read())
+                        {
+
+                            e.EntryID = 0;
+                            e.SensorID = reader.GetInt32(5);
+                            e.Name = reader.GetString(1);
+                            e.PeopleIn = reader.GetInt32(2);
+                            e.PeopleOut = reader.GetInt32(3);
+                            e.TimeStamp = reader.GetString(4);
+
+
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+
+                        Console.WriteLine($"Unable to read from EntreeSensors table, are you connected?");
+                        Console.WriteLine(ex.ToString());
+                    }
+                    return e;
                 }
             }
         }

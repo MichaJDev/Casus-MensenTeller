@@ -15,8 +15,10 @@ namespace Mensenteller_B3
     {
 
         DALZone dal = new DALZone();
-        public CreateZones()
+        int BedrijvenId;
+        public CreateZones(int _BedrijvenId)
         {
+            BedrijvenId = _BedrijvenId;
             InitializeComponent();
         }
 
@@ -30,8 +32,9 @@ namespace Mensenteller_B3
             if (CreateZoneNatextbox.Text != "")
             {
                 string Name = CreateZoneNatextbox.Text;
-              
-                Zone zone= new Zone(0, Name);
+                
+
+                Zone zone= new Zone( Name, BedrijvenId );
                 dal.CreateZone(zone);
 
                 CreateZoneNatextbox.Text = "";

@@ -34,19 +34,23 @@ namespace Mensenteller_B3
 
         public ModifyBedrijf()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
         private void ModifyBedrijf_Load(object sender, EventArgs e)
         {
-            
+            zoneDAL.ReadZoneByBedrijfId(BedrijfId);
+            DataGridViewZones.DataSource = zoneDAL.ZoneList;
 
         }
 
         private void ButtonCreate_Click(object sender, EventArgs e)
         {
-            CreateZones createZones = new CreateZones();
+
+            CreateZones createZones = new CreateZones(BedrijfId);
+
             createZones.Show();
+
         }
 
         private void ButtonModify_Click(object sender, EventArgs e)
@@ -80,13 +84,13 @@ namespace Mensenteller_B3
             string id = DataGridViewZones.CurrentRow.Cells[0].Value.ToString();
             int pid = int.Parse(id);
             zoneDAL.DeleteZone(pid);
-            
+            //this.zonesTableAdapter1.Fill(this.mensentellerDataSet5.Zones);
 
         }
 
         private void TextBoxAdress_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

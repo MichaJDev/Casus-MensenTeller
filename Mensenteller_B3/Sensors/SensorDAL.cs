@@ -134,5 +134,31 @@ namespace Mensenteller_B3.Sensors
                 }
             }
         }
+        public Sensor GetSensor(int id)
+        {
+            Sensor s = new Sensor();
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                string sql = "SELECT Id, Name, LocatieId FROM Sensors WHERE LocatieId = @id";
+                using (SqlCommand cmd = new SqlCommand(sql, cnn))
+                {
+                    List<Sensor> sl = new List<Sensor>();
+                    cnn.Open();
+                    cmd.Parameters.AddWithValue("@id", id);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+
+
+                        s.ID = reader.GetInt32(0);
+                        s.Name = reader.GetString(1);
+                        s.LocatieID = reader.GetInt32(2);
+                        
+                       
+                    }
+                    return s;
+                }
+            }
+        }
     }
 }

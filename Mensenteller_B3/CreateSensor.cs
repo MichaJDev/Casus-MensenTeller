@@ -24,11 +24,18 @@ namespace Mensenteller_B3
         SensorDAL dalsensor = new SensorDAL();
         EntreeSensorDAL entreeSensorDAL = new EntreeSensorDAL();
         DruksensorDAL drukSensorDAL = new DruksensorDAL();
+
+        int LocatieId;
         public CreateSensor()
         {
             InitializeComponent();
         }
 
+        public CreateSensor(int _locatieId)
+        {
+            LocatieId = _locatieId;
+            InitializeComponent();
+        }
         private void CreateSensorbutton_Click(object sender, EventArgs e)
         {
             
@@ -36,6 +43,7 @@ namespace Mensenteller_B3
 
         private void EditSensorbutton_Click(object sender, EventArgs e)
         {
+            /*
             string Name = EditNaamsensortextbox.Text;
             //int id = int.Parse();//comboboxselectedshithiering
             //Sensor sensor= new Sensor(id, Name);
@@ -43,6 +51,7 @@ namespace Mensenteller_B3
 
 
             MessageBox.Show("Updated");
+            */
             
         }
 
@@ -56,8 +65,9 @@ namespace Mensenteller_B3
             if (CheckBoxEntree.Checked)
             {
                 CheckBoxDruk.Checked = false;
-                entreeSensorDAL.ReadEntreeSensors();
-                foreach(EntreeSensor es in entreeSensorDAL.EntreeSensors)
+                
+                // List Dal maken van entree en druk
+                foreach(EntreeSensor es in entreeSensorDAL.ReadEntreeSensors())
                 {
                     ComboBox.Items.Add(es.SensorID.ToString());
                 }

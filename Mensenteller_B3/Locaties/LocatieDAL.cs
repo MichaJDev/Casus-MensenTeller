@@ -30,8 +30,8 @@ namespace Mensenteller_B3.Locaties
                   cmd.Parameters.AddWithValue("@Yco", l.Yco);
                   */
                 con.Open();
-                
-               
+
+
                 try
                 {
                     cmd.ExecuteNonQuery();
@@ -43,7 +43,7 @@ namespace Mensenteller_B3.Locaties
 
             }
         }
-       
+
         /*
         public void Update(Locatie l)
         {
@@ -133,7 +133,7 @@ namespace Mensenteller_B3.Locaties
                     }
                 }
             }
-            
+
         }
         public List<Locatie> ReadLocatie(int id)
         {
@@ -141,7 +141,7 @@ namespace Mensenteller_B3.Locaties
             {
                 Locaties.Clear();
             }
-            List<Locatie>ls = new List<Locatie>();
+            List<Locatie> ls = new List<Locatie>();
             using (SqlConnection cnn = new SqlConnection(conString))
             {
                 using (SqlCommand command = new SqlCommand())
@@ -161,18 +161,18 @@ namespace Mensenteller_B3.Locaties
                             Name = dataReader.GetString(1),
                             ZoneId = dataReader.GetInt32(2)
                         };
-          
+
                         ls.Add(l);
-                        
+
 
                     }
                 }
                 return ls;
             }
         }
-        public List <Locatie> ReadLocatieById(int id)
+        public List<Locatie> ReadLocatieById(int id)
         {
-            
+
             List<Locatie> ls = new List<Locatie>();
             using (SqlConnection cnn = new SqlConnection(conString))
             {
@@ -194,14 +194,47 @@ namespace Mensenteller_B3.Locaties
                             ZoneId = dataReader.GetInt32(2)
                         }
                     ;
-                        ls.Add (l);
+                        ls.Add(l);
+
+
+
+
+                    }
+                }
+                return ls;
+            }
+
+        }
+        public Locatie GetLocatie(int id)
+        {
+            
+           Locatie l = new Locatie();
+            using (SqlConnection cnn = new SqlConnection(conString))
+            {
+                using (SqlCommand command = new SqlCommand())
+                {
+                    cnn.ConnectionString = conString;
+                    command.Connection = cnn;
+                    command.CommandText = "SELECT * FROM Locaties WHERE ZoneId = @Id";
+                    command.Parameters.AddWithValue("@Id", id);
+                    cnn.Open();
+                    SqlDataReader dataReader = command.ExecuteReader();
+
+                    while (dataReader.Read())
+                    {
+
+
+                        l.ID = dataReader.GetInt32(0);
+                        l.Name = dataReader.GetString(1);
+                        l.ZoneId = dataReader.GetInt32(2);
+                        
 
                       
 
 
                     }
                 }
-                return ls;
+                return l;
             }
         }
     }

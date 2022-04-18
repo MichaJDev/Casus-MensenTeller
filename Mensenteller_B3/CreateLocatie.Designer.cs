@@ -79,7 +79,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -170,7 +170,6 @@
             this.TableLayoutPanelControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TableLayoutPanelControl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TableLayoutPanelControl.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.TableLayoutPanelControl.Controls.Add(this.EditLocatiebutton, 1, 1);
             this.TableLayoutPanelControl.Controls.Add(this.tableLayoutPanel1, 0, 1);
             this.TableLayoutPanelControl.Controls.Add(this.CreateLocatiebutton, 1, 0);
             this.TableLayoutPanelControl.Controls.Add(this.ButtondDone, 1, 2);
@@ -235,8 +234,6 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.EditIdLocatietextbox, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.EditLocatietextbox, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.LabelEditName, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 85);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -292,7 +289,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.TableLayoutPanelCreateBedrijf);
+            this.Controls.Add(this.EditLocatietextbox);
+            this.Controls.Add(this.EditIdLocatietextbox);
+            this.Controls.Add(this.EditLocatiebutton);
+            this.Controls.Add(this.CreateLocatiebutton);
             this.Name = "CreateLocatie";
             this.Text = "CreateLocatie";
             this.Load += new System.EventHandler(this.CreateLocatie_Load);

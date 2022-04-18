@@ -68,6 +68,7 @@
             this.DataGridViewSensors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridViewSensors.Location = new System.Drawing.Point(3, 59);
             this.DataGridViewSensors.Name = "DataGridViewSensors";
+            this.DataGridViewSensors.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridViewSensors.Size = new System.Drawing.Size(770, 218);
             this.DataGridViewSensors.TabIndex = 0;
             // 

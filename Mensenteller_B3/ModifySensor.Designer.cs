@@ -36,11 +36,11 @@
             this.ButtonDelete = new System.Windows.Forms.Button();
             this.TextBoxAdress = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.EntreeIdTextBox = new System.Windows.Forms.TextBox();
-            this.PeopleOutTextBox = new System.Windows.Forms.TextBox();
-            this.PeopleInTextBox = new System.Windows.Forms.TextBox();
-            this.InUseCheckBox = new System.Windows.Forms.CheckBox();
             this.DateTimeTextBox = new System.Windows.Forms.TextBox();
+            this.InUseCheckBox = new System.Windows.Forms.CheckBox();
+            this.PeopleInTextBox = new System.Windows.Forms.TextBox();
+            this.PeopleOutTextBox = new System.Windows.Forms.TextBox();
+            this.EntreeIdTextBox = new System.Windows.Forms.TextBox();
             this.TableLayoutPanelModifyBedrijf.SuspendLayout();
             this.TableLayoutPanelControl.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -64,7 +64,7 @@
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.66667F));
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56F));
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.TableLayoutPanelModifyBedrijf.Size = new System.Drawing.Size(776, 417);
+            this.TableLayoutPanelModifyBedrijf.Size = new System.Drawing.Size(776, 415);
             this.TableLayoutPanelModifyBedrijf.TabIndex = 1;
             // 
             // TableLayoutPanelControl
@@ -81,12 +81,12 @@
             this.TableLayoutPanelControl.Controls.Add(this.ButtonCreate, 0, 0);
             this.TableLayoutPanelControl.Controls.Add(this.ButtonDone, 1, 1);
             this.TableLayoutPanelControl.Controls.Add(this.ButtonDelete, 0, 1);
-            this.TableLayoutPanelControl.Location = new System.Drawing.Point(3, 280);
+            this.TableLayoutPanelControl.Location = new System.Drawing.Point(3, 279);
             this.TableLayoutPanelControl.Name = "TableLayoutPanelControl";
             this.TableLayoutPanelControl.RowCount = 2;
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TableLayoutPanelControl.Size = new System.Drawing.Size(770, 134);
+            this.TableLayoutPanelControl.Size = new System.Drawing.Size(770, 133);
             this.TableLayoutPanelControl.TabIndex = 2;
             // 
             // ButtonModify
@@ -98,7 +98,7 @@
             this.ButtonModify.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonModify.Location = new System.Drawing.Point(388, 3);
             this.ButtonModify.Name = "ButtonModify";
-            this.ButtonModify.Size = new System.Drawing.Size(379, 101);
+            this.ButtonModify.Size = new System.Drawing.Size(379, 100);
             this.ButtonModify.TabIndex = 1;
             this.ButtonModify.Text = "Modify";
             this.ButtonModify.UseVisualStyleBackColor = true;
@@ -113,7 +113,7 @@
             this.ButtonCreate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonCreate.Location = new System.Drawing.Point(3, 3);
             this.ButtonCreate.Name = "ButtonCreate";
-            this.ButtonCreate.Size = new System.Drawing.Size(379, 101);
+            this.ButtonCreate.Size = new System.Drawing.Size(379, 100);
             this.ButtonCreate.TabIndex = 0;
             this.ButtonCreate.Text = "Create";
             this.ButtonCreate.UseVisualStyleBackColor = true;
@@ -126,12 +126,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonDone.AutoSize = true;
             this.ButtonDone.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ButtonDone.Location = new System.Drawing.Point(388, 110);
+            this.ButtonDone.Location = new System.Drawing.Point(388, 109);
             this.ButtonDone.Name = "ButtonDone";
             this.ButtonDone.Size = new System.Drawing.Size(379, 21);
             this.ButtonDone.TabIndex = 3;
             this.ButtonDone.Text = "Done";
             this.ButtonDone.UseVisualStyleBackColor = true;
+            this.ButtonDone.Click += new System.EventHandler(this.ButtonDone_Click_1);
             // 
             // ButtonDelete
             // 
@@ -140,7 +141,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonDelete.AutoSize = true;
             this.ButtonDelete.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ButtonDelete.Location = new System.Drawing.Point(3, 110);
+            this.ButtonDelete.Location = new System.Drawing.Point(3, 109);
             this.ButtonDelete.Name = "ButtonDelete";
             this.ButtonDelete.Size = new System.Drawing.Size(379, 21);
             this.ButtonDelete.TabIndex = 4;
@@ -166,29 +167,15 @@
             this.panel1.Controls.Add(this.EntreeIdTextBox);
             this.panel1.Location = new System.Drawing.Point(3, 47);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(382, 227);
+            this.panel1.Size = new System.Drawing.Size(382, 226);
             this.panel1.TabIndex = 4;
             // 
-            // EntreeIdTextBox
+            // DateTimeTextBox
             // 
-            this.EntreeIdTextBox.Location = new System.Drawing.Point(12, 37);
-            this.EntreeIdTextBox.Name = "EntreeIdTextBox";
-            this.EntreeIdTextBox.Size = new System.Drawing.Size(100, 20);
-            this.EntreeIdTextBox.TabIndex = 0;
-            // 
-            // PeopleOutTextBox
-            // 
-            this.PeopleOutTextBox.Location = new System.Drawing.Point(152, 83);
-            this.PeopleOutTextBox.Name = "PeopleOutTextBox";
-            this.PeopleOutTextBox.Size = new System.Drawing.Size(100, 20);
-            this.PeopleOutTextBox.TabIndex = 1;
-            // 
-            // PeopleInTextBox
-            // 
-            this.PeopleInTextBox.Location = new System.Drawing.Point(152, 37);
-            this.PeopleInTextBox.Name = "PeopleInTextBox";
-            this.PeopleInTextBox.Size = new System.Drawing.Size(100, 20);
-            this.PeopleInTextBox.TabIndex = 2;
+            this.DateTimeTextBox.Location = new System.Drawing.Point(12, 180);
+            this.DateTimeTextBox.Name = "DateTimeTextBox";
+            this.DateTimeTextBox.Size = new System.Drawing.Size(109, 20);
+            this.DateTimeTextBox.TabIndex = 4;
             // 
             // InUseCheckBox
             // 
@@ -200,12 +187,26 @@
             this.InUseCheckBox.Text = "InUse";
             this.InUseCheckBox.UseVisualStyleBackColor = true;
             // 
-            // DateTimeTextBox
+            // PeopleInTextBox
             // 
-            this.DateTimeTextBox.Location = new System.Drawing.Point(12, 180);
-            this.DateTimeTextBox.Name = "DateTimeTextBox";
-            this.DateTimeTextBox.Size = new System.Drawing.Size(109, 20);
-            this.DateTimeTextBox.TabIndex = 4;
+            this.PeopleInTextBox.Location = new System.Drawing.Point(152, 37);
+            this.PeopleInTextBox.Name = "PeopleInTextBox";
+            this.PeopleInTextBox.Size = new System.Drawing.Size(100, 20);
+            this.PeopleInTextBox.TabIndex = 2;
+            // 
+            // PeopleOutTextBox
+            // 
+            this.PeopleOutTextBox.Location = new System.Drawing.Point(152, 83);
+            this.PeopleOutTextBox.Name = "PeopleOutTextBox";
+            this.PeopleOutTextBox.Size = new System.Drawing.Size(100, 20);
+            this.PeopleOutTextBox.TabIndex = 1;
+            // 
+            // EntreeIdTextBox
+            // 
+            this.EntreeIdTextBox.Location = new System.Drawing.Point(12, 37);
+            this.EntreeIdTextBox.Name = "EntreeIdTextBox";
+            this.EntreeIdTextBox.Size = new System.Drawing.Size(100, 20);
+            this.EntreeIdTextBox.TabIndex = 0;
             // 
             // ModifySensor
             // 
