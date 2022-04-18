@@ -37,18 +37,14 @@ namespace Mensenteller_B3
             Close();
         }
 
-        private void ButtonCreate_Click(object sender, EventArgs e)
-        {
-            CreateSensor createSensor = new CreateSensor();
-            createSensor.Show();
-        }
+
         private void ModifySensor_Load(object sender, EventArgs e)
         {
 
-
+            Sensor s = sensorDAL.GetSensor(locatieId);
             foreach (EntreeSensor es in entreeSenorDAL.ReadEntreeSensors(sensorId))
             {
-
+                
                 if (es.SensorID == sensorId)
                 {
 
@@ -88,10 +84,6 @@ namespace Mensenteller_B3
             }
         }
 
-        private void ButtonDone_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
 
         private void ButtonCreate_Click(object sender, EventArgs e)
         {
@@ -109,53 +101,7 @@ namespace Mensenteller_B3
                 createSensor.Show();
             }
         }
-        private void ModifySensor_Load(object sender, EventArgs e)
-        {
 
-            //Sensor s = sensorDAL.GetSensor(sensorId);
-            //foreach (EntreeSensor es in entreeSenorDAL.ReadEntreeSensors(sensorId))
-            //{
-
-            //    if (es.SensorID == sensorId)
-            //    {
-
-            //        locatieId = s.LocatieID;
-            //        entree = entreeSenorDAL.ReadEntreeSensor(sensorId);
-
-            //        InUseCheckBox.Hide();
-            //        EntreeIdTextBox.Text = es.SensorID.ToString();
-            //        PeopleInTextBox.Text = es.PeopleIn.ToString();
-            //        PeopleOutTextBox.Text = es.PeopleOut.ToString();
-            //        if (es.TimeStamp != null)
-            //        {
-            //            DateTimeTextBox.Text = es.TimeStamp;
-            //        }
-            //        else
-            //        {
-            //            DateTimeTextBox.Text = "No DATA FOUND!!!!!!!!!!!";
-            //        }
-
-            //    }
-            //}
-
-            //foreach (DrukSensor ds in drukSensorDAL.ReadDrukSensor(sensorId))
-            //{
-            //    if (ds.SensorId == sensorId)
-            //    {
-            //        druk = drukSensorDAL.GetDrukSensor(sensorId);
-            //        locatieId = s.LocatieID;
-
-            //        PeopleInTextBox.Hide();
-            //        PeopleOutTextBox.Hide();
-            //        EntreeIdTextBox.Text = ds.SensorId.ToString();
-            //        InUseCheckBox.Checked = ds.InUse;
-            //        DateTimeTextBox.Text = ds.TimeStamp.ToString();
-
-            //    }
-            //}
-
-
-        }
 
         private void ButtonModify_Click(object sender, EventArgs e)
         {
