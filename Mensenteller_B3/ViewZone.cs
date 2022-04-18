@@ -12,7 +12,7 @@ using MensenTeller_B3.Zones;
 
 namespace Mensenteller_B3
 {
-    public partial class ViewZone : Form
+    public partial class ViewZone : BaseForm
     {
         private Zone zone;
         

@@ -12,7 +12,7 @@ using Mensenteller_B3.Sensors.EntreeSensors;
 
 namespace Mensenteller_B3
 {
-    public partial class SensorView : Form
+    public partial class SensorView : BaseForm
     {
         EntreeSensor es;
         DrukSensor ds;

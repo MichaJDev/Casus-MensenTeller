@@ -12,7 +12,7 @@ using MensenTeller_B3.Zones;
 
 namespace Mensenteller_B3
 {
-    public partial class ModifyZones : Form
+    public partial class ModifyZones : BaseForm
     {
         public string BedrijfNaam { get; set; }
         public int BedrijfId { get; set; }

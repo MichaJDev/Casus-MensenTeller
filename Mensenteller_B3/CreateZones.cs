@@ -11,7 +11,7 @@ using MensenTeller_B3.Zones;
 
 namespace Mensenteller_B3
 {
-    public partial class CreateZones : Form
+    public partial class CreateZones : BaseForm
     {
 
         DALZone dal = new DALZone();

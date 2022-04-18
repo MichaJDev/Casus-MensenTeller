@@ -13,7 +13,7 @@ using MensenTeller_B3.Zones;
 namespace Mensenteller_B3
 {
     
-    public partial class ViewBedrijf : Form
+    public partial class ViewBedrijf : BaseForm
     {
         DALZone zonedal = new DALZone();
         private Bedrijf bedrijf;

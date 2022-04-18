@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Mensenteller_B3
 {
-    public partial class ModifyBedrijf : Form
+    public partial class ModifyBedrijf : BaseForm
     {
         DALZone zoneDAL = new DALZone();
         public int BedrijfId { get; set; }

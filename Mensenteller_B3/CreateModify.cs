@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Mensenteller_B3
 {
-    public partial class CreateModify : Form
+    public partial class CreateModify : BaseForm
     {
         BedrijfDAL dal = new BedrijfDAL();
         

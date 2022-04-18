@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.TableLayoutPanelMain = new System.Windows.Forms.TableLayoutPanel();
             this.ButtonView = new System.Windows.Forms.Button();
             this.ButtonCreateModify = new System.Windows.Forms.Button();
@@ -73,13 +74,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonView.AutoSize = true;
             this.ButtonView.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ButtonView.BackColor = System.Drawing.Color.Gray;
+            this.ButtonView.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ButtonView.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonView.Location = new System.Drawing.Point(3, 367);
             this.ButtonView.Name = "ButtonView";
             this.ButtonView.Size = new System.Drawing.Size(855, 150);
             this.ButtonView.TabIndex = 4;
             this.ButtonView.Text = "View";
-            this.ButtonView.UseVisualStyleBackColor = true;
+            this.ButtonView.UseVisualStyleBackColor = false;
             this.ButtonView.Click += new System.EventHandler(this.ButtonView_Click);
             // 
             // ButtonCreateModify
@@ -89,13 +92,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonCreateModify.AutoSize = true;
             this.ButtonCreateModify.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ButtonCreateModify.BackColor = System.Drawing.Color.Gray;
+            this.ButtonCreateModify.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ButtonCreateModify.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonCreateModify.Location = new System.Drawing.Point(3, 211);
             this.ButtonCreateModify.Name = "ButtonCreateModify";
             this.ButtonCreateModify.Size = new System.Drawing.Size(855, 150);
             this.ButtonCreateModify.TabIndex = 3;
             this.ButtonCreateModify.Text = "Create/Modify";
-            this.ButtonCreateModify.UseVisualStyleBackColor = true;
+            this.ButtonCreateModify.UseVisualStyleBackColor = false;
             this.ButtonCreateModify.Click += new System.EventHandler(this.ButtonCreateModify_Click);
             // 
             // LabelTitle
@@ -214,8 +219,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(885, 544);
             this.Controls.Add(this.TableLayoutPanelMain);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PoepleCounter : Home";

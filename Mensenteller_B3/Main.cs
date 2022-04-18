@@ -18,7 +18,7 @@ namespace Mensenteller_B3
         
         public Main()
         {
-            InitializeComponent();
+            InitializeComponent();//iyyuf
         }
 
         private void ButtonCreateModify_Click(object sender, EventArgs e)

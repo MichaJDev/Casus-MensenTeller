@@ -15,7 +15,7 @@ using MensenTeller_B3.Sensors;
 
 namespace Mensenteller_B3
 {
-    public partial class ViewLocatie : Form
+    public partial class ViewLocatie : BaseForm
     {
         private Locatie locatie;
 

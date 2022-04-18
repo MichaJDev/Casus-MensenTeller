@@ -11,7 +11,7 @@ using Mensenteller_B3.Sensors;
 
 namespace Mensenteller_B3
 {
-    public partial class ModifyLocation : Form
+    public partial class ModifyLocation : BaseForm
     {
         int zoneId ;
         SensorDAL sensordal = new SensorDAL();

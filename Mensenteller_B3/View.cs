@@ -12,7 +12,7 @@ using Mensenteller_B3.Bedrijven;
 
 namespace Mensenteller_B3
 {
-    public partial class View : Form
+    public partial class View : BaseForm
 
     {
         BedrijfDAL bedrijfDAL = new BedrijfDAL();
