@@ -114,12 +114,22 @@
     </Compile>
     <Compile Include="DataSet_LocatiesView.Designer.cs" />
     <Compile Include="DataSet_Sensor.Designer.cs" />
+    <Compile Include="DataSet_Sensors123.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Sensors123.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet_Zones.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet_Zones.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataSet_Zones1.Designer.cs" />
+    <Compile Include="DataSet_Zones123.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Zones123.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Locaties\Locatie.cs" />
     <Compile Include="Locaties\LocatieDAL.cs" />
     <Compile Include="LocatieView.cs">
@@ -350,6 +360,17 @@
     <None Include="DataSet_Locaties123.xss">
       <DependentUpon>DataSet_Locaties123.xsd</DependentUpon>
     </None>
+    <None Include="DataSet_Sensors123.xsc">
+      <DependentUpon>DataSet_Sensors123.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Sensors123.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Sensors123.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_Sensors123.xss">
+      <DependentUpon>DataSet_Sensors123.xsd</DependentUpon>
+    </None>
     <None Include="DataSet_Zones.xsc">
       <DependentUpon>DataSet_Zones.xsd</DependentUpon>
     </None>
@@ -360,6 +381,17 @@
     </None>
     <None Include="DataSet_Zones.xss">
       <DependentUpon>DataSet_Zones.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Zones123.xsc">
+      <DependentUpon>DataSet_Zones123.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Zones123.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Zones123.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_Zones123.xss">
+      <DependentUpon>DataSet_Zones123.xsd</DependentUpon>
     </None>
     <None Include="MensentellerDataSet.xsc">
       <DependentUpon>MensentellerDataSet.xsd</DependentUpon>

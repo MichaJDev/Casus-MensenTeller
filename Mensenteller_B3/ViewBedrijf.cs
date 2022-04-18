@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MensenTeller_B3;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,8 +38,10 @@ namespace Mensenteller_B3
             int pid = int.Parse(id);
             Zone z = new Zone(pid);
             ViewZone form = new ViewZone(z);
-            form.Show();
-            
+            form.ShowDialog();
+            zonedal.ReadZoneByBedrijfId(bedrijf.Id);
+            DgvBedrijfview.DataSource = zonedal.ZoneList;
+
         }
 
         private void DgvBedrijfview_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -56,8 +56,8 @@ namespace Mensenteller_B3
             string Name = EditBedrijftextbox.Text;
             int id = int.Parse(EdittextoxId.Text);
             dal.EditBedrijf(id, Name);
-            this.bedrijvenTableAdapter.Fill(this.dataSet_CreateBedrijven.Bedrijven);
             MessageBox.Show("Updated");
+            this.bedrijvenTableAdapter.Fill(this.dataSet_CreateBedrijven.Bedrijven);
         }
 
         private void ButtondDone_Click(object sender, EventArgs e)

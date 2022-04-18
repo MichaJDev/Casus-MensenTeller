@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.DgvCreateSensor = new System.Windows.Forms.DataGridView();
             this.CreateSensorbutton = new System.Windows.Forms.Button();
             this.EditSensorbutton = new System.Windows.Forms.Button();
@@ -48,12 +49,20 @@
             this.LabelEditId = new System.Windows.Forms.Label();
             this.LabelEditSensorNaam = new System.Windows.Forms.Label();
             this.ButtonDone = new System.Windows.Forms.Button();
+            this.dataSet_Sensors123 = new Mensenteller_B3.DataSet_Sensors123();
+            this.sensorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sensorsTableAdapter = new Mensenteller_B3.DataSet_Sensors123TableAdapters.SensorsTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.locatieIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvCreateSensor)).BeginInit();
             this.TLPSensor.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.TLPCheckBox.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Sensors123)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sensorsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // DgvCreateSensor
@@ -61,7 +70,13 @@
             this.DgvCreateSensor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.DgvCreateSensor.AutoGenerateColumns = false;
             this.DgvCreateSensor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvCreateSensor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.locatieIdDataGridViewTextBoxColumn});
+            this.DgvCreateSensor.DataSource = this.sensorsBindingSource;
             this.DgvCreateSensor.Location = new System.Drawing.Point(3, 3);
             this.DgvCreateSensor.Name = "DgvCreateSensor";
             this.DgvCreateSensor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -219,7 +234,7 @@
             this.TLPCheckBox.Name = "TLPCheckBox";
             this.TLPCheckBox.RowCount = 1;
             this.TLPCheckBox.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TLPCheckBox.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.TLPCheckBox.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.TLPCheckBox.Size = new System.Drawing.Size(300, 40);
             this.TLPCheckBox.TabIndex = 8;
             // 
@@ -350,6 +365,38 @@
             this.ButtonDone.UseVisualStyleBackColor = true;
             this.ButtonDone.Click += new System.EventHandler(this.ButtonDone_Click);
             // 
+            // dataSet_Sensors123
+            // 
+            this.dataSet_Sensors123.DataSetName = "DataSet_Sensors123";
+            this.dataSet_Sensors123.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sensorsBindingSource
+            // 
+            this.sensorsBindingSource.DataMember = "Sensors";
+            this.sensorsBindingSource.DataSource = this.dataSet_Sensors123;
+            // 
+            // sensorsTableAdapter
+            // 
+            this.sensorsTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // locatieIdDataGridViewTextBoxColumn
+            // 
+            this.locatieIdDataGridViewTextBoxColumn.DataPropertyName = "LocatieId";
+            this.locatieIdDataGridViewTextBoxColumn.HeaderText = "LocatieId";
+            this.locatieIdDataGridViewTextBoxColumn.Name = "locatieIdDataGridViewTextBoxColumn";
+            // 
             // CreateSensor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -370,6 +417,8 @@
             this.TLPCheckBox.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Sensors123)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sensorsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -397,5 +446,11 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label LabelComboBox;
         private System.Windows.Forms.ComboBox ComboBox;
+        private DataSet_Sensors123 dataSet_Sensors123;
+        private System.Windows.Forms.BindingSource sensorsBindingSource;
+        private DataSet_Sensors123TableAdapters.SensorsTableAdapter sensorsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn locatieIdDataGridViewTextBoxColumn;
     }
 }

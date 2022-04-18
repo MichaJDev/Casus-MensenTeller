@@ -49,7 +49,8 @@ namespace Mensenteller_B3
 
             
             CreateLocatie createLocatie = new CreateLocatie(ZoneId);
-            createLocatie.Show();
+            createLocatie.ShowDialog();
+            DataGridViewZones.DataSource = dal.ReadLocatieById(ZoneId);
         }
 
         private void ButtonDone_Click(object sender, EventArgs e)
@@ -61,7 +62,8 @@ namespace Mensenteller_B3
         {
            
             ModifyLocation modifyLocation = new ModifyLocation(ZoneId);
-            modifyLocation.Show();
+            modifyLocation.ShowDialog();
+            DataGridViewZones.DataSource = dal.ReadLocatieById(ZoneId);
         }
 
         private void TextBoxAdress_TextChanged(object sender, EventArgs e)

@@ -111,7 +111,8 @@ namespace Mensenteller_B3
             //ToDO              opnieuw toevoegen!!!
             //this.locatiesTableAdapter.Fill(this.dataSet_LocatiesView.Locaties);
             ViewBedrijf form = new ViewBedrijf(b);
-            form.Show();
+            form.ShowDialog();
+            this.bedrijvenTableAdapter.Fill(this.dataSet_Bedrijvenview.Bedrijven);
         }
 
         private void ButtonDone_Click(object sender, EventArgs e)

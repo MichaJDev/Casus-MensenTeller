@@ -39,7 +39,8 @@ namespace Mensenteller_B3
 
                 CreateZoneNatextbox.Text = "";
                 MessageBox.Show("Saved");
-                
+                this.zonesTableAdapter.Fill(this.dataSet_Zones123.Zones);
+
             }
         }
 
@@ -49,10 +50,13 @@ namespace Mensenteller_B3
             int id = int.Parse(ZoneEditIdtextbox.Text);
             dal.EditZone(id, Name);
             MessageBox.Show("Updated");
+            this.zonesTableAdapter.Fill(this.dataSet_Zones123.Zones);
         }
 
         private void CreateZones_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet_Zones123.Zones' table. You can move, or remove it, as needed.
+            this.zonesTableAdapter.Fill(this.dataSet_Zones123.Zones);
 
         }
 

@@ -25,7 +25,8 @@ namespace Mensenteller_B3
         {
             
             CreateLocatie createLocatie = new CreateLocatie();
-            createLocatie.Show();
+            createLocatie.ShowDialog();
+            DataGridViewSensors.DataSource = sensordal.ReadSensors(LocatieId);
         }
 
         private void ButtonModify_Click(object sender, EventArgs e)
@@ -35,7 +36,8 @@ namespace Mensenteller_B3
             int SensorId = int.Parse(StringSensorId);
 
             ModifySensor modifySensor = new ModifySensor(SensorId);
-            modifySensor.Show();
+            modifySensor.ShowDialog();
+            DataGridViewSensors.DataSource = sensordal.ReadSensors(LocatieId);
         }
 
         private void ButtonDone_Click(object sender, EventArgs e)

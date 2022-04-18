@@ -38,7 +38,9 @@ namespace Mensenteller_B3
         }
         private void CreateSensorbutton_Click(object sender, EventArgs e)
         {
-            
+
+
+            this.sensorsTableAdapter.Fill(this.dataSet_Sensors123.Sensors);
         }
 
         private void EditSensorbutton_Click(object sender, EventArgs e)
@@ -52,12 +54,15 @@ namespace Mensenteller_B3
 
             MessageBox.Show("Updated");
             */
-            
+            this.sensorsTableAdapter.Fill(this.dataSet_Sensors123.Sensors);
+
         }
 
         private void ButtonDone_Click(object sender, EventArgs e)
         {
             Close();
+
+
         }
 
         private void CheckBoxEntree_CheckedChanged(object sender, EventArgs e)
@@ -89,6 +94,8 @@ namespace Mensenteller_B3
 
         private void CreateSensor_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet_Sensors123.Sensors' table. You can move, or remove it, as needed.
+            this.sensorsTableAdapter.Fill(this.dataSet_Sensors123.Sensors);
 
         }
     }

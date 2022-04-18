@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.DgvCreateZone = new System.Windows.Forms.DataGridView();
             this.CreateZonebutton = new System.Windows.Forms.Button();
             this.EditZonebutton = new System.Windows.Forms.Button();
@@ -42,11 +43,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.LabelEditName = new System.Windows.Forms.Label();
             this.ButtondDone = new System.Windows.Forms.Button();
+            this.dataSet_Zones123 = new Mensenteller_B3.DataSet_Zones123();
+            this.zonesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.zonesTableAdapter = new Mensenteller_B3.DataSet_Zones123TableAdapters.ZonesTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bedrijvenIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvCreateZone)).BeginInit();
             this.TLPCreateZone.SuspendLayout();
             this.TableLayoutPanelControl.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Zones123)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // DgvCreateZone
@@ -54,7 +63,13 @@
             this.DgvCreateZone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.DgvCreateZone.AutoGenerateColumns = false;
             this.DgvCreateZone.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvCreateZone.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.bedrijvenIdDataGridViewTextBoxColumn});
+            this.DgvCreateZone.DataSource = this.zonesBindingSource;
             this.DgvCreateZone.Location = new System.Drawing.Point(3, 3);
             this.DgvCreateZone.Name = "DgvCreateZone";
             this.DgvCreateZone.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -249,6 +264,39 @@
             this.ButtondDone.UseVisualStyleBackColor = true;
             this.ButtondDone.Click += new System.EventHandler(this.ButtondDone_Click);
             // 
+            // dataSet_Zones123
+            // 
+            this.dataSet_Zones123.DataSetName = "DataSet_Zones123";
+            this.dataSet_Zones123.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // zonesBindingSource
+            // 
+            this.zonesBindingSource.DataMember = "Zones";
+            this.zonesBindingSource.DataSource = this.dataSet_Zones123;
+            // 
+            // zonesTableAdapter
+            // 
+            this.zonesTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // bedrijvenIdDataGridViewTextBoxColumn
+            // 
+            this.bedrijvenIdDataGridViewTextBoxColumn.DataPropertyName = "BedrijvenId";
+            this.bedrijvenIdDataGridViewTextBoxColumn.HeaderText = "BedrijvenId";
+            this.bedrijvenIdDataGridViewTextBoxColumn.Name = "bedrijvenIdDataGridViewTextBoxColumn";
+            // 
             // CreateZones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,6 +317,8 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Zones123)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,5 +340,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label LabelEditName;
         private System.Windows.Forms.Button ButtondDone;
+        private DataSet_Zones123 dataSet_Zones123;
+        private System.Windows.Forms.BindingSource zonesBindingSource;
+        private DataSet_Zones123TableAdapters.ZonesTableAdapter zonesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bedrijvenIdDataGridViewTextBoxColumn;
     }
 }

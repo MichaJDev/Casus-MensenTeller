@@ -95,13 +95,15 @@ namespace Mensenteller_B3
             {
 
                 CreateSensor createSensor = new CreateSensor(s.LocatieID);
-                createSensor.Show();
+                createSensor.ShowDialog();
+                LoadContent();
             }
             else if (druk != null)
             {
 
                 CreateSensor createSensor = new CreateSensor(s.LocatieID);
                 createSensor.Show();
+                LoadContent();
             }
         }
 
@@ -145,5 +147,52 @@ namespace Mensenteller_B3
         {
             Close();
         }
+
+        private void LoadContent()
+        {
+
+            foreach (EntreeSensor es in entreeSensorDAL.ReadEntreeSensors())
+            {
+                Sensor se = sensorDAL.GetSensor(sensorId);
+                if (es.SensorID == sensorId)
+                {
+
+                    locatieId = se.LocatieID;
+                    entree = entreeSensorDAL.ReadEntreeSensor(sensorId);
+
+                    InUseCheckBox.Hide();
+                    EntreeIdTextBox.Text = es.SensorID.ToString();
+                    PeopleInTextBox.Text = es.PeopleIn.ToString();
+                    PeopleOutTextBox.Text = es.PeopleOut.ToString();
+                    if (es.TimeStamp != null)
+                    {
+                        DateTimeTextBox.Text = es.TimeStamp;
+                    }
+                    else
+                    {
+                        DateTimeTextBox.Text = "No DATA FOUND!!!!!!!!!!!";
+                    }
+
+                }
+            }
+            Sensor s = sensorDAL.GetSensor(sensorId);
+            foreach (DrukSensor ds in drukSensorDAL.ReadDrukSensor())
+            {
+                if (ds.SensorId == sensorId)
+                {
+                    druk = drukSensorDAL.GetDrukSensor(sensorId);
+                    locatieId = s.LocatieID;
+
+                    PeopleInTextBox.Hide();
+                    PeopleOutTextBox.Hide();
+                    EntreeIdTextBox.Text = ds.SensorId.ToString();
+                    InUseCheckBox.Checked = ds.InUse;
+                    DateTimeTextBox.Text = ds.TimeStamp.ToString();
+
+                }
+            }
+
+        }
     }
+
 }

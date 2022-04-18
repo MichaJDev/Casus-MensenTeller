@@ -23,10 +23,11 @@ namespace Mensenteller_B3
         private void ButtonCreate_Click(object sender, EventArgs e)
         {
             Close();
-           
+
             CreateBedrijf createBedrijf = new CreateBedrijf();
-            createBedrijf.Show();
-            
+            createBedrijf.ShowDialog();
+            this.bedrijvenTableAdapter2.Fill(this.mensentellerDataSet6.Bedrijven);
+
         }
 
         private void ButtonBack_Click(object sender, EventArgs e)
@@ -41,7 +42,8 @@ namespace Mensenteller_B3
             int pid = int.Parse(id);
             Close();            
             ModifyBedrijf modifyBedrijf = new ModifyBedrijf(pid, name);
-            modifyBedrijf.Show();
+            modifyBedrijf.ShowDialog();
+            this.bedrijvenTableAdapter2.Fill(this.mensentellerDataSet6.Bedrijven);
         }
 
         private void CreateModify_Load(object sender, EventArgs e)

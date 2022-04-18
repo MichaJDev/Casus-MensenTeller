@@ -37,7 +37,8 @@ namespace Mensenteller_B3
             int pid = int.Parse(id);
             Locatie l = new Locatie(pid);
             ViewLocatie form = new ViewLocatie(l);
-            form.Show();
+            form.ShowDialog();
+            DgvZoneview.DataSource = locatiedal.ReadLocatie(zone.ID);
         }
     }
 }
