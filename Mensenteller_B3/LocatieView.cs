@@ -12,7 +12,7 @@ using MensenTeller_B3.Zones;
 
 namespace Mensenteller_B3
 {
-    public partial class LocatieView : Form
+    public partial class LocatieView : BaseForm
     {
         private Locatie locatie;
 

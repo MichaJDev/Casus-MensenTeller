@@ -71,7 +71,7 @@
             this.DgvBedrijven.Location = new System.Drawing.Point(3, 3);
             this.DgvBedrijven.Name = "DgvBedrijven";
             this.DgvBedrijven.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvBedrijven.Size = new System.Drawing.Size(770, 207);
+            this.DgvBedrijven.Size = new System.Drawing.Size(1234, 322);
             this.DgvBedrijven.TabIndex = 0;
             this.DgvBedrijven.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvBedrijven_CellMouseClick);
             // 
@@ -105,9 +105,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CreateBedrijfbutton.AutoSize = true;
             this.CreateBedrijfbutton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.CreateBedrijfbutton.Location = new System.Drawing.Point(388, 3);
+            this.CreateBedrijfbutton.Location = new System.Drawing.Point(620, 3);
             this.CreateBedrijfbutton.Name = "CreateBedrijfbutton";
-            this.CreateBedrijfbutton.Size = new System.Drawing.Size(379, 76);
+            this.CreateBedrijfbutton.Size = new System.Drawing.Size(611, 122);
             this.CreateBedrijfbutton.TabIndex = 1;
             this.CreateBedrijfbutton.Text = "Create";
             this.CreateBedrijfbutton.UseVisualStyleBackColor = true;
@@ -116,17 +116,17 @@
             // CreateBedrijftextbox
             // 
             this.CreateBedrijftextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.CreateBedrijftextbox.Location = new System.Drawing.Point(192, 28);
+            this.CreateBedrijftextbox.Location = new System.Drawing.Point(308, 51);
             this.CreateBedrijftextbox.Name = "CreateBedrijftextbox";
-            this.CreateBedrijftextbox.Size = new System.Drawing.Size(184, 20);
+            this.CreateBedrijftextbox.Size = new System.Drawing.Size(300, 20);
             this.CreateBedrijftextbox.TabIndex = 2;
             // 
             // EditBedrijftextbox
             // 
             this.EditBedrijftextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.EditBedrijftextbox.Location = new System.Drawing.Point(192, 9);
+            this.EditBedrijftextbox.Location = new System.Drawing.Point(308, 20);
             this.EditBedrijftextbox.Name = "EditBedrijftextbox";
-            this.EditBedrijftextbox.Size = new System.Drawing.Size(184, 20);
+            this.EditBedrijftextbox.Size = new System.Drawing.Size(300, 20);
             this.EditBedrijftextbox.TabIndex = 4;
             // 
             // EditBedrijfbutton
@@ -136,9 +136,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EditBedrijfbutton.AutoSize = true;
             this.EditBedrijfbutton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.EditBedrijfbutton.Location = new System.Drawing.Point(388, 85);
+            this.EditBedrijfbutton.Location = new System.Drawing.Point(620, 131);
             this.EditBedrijfbutton.Name = "EditBedrijfbutton";
-            this.EditBedrijfbutton.Size = new System.Drawing.Size(379, 76);
+            this.EditBedrijfbutton.Size = new System.Drawing.Size(611, 122);
             this.EditBedrijfbutton.TabIndex = 5;
             this.EditBedrijfbutton.Text = "Edit";
             this.EditBedrijfbutton.UseVisualStyleBackColor = true;
@@ -147,9 +147,9 @@
             // EdittextoxId
             // 
             this.EdittextoxId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.EdittextoxId.Location = new System.Drawing.Point(192, 47);
+            this.EdittextoxId.Location = new System.Drawing.Point(308, 81);
             this.EdittextoxId.Name = "EdittextoxId";
-            this.EdittextoxId.Size = new System.Drawing.Size(184, 20);
+            this.EdittextoxId.Size = new System.Drawing.Size(300, 20);
             this.EdittextoxId.TabIndex = 6;
             // 
             // bedrijvenTableAdapter
@@ -163,9 +163,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtondDone.AutoSize = true;
             this.ButtondDone.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ButtondDone.Location = new System.Drawing.Point(388, 167);
+            this.ButtondDone.Location = new System.Drawing.Point(620, 259);
             this.ButtondDone.Name = "ButtondDone";
-            this.ButtondDone.Size = new System.Drawing.Size(379, 37);
+            this.ButtondDone.Size = new System.Drawing.Size(611, 60);
             this.ButtondDone.TabIndex = 7;
             this.ButtondDone.Text = "Done";
             this.ButtondDone.UseVisualStyleBackColor = true;
@@ -187,7 +187,7 @@
             this.TableLayoutPanelCreateBedrijf.RowCount = 2;
             this.TableLayoutPanelCreateBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TableLayoutPanelCreateBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TableLayoutPanelCreateBedrijf.Size = new System.Drawing.Size(776, 426);
+            this.TableLayoutPanelCreateBedrijf.Size = new System.Drawing.Size(1240, 656);
             this.TableLayoutPanelCreateBedrijf.TabIndex = 8;
             // 
             // TableLayoutPanelControl
@@ -205,13 +205,13 @@
             this.TableLayoutPanelControl.Controls.Add(this.ButtondDone, 1, 2);
             this.TableLayoutPanelControl.Controls.Add(this.CreateBedrijfbutton, 1, 0);
             this.TableLayoutPanelControl.Controls.Add(this.EditBedrijfbutton, 1, 1);
-            this.TableLayoutPanelControl.Location = new System.Drawing.Point(3, 216);
+            this.TableLayoutPanelControl.Location = new System.Drawing.Point(3, 331);
             this.TableLayoutPanelControl.Name = "TableLayoutPanelControl";
             this.TableLayoutPanelControl.RowCount = 3;
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TableLayoutPanelControl.Size = new System.Drawing.Size(770, 207);
+            this.TableLayoutPanelControl.Size = new System.Drawing.Size(1234, 322);
             this.TableLayoutPanelControl.TabIndex = 9;
             // 
             // tableLayoutPanel2
@@ -230,7 +230,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(379, 76);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(611, 122);
             this.tableLayoutPanel2.TabIndex = 11;
             // 
             // LabelCreateBedrijf
@@ -241,7 +241,7 @@
             this.LabelCreateBedrijf.AutoSize = true;
             this.LabelCreateBedrijf.Location = new System.Drawing.Point(3, 0);
             this.LabelCreateBedrijf.Name = "LabelCreateBedrijf";
-            this.LabelCreateBedrijf.Size = new System.Drawing.Size(183, 76);
+            this.LabelCreateBedrijf.Size = new System.Drawing.Size(299, 122);
             this.LabelCreateBedrijf.TabIndex = 10;
             this.LabelCreateBedrijf.Text = "Create Bedrijf";
             this.LabelCreateBedrijf.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -260,12 +260,12 @@
             this.tableLayoutPanel1.Controls.Add(this.LabelEditName, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.EditBedrijftextbox, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.EdittextoxId, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 85);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 131);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(379, 76);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(611, 122);
             this.tableLayoutPanel1.TabIndex = 10;
             // 
             // label1
@@ -274,9 +274,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 38);
+            this.label1.Location = new System.Drawing.Point(3, 61);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 38);
+            this.label1.Size = new System.Drawing.Size(299, 61);
             this.label1.TabIndex = 10;
             this.label1.Text = "Edit ID";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -289,7 +289,7 @@
             this.LabelEditName.AutoSize = true;
             this.LabelEditName.Location = new System.Drawing.Point(3, 0);
             this.LabelEditName.Name = "LabelEditName";
-            this.LabelEditName.Size = new System.Drawing.Size(183, 38);
+            this.LabelEditName.Size = new System.Drawing.Size(299, 61);
             this.LabelEditName.TabIndex = 9;
             this.LabelEditName.Text = "Edit Bedrijf ";
             this.LabelEditName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -298,7 +298,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.TableLayoutPanelCreateBedrijf);
             this.Name = "CreateBedrijf";
             this.Text = "CreateBedrijf";

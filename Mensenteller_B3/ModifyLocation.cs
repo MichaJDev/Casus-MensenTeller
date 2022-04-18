@@ -13,7 +13,7 @@ namespace Mensenteller_B3
 {
     public partial class ModifyLocation : BaseForm
     {
-        int LocatieId ;
+        int LocatieId;
         SensorDAL sensordal = new SensorDAL();
         public ModifyLocation(int _locatieId)
         {

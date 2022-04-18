@@ -32,6 +32,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.StatusMensenButton = new System.Windows.Forms.Button();
             this.DgvBedrijfview = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bedrijvenBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet_Bedrijvenview = new Mensenteller_B3.DataSet_Bedrijvenview();
             this.bedrijvenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sensorReadingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sensorDataDataSet = new Mensenteller_B3.SensorDataDataSet();
@@ -41,19 +45,15 @@
             this.pressureSensorsTableAdapter = new Mensenteller_B3.SensorDataDataSet1TableAdapters.PressureSensorsTableAdapter();
             this.Averagetextbox = new System.Windows.Forms.TextBox();
             this.BedrijfViewbutton = new System.Windows.Forms.Button();
-            this.dataSet_Bedrijvenview = new Mensenteller_B3.DataSet_Bedrijvenview();
-            this.bedrijvenBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bedrijvenTableAdapter = new Mensenteller_B3.DataSet_BedrijvenviewTableAdapters.BedrijvenTableAdapter();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvBedrijfview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Bedrijvenview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sensorReadingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sensorDataDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pressureSensorsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sensorDataDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Bedrijvenview)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -90,6 +90,30 @@
             this.DgvBedrijfview.Size = new System.Drawing.Size(544, 150);
             this.DgvBedrijfview.TabIndex = 2;
             this.DgvBedrijfview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSensorRead_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // bedrijvenBindingSource1
+            // 
+            this.bedrijvenBindingSource1.DataMember = "Bedrijven";
+            this.bedrijvenBindingSource1.DataSource = this.dataSet_Bedrijvenview;
+            // 
+            // dataSet_Bedrijvenview
+            // 
+            this.dataSet_Bedrijvenview.DataSetName = "DataSet_Bedrijvenview";
+            this.dataSet_Bedrijvenview.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bedrijvenBindingSource
             // 
@@ -140,39 +164,15 @@
             this.BedrijfViewbutton.UseVisualStyleBackColor = true;
             this.BedrijfViewbutton.Click += new System.EventHandler(this.BedrijfViewbutton_Click);
             // 
-            // dataSet_Bedrijvenview
-            // 
-            this.dataSet_Bedrijvenview.DataSetName = "DataSet_Bedrijvenview";
-            this.dataSet_Bedrijvenview.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bedrijvenBindingSource1
-            // 
-            this.bedrijvenBindingSource1.DataMember = "Bedrijven";
-            this.bedrijvenBindingSource1.DataSource = this.dataSet_Bedrijvenview;
-            // 
             // bedrijvenTableAdapter
             // 
             this.bedrijvenTableAdapter.ClearBeforeFill = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Name";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(943, 586);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.BedrijfViewbutton);
             this.Controls.Add(this.Averagetextbox);
             this.Controls.Add(this.DgvBedrijfview);
@@ -182,13 +182,13 @@
             this.Text = "View";
             this.Load += new System.EventHandler(this.View_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvBedrijfview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Bedrijvenview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sensorReadingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sensorDataDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pressureSensorsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sensorDataDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Bedrijvenview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bedrijvenBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

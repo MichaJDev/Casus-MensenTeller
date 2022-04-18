@@ -34,12 +34,12 @@
             this.ButtonCreateModify = new System.Windows.Forms.Button();
             this.LabelTitle = new System.Windows.Forms.Label();
             this.TableLayoutPanelDecoCounter = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.LabelCounter6 = new System.Windows.Forms.Label();
             this.LabelCounter5 = new System.Windows.Forms.Label();
             this.LabelCounter4 = new System.Windows.Forms.Label();
             this.LabelCounter3 = new System.Windows.Forms.Label();
             this.LabelCounter2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.TableLayoutPanelMain.SuspendLayout();
             this.TableLayoutPanelDecoCounter.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +65,7 @@
             this.TableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.TableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.TableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.TableLayoutPanelMain.Size = new System.Drawing.Size(861, 520);
+            this.TableLayoutPanelMain.Size = new System.Drawing.Size(1240, 654);
             this.TableLayoutPanelMain.TabIndex = 0;
             // 
             // ButtonView
@@ -78,9 +78,9 @@
             this.ButtonView.BackColor = System.Drawing.Color.Gray;
             this.ButtonView.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ButtonView.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonView.Location = new System.Drawing.Point(3, 367);
+            this.ButtonView.Location = new System.Drawing.Point(3, 459);
             this.ButtonView.Name = "ButtonView";
-            this.ButtonView.Size = new System.Drawing.Size(855, 150);
+            this.ButtonView.Size = new System.Drawing.Size(1234, 192);
             this.ButtonView.TabIndex = 4;
             this.ButtonView.Text = "View";
             this.ButtonView.UseVisualStyleBackColor = false;
@@ -96,9 +96,9 @@
             this.ButtonCreateModify.BackColor = System.Drawing.Color.Gray;
             this.ButtonCreateModify.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ButtonCreateModify.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonCreateModify.Location = new System.Drawing.Point(3, 211);
+            this.ButtonCreateModify.Location = new System.Drawing.Point(3, 263);
             this.ButtonCreateModify.Name = "ButtonCreateModify";
-            this.ButtonCreateModify.Size = new System.Drawing.Size(855, 150);
+            this.ButtonCreateModify.Size = new System.Drawing.Size(1234, 190);
             this.ButtonCreateModify.TabIndex = 3;
             this.ButtonCreateModify.Text = "Create/Modify";
             this.ButtonCreateModify.UseVisualStyleBackColor = false;
@@ -111,9 +111,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LabelTitle.AutoSize = true;
             this.LabelTitle.Font = new System.Drawing.Font("Calibri", 51.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelTitle.Location = new System.Drawing.Point(3, 104);
+            this.LabelTitle.Location = new System.Drawing.Point(3, 130);
             this.LabelTitle.Name = "LabelTitle";
-            this.LabelTitle.Size = new System.Drawing.Size(855, 104);
+            this.LabelTitle.Size = new System.Drawing.Size(1234, 130);
             this.LabelTitle.TabIndex = 2;
             this.LabelTitle.Text = "People Counter";
             this.LabelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -143,9 +143,23 @@
             this.TableLayoutPanelDecoCounter.Name = "TableLayoutPanelDecoCounter";
             this.TableLayoutPanelDecoCounter.RowCount = 1;
             this.TableLayoutPanelDecoCounter.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TableLayoutPanelDecoCounter.Size = new System.Drawing.Size(855, 98);
+            this.TableLayoutPanelDecoCounter.Size = new System.Drawing.Size(1234, 124);
             this.TableLayoutPanelDecoCounter.TabIndex = 1;
             this.TableLayoutPanelDecoCounter.Paint += new System.Windows.Forms.PaintEventHandler(this.TableLayoutPanelDecoCounter_Paint);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 56.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(199, 124);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "0";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LabelCounter6
             // 
@@ -154,9 +168,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LabelCounter6.AutoSize = true;
             this.LabelCounter6.Font = new System.Drawing.Font("Calibri", 56.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelCounter6.Location = new System.Drawing.Point(713, 0);
+            this.LabelCounter6.Location = new System.Drawing.Point(1028, 0);
             this.LabelCounter6.Name = "LabelCounter6";
-            this.LabelCounter6.Size = new System.Drawing.Size(139, 98);
+            this.LabelCounter6.Size = new System.Drawing.Size(203, 124);
             this.LabelCounter6.TabIndex = 5;
             this.LabelCounter6.Text = "2";
             this.LabelCounter6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -168,9 +182,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LabelCounter5.AutoSize = true;
             this.LabelCounter5.Font = new System.Drawing.Font("Calibri", 56.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelCounter5.Location = new System.Drawing.Point(571, 0);
+            this.LabelCounter5.Location = new System.Drawing.Point(823, 0);
             this.LabelCounter5.Name = "LabelCounter5";
-            this.LabelCounter5.Size = new System.Drawing.Size(136, 98);
+            this.LabelCounter5.Size = new System.Drawing.Size(199, 124);
             this.LabelCounter5.TabIndex = 4;
             this.LabelCounter5.Text = "0";
             this.LabelCounter5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -182,9 +196,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LabelCounter4.AutoSize = true;
             this.LabelCounter4.Font = new System.Drawing.Font("Calibri", 56.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelCounter4.Location = new System.Drawing.Point(429, 0);
+            this.LabelCounter4.Location = new System.Drawing.Point(618, 0);
             this.LabelCounter4.Name = "LabelCounter4";
-            this.LabelCounter4.Size = new System.Drawing.Size(136, 98);
+            this.LabelCounter4.Size = new System.Drawing.Size(199, 124);
             this.LabelCounter4.TabIndex = 3;
             this.LabelCounter4.Text = "4";
             this.LabelCounter4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -196,9 +210,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LabelCounter3.AutoSize = true;
             this.LabelCounter3.Font = new System.Drawing.Font("Calibri", 56.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelCounter3.Location = new System.Drawing.Point(287, 0);
+            this.LabelCounter3.Location = new System.Drawing.Point(413, 0);
             this.LabelCounter3.Name = "LabelCounter3";
-            this.LabelCounter3.Size = new System.Drawing.Size(136, 98);
+            this.LabelCounter3.Size = new System.Drawing.Size(199, 124);
             this.LabelCounter3.TabIndex = 2;
             this.LabelCounter3.Text = "0";
             this.LabelCounter3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -210,33 +224,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LabelCounter2.AutoSize = true;
             this.LabelCounter2.Font = new System.Drawing.Font("Calibri", 56.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelCounter2.Location = new System.Drawing.Point(145, 0);
+            this.LabelCounter2.Location = new System.Drawing.Point(208, 0);
             this.LabelCounter2.Name = "LabelCounter2";
-            this.LabelCounter2.Size = new System.Drawing.Size(136, 98);
+            this.LabelCounter2.Size = new System.Drawing.Size(199, 124);
             this.LabelCounter2.TabIndex = 1;
             this.LabelCounter2.Text = "0";
             this.LabelCounter2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 56.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 98);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "0";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(885, 544);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.TableLayoutPanelMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";

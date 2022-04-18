@@ -30,16 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.DgvViewLocatie = new System.Windows.Forms.DataGridView();
-            this.dataSet_LocatiesView = new Mensenteller_B3.DataSet_LocatiesView();
-            this.locatiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.locatiesTableAdapter = new Mensenteller_B3.DataSet_LocatiesViewTableAdapters.LocatiesTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.zoneIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.locatiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet_LocatiesView = new Mensenteller_B3.DataSet_LocatiesView();
+            this.locatiesTableAdapter = new Mensenteller_B3.DataSet_LocatiesViewTableAdapters.LocatiesTableAdapter();
             this.ViewLocatiebutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvViewLocatie)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_LocatiesView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.locatiesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_LocatiesView)).BeginInit();
             this.SuspendLayout();
             // 
             // DgvViewLocatie
@@ -59,20 +59,6 @@
             this.DgvViewLocatie.Size = new System.Drawing.Size(636, 119);
             this.DgvViewLocatie.TabIndex = 0;
             this.DgvViewLocatie.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvViewLocatie_CellMouseClick);
-            // 
-            // dataSet_LocatiesView
-            // 
-            this.dataSet_LocatiesView.DataSetName = "DataSet_LocatiesView";
-            this.dataSet_LocatiesView.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // locatiesBindingSource
-            // 
-            this.locatiesBindingSource.DataMember = "Locaties";
-            this.locatiesBindingSource.DataSource = this.dataSet_LocatiesView;
-            // 
-            // locatiesTableAdapter
-            // 
-            this.locatiesTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -95,6 +81,20 @@
             this.zoneIdDataGridViewTextBoxColumn.Name = "zoneIdDataGridViewTextBoxColumn";
             this.zoneIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // locatiesBindingSource
+            // 
+            this.locatiesBindingSource.DataMember = "Locaties";
+            this.locatiesBindingSource.DataSource = this.dataSet_LocatiesView;
+            // 
+            // dataSet_LocatiesView
+            // 
+            this.dataSet_LocatiesView.DataSetName = "DataSet_LocatiesView";
+            this.dataSet_LocatiesView.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // locatiesTableAdapter
+            // 
+            this.locatiesTableAdapter.ClearBeforeFill = true;
+            // 
             // ViewLocatiebutton
             // 
             this.ViewLocatiebutton.Location = new System.Drawing.Point(66, 275);
@@ -109,15 +109,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.ViewLocatiebutton);
             this.Controls.Add(this.DgvViewLocatie);
             this.Name = "LocatieView";
             this.Text = "LocatieView";
             this.Load += new System.EventHandler(this.LocatieView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvViewLocatie)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_LocatiesView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.locatiesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_LocatiesView)).EndInit();
             this.ResumeLayout(false);
 
         }

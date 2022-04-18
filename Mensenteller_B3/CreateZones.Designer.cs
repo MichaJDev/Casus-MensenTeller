@@ -58,7 +58,7 @@
             this.DgvCreateZone.Location = new System.Drawing.Point(3, 3);
             this.DgvCreateZone.Name = "DgvCreateZone";
             this.DgvCreateZone.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvCreateZone.Size = new System.Drawing.Size(838, 182);
+            this.DgvCreateZone.Size = new System.Drawing.Size(1234, 322);
             this.DgvCreateZone.TabIndex = 0;
             // 
             // CreateZonebutton
@@ -66,9 +66,9 @@
             this.CreateZonebutton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CreateZonebutton.Location = new System.Drawing.Point(422, 3);
+            this.CreateZonebutton.Location = new System.Drawing.Point(620, 3);
             this.CreateZonebutton.Name = "CreateZonebutton";
-            this.CreateZonebutton.Size = new System.Drawing.Size(413, 66);
+            this.CreateZonebutton.Size = new System.Drawing.Size(611, 122);
             this.CreateZonebutton.TabIndex = 1;
             this.CreateZonebutton.Text = "Create";
             this.CreateZonebutton.UseVisualStyleBackColor = true;
@@ -79,9 +79,9 @@
             this.EditZonebutton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.EditZonebutton.Location = new System.Drawing.Point(422, 75);
+            this.EditZonebutton.Location = new System.Drawing.Point(620, 131);
             this.EditZonebutton.Name = "EditZonebutton";
-            this.EditZonebutton.Size = new System.Drawing.Size(413, 66);
+            this.EditZonebutton.Size = new System.Drawing.Size(611, 122);
             this.EditZonebutton.TabIndex = 2;
             this.EditZonebutton.Text = "Edit";
             this.EditZonebutton.UseVisualStyleBackColor = true;
@@ -90,25 +90,25 @@
             // CreateZoneNatextbox
             // 
             this.CreateZoneNatextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.CreateZoneNatextbox.Location = new System.Drawing.Point(209, 23);
+            this.CreateZoneNatextbox.Location = new System.Drawing.Point(308, 51);
             this.CreateZoneNatextbox.Name = "CreateZoneNatextbox";
-            this.CreateZoneNatextbox.Size = new System.Drawing.Size(201, 20);
+            this.CreateZoneNatextbox.Size = new System.Drawing.Size(300, 20);
             this.CreateZoneNatextbox.TabIndex = 3;
             // 
             // ZoneEditIdtextbox
             // 
             this.ZoneEditIdtextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.ZoneEditIdtextbox.Location = new System.Drawing.Point(209, 39);
+            this.ZoneEditIdtextbox.Location = new System.Drawing.Point(308, 81);
             this.ZoneEditIdtextbox.Name = "ZoneEditIdtextbox";
-            this.ZoneEditIdtextbox.Size = new System.Drawing.Size(201, 20);
+            this.ZoneEditIdtextbox.Size = new System.Drawing.Size(300, 20);
             this.ZoneEditIdtextbox.TabIndex = 4;
             // 
             // ZoneNaamEdittextbox
             // 
             this.ZoneNaamEdittextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.ZoneNaamEdittextbox.Location = new System.Drawing.Point(209, 6);
+            this.ZoneNaamEdittextbox.Location = new System.Drawing.Point(308, 20);
             this.ZoneNaamEdittextbox.Name = "ZoneNaamEdittextbox";
-            this.ZoneNaamEdittextbox.Size = new System.Drawing.Size(201, 20);
+            this.ZoneNaamEdittextbox.Size = new System.Drawing.Size(300, 20);
             this.ZoneNaamEdittextbox.TabIndex = 5;
             // 
             // TLPCreateZone
@@ -127,7 +127,7 @@
             this.TLPCreateZone.RowCount = 2;
             this.TLPCreateZone.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TLPCreateZone.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TLPCreateZone.Size = new System.Drawing.Size(844, 376);
+            this.TLPCreateZone.Size = new System.Drawing.Size(1240, 656);
             this.TLPCreateZone.TabIndex = 9;
             // 
             // TableLayoutPanelControl
@@ -145,13 +145,13 @@
             this.TableLayoutPanelControl.Controls.Add(this.ButtondDone, 1, 2);
             this.TableLayoutPanelControl.Controls.Add(this.CreateZonebutton, 1, 0);
             this.TableLayoutPanelControl.Controls.Add(this.EditZonebutton, 1, 1);
-            this.TableLayoutPanelControl.Location = new System.Drawing.Point(3, 191);
+            this.TableLayoutPanelControl.Location = new System.Drawing.Point(3, 331);
             this.TableLayoutPanelControl.Name = "TableLayoutPanelControl";
             this.TableLayoutPanelControl.RowCount = 3;
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TableLayoutPanelControl.Size = new System.Drawing.Size(838, 182);
+            this.TableLayoutPanelControl.Size = new System.Drawing.Size(1234, 322);
             this.TableLayoutPanelControl.TabIndex = 9;
             // 
             // tableLayoutPanel2
@@ -170,7 +170,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(413, 66);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(611, 122);
             this.tableLayoutPanel2.TabIndex = 11;
             // 
             // LabelCreateBedrijf
@@ -181,7 +181,7 @@
             this.LabelCreateBedrijf.AutoSize = true;
             this.LabelCreateBedrijf.Location = new System.Drawing.Point(3, 0);
             this.LabelCreateBedrijf.Name = "LabelCreateBedrijf";
-            this.LabelCreateBedrijf.Size = new System.Drawing.Size(200, 66);
+            this.LabelCreateBedrijf.Size = new System.Drawing.Size(299, 122);
             this.LabelCreateBedrijf.TabIndex = 10;
             this.LabelCreateBedrijf.Text = "Create Bedrijf";
             this.LabelCreateBedrijf.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -200,12 +200,12 @@
             this.tableLayoutPanel1.Controls.Add(this.LabelEditName, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.ZoneEditIdtextbox, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.ZoneNaamEdittextbox, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 75);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 131);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(413, 66);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(611, 122);
             this.tableLayoutPanel1.TabIndex = 10;
             // 
             // label4
@@ -214,9 +214,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 33);
+            this.label4.Location = new System.Drawing.Point(3, 61);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(200, 33);
+            this.label4.Size = new System.Drawing.Size(299, 61);
             this.label4.TabIndex = 10;
             this.label4.Text = "Edit ID";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -229,7 +229,7 @@
             this.LabelEditName.AutoSize = true;
             this.LabelEditName.Location = new System.Drawing.Point(3, 0);
             this.LabelEditName.Name = "LabelEditName";
-            this.LabelEditName.Size = new System.Drawing.Size(200, 33);
+            this.LabelEditName.Size = new System.Drawing.Size(299, 61);
             this.LabelEditName.TabIndex = 9;
             this.LabelEditName.Text = "Edit Bedrijf ";
             this.LabelEditName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -241,9 +241,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtondDone.AutoSize = true;
             this.ButtondDone.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ButtondDone.Location = new System.Drawing.Point(422, 147);
+            this.ButtondDone.Location = new System.Drawing.Point(620, 259);
             this.ButtondDone.Name = "ButtondDone";
-            this.ButtondDone.Size = new System.Drawing.Size(413, 32);
+            this.ButtondDone.Size = new System.Drawing.Size(611, 60);
             this.ButtondDone.TabIndex = 7;
             this.ButtondDone.Text = "Done";
             this.ButtondDone.UseVisualStyleBackColor = true;
@@ -255,7 +255,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(868, 400);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.TLPCreateZone);
             this.Name = "CreateZones";
             this.Text = "CreateZone";
