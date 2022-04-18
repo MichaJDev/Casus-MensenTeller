@@ -26,8 +26,8 @@ namespace Mensenteller_B3
         private void ButtonCreate_Click(object sender, EventArgs e)
         {
             
-            CreateLocatie createLocatie = new CreateLocatie();
-            createLocatie.ShowDialog();
+            CreateSensor createSensor = new CreateSensor(LocatieId);
+            createSensor.ShowDialog();
             DataGridViewSensors.DataSource = sensordal.ReadSensors(LocatieId);
         }
 
