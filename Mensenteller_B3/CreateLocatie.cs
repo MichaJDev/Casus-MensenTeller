@@ -11,7 +11,7 @@ using Mensenteller_B3.Locaties;
 
 namespace Mensenteller_B3
 {
-    public partial class CreateLocatie : Form
+    public partial class CreateLocatie : BaseForm
     {
 
         LocatieDAL dal = new LocatieDAL();

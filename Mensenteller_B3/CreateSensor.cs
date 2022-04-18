@@ -19,7 +19,7 @@ namespace Mensenteller_B3
     
 
     
-    public partial class CreateSensor : Form
+    public partial class CreateSensor : BaseForm
     {
         SensorDAL dalsensor = new SensorDAL();
         EntreeSensorDAL entreeSensorDAL = new EntreeSensorDAL();
@@ -85,6 +85,11 @@ namespace Mensenteller_B3
                     ComboBox.Items.Add(ds.SensorId.ToString());
                 }
             }
+        }
+
+        private void CreateSensor_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

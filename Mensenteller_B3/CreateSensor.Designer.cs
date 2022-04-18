@@ -43,11 +43,11 @@
             this.CheckBoxDruk = new System.Windows.Forms.CheckBox();
             this.LabelSensorType = new System.Windows.Forms.Label();
             this.LabelSensorNaam = new System.Windows.Forms.Label();
+            this.ComboBox = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.LabelEditId = new System.Windows.Forms.Label();
             this.LabelEditSensorNaam = new System.Windows.Forms.Label();
             this.ButtonDone = new System.Windows.Forms.Button();
-            this.ComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgvCreateSensor)).BeginInit();
             this.TLPSensor.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -277,6 +277,15 @@
             this.LabelSensorNaam.Text = "Naam:";
             this.LabelSensorNaam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // ComboBox
+            // 
+            this.ComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ComboBox.FormattingEnabled = true;
+            this.ComboBox.Location = new System.Drawing.Point(241, 63);
+            this.ComboBox.Name = "ComboBox";
+            this.ComboBox.Size = new System.Drawing.Size(232, 21);
+            this.ComboBox.TabIndex = 11;
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -341,15 +350,6 @@
             this.ButtonDone.UseVisualStyleBackColor = true;
             this.ButtonDone.Click += new System.EventHandler(this.ButtonDone_Click);
             // 
-            // ComboBox
-            // 
-            this.ComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.ComboBox.FormattingEnabled = true;
-            this.ComboBox.Location = new System.Drawing.Point(241, 63);
-            this.ComboBox.Name = "ComboBox";
-            this.ComboBox.Size = new System.Drawing.Size(232, 21);
-            this.ComboBox.TabIndex = 11;
-            // 
             // CreateSensor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -359,6 +359,7 @@
             this.Name = "CreateSensor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateSensor";
+            this.Load += new System.EventHandler(this.CreateSensor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvCreateSensor)).EndInit();
             this.TLPSensor.ResumeLayout(false);
             this.TLPSensor.PerformLayout();

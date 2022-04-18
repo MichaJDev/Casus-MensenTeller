@@ -14,7 +14,7 @@ using MensenTeller_B3.Sensors;
 
 namespace Mensenteller_B3
 {
-    public partial class ModifySensor : Form
+    public partial class ModifySensor : BaseForm
     {
         EntreeSensorDAL entreeSenorDAL = new EntreeSensorDAL();
         DruksensorDAL drukSensorDAL = new DruksensorDAL();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mensenteller_B3.Bedrijven;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,11 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Mensenteller_B3.Bedrijven;
 
 namespace Mensenteller_B3
 {
-    public partial class CreateBedrijf : Form
+    public partial class CreateBedrijf : BaseForm
     {
         BedrijfDAL dal = new BedrijfDAL();
         private int rowID = 0;
