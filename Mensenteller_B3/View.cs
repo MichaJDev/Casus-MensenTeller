@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MensenTeller_B3;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Mensenteller_B3.Bedrijven;
-
+using Mensenteller_B3.Logic;
 
 namespace Mensenteller_B3
 {
@@ -16,7 +17,6 @@ namespace Mensenteller_B3
 
     {
         BedrijfDAL bedrijfDAL = new BedrijfDAL();
-        
         public View()
         {
             InitializeComponent();
@@ -25,12 +25,12 @@ namespace Mensenteller_B3
         // per Kleur aparte panel!!!
         private void Canvas_paint(object sender, PaintEventArgs e)
         {
-          
+
         }
 
 
         //Indien je de status wilt zien van de aantal mensen die in de basic fit zijn kan dit aangegeven worden door op de status knop te drukken
-        
+
 
         //ToDO X VERANDEREN NAAR AVERAGEPEOPLEIN met meerder else statement
         private void StatusMensenButton_Click(object sender, EventArgs e)
@@ -61,7 +61,7 @@ namespace Mensenteller_B3
             }
             else
             {
-                
+
                 Graphics gObject = panel1.CreateGraphics();
 
                 Brush red = new SolidBrush(Color.Red);
@@ -70,13 +70,15 @@ namespace Mensenteller_B3
                 gObject.FillRectangle(red, 10, 10, 100, 50);
             }
 
-            
+
 
 
         }
 
         private void View_Load(object sender, EventArgs e)
         {
+            
+
             // TODO: This line of code loads data into the 'dataSet_Bedrijvenview.Bedrijven' table. You can move, or remove it, as needed.
             this.bedrijvenTableAdapter.Fill(this.dataSet_Bedrijvenview.Bedrijven);
             // TODO: This line of code loads data into the 'dataSet_bedrijvenview.Bedrijven' table. You can move, or remove it, as needed.

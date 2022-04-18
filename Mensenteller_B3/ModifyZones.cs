@@ -60,8 +60,9 @@ namespace Mensenteller_B3
 
         private void ButtonModify_Click(object sender, EventArgs e)
         {
-           
-            ModifyLocation modifyLocation = new ModifyLocation(ZoneId);
+            string stringlocationId = DataGridViewZones.CurrentRow.Cells[0].Value.ToString();
+            int id = int.Parse(stringlocationId);
+            ModifyLocation modifyLocation = new ModifyLocation(id, ZoneId);
             modifyLocation.ShowDialog();
             DataGridViewZones.DataSource = dal.ReadLocatieById(ZoneId);
         }

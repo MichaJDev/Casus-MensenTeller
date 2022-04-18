@@ -30,6 +30,8 @@
         {
             this.DgvBedrijfview = new System.Windows.Forms.DataGridView();
             this.BedrijfView = new System.Windows.Forms.Button();
+            this.lblBedrijf = new System.Windows.Forms.Label();
+            this.lblStats = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgvBedrijfview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,11 +54,32 @@
             this.BedrijfView.UseVisualStyleBackColor = true;
             this.BedrijfView.Click += new System.EventHandler(this.BedrijfView_Click);
             // 
+            // lblBedrijf
+            // 
+            this.lblBedrijf.AutoSize = true;
+            this.lblBedrijf.Location = new System.Drawing.Point(730, 42);
+            this.lblBedrijf.Name = "lblBedrijf";
+            this.lblBedrijf.Size = new System.Drawing.Size(35, 13);
+            this.lblBedrijf.TabIndex = 2;
+            this.lblBedrijf.Text = "label1";
+            // 
+            // lblStats
+            // 
+            this.lblStats.AutoSize = true;
+            this.lblStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStats.Location = new System.Drawing.Point(726, 55);
+            this.lblStats.Name = "lblStats";
+            this.lblStats.Size = new System.Drawing.Size(124, 42);
+            this.lblStats.TabIndex = 3;
+            this.lblStats.Text = "label2";
+            // 
             // ViewBedrijf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.lblStats);
+            this.Controls.Add(this.lblBedrijf);
             this.Controls.Add(this.BedrijfView);
             this.Controls.Add(this.DgvBedrijfview);
             this.Name = "ViewBedrijf";
@@ -64,6 +87,7 @@
             this.Load += new System.EventHandler(this.ViewBedrijf_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvBedrijfview)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -71,5 +95,7 @@
 
         private System.Windows.Forms.DataGridView DgvBedrijfview;
         private System.Windows.Forms.Button BedrijfView;
+        private System.Windows.Forms.Label lblBedrijf;
+        private System.Windows.Forms.Label lblStats;
     }
 }

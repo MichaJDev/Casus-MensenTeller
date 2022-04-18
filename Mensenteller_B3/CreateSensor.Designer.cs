@@ -30,6 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.DgvCreateSensor = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.locatieIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sensorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet_Sensors123 = new Mensenteller_B3.DataSet_Sensors123();
             this.CreateSensorbutton = new System.Windows.Forms.Button();
             this.EditSensorbutton = new System.Windows.Forms.Button();
             this.CreatSensorNatextbox = new System.Windows.Forms.TextBox();
@@ -49,20 +54,15 @@
             this.LabelEditId = new System.Windows.Forms.Label();
             this.LabelEditSensorNaam = new System.Windows.Forms.Label();
             this.ButtonDone = new System.Windows.Forms.Button();
-            this.dataSet_Sensors123 = new Mensenteller_B3.DataSet_Sensors123();
-            this.sensorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sensorsTableAdapter = new Mensenteller_B3.DataSet_Sensors123TableAdapters.SensorsTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.locatieIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvCreateSensor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sensorsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Sensors123)).BeginInit();
             this.TLPSensor.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.TLPCheckBox.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Sensors123)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sensorsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // DgvCreateSensor
@@ -82,6 +82,34 @@
             this.DgvCreateSensor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvCreateSensor.Size = new System.Drawing.Size(1234, 322);
             this.DgvCreateSensor.TabIndex = 0;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // locatieIdDataGridViewTextBoxColumn
+            // 
+            this.locatieIdDataGridViewTextBoxColumn.DataPropertyName = "LocatieId";
+            this.locatieIdDataGridViewTextBoxColumn.HeaderText = "LocatieId";
+            this.locatieIdDataGridViewTextBoxColumn.Name = "locatieIdDataGridViewTextBoxColumn";
+            // 
+            // sensorsBindingSource
+            // 
+            this.sensorsBindingSource.DataMember = "Sensors";
+            this.sensorsBindingSource.DataSource = this.dataSet_Sensors123;
+            // 
+            // dataSet_Sensors123
+            // 
+            this.dataSet_Sensors123.DataSetName = "DataSet_Sensors123";
+            this.dataSet_Sensors123.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // CreateSensorbutton
             // 
@@ -300,6 +328,7 @@
             this.ComboBox.Name = "ComboBox";
             this.ComboBox.Size = new System.Drawing.Size(300, 21);
             this.ComboBox.TabIndex = 11;
+            this.ComboBox.SelectedIndexChanged += new System.EventHandler(this.ComboBox_SelectedIndexChanged);
             // 
             // tableLayoutPanel3
             // 
@@ -365,37 +394,9 @@
             this.ButtonDone.UseVisualStyleBackColor = true;
             this.ButtonDone.Click += new System.EventHandler(this.ButtonDone_Click);
             // 
-            // dataSet_Sensors123
-            // 
-            this.dataSet_Sensors123.DataSetName = "DataSet_Sensors123";
-            this.dataSet_Sensors123.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sensorsBindingSource
-            // 
-            this.sensorsBindingSource.DataMember = "Sensors";
-            this.sensorsBindingSource.DataSource = this.dataSet_Sensors123;
-            // 
             // sensorsTableAdapter
             // 
             this.sensorsTableAdapter.ClearBeforeFill = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // locatieIdDataGridViewTextBoxColumn
-            // 
-            this.locatieIdDataGridViewTextBoxColumn.DataPropertyName = "LocatieId";
-            this.locatieIdDataGridViewTextBoxColumn.HeaderText = "LocatieId";
-            this.locatieIdDataGridViewTextBoxColumn.Name = "locatieIdDataGridViewTextBoxColumn";
             // 
             // CreateSensor
             // 
@@ -407,6 +408,8 @@
             this.Text = "CreateSensor";
             this.Load += new System.EventHandler(this.CreateSensor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvCreateSensor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sensorsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Sensors123)).EndInit();
             this.TLPSensor.ResumeLayout(false);
             this.TLPSensor.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -417,8 +420,6 @@
             this.TLPCheckBox.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Sensors123)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sensorsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

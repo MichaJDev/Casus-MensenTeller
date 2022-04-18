@@ -182,10 +182,10 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.DgvBedrijfview, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.BedrijfViewbutton, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.StatusMensenButton, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.Averagetextbox, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.ButtonDone, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;

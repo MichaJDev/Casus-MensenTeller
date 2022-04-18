@@ -14,13 +14,15 @@ namespace Mensenteller_B3
     public partial class ModifyLocation : BaseForm
     {
         int LocatieId;
+        int zoneId;
         SensorDAL sensordal = new SensorDAL();
-        public ModifyLocation(int _locatieId)
+        public ModifyLocation(int _locatieId, int _zoneId)
         {
             LocatieId = _locatieId;
+            zoneId = _zoneId;
             InitializeComponent();
         }
-
+        //Open CreateWindow for creating a new location 
         private void ButtonCreate_Click(object sender, EventArgs e)
         {
             

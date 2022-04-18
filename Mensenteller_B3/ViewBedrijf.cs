@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Mensenteller_B3.Bedrijven;
 using MensenTeller_B3.Zones;
+using Mensenteller_B3.Logic;
 
 namespace Mensenteller_B3
 {
@@ -18,7 +19,7 @@ namespace Mensenteller_B3
     {
         DALZone zonedal = new DALZone();
         private Bedrijf bedrijf;
-
+        Statestieken stats = new Statestieken();
         public ViewBedrijf(Bedrijf b)
         {
             bedrijf = b;
@@ -27,6 +28,11 @@ namespace Mensenteller_B3
 
         private void ViewBedrijf_Load(object sender, EventArgs e)
         {
+            lblBedrijf.Text = $"Company: {bedrijf.Id} | Stats";
+            stats.CollectMaxPeople();
+            stats.CollectAverage();
+            stats.CollectDrukSensorInUse();
+            lblStats.Text = $"Max People: {stats.MaxPeopleIn}\nAverage People: {stats.AveragePeopleIn};\nMachines InUse: {stats.DrukSensorsInUse}";
             //LBLname.Text = bedrijf.Name;
             zonedal.ReadZoneByBedrijfId(bedrijf.Id);
             DgvBedrijfview.DataSource = zonedal.ZoneList;
