@@ -112,7 +112,8 @@ namespace Mensenteller_B3
         private void ComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedIndex = ComboBox.SelectedIndex;
-            selectedValue = (int)ComboBox.SelectedValue;
+            //selectedValue = (int)ComboBox.SelectedItem;
+            selectedValue = int.Parse(ComboBox.GetItemText(this.ComboBox.SelectedItem));
         }
     }
 }

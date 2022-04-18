@@ -161,7 +161,7 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.TableLayoutPanelModifyLocation);
             this.Name = "ModifyLocation";
-            this.Text = "ModifyLocation";
+            this.Text = "Sensors";
             this.Load += new System.EventHandler(this.ModifyLocation_Load);
             this.TableLayoutPanelModifyLocation.ResumeLayout(false);
             this.TableLayoutPanelModifyLocation.PerformLayout();

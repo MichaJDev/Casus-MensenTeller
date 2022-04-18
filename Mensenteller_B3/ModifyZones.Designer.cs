@@ -59,7 +59,7 @@
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.TableLayoutPanelModifyBedrijf.Size = new System.Drawing.Size(1240, 653);
+            this.TableLayoutPanelModifyBedrijf.Size = new System.Drawing.Size(1240, 652);
             this.TableLayoutPanelModifyBedrijf.TabIndex = 1;
             this.TableLayoutPanelModifyBedrijf.Paint += new System.Windows.Forms.PaintEventHandler(this.TableLayoutPanelModifyBedrijf_Paint);
             // 
@@ -94,7 +94,7 @@
             this.TableLayoutPanelControl.RowCount = 2;
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TableLayoutPanelControl.Size = new System.Drawing.Size(1234, 256);
+            this.TableLayoutPanelControl.Size = new System.Drawing.Size(1234, 255);
             this.TableLayoutPanelControl.TabIndex = 2;
             // 
             // ButtonModify
@@ -136,7 +136,7 @@
             this.ButtonDone.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonDone.Location = new System.Drawing.Point(620, 207);
             this.ButtonDone.Name = "ButtonDone";
-            this.ButtonDone.Size = new System.Drawing.Size(611, 46);
+            this.ButtonDone.Size = new System.Drawing.Size(611, 45);
             this.ButtonDone.TabIndex = 3;
             this.ButtonDone.Text = "Done";
             this.ButtonDone.UseVisualStyleBackColor = true;
@@ -151,7 +151,7 @@
             this.ButtonDelete.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ButtonDelete.Location = new System.Drawing.Point(3, 207);
             this.ButtonDelete.Name = "ButtonDelete";
-            this.ButtonDelete.Size = new System.Drawing.Size(611, 46);
+            this.ButtonDelete.Size = new System.Drawing.Size(611, 45);
             this.ButtonDelete.TabIndex = 4;
             this.ButtonDelete.Text = "Delete";
             this.ButtonDelete.UseVisualStyleBackColor = true;
@@ -173,7 +173,7 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.TableLayoutPanelModifyBedrijf);
             this.Name = "ModifyZones";
-            this.Text = "Modify Zone";
+            this.Text = "Locaties";
             this.Load += new System.EventHandler(this.ModifyZones_Load);
             this.TableLayoutPanelModifyBedrijf.ResumeLayout(false);
             this.TableLayoutPanelModifyBedrijf.PerformLayout();
