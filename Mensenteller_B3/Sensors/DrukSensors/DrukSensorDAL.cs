@@ -35,7 +35,7 @@ namespace Mensenteller_B3.Sensors.DrukSensors
                     }
 
 
-        
+
                 }
             }
         }
@@ -56,16 +56,24 @@ namespace Mensenteller_B3.Sensors.DrukSensors
 
                     while (datareader.Read())
                     {
-                        dl.Add(new DrukSensor(Int32.Parse(datareader[0].ToString()),
-                                                              Int32.Parse(datareader[1].ToString()),
-                                                              datareader.GetBoolean(2),
-                                                              datareader[3].ToString()
-                                                              ));
+                        DrukSensor d = new DrukSensor
+                        {
+                            ID = datareader.GetInt32(0),
+                            InUse = datareader.GetBoolean(2),
+                            TimeStamp = datareader.GetString(3),
+                            SensorId = datareader.GetInt32(4)
+                        };
+
+                        dl.Add(d);
                     }
                 }
                 return dl;
             }
         }
+        //Int32.Parse(datareader[0].ToString()),
+        //                                                      Int32.Parse(datareader[1].ToString()),
+        //                                                      datareader.GetBoolean(2),
+        //                                                      datareader[3].ToString()
 
         public List<DrukSensor> ReadDrukSensor(int id)
         {
@@ -83,11 +91,15 @@ namespace Mensenteller_B3.Sensors.DrukSensors
 
                     while (datareader.Read())
                     {
-                        ds.Add(new DrukSensor(Int32.Parse(datareader[0].ToString()),
-                                                              Int32.Parse(datareader[1].ToString()),
-                                                              datareader.GetBoolean(2),
-                                                              datareader[3].ToString()
-                                                              ));
+                        DrukSensor d = new DrukSensor
+                        {
+                            ID = datareader.GetInt32(0),
+                            InUse = datareader.GetBoolean(2),
+                            TimeStamp = datareader.GetString(3),
+                            SensorId = datareader.GetInt32(4)
+                        };
+
+                        ds.Add(d);
                     }
                 }
                 return ds;
@@ -130,6 +142,42 @@ namespace Mensenteller_B3.Sensors.DrukSensors
                 }
             }
             ReadDrukSensor();
+        }
+
+
+
+
+
+        public DrukSensor GetDrukSensor(int id)
+        {
+            DrukSensor d = new DrukSensor();
+            using (SqlConnection cnn = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand())
+                {
+                    cnn.ConnectionString = connectionString;
+                    cnn.Open();
+                    command.Connection = cnn;
+                    command.CommandText = "SELECT entryid, sensorid, inuse, timestamp FROM DrukSensors WHERE SensorId = @Id";
+                    command.Parameters.AddWithValue("@Id", id);
+                    SqlDataReader datareader = command.ExecuteReader();
+
+                    while (datareader.Read())
+                    {
+
+
+                        d.ID = datareader.GetInt32(0);
+                        d.InUse = datareader.GetBoolean(2);
+                        d.TimeStamp = datareader.GetString(3);
+                        d.SensorId = datareader.GetInt32(4);
+
+
+
+
+                    }
+                }
+                return d;
+            }
         }
     }
 }

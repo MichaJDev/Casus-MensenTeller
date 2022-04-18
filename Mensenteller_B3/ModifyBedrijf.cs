@@ -39,17 +39,18 @@ namespace Mensenteller_B3
 
         private void ModifyBedrijf_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'mensentellerDataSet5.Zones' table. You can move, or remove it, as needed.
-            this.zonesTableAdapter1.Fill(this.mensentellerDataSet5.Zones);
-            // TODO: This line of code loads data into the 'mensentellerDataSet3.Zones' table. You can move, or remove it, as needed.
-            this.zonesTableAdapter.Fill(this.mensentellerDataSet3.Zones);
+            zoneDAL.ReadZoneByBedrijfId(BedrijfId);
+            DataGridViewZones.DataSource = zoneDAL.ZoneList;
 
         }
 
         private void ButtonCreate_Click(object sender, EventArgs e)
         {
-            CreateZones createZones = new CreateZones();
+           
+            CreateZones createZones = new CreateZones(BedrijfId);
+
             createZones.Show();
+
         }
 
         private void ButtonModify_Click(object sender, EventArgs e)
@@ -83,7 +84,7 @@ namespace Mensenteller_B3
             string id = DataGridViewZones.CurrentRow.Cells[0].Value.ToString();
             int pid = int.Parse(id);
             zoneDAL.DeleteZone(pid);
-            this.zonesTableAdapter1.Fill(this.mensentellerDataSet5.Zones);
+            //this.zonesTableAdapter1.Fill(this.mensentellerDataSet5.Zones);
 
         }
 

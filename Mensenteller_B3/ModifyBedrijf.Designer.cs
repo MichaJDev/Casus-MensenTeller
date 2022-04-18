@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.TableLayoutPanelModifyBedrijf = new System.Windows.Forms.TableLayoutPanel();
             this.DataGridViewZones = new System.Windows.Forms.DataGridView();
+            this.zonesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.TableLayoutPanelControl = new System.Windows.Forms.TableLayoutPanel();
             this.ButtonModify = new System.Windows.Forms.Button();
             this.ButtonCreate = new System.Windows.Forms.Button();
@@ -40,13 +41,12 @@
             this.zonesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mensentellerDataSet3 = new Mensenteller_B3.MensentellerDataSet3();
             this.zonesTableAdapter = new Mensenteller_B3.MensentellerDataSet3TableAdapters.ZonesTableAdapter();
-            this.zonesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.TableLayoutPanelModifyBedrijf.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewZones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource1)).BeginInit();
             this.TableLayoutPanelControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // TableLayoutPanelModifyBedrijf
@@ -67,7 +67,7 @@
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.66667F));
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56F));
             this.TableLayoutPanelModifyBedrijf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.TableLayoutPanelModifyBedrijf.Size = new System.Drawing.Size(776, 406);
+            this.TableLayoutPanelModifyBedrijf.Size = new System.Drawing.Size(776, 405);
             this.TableLayoutPanelModifyBedrijf.TabIndex = 0;
             // 
             // DataGridViewZones
@@ -75,13 +75,11 @@
             this.DataGridViewZones.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DataGridViewZones.AutoGenerateColumns = false;
             this.DataGridViewZones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridViewZones.DataSource = this.zonesBindingSource1;
             this.DataGridViewZones.Location = new System.Drawing.Point(3, 46);
             this.DataGridViewZones.Name = "DataGridViewZones";
             this.DataGridViewZones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridViewZones.Size = new System.Drawing.Size(770, 221);
+            this.DataGridViewZones.Size = new System.Drawing.Size(770, 220);
             this.DataGridViewZones.TabIndex = 0;
             this.DataGridViewZones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewZones_CellContentClick);
             // 
@@ -99,7 +97,7 @@
             this.TableLayoutPanelControl.Controls.Add(this.ButtonCreate, 0, 0);
             this.TableLayoutPanelControl.Controls.Add(this.ButtonDone, 1, 1);
             this.TableLayoutPanelControl.Controls.Add(this.ButtonDelete, 0, 1);
-            this.TableLayoutPanelControl.Location = new System.Drawing.Point(3, 273);
+            this.TableLayoutPanelControl.Location = new System.Drawing.Point(3, 272);
             this.TableLayoutPanelControl.Name = "TableLayoutPanelControl";
             this.TableLayoutPanelControl.RowCount = 2;
             this.TableLayoutPanelControl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
@@ -204,11 +202,11 @@
             this.TableLayoutPanelModifyBedrijf.ResumeLayout(false);
             this.TableLayoutPanelModifyBedrijf.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridViewZones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource1)).EndInit();
             this.TableLayoutPanelControl.ResumeLayout(false);
             this.TableLayoutPanelControl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mensentellerDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zonesBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

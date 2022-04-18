@@ -38,6 +38,7 @@
             this.LabelCounter4 = new System.Windows.Forms.Label();
             this.LabelCounter3 = new System.Windows.Forms.Label();
             this.LabelCounter2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.TableLayoutPanelMain.SuspendLayout();
             this.TableLayoutPanelDecoCounter.SuspendLayout();
             this.SuspendLayout();
@@ -126,6 +127,7 @@
             this.TableLayoutPanelDecoCounter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.TableLayoutPanelDecoCounter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.TableLayoutPanelDecoCounter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.TableLayoutPanelDecoCounter.Controls.Add(this.label1, 0, 0);
             this.TableLayoutPanelDecoCounter.Controls.Add(this.LabelCounter6, 5, 0);
             this.TableLayoutPanelDecoCounter.Controls.Add(this.LabelCounter5, 4, 0);
             this.TableLayoutPanelDecoCounter.Controls.Add(this.LabelCounter4, 3, 0);
@@ -210,6 +212,20 @@
             this.LabelCounter2.Text = "0";
             this.LabelCounter2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 56.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 98);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "0";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,5 +257,6 @@
         private System.Windows.Forms.Label LabelCounter2;
         private System.Windows.Forms.Button ButtonView;
         private System.Windows.Forms.Button ButtonCreateModify;
+        private System.Windows.Forms.Label label1;
     }
 }
