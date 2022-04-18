@@ -21,8 +21,7 @@ namespace Mensenteller_B3
         }
 
         private void ButtonCreate_Click(object sender, EventArgs e)
-        {
-            Close();
+        {            
 
             CreateBedrijf createBedrijf = new CreateBedrijf();
             createBedrijf.ShowDialog();

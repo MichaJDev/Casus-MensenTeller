@@ -1,4 +1,5 @@
 ﻿using Mensenteller_B3.Bedrijven;
+using Mensenteller_B3;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -63,8 +64,7 @@ namespace Mensenteller_B3
         private void ButtondDone_Click(object sender, EventArgs e)
         {
             Close();
-            CreateModify createModify = new CreateModify();
-            createModify.Show();
+            
         }
     }
 }
