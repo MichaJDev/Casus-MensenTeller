@@ -34,7 +34,7 @@ namespace Mensenteller_B3
 
         public ModifyBedrijf()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
         private void ModifyBedrijf_Load(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace Mensenteller_B3
 
         private void ButtonCreate_Click(object sender, EventArgs e)
         {
-           
+
             CreateZones createZones = new CreateZones(BedrijfId);
 
             createZones.Show();
@@ -90,7 +90,7 @@ namespace Mensenteller_B3
 
         private void TextBoxAdress_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

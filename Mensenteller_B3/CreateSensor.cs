@@ -46,8 +46,8 @@ namespace Mensenteller_B3
             /*
             string Name = EditNaamsensortextbox.Text;
             //int id = int.Parse();//comboboxselectedshithiering
-            Sensor sensor= new Sensor(id, Name);
-            dalsensor.Update(sensor);
+            //Sensor sensor= new Sensor(id, Name);
+            //dalsensor.Update(sensor);
 
 
             MessageBox.Show("Updated");

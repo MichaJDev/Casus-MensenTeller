@@ -20,7 +20,7 @@ namespace Mensenteller_B3
         DruksensorDAL drukSensorDAL = new DruksensorDAL();
         EntreeSensor entree = new EntreeSensor();
         DrukSensor druk = new DrukSensor();
-        
+
         SensorDAL sensorDAL = new SensorDAL();
 
         int locatieId;
@@ -30,7 +30,22 @@ namespace Mensenteller_B3
             sensorId = _sensorId;
 
             InitializeComponent();
-            Sensor s = sensorDAL.GetSensor(sensorId);
+        }
+
+        private void ButtonDone_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void ButtonCreate_Click(object sender, EventArgs e)
+        {
+            CreateSensor createSensor = new CreateSensor();
+            createSensor.Show();
+        }
+        private void ModifySensor_Load(object sender, EventArgs e)
+        {
+
+
             foreach (EntreeSensor es in entreeSenorDAL.ReadEntreeSensors(sensorId))
             {
 
@@ -83,13 +98,13 @@ namespace Mensenteller_B3
             Sensor s = sensorDAL.GetSensor(sensorId);
             if (entree != null)
             {
-                
+
                 CreateSensor createSensor = new CreateSensor(s.LocatieID);
                 createSensor.Show();
             }
             else if (druk != null)
             {
-                
+
                 CreateSensor createSensor = new CreateSensor(s.LocatieID);
                 createSensor.Show();
             }
@@ -168,10 +183,10 @@ namespace Mensenteller_B3
                 };
 
                 drukSensorDAL.EditDrukSensor(0, ds.SensorId, ds.InUse, ds.TimeStamp);
-               
+
             }
         }
-        
+
         private void ButtonDelete_Click(object sender, EventArgs e)
         {
 
