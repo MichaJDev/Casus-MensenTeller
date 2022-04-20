@@ -65,7 +65,7 @@
             this.TableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.TableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.TableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.TableLayoutPanelMain.Size = new System.Drawing.Size(1240, 654);
+            this.TableLayoutPanelMain.Size = new System.Drawing.Size(1240, 652);
             this.TableLayoutPanelMain.TabIndex = 0;
             // 
             // ButtonView
@@ -78,9 +78,9 @@
             this.ButtonView.BackColor = System.Drawing.Color.Gray;
             this.ButtonView.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ButtonView.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonView.Location = new System.Drawing.Point(3, 459);
+            this.ButtonView.Location = new System.Drawing.Point(3, 458);
             this.ButtonView.Name = "ButtonView";
-            this.ButtonView.Size = new System.Drawing.Size(1234, 192);
+            this.ButtonView.Size = new System.Drawing.Size(1234, 191);
             this.ButtonView.TabIndex = 4;
             this.ButtonView.Text = "View";
             this.ButtonView.UseVisualStyleBackColor = false;
@@ -98,7 +98,7 @@
             this.ButtonCreateModify.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonCreateModify.Location = new System.Drawing.Point(3, 263);
             this.ButtonCreateModify.Name = "ButtonCreateModify";
-            this.ButtonCreateModify.Size = new System.Drawing.Size(1234, 190);
+            this.ButtonCreateModify.Size = new System.Drawing.Size(1234, 189);
             this.ButtonCreateModify.TabIndex = 3;
             this.ButtonCreateModify.Text = "Create/Modify";
             this.ButtonCreateModify.UseVisualStyleBackColor = false;
@@ -241,7 +241,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PoepleCounter : Home";
+            this.Text = "PeopleCounter : Home";
             this.Load += new System.EventHandler(this.Main_Load);
             this.TableLayoutPanelMain.ResumeLayout(false);
             this.TableLayoutPanelMain.PerformLayout();
